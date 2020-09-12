@@ -337,12 +337,29 @@
 .end method
 
 .method public static isNotificationLightEnabled()Z
-    .locals 1
+    .registers 3
 
-    .line 114
+    .prologue
     const/4 v0, 0x1
 
+    const/4 v1, 0x0
+
+    .line 18
+    const-string v2, "sys.aod.notif_light_enable"
+
+    invoke-static {v2, v1}, Lcom/android/wubydax/GearUtils;->getDbIntForKey(Ljava/lang/String;I)I
+
+    move-result v2
+
+    if-ne v2, v0, :cond_b
+
+    :goto_a
     return v0
+
+    :cond_b
+    move v0, v1
+
+    goto :goto_a
 .end method
 
 .method public static isNotificationWakeUpEnabled()Z
