@@ -404,194 +404,257 @@
 .end method
 
 .method private drawText(Landroid/graphics/Canvas;)V
-    .locals 6
+    .registers 19
+    .param p1, "canvas"    # Landroid/graphics/Canvas;
 
-    .line 519
-    invoke-virtual {p1}, Landroid/graphics/Canvas;->getWidth()I
+    .prologue
+    .line 142
+    invoke-virtual/range {p1 .. p1}, Landroid/graphics/Canvas;->getWidth()I
 
-    move-result v0
+    move-result v14
 
-    div-int/lit8 v0, v0, 0x2
+    div-int/lit8 v8, v14, 0x2
 
-    .line 520
-    new-instance v1, Landroid/graphics/Rect;
+    .line 143
+    .local v8, "n":I
+    new-instance v9, Landroid/graphics/Rect;
 
-    invoke-direct {v1}, Landroid/graphics/Rect;-><init>()V
+    invoke-direct {v9}, Landroid/graphics/Rect;-><init>()V
 
-    .line 523
-    invoke-virtual {p0}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+    .line 144
+    .local v9, "rect":Landroid/graphics/Rect;
+    invoke-virtual/range {p0 .. p0}, Lcom/oneplus/aod/OpTextDate;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+
+    move-result-object v7
+
+    check-cast v7, Landroid/widget/LinearLayout$LayoutParams;
+
+    .line 145
+    .local v7, "layoutParams":Landroid/widget/LinearLayout$LayoutParams;
+    invoke-static {}, Ljava/util/Locale;->getDefault()Ljava/util/Locale;
+
+    move-result-object v4
+
+    .line 147
+    .local v4, "default1":Ljava/util/Locale;
+    invoke-virtual {v4}, Ljava/util/Locale;->toString()Ljava/lang/String;
+
+    move-result-object v14
+
+    const-string v15, "zh_"
+
+    invoke-virtual {v14, v15}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
+
+    move-result v14
+
+    if-eqz v14, :cond_ab
+
+    .line 148
+    const-string v14, "MMMMd"
+
+    invoke-static {v4, v14}, Landroid/text/format/DateFormat;->getBestDateTimePattern(Ljava/util/Locale;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
-    check-cast v2, Landroid/widget/LinearLayout$LayoutParams;
+    .line 149
+    .local v2, "bestDateTimePattern":Ljava/lang/String;
+    const-string v14, "EEE"
 
-    .line 525
-    invoke-static {}, Ljava/util/Locale;->getDefault()Ljava/util/Locale;
-
-    move-result-object v3
-
-    .line 527
-    invoke-virtual {v3}, Ljava/util/Locale;->toString()Ljava/lang/String;
-
-    move-result-object v4
-
-    const-string v5, "zh_"
-
-    invoke-virtual {v4, v5}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
-
-    move-result v4
-
-    if-eqz v4, :cond_0
-
-    const-string v4, "MMMMd"
-
-    .line 532
-    invoke-static {v3, v4}, Landroid/text/format/DateFormat;->getBestDateTimePattern(Ljava/util/Locale;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v4
-
-    const-string v5, "EEE"
-
-    .line 533
-    invoke-static {v3, v5}, Landroid/text/format/DateFormat;->getBestDateTimePattern(Ljava/util/Locale;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v4, v14}, Landroid/text/format/DateFormat;->getBestDateTimePattern(Ljava/util/Locale;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
-    .line 535
-    iget-object v5, p0, Lcom/oneplus/aod/OpTextDate;->mTime:Ljava/util/Calendar;
+    .line 150
+    .local v3, "bestDateTimePattern2":Ljava/lang/String;
+    move-object/from16 v0, p0
 
-    invoke-static {v4, v5}, Landroid/text/format/DateFormat;->format(Ljava/lang/CharSequence;Ljava/util/Calendar;)Ljava/lang/CharSequence;
+    iget-object v14, v0, Lcom/oneplus/aod/OpTextDate;->mTime:Ljava/util/Calendar;
 
-    move-result-object v4
+    invoke-static {v2, v14}, Landroid/text/format/DateFormat;->format(Ljava/lang/CharSequence;Ljava/util/Calendar;)Ljava/lang/CharSequence;
 
-    invoke-interface {v4}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
+    move-result-object v14
 
-    move-result-object v4
+    invoke-interface {v14}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
 
-    .line 537
-    iget-object v5, p0, Lcom/oneplus/aod/OpTextDate;->mTime:Ljava/util/Calendar;
+    move-result-object v12
 
-    invoke-static {v3, v5}, Landroid/text/format/DateFormat;->format(Ljava/lang/CharSequence;Ljava/util/Calendar;)Ljava/lang/CharSequence;
+    .line 151
+    .local v12, "string":Ljava/lang/String;
+    move-object/from16 v0, p0
 
-    move-result-object v3
+    iget-object v14, v0, Lcom/oneplus/aod/OpTextDate;->mTime:Ljava/util/Calendar;
 
-    invoke-interface {v3}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
+    invoke-static {v3, v14}, Landroid/text/format/DateFormat;->format(Ljava/lang/CharSequence;Ljava/util/Calendar;)Ljava/lang/CharSequence;
 
-    move-result-object v3
+    move-result-object v14
 
-    .line 538
-    new-instance v5, Ljava/lang/StringBuilder;
+    invoke-interface {v14}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
 
-    invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
+    move-result-object v13
 
-    invoke-virtual {v5, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    .line 152
+    .local v13, "string2":Ljava/lang/String;
+    new-instance v11, Ljava/lang/StringBuilder;
 
-    const-string v4, " "
+    invoke-direct {v11}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {v5, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    .line 153
+    .local v11, "sb":Ljava/lang/StringBuilder;
+    invoke-virtual {v11, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v5, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    .line 154
+    const-string v14, " "
 
-    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v11, v14}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v3
+    .line 155
+    invoke-virtual {v11, v13}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    goto :goto_0
+    .line 156
+    invoke-virtual {v11}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    :cond_0
-    const-string v4, "EEE, MMM d"
+    move-result-object v10
 
-    .line 540
-    invoke-static {v3, v4}, Landroid/text/format/DateFormat;->getBestDateTimePattern(Ljava/util/Locale;Ljava/lang/String;)Ljava/lang/String;
+    .line 163
+    .end local v2    # "bestDateTimePattern":Ljava/lang/String;
+    .end local v3    # "bestDateTimePattern2":Ljava/lang/String;
+    .end local v11    # "sb":Ljava/lang/StringBuilder;
+    .end local v12    # "string":Ljava/lang/String;
+    .end local v13    # "string2":Ljava/lang/String;
+    .local v10, "s":Ljava/lang/String;
+    :goto_59
+    int-to-float v14, v8
 
-    move-result-object v3
+    move-object/from16 v0, p0
 
-    .line 541
-    iget-object v4, p0, Lcom/oneplus/aod/OpTextDate;->mTime:Ljava/util/Calendar;
+    iget v15, v0, Lcom/oneplus/aod/OpTextDate;->mDateFontBaseLineY:F
 
-    invoke-static {v3, v4}, Landroid/text/format/DateFormat;->format(Ljava/lang/CharSequence;Ljava/util/Calendar;)Ljava/lang/CharSequence;
+    move-object/from16 v0, p0
 
-    move-result-object v3
+    iget-object v0, v0, Lcom/oneplus/aod/OpTextDate;->mDatePaint:Landroid/graphics/Paint;
 
-    invoke-interface {v3}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
+    move-object/from16 v16, v0
 
-    move-result-object v3
+    move-object/from16 v0, p1
 
-    :goto_0
-    int-to-float v0, v0
+    move-object/from16 v1, v16
 
-    .line 543
-    iget v4, p0, Lcom/oneplus/aod/OpTextDate;->mDateFontBaseLineY:F
+    invoke-virtual {v0, v10, v14, v15, v1}, Landroid/graphics/Canvas;->drawText(Ljava/lang/String;FFLandroid/graphics/Paint;)V
 
-    iget-object v5, p0, Lcom/oneplus/aod/OpTextDate;->mDatePaint:Landroid/graphics/Paint;
+    .line 164
+    move-object/from16 v0, p0
 
-    invoke-virtual {p1, v3, v0, v4, v5}, Landroid/graphics/Canvas;->drawText(Ljava/lang/String;FFLandroid/graphics/Paint;)V
+    iget-object v14, v0, Lcom/oneplus/aod/OpTextDate;->mDatePaint:Landroid/graphics/Paint;
 
-    .line 544
-    iget-object p1, p0, Lcom/oneplus/aod/OpTextDate;->mDatePaint:Landroid/graphics/Paint;
+    const/4 v15, 0x0
 
-    const/4 v0, 0x0
+    invoke-virtual {v10}, Ljava/lang/String;->length()I
 
-    invoke-virtual {v3}, Ljava/lang/String;->length()I
+    move-result v16
 
-    move-result v4
+    move/from16 v0, v16
 
-    invoke-virtual {p1, v3, v0, v4, v1}, Landroid/graphics/Paint;->getTextBounds(Ljava/lang/String;IILandroid/graphics/Rect;)V
+    invoke-virtual {v14, v10, v15, v0, v9}, Landroid/graphics/Paint;->getTextBounds(Ljava/lang/String;IILandroid/graphics/Rect;)V
 
-    .line 545
-    iget-object p1, p0, Lcom/oneplus/aod/OpTextDate;->mDatePaint:Landroid/graphics/Paint;
+    .line 165
+    move-object/from16 v0, p0
 
-    invoke-virtual {p1, v3}, Landroid/graphics/Paint;->measureText(Ljava/lang/String;)F
+    iget-object v14, v0, Lcom/oneplus/aod/OpTextDate;->mDatePaint:Landroid/graphics/Paint;
 
-    move-result p1
+    invoke-virtual {v14, v10}, Landroid/graphics/Paint;->measureText(Ljava/lang/String;)F
 
-    float-to-int p1, p1
+    move-result v14
 
-    iput p1, v2, Landroid/widget/LinearLayout$LayoutParams;->width:I
+    float-to-int v14, v14
 
-    .line 547
-    iget-object p1, p0, Lcom/oneplus/aod/OpTextDate;->mDatePaint:Landroid/graphics/Paint;
+    iput v14, v7, Landroid/widget/LinearLayout$LayoutParams;->width:I
 
-    invoke-virtual {p1}, Landroid/graphics/Paint;->getFontMetrics()Landroid/graphics/Paint$FontMetrics;
+    .line 166
+    move-object/from16 v0, p0
 
-    move-result-object p1
+    iget-object v14, v0, Lcom/oneplus/aod/OpTextDate;->mDatePaint:Landroid/graphics/Paint;
 
-    .line 548
-    iget v0, p1, Landroid/graphics/Paint$FontMetrics;->bottom:F
+    invoke-virtual {v14}, Landroid/graphics/Paint;->getFontMetrics()Landroid/graphics/Paint$FontMetrics;
 
-    iget p1, p1, Landroid/graphics/Paint$FontMetrics;->top:F
+    move-result-object v5
 
-    sub-float/2addr v0, p1
+    .line 167
+    .local v5, "fontMetrics":Landroid/graphics/Paint$FontMetrics;
+    iget v14, v5, Landroid/graphics/Paint$FontMetrics;->bottom:F
 
-    float-to-double v0, v0
+    iget v15, v5, Landroid/graphics/Paint$FontMetrics;->top:F
 
-    invoke-static {v0, v1}, Ljava/lang/Math;->ceil(D)D
+    sub-float/2addr v14, v15
 
-    move-result-wide v0
+    float-to-double v14, v14
 
-    double-to-int p1, v0
+    invoke-static {v14, v15}, Ljava/lang/Math;->ceil(D)D
 
-    iput p1, v2, Landroid/widget/LinearLayout$LayoutParams;->height:I
+    move-result-wide v14
 
-    .line 549
+    double-to-int v14, v14
+
+    iput v14, v7, Landroid/widget/LinearLayout$LayoutParams;->height:I
+
+    .line 168
     invoke-static {}, Lcom/oneplus/util/OpUtils;->isMCLVersion()Z
 
-    move-result p1
+    move-result v14
 
-    if-eqz p1, :cond_1
+    if-eqz v14, :cond_a5
 
-    .line 550
-    iget p1, v2, Landroid/widget/LinearLayout$LayoutParams;->height:I
+    .line 169
+    iget v14, v7, Landroid/widget/LinearLayout$LayoutParams;->height:I
 
-    add-int/lit8 p1, p1, 0x4
+    add-int/lit8 v14, v14, 0x4
 
-    iput p1, v2, Landroid/widget/LinearLayout$LayoutParams;->height:I
+    iput v14, v7, Landroid/widget/LinearLayout$LayoutParams;->height:I
 
-    .line 552
-    :cond_1
-    invoke-virtual {p0, v2}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+    .line 171
+    :cond_a5
+    move-object/from16 v0, p0
 
+    invoke-virtual {v0, v7}, Lcom/oneplus/aod/OpTextDate;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    .line 172
     return-void
+
+    .line 159
+    .end local v5    # "fontMetrics":Landroid/graphics/Paint$FontMetrics;
+    .end local v10    # "s":Ljava/lang/String;
+    :cond_ab
+    const-string v14, "sys.aod.custom_data_format"
+
+    invoke-static {v14}, Lcom/android/wubydax/GearUtils;->getDbStringForKey(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v6
+
+    .line 160
+    .local v6, "format":Ljava/lang/String;
+    if-nez v6, :cond_b5
+
+    const-string v6, "EEE, MMM d"
+
+    .line 161
+    :cond_b5
+    invoke-static {v4, v6}, Landroid/text/format/DateFormat;->getBestDateTimePattern(Ljava/util/Locale;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v14
+
+    move-object/from16 v0, p0
+
+    iget-object v15, v0, Lcom/oneplus/aod/OpTextDate;->mTime:Ljava/util/Calendar;
+
+    invoke-static {v14, v15}, Landroid/text/format/DateFormat;->format(Ljava/lang/CharSequence;Ljava/util/Calendar;)Ljava/lang/CharSequence;
+
+    move-result-object v14
+
+    invoke-interface {v14}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
+
+    move-result-object v10
+
+    .restart local v10    # "s":Ljava/lang/String;
+    goto :goto_59
 .end method
 
 .method private init()V

@@ -30,6 +30,27 @@
     return v0
 .end method
 
+.method public static getDbStringForKey(Ljava/lang/String;)Ljava/lang/String;
+    .registers 2
+    .param p0, "s"    # Ljava/lang/String;
+
+    .prologue
+    .line 13
+    invoke-static {}, Lcom/android/systemui/SystemUIApplication;->getContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object v0
+
+    invoke-static {v0, p0}, Landroid/provider/Settings$System;->getString(Landroid/content/ContentResolver;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
 .method public static getIdentifier(Ljava/lang/String;Ljava/lang/String;)I
     .locals 5
 
