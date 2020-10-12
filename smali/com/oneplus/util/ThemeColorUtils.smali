@@ -42,7 +42,7 @@
 
 .field private static sCurrentTheme:I = -0x1
 
-.field private static sSpecialTheme:Z = false
+.field private static sSpecialTheme:Z
 
 .field private static sThemeName:[Ljava/lang/String;
 

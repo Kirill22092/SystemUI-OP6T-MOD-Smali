@@ -556,6 +556,8 @@
     <public type="array" name="wifi_status_with_ssid" id="0x7f030139" />
     <public type="array" name="window_animation_scale_entries" id="0x7f03013a" />
     <public type="array" name="window_animation_scale_values" id="0x7f03013b" />
+    <public type="array" name="text_clock_hours_array" id="0x7f03013c" />
+    <public type="array" name="text_clock_minutes_array" id="0x7f03013d" />
     <public type="attr" name="OPAlertDialogStyle" id="0x7f040000" />
     <public type="attr" name="OPEditTextStyle" id="0x7f040001" />
     <public type="attr" name="OPFloatingActionButtonStyle" id="0x7f040002" />
@@ -2808,6 +2810,7 @@
     <public type="color" name="yellow_a400" id="0x7f0604ac" />
     <public type="color" name="yellow_a700" id="0x7f0604ad" />
     <public type="color" name="zen_introduction" id="0x7f0604ae" />
+    <public type="color" name="custom_text_clock_top_color" id="0x7f0604af" />
     <public type="dimen" name="G" id="0x7f070000" />
     <public type="dimen" name="ab_double_subhead" id="0x7f070001" />
     <public type="dimen" name="ab_double_title" id="0x7f070002" />
@@ -9928,6 +9931,7 @@
     <public type="id" name="zen_mode_panel" id="0x7f0a0552" />
     <public type="id" name="zen_radio_buttons" id="0x7f0a0553" />
     <public type="id" name="zen_radio_buttons_content" id="0x7f0a0554" />
+    <public type="id" name="custom_textclock_view" id="0x7f0a0555" />
     <public type="integer" name="abc_config_activityDefaultDur" id="0x7f0b0000" />
     <public type="integer" name="abc_config_activityShortDur" id="0x7f0b0001" />
     <public type="integer" name="ambient_notification_decay" id="0x7f0b0002" />
@@ -10714,6 +10718,7 @@
     <public type="plurals" name="snoozeMinuteOptions" id="0x7f0f0011" />
     <public type="plurals" name="user_limit_reached_message" id="0x7f0f0012" />
     <public type="plurals" name="wifi_tether_connected_summary" id="0x7f0f0013" />
+    <public type="plurals" name="text_clock_header" id="0x7f0f0014" />
     <public type="raw" name="charging" id="0x7f100000" />
     <public type="raw" name="image_wallpaper_fragment_shader" id="0x7f100001" />
     <public type="raw" name="image_wallpaper_vertex_shader" id="0x7f100002" />
@@ -12647,6 +12652,94 @@
     <public type="string" name="zen_priority_introduction" id="0x7f110786" />
     <public type="string" name="zen_silence_introduction" id="0x7f110787" />
     <public type="string" name="zen_silence_introduction_voice" id="0x7f110788" />
+    <public type="string" name="text_clock_string_format" id="0x7f110789" />
+    <public type="string" name="text_clock_header_one" id="0x7f11078a" />
+    <public type="string" name="text_clock_hours_midnight" id="0x7f11078b" />
+    <public type="string" name="text_clock_hours_one" id="0x7f11078c" />
+    <public type="string" name="text_clock_hours_two" id="0x7f11078d" />
+    <public type="string" name="text_clock_hours_three" id="0x7f11078e" />
+    <public type="string" name="text_clock_hours_four" id="0x7f11078f" />
+    <public type="string" name="text_clock_hours_five" id="0x7f110790" />
+    <public type="string" name="text_clock_hours_six" id="0x7f110791" />
+    <public type="string" name="text_clock_hours_seven" id="0x7f110792" />
+    <public type="string" name="text_clock_hours_eight" id="0x7f110793" />
+    <public type="string" name="text_clock_hours_nine" id="0x7f110794" />
+    <public type="string" name="text_clock_hours_ten" id="0x7f110795" />
+    <public type="string" name="text_clock_hours_eleven" id="0x7f110796" />
+    <public type="string" name="text_clock_hours_twelve" id="0x7f110797" />
+    <public type="string" name="text_clock_hours_thirteen" id="0x7f110798" />
+    <public type="string" name="text_clock_hours_fourteen" id="0x7f110799" />
+    <public type="string" name="text_clock_hours_fifteen" id="0x7f11079a" />
+    <public type="string" name="text_clock_hours_sixteen" id="0x7f11079b" />
+    <public type="string" name="text_clock_hours_seventeen" id="0x7f11079c" />
+    <public type="string" name="text_clock_hours_eighteen" id="0x7f11079d" />
+    <public type="string" name="text_clock_hours_nineteen" id="0x7f11079e" />
+    <public type="string" name="text_clock_hours_twenty" id="0x7f11079f" />
+    <public type="string" name="text_clock_hours_twentyone" id="0x7f1107a0" />
+    <public type="string" name="text_clock_hours_twentytwo" id="0x7f1107a1" />
+    <public type="string" name="text_clock_hours_twentythree" id="0x7f1107a2" />
+    <public type="string" name="text_clock_minutes_zero" id="0x7f1107a3" />
+    <public type="string" name="text_clock_minutes_one" id="0x7f1107a4" />
+    <public type="string" name="text_clock_minutes_two" id="0x7f1107a5" />
+    <public type="string" name="text_clock_minutes_three" id="0x7f1107a6" />
+    <public type="string" name="text_clock_minutes_four" id="0x7f1107a7" />
+    <public type="string" name="text_clock_minutes_five" id="0x7f1107a8" />
+    <public type="string" name="text_clock_minutes_six" id="0x7f1107a9" />
+    <public type="string" name="text_clock_minutes_seven" id="0x7f1107aa" />
+    <public type="string" name="text_clock_minutes_eight" id="0x7f1107ab" />
+    <public type="string" name="text_clock_minutes_nine" id="0x7f1107ac" />
+    <public type="string" name="text_clock_minutes_ten" id="0x7f1107ad" />
+    <public type="string" name="text_clock_minutes_eleven" id="0x7f1107ae" />
+    <public type="string" name="text_clock_minutes_twelve" id="0x7f1107af" />
+    <public type="string" name="text_clock_minutes_thirteen" id="0x7f1107b0" />
+    <public type="string" name="text_clock_minutes_fourteen" id="0x7f1107b1" />
+    <public type="string" name="text_clock_minutes_fifteen" id="0x7f1107b2" />
+    <public type="string" name="text_clock_minutes_sixteen" id="0x7f1107b3" />
+    <public type="string" name="text_clock_minutes_seventeen" id="0x7f1107b4" />
+    <public type="string" name="text_clock_minutes_eighteen" id="0x7f1107b5" />
+    <public type="string" name="text_clock_minutes_nineteen" id="0x7f1107b6" />
+    <public type="string" name="text_clock_minutes_twenty" id="0x7f1107b7" />
+    <public type="string" name="text_clock_minutes_twentyone" id="0x7f1107b8" />
+    <public type="string" name="text_clock_minutes_twentytwo" id="0x7f1107b9" />
+    <public type="string" name="text_clock_minutes_twentythree" id="0x7f1107ba" />
+    <public type="string" name="text_clock_minutes_twentyfour" id="0x7f1107bb" />
+    <public type="string" name="text_clock_minutes_twentyfive" id="0x7f1107bc" />
+    <public type="string" name="text_clock_minutes_twentysix" id="0x7f1107bd" />
+    <public type="string" name="text_clock_minutes_twentyseven" id="0x7f1107be" />
+    <public type="string" name="text_clock_minutes_twentyeight" id="0x7f1107bf" />
+    <public type="string" name="text_clock_minutes_twentynine" id="0x7f1107c0" />
+    <public type="string" name="text_clock_minutes_thirty" id="0x7f1107c1" />
+    <public type="string" name="text_clock_minutes_thirtyone" id="0x7f1107c2" />
+    <public type="string" name="text_clock_minutes_thirtytwo" id="0x7f1107c3" />
+    <public type="string" name="text_clock_minutes_thirtythree" id="0x7f1107c4" />
+    <public type="string" name="text_clock_minutes_thirtyfour" id="0x7f1107c5" />
+    <public type="string" name="text_clock_minutes_thirtyfive" id="0x7f1107c6" />
+    <public type="string" name="text_clock_minutes_thirtysix" id="0x7f1107c7" />
+    <public type="string" name="text_clock_minutes_thirtyseven" id="0x7f1107c8" />
+    <public type="string" name="text_clock_minutes_thirtyeight" id="0x7f1107c9" />
+    <public type="string" name="text_clock_minutes_thirtynine" id="0x7f1107ca" />
+    <public type="string" name="text_clock_minutes_forty" id="0x7f1107cb" />
+    <public type="string" name="text_clock_minutes_fortyone" id="0x7f1107cc" />
+    <public type="string" name="text_clock_minutes_fortytwo" id="0x7f1107cd" />
+    <public type="string" name="text_clock_minutes_fortythree" id="0x7f1107ce" />
+    <public type="string" name="text_clock_minutes_fortyfour" id="0x7f1107cf" />
+    <public type="string" name="text_clock_minutes_fortyfive" id="0x7f1107d0" />
+    <public type="string" name="text_clock_minutes_fortysix" id="0x7f1107d1" />
+    <public type="string" name="text_clock_minutes_fortyseven" id="0x7f1107d2" />
+    <public type="string" name="text_clock_minutes_fortyeight" id="0x7f1107d3" />
+    <public type="string" name="text_clock_minutes_fortynine" id="0x7f1107d4" />
+    <public type="string" name="text_clock_minutes_fifty" id="0x7f1107d5" />
+    <public type="string" name="text_clock_minutes_fiftyone" id="0x7f1107d6" />
+    <public type="string" name="text_clock_minutes_fiftytwo" id="0x7f1107d7" />
+    <public type="string" name="text_clock_minutes_fiftythree" id="0x7f1107d8" />
+    <public type="string" name="text_clock_minutes_fiftyfour" id="0x7f1107d9" />
+    <public type="string" name="text_clock_minutes_fiftyfive" id="0x7f1107da" />
+    <public type="string" name="text_clock_minutes_fiftysix" id="0x7f1107db" />
+    <public type="string" name="text_clock_minutes_fiftyseven" id="0x7f1107dc" />
+    <public type="string" name="text_clock_minutes_fiftyeight" id="0x7f1107dd" />
+    <public type="string" name="text_clock_minutes_fiftynine" id="0x7f1107de" />
+    <public type="string" name="text_clock_header_few" id="0x7f1107df" />
+    <public type="string" name="text_clock_header_multiple" id="0x7f1107e0" />
     <public type="string" name="toast_rotation_locked" id="0x7f11068d" />
     <public type="string" name="notifications_off_text" id="0x7f11046a" />
     <public type="string" name="notifications_off_title" id="0x7f11046b" />

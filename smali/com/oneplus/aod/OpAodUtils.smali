@@ -337,7 +337,7 @@
 .end method
 
 .method public static isNotificationLightEnabled()Z
-    .registers 3
+    .locals 3
 
     .prologue
     const/4 v0, 0x1
@@ -351,15 +351,15 @@
 
     move-result v2
 
-    if-ne v2, v0, :cond_b
+    if-ne v2, v0, :cond_0
 
-    :goto_a
+    :goto_0
     return v0
 
-    :cond_b
+    :cond_0
     move v0, v1
 
-    goto :goto_a
+    goto :goto_0
 .end method
 
 .method public static isNotificationWakeUpEnabled()Z

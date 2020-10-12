@@ -4,7 +4,7 @@
 
 
 # static fields
-.field private static sCompatVectorFromResourcesEnabled:Z = false
+.field private static sCompatVectorFromResourcesEnabled:Z
 
 
 # instance fields

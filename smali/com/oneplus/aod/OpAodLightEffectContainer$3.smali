@@ -23,7 +23,7 @@
 
 # direct methods
 .method constructor <init>(Lcom/oneplus/aod/OpAodLightEffectContainer;)V
-    .registers 2
+    .locals 0
     .param p1, "this$0"    # Lcom/oneplus/aod/OpAodLightEffectContainer;
 
     .prologue
@@ -38,7 +38,7 @@
 
 # virtual methods
 .method public run()V
-    .registers 11
+    .locals 10
 
     .prologue
     const-wide/16 v8, 0x10
@@ -58,7 +58,7 @@
 
     move-result v0
 
-    if-ltz v0, :cond_36
+    if-ltz v0, :cond_0
 
     iget-object v0, p0, Lcom/oneplus/aod/OpAodLightEffectContainer$3;->this$0:Lcom/oneplus/aod/OpAodLightEffectContainer;
 
@@ -74,7 +74,7 @@
 
     array-length v2, v2
 
-    if-ge v0, v2, :cond_36
+    if-ge v0, v2, :cond_0
 
     .line 138
     iget-object v0, p0, Lcom/oneplus/aod/OpAodLightEffectContainer$3;->this$0:Lcom/oneplus/aod/OpAodLightEffectContainer;
@@ -100,14 +100,14 @@
     invoke-virtual {v0, v2}, Landroid/widget/ImageView;->setImageBitmap(Landroid/graphics/Bitmap;)V
 
     .line 140
-    :cond_36
+    :cond_0
     iget-object v0, p0, Lcom/oneplus/aod/OpAodLightEffectContainer$3;->this$0:Lcom/oneplus/aod/OpAodLightEffectContainer;
 
     invoke-static {v0}, Lcom/oneplus/aod/OpAodLightEffectContainer;->access$000(Lcom/oneplus/aod/OpAodLightEffectContainer;)I
 
     move-result v0
 
-    if-ltz v0, :cond_64
+    if-ltz v0, :cond_1
 
     iget-object v0, p0, Lcom/oneplus/aod/OpAodLightEffectContainer$3;->this$0:Lcom/oneplus/aod/OpAodLightEffectContainer;
 
@@ -123,7 +123,7 @@
 
     array-length v2, v2
 
-    if-ge v0, v2, :cond_64
+    if-ge v0, v2, :cond_1
 
     .line 141
     iget-object v0, p0, Lcom/oneplus/aod/OpAodLightEffectContainer$3;->this$0:Lcom/oneplus/aod/OpAodLightEffectContainer;
@@ -149,7 +149,7 @@
     invoke-virtual {v0, v2}, Landroid/widget/ImageView;->setImageBitmap(Landroid/graphics/Bitmap;)V
 
     .line 143
-    :cond_64
+    :cond_1
     iget-object v0, p0, Lcom/oneplus/aod/OpAodLightEffectContainer$3;->this$0:Lcom/oneplus/aod/OpAodLightEffectContainer;
 
     invoke-static {v0}, Lcom/oneplus/aod/OpAodLightEffectContainer;->access$000(Lcom/oneplus/aod/OpAodLightEffectContainer;)I
@@ -158,7 +158,7 @@
 
     const/16 v2, 0x64
 
-    if-ge v0, v2, :cond_f3
+    if-ge v0, v2, :cond_7
 
     .line 144
     const-string v0, "sys.aod.app_color_unlock"
@@ -167,7 +167,7 @@
 
     move-result v0
 
-    if-eq v0, v4, :cond_7e
+    if-eq v0, v4, :cond_2
 
     const-string v0, "sys.aod.custom_color_unlock"
 
@@ -175,17 +175,17 @@
 
     move-result v0
 
-    if-ne v0, v4, :cond_e0
+    if-ne v0, v4, :cond_6
 
     .line 145
-    :cond_7e
+    :cond_2
     const-string v0, "sys.aod.app_color_unlock"
 
     invoke-static {v0, v5}, Lcom/android/wubydax/GearUtils;->getDbIntForKey(Ljava/lang/String;I)I
 
     move-result v0
 
-    if-ne v0, v4, :cond_b5
+    if-ne v0, v4, :cond_5
 
     .line 146
     iget-object v0, p0, Lcom/oneplus/aod/OpAodLightEffectContainer$3;->this$0:Lcom/oneplus/aod/OpAodLightEffectContainer;
@@ -214,8 +214,8 @@
     invoke-virtual {v0, v1, v2}, Landroid/widget/ImageView;->setColorFilter(ILandroid/graphics/PorterDuff$Mode;)V
 
     .line 157
-    :cond_a0
-    :goto_a0
+    :cond_3
+    :goto_0
     iget-object v0, p0, Lcom/oneplus/aod/OpAodLightEffectContainer$3;->this$0:Lcom/oneplus/aod/OpAodLightEffectContainer;
 
     invoke-static {v0}, Lcom/oneplus/aod/OpAodLightEffectContainer;->access$600(Lcom/oneplus/aod/OpAodLightEffectContainer;)Landroid/os/Handler;
@@ -231,8 +231,8 @@
     invoke-virtual {v0, v1, v8, v9}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
 
     .line 170
-    :cond_af
-    :goto_af
+    :cond_4
+    :goto_1
     iget-object v0, p0, Lcom/oneplus/aod/OpAodLightEffectContainer$3;->this$0:Lcom/oneplus/aod/OpAodLightEffectContainer;
 
     invoke-static {v0}, Lcom/oneplus/aod/OpAodLightEffectContainer;->access$008(Lcom/oneplus/aod/OpAodLightEffectContainer;)I
@@ -241,14 +241,14 @@
     return-void
 
     .line 148
-    :cond_b5
+    :cond_5
     const-string v0, "sys.aod.custom_color_unlock"
 
     invoke-static {v0, v5}, Lcom/android/wubydax/GearUtils;->getDbIntForKey(Ljava/lang/String;I)I
 
     move-result v0
 
-    if-ne v0, v4, :cond_a0
+    if-ne v0, v4, :cond_3
 
     .line 149
     iget-object v0, p0, Lcom/oneplus/aod/OpAodLightEffectContainer$3;->this$0:Lcom/oneplus/aod/OpAodLightEffectContainer;
@@ -284,10 +284,10 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/widget/ImageView;->setColorFilter(ILandroid/graphics/PorterDuff$Mode;)V
 
-    goto :goto_a0
+    goto :goto_0
 
     .line 154
-    :cond_e0
+    :cond_6
     iget-object v0, p0, Lcom/oneplus/aod/OpAodLightEffectContainer$3;->this$0:Lcom/oneplus/aod/OpAodLightEffectContainer;
 
     invoke-static {v0}, Lcom/oneplus/aod/OpAodLightEffectContainer;->access$200(Lcom/oneplus/aod/OpAodLightEffectContainer;)Landroid/widget/ImageView;
@@ -305,10 +305,10 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setColorFilter(Landroid/graphics/ColorFilter;)V
 
-    goto :goto_a0
+    goto :goto_0
 
     .line 160
-    :cond_f3
+    :cond_7
     iget-object v0, p0, Lcom/oneplus/aod/OpAodLightEffectContainer$3;->this$0:Lcom/oneplus/aod/OpAodLightEffectContainer;
 
     invoke-static {v0}, Lcom/oneplus/aod/OpAodLightEffectContainer;->access$200(Lcom/oneplus/aod/OpAodLightEffectContainer;)Landroid/widget/ImageView;
@@ -339,7 +339,7 @@
 
     move-result v0
 
-    if-lez v0, :cond_117
+    if-lez v0, :cond_8
 
     .line 163
     iget-object v0, p0, Lcom/oneplus/aod/OpAodLightEffectContainer$3;->this$0:Lcom/oneplus/aod/OpAodLightEffectContainer;
@@ -347,14 +347,14 @@
     invoke-static {v0}, Lcom/oneplus/aod/OpAodLightEffectContainer;->access$708(Lcom/oneplus/aod/OpAodLightEffectContainer;)I
 
     .line 165
-    :cond_117
+    :cond_8
     const-string v0, "tweaks_edge_notif_repeat_count"
 
     invoke-static {v0, v4}, Lcom/android/wubydax/GearUtils;->getDbIntForKey(Ljava/lang/String;I)I
 
     move-result v0
 
-    if-eqz v0, :cond_12d
+    if-eqz v0, :cond_9
 
     iget-object v0, p0, Lcom/oneplus/aod/OpAodLightEffectContainer$3;->this$0:Lcom/oneplus/aod/OpAodLightEffectContainer;
 
@@ -368,10 +368,10 @@
 
     move-result v1
 
-    if-gt v0, v1, :cond_af
+    if-gt v0, v1, :cond_4
 
     .line 166
-    :cond_12d
+    :cond_9
     iget-object v0, p0, Lcom/oneplus/aod/OpAodLightEffectContainer$3;->this$0:Lcom/oneplus/aod/OpAodLightEffectContainer;
 
     const/4 v1, -0x1
@@ -393,5 +393,5 @@
 
     invoke-virtual {v0, v1, v8, v9}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    goto/16 :goto_af
+    goto/16 :goto_1
 .end method

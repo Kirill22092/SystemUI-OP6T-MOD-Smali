@@ -20,7 +20,7 @@
 
 # direct methods
 .method constructor <init>(Lcom/oneplus/aod/OpAodLightEffectContainer;Landroid/os/Looper;)V
-    .registers 3
+    .locals 0
     .param p1, "this$0"    # Lcom/oneplus/aod/OpAodLightEffectContainer;
     .param p2, "arg0"    # Landroid/os/Looper;
 
@@ -36,7 +36,7 @@
 
 # virtual methods
 .method public handleMessage(Landroid/os/Message;)V
-    .registers 5
+    .locals 3
     .param p1, "message"    # Landroid/os/Message;
         .annotation build Lorg/jetbrains/annotations/NotNull;
         .end annotation
@@ -51,7 +51,7 @@
     .line 323
     iget v0, p1, Landroid/os/Message;->what:I
 
-    if-ne v0, v2, :cond_21
+    if-ne v0, v2, :cond_0
 
     iget-object v0, p0, Lcom/oneplus/aod/OpAodLightEffectContainer$6;->this$0:Lcom/oneplus/aod/OpAodLightEffectContainer;
 
@@ -61,7 +61,7 @@
 
     const/16 v1, 0x64
 
-    if-ge v0, v1, :cond_21
+    if-ge v0, v1, :cond_0
 
     .line 324
     iget-object v0, p0, Lcom/oneplus/aod/OpAodLightEffectContainer$6;->this$0:Lcom/oneplus/aod/OpAodLightEffectContainer;
@@ -78,6 +78,6 @@
     invoke-static {v0}, Lcom/oneplus/aod/OpAodLightEffectContainer;->access$1000(Lcom/oneplus/aod/OpAodLightEffectContainer;)V
 
     .line 327
-    :cond_21
+    :cond_0
     return-void
 .end method

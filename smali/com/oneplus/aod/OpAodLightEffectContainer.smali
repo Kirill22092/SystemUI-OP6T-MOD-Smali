@@ -1129,7 +1129,7 @@
 .end method
 
 .method public showLight()V
-    .registers 9
+    .locals 8
 
     .prologue
     const/4 v7, 0x0
@@ -1145,7 +1145,7 @@
 
     const/16 v3, 0xa
 
-    if-ne v2, v3, :cond_2a
+    if-ne v2, v3, :cond_2
 
     .line 433
     invoke-direct {p0}, Lcom/oneplus/aod/OpAodLightEffectContainer;->prepareResources()V
@@ -1155,14 +1155,14 @@
 
     .line 435
     .local v0, "mAnimateIndex":I
-    if-lez v0, :cond_17
+    if-lez v0, :cond_0
 
     const/16 v2, 0x64
 
-    if-lt v0, v2, :cond_29
+    if-lt v0, v2, :cond_1
 
     .line 436
-    :cond_17
+    :cond_0
     iput v4, p0, Lcom/oneplus/aod/OpAodLightEffectContainer;->mRepeatCount:I
 
     .line 437
@@ -1183,12 +1183,12 @@
 
     .line 462
     .end local v0    # "mAnimateIndex":I
-    :cond_29
-    :goto_29
+    :cond_1
+    :goto_0
     return-void
 
     .line 442
-    :cond_2a
+    :cond_2
     const/high16 v2, 0x3f800000    # 1.0f
 
     invoke-virtual {p0, v2}, Lcom/oneplus/aod/OpAodLightEffectContainer;->setAlpha(F)V
@@ -1198,25 +1198,25 @@
 
     .line 444
     .local v1, "mLightAnimator":Landroid/animation/ValueAnimator;
-    if-eqz v1, :cond_3b
+    if-eqz v1, :cond_3
 
-    if-eqz v1, :cond_29
+    if-eqz v1, :cond_1
 
     invoke-virtual {v1}, Landroid/animation/ValueAnimator;->isRunning()Z
 
     move-result v2
 
-    if-nez v2, :cond_29
+    if-nez v2, :cond_1
 
     .line 445
-    :cond_3b
+    :cond_3
     const-string v2, "sys.aod.app_color_unlock"
 
     invoke-static {v2, v5}, Lcom/android/wubydax/GearUtils;->getDbIntForKey(Ljava/lang/String;I)I
 
     move-result v2
 
-    if-eq v2, v4, :cond_4b
+    if-eq v2, v4, :cond_4
 
     const-string v2, "sys.aod.custom_color_unlock"
 
@@ -1224,17 +1224,17 @@
 
     move-result v2
 
-    if-ne v2, v4, :cond_8f
+    if-ne v2, v4, :cond_7
 
     .line 446
-    :cond_4b
+    :cond_4
     const-string v2, "sys.aod.app_color_unlock"
 
     invoke-static {v2, v5}, Lcom/android/wubydax/GearUtils;->getDbIntForKey(Ljava/lang/String;I)I
 
     move-result v2
 
-    if-ne v2, v4, :cond_6c
+    if-ne v2, v4, :cond_6
 
     .line 447
     iget-object v2, p0, Lcom/oneplus/aod/OpAodLightEffectContainer;->mLeftView:Landroid/widget/ImageView;
@@ -1255,24 +1255,24 @@
     invoke-virtual {v2, v3, v4}, Landroid/widget/ImageView;->setColorFilter(ILandroid/graphics/PorterDuff$Mode;)V
 
     .line 458
-    :cond_65
-    :goto_65
+    :cond_5
+    :goto_1
     invoke-direct {p0}, Lcom/oneplus/aod/OpAodLightEffectContainer;->loadResources()V
 
     .line 459
     invoke-direct {p0}, Lcom/oneplus/aod/OpAodLightEffectContainer;->animateNotification()V
 
-    goto :goto_29
+    goto :goto_0
 
     .line 449
-    :cond_6c
+    :cond_6
     const-string v2, "sys.aod.custom_color_unlock"
 
     invoke-static {v2, v5}, Lcom/android/wubydax/GearUtils;->getDbIntForKey(Ljava/lang/String;I)I
 
     move-result v2
 
-    if-ne v2, v4, :cond_65
+    if-ne v2, v4, :cond_5
 
     .line 450
     iget-object v2, p0, Lcom/oneplus/aod/OpAodLightEffectContainer;->mLeftView:Landroid/widget/ImageView;
@@ -1300,10 +1300,10 @@
 
     invoke-virtual {v2, v3, v4}, Landroid/widget/ImageView;->setColorFilter(ILandroid/graphics/PorterDuff$Mode;)V
 
-    goto :goto_65
+    goto :goto_1
 
     .line 455
-    :cond_8f
+    :cond_7
     iget-object v2, p0, Lcom/oneplus/aod/OpAodLightEffectContainer;->mLeftView:Landroid/widget/ImageView;
 
     invoke-virtual {v2, v7}, Landroid/widget/ImageView;->setColorFilter(Landroid/graphics/ColorFilter;)V
@@ -1313,5 +1313,5 @@
 
     invoke-virtual {v2, v7}, Landroid/widget/ImageView;->setColorFilter(Landroid/graphics/ColorFilter;)V
 
-    goto :goto_65
+    goto :goto_1
 .end method

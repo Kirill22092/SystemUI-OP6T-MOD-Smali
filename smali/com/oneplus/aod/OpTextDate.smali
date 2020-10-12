@@ -404,7 +404,7 @@
 .end method
 
 .method private drawText(Landroid/graphics/Canvas;)V
-    .registers 19
+    .locals 17
     .param p1, "canvas"    # Landroid/graphics/Canvas;
 
     .prologue
@@ -447,7 +447,7 @@
 
     move-result v14
 
-    if-eqz v14, :cond_ab
+    if-eqz v14, :cond_1
 
     .line 148
     const-string v14, "MMMMd"
@@ -522,7 +522,7 @@
     .end local v12    # "string":Ljava/lang/String;
     .end local v13    # "string2":Ljava/lang/String;
     .local v10, "s":Ljava/lang/String;
-    :goto_59
+    :goto_0
     int-to-float v14, v8
 
     move-object/from16 v0, p0
@@ -601,7 +601,7 @@
 
     move-result v14
 
-    if-eqz v14, :cond_a5
+    if-eqz v14, :cond_0
 
     .line 169
     iget v14, v7, Landroid/widget/LinearLayout$LayoutParams;->height:I
@@ -611,7 +611,7 @@
     iput v14, v7, Landroid/widget/LinearLayout$LayoutParams;->height:I
 
     .line 171
-    :cond_a5
+    :cond_0
     move-object/from16 v0, p0
 
     invoke-virtual {v0, v7}, Lcom/oneplus/aod/OpTextDate;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
@@ -622,7 +622,7 @@
     .line 159
     .end local v5    # "fontMetrics":Landroid/graphics/Paint$FontMetrics;
     .end local v10    # "s":Ljava/lang/String;
-    :cond_ab
+    :cond_1
     const-string v14, "sys.aod.custom_data_format"
 
     invoke-static {v14}, Lcom/android/wubydax/GearUtils;->getDbStringForKey(Ljava/lang/String;)Ljava/lang/String;
@@ -631,12 +631,12 @@
 
     .line 160
     .local v6, "format":Ljava/lang/String;
-    if-nez v6, :cond_b5
+    if-nez v6, :cond_2
 
     const-string v6, "EEE, MMM d"
 
     .line 161
-    :cond_b5
+    :cond_2
     invoke-static {v4, v6}, Landroid/text/format/DateFormat;->getBestDateTimePattern(Ljava/util/Locale;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v14
@@ -654,7 +654,7 @@
     move-result-object v10
 
     .restart local v10    # "s":Ljava/lang/String;
-    goto :goto_59
+    goto :goto_0
 .end method
 
 .method private init()V

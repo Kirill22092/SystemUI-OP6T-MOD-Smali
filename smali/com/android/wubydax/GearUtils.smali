@@ -31,7 +31,7 @@
 .end method
 
 .method public static getDbStringForKey(Ljava/lang/String;)Ljava/lang/String;
-    .registers 2
+    .locals 1
     .param p0, "s"    # Ljava/lang/String;
 
     .prologue

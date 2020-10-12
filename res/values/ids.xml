@@ -1224,4 +1224,5 @@
     <item type="id" name="zen_mode_panel" />
     <item type="id" name="zen_radio_buttons" />
     <item type="id" name="zen_radio_buttons_content" />
+    <item type="id" name="custom_textclock_view" />
 </resources>

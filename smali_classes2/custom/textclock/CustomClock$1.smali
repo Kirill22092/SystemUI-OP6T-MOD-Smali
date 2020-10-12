@@ -20,7 +20,7 @@
 
 # direct methods
 .method constructor <init>(Lcustom/textclock/CustomClock;)V
-    .registers 2
+    .locals 0
     .param p1, "this$0"    # Lcustom/textclock/CustomClock;
 
     .prologue
@@ -35,7 +35,7 @@
 
 # virtual methods
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
-    .registers 7
+    .locals 4
     .param p1, "context"    # Landroid/content/Context;
     .param p2, "intent"    # Landroid/content/Intent;
 
@@ -51,7 +51,7 @@
 
     move-result v2
 
-    if-eqz v2, :cond_21
+    if-eqz v2, :cond_1
 
     .line 56
     iget-object v2, p0, Lcustom/textclock/CustomClock$1;->this$0:Lcustom/textclock/CustomClock;
@@ -74,12 +74,12 @@
     invoke-virtual {v2}, Lcustom/textclock/CustomClock;->onTimeChanged()V
 
     .line 69
-    :cond_20
-    :goto_20
+    :cond_0
+    :goto_0
     return-void
 
     .line 59
-    :cond_21
+    :cond_1
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v2
@@ -90,7 +90,7 @@
 
     move-result v2
 
-    if-nez v2, :cond_39
+    if-nez v2, :cond_2
 
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
@@ -102,10 +102,10 @@
 
     move-result v2
 
-    if-eqz v2, :cond_20
+    if-eqz v2, :cond_0
 
     .line 60
-    :cond_39
+    :cond_2
     iget-object v2, p0, Lcustom/textclock/CustomClock$1;->this$0:Lcustom/textclock/CustomClock;
 
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -175,5 +175,5 @@
 
     invoke-virtual {v2}, Lcustom/textclock/CustomClock;->onTimeChanged()V
 
-    goto :goto_20
+    goto :goto_0
 .end method

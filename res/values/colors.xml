@@ -1074,4 +1074,5 @@
     <color name="yellow_a400">#ffffc822</color>
     <color name="yellow_a700">#ffffc30f</color>
     <color name="zen_introduction">#ffffffff</color>
+    <color name="custom_text_clock_top_color">#ff33b5e5</color>
 </resources>

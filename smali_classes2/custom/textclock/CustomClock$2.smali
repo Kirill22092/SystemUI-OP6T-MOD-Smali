@@ -23,7 +23,7 @@
 
 # direct methods
 .method constructor <init>(Lcustom/textclock/CustomClock;)V
-    .registers 2
+    .locals 0
     .param p1, "this$0"    # Lcustom/textclock/CustomClock;
 
     .prologue
@@ -38,7 +38,7 @@
 
 # virtual methods
 .method public run()V
-    .registers 9
+    .locals 8
 
     .prologue
     const-wide/16 v6, 0x3e8

@@ -8,7 +8,7 @@
 
 .field public static MODE_FULL:I = 0x66
 
-.field private static mIsFullScreenMode:Z = false
+.field private static mIsFullScreenMode:Z
 
 
 # instance fields

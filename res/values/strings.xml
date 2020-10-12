@@ -696,7 +696,7 @@ If you resume, charges may apply for data usage."</string>
     <string name="force_rtl_layout_all_locales">Force RTL layout direction</string>
     <string name="force_rtl_layout_all_locales_summary">Force screen layout direction to RTL for all locales</string>
     <string name="forced_resizable_secondary_display">App may not work on a secondary display.</string>
-    <string name="global_action_emergency">@android:string/global_actions_airplane_mode_on_status</string>
+    <string name="global_action_emergency">@android:string/granularity_label_word</string>
     <string name="global_action_screenshot">Screenshot</string>
     <string name="go_to_web">Go to browser</string>
     <string name="got_it">Got it</string>
@@ -1717,7 +1717,7 @@ be monitored"</string>
     <string name="switch_bar_off">Off</string>
     <string name="switch_bar_on">On</string>
     <string name="system_ui_aod_date_pattern">eeeMMMd</string>
-    <string name="system_ui_date_pattern">@android:string/time_picker_minute_label</string>
+    <string name="system_ui_date_pattern">@android:string/unsupported_display_size_show</string>
     <string name="system_ui_tuner">System UI Tuner</string>
     <string name="tag_status_bar">statusBar</string>
     <string name="tap_to_sign_up">Tap to sign up</string>
@@ -2018,4 +2018,133 @@ Credential storage might not enable"</string>
     <string name="zen_priority_introduction">"You won't be disturbed by sounds and vibrations, except from alarms, reminders, events, and callers you specify. You'll still hear anything you choose to play including music, videos, and games."</string>
     <string name="zen_silence_introduction">This blocks ALL sounds and vibrations, including from alarms, music, videos, and games.</string>
     <string name="zen_silence_introduction_voice">"This blocks ALL sounds and vibrations, including from alarms, music, videos, and games. You'll still be able to make phone calls."</string>
+    <string name="text_clock_string_format"><annotation name="header_color">"^1
+"</annotation>"^2
+^3"</string>
+    <string name="text_clock_header_one">"It's"</string>
+    <string name="text_clock_hours_midnight">Midnight</string>
+    <string name="text_clock_hours_one">One</string>
+    <string name="text_clock_hours_two">Two</string>
+    <string name="text_clock_hours_three">Three</string>
+    <string name="text_clock_hours_four">Four</string>
+    <string name="text_clock_hours_five">Five</string>
+    <string name="text_clock_hours_six">Six</string>
+    <string name="text_clock_hours_seven">Seven</string>
+    <string name="text_clock_hours_eight">Eight</string>
+    <string name="text_clock_hours_nine">Nine</string>
+    <string name="text_clock_hours_ten">Ten</string>
+    <string name="text_clock_hours_eleven">Eleven</string>
+    <string name="text_clock_hours_twelve">Twelve</string>
+    <string name="text_clock_hours_thirteen">Thirteen</string>
+    <string name="text_clock_hours_fourteen">Fourteen</string>
+    <string name="text_clock_hours_fifteen">Fifteen</string>
+    <string name="text_clock_hours_sixteen">Sixteen</string>
+    <string name="text_clock_hours_seventeen">Seventeen</string>
+    <string name="text_clock_hours_eighteen">Eighteen</string>
+    <string name="text_clock_hours_nineteen">Nineteen</string>
+    <string name="text_clock_hours_twenty">Twenty</string>
+    <string name="text_clock_hours_twentyone">"Twenty
+One"</string>
+    <string name="text_clock_hours_twentytwo">"Twenty
+Two"</string>
+    <string name="text_clock_hours_twentythree">"Twenty
+Three"</string>
+    <string name="text_clock_minutes_zero">"O' clock"</string>
+    <string name="text_clock_minutes_one">One</string>
+    <string name="text_clock_minutes_two">Two</string>
+    <string name="text_clock_minutes_three">Three</string>
+    <string name="text_clock_minutes_four">Four</string>
+    <string name="text_clock_minutes_five">Five</string>
+    <string name="text_clock_minutes_six">Six</string>
+    <string name="text_clock_minutes_seven">Seven</string>
+    <string name="text_clock_minutes_eight">Eight</string>
+    <string name="text_clock_minutes_nine">Nine</string>
+    <string name="text_clock_minutes_ten">Ten</string>
+    <string name="text_clock_minutes_eleven">Eleven</string>
+    <string name="text_clock_minutes_twelve">Twelve</string>
+    <string name="text_clock_minutes_thirteen">Thirteen</string>
+    <string name="text_clock_minutes_fourteen">Fourteen</string>
+    <string name="text_clock_minutes_fifteen">Fifteen</string>
+    <string name="text_clock_minutes_sixteen">Sixteen</string>
+    <string name="text_clock_minutes_seventeen">Seventeen</string>
+    <string name="text_clock_minutes_eighteen">Eighteen</string>
+    <string name="text_clock_minutes_nineteen">Nineteen</string>
+    <string name="text_clock_minutes_twenty">Twenty</string>
+    <string name="text_clock_minutes_twentyone">"Twenty
+One"</string>
+    <string name="text_clock_minutes_twentytwo">"Twenty
+Two"</string>
+    <string name="text_clock_minutes_twentythree">"Twenty
+Three"</string>
+    <string name="text_clock_minutes_twentyfour">"Twenty
+Four"</string>
+    <string name="text_clock_minutes_twentyfive">"Twenty
+Five"</string>
+    <string name="text_clock_minutes_twentysix">"Twenty
+Six"</string>
+    <string name="text_clock_minutes_twentyseven">"Twenty
+Seven"</string>
+    <string name="text_clock_minutes_twentyeight">"Twenty
+Eight"</string>
+    <string name="text_clock_minutes_twentynine">"Twenty
+Nine"</string>
+    <string name="text_clock_minutes_thirty">Thirty</string>
+    <string name="text_clock_minutes_thirtyone">"Thirty
+One"</string>
+    <string name="text_clock_minutes_thirtytwo">"Thirty
+Two"</string>
+    <string name="text_clock_minutes_thirtythree">"Thirty
+Three"</string>
+    <string name="text_clock_minutes_thirtyfour">"Thirty
+Four"</string>
+    <string name="text_clock_minutes_thirtyfive">"Thirty
+Five"</string>
+    <string name="text_clock_minutes_thirtysix">"Thirty
+Six"</string>
+    <string name="text_clock_minutes_thirtyseven">"Thirty
+Seven"</string>
+    <string name="text_clock_minutes_thirtyeight">"Thirty
+Eight"</string>
+    <string name="text_clock_minutes_thirtynine">"Thirty
+Nine"</string>
+    <string name="text_clock_minutes_forty">Forty</string>
+    <string name="text_clock_minutes_fortyone">"Forty
+One"</string>
+    <string name="text_clock_minutes_fortytwo">"Forty
+Two"</string>
+    <string name="text_clock_minutes_fortythree">"Forty
+Three"</string>
+    <string name="text_clock_minutes_fortyfour">"Forty
+Four"</string>
+    <string name="text_clock_minutes_fortyfive">"Forty
+Five"</string>
+    <string name="text_clock_minutes_fortysix">"Forty
+Six"</string>
+    <string name="text_clock_minutes_fortyseven">"Forty
+Seven"</string>
+    <string name="text_clock_minutes_fortyeight">"Forty
+Eight"</string>
+    <string name="text_clock_minutes_fortynine">"Forty
+Nine"</string>
+    <string name="text_clock_minutes_fifty">Fifty</string>
+    <string name="text_clock_minutes_fiftyone">"Fifty
+One"</string>
+    <string name="text_clock_minutes_fiftytwo">"Fifty
+Two"</string>
+    <string name="text_clock_minutes_fiftythree">"Fifty
+Three"</string>
+    <string name="text_clock_minutes_fiftyfour">"Fifty
+Four"</string>
+    <string name="text_clock_minutes_fiftyfive">"Fifty
+Five"</string>
+    <string name="text_clock_minutes_fiftysix">"Fifty
+Six"</string>
+    <string name="text_clock_minutes_fiftyseven">"Fifty
+Seven"</string>
+    <string name="text_clock_minutes_fiftyeight">"Fifty
+Eight"</string>
+    <string name="text_clock_minutes_fiftynine">"Fifty
+Nine"</string>
+    <string name="text_clock_header_few">"It's"</string>
+    <string name="text_clock_header_multiple">"It's"</string>
 </resources>

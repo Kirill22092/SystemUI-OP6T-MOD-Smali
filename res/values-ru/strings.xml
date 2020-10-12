@@ -1187,27 +1187,27 @@
 ‒ Показывать полноэкранные уведомления.
 ‒ Показывать всплывающие уведомления.
 Уровень 4
-"<b></b>"
+
 ‒ Не показывать полноэкранные уведомления.
 ‒ Показывать всплывающие уведомления.
 Уровень 3
-"<b></b>"
+
 ‒ Не показывать полноэкранные уведомления.
 ‒ Не показывать всплывающие уведомления.
 Уровень 2
-"<b></b>"
+
 ‒ Не показывать полноэкранные уведомления.
 ‒ Не показывать всплывающие уведомления.
 ‒ Не использовать звук и вибрацию.
 Уровень 1
-"<b></b>"
+
 ‒ Не показывать полноэкранные уведомления.
 ‒ Не показывать всплывающие уведомления.
 ‒ Не использовать звук и вибрацию.
 ‒ Не показывать на экране блокировки и в строке состояния.
 ‒ Помещать уведомления в конец списка.
 Уровень 0
-"<b></b>"
+
 ‒ Блокировать все уведомления приложения."</string>
     <string name="power_remaining_charging_duration_only">Ещё %1$s до полной зарядки</string>
     <string name="power_remaining_duration_only">Заряда хватит примерно на %1$s</string>
@@ -1756,4 +1756,142 @@
     <string name="zen_priority_introduction">Вас не будут отвлекать звуки и вибрация, за исключением сигналов будильника, напоминаний, уведомлений о мероприятиях и звонков от помеченных контактов. Вы по-прежнему будете слышать включенную вами музыку, видео, игры и т. д.</string>
     <string name="zen_silence_introduction">В этом режиме будут отключены вибросигнал и все звуки (в том числе для будильника, музыкального проигрывателя, игр и видео).</string>
     <string name="zen_silence_introduction_voice">Этот режим заблокирует все звуки и вибрацию, в том числе для будильника, музыки, видео и игр. Вы сможете разговаривать по телефону.</string>
+    <string name="text_clock_string_format"><annotation name="header_color">"^1
+"</annotation>"^2
+^3"</string>
+    <string name="text_clock_header_one">Сейчас</string>
+    <string name="text_clock_hours_midnight">Двенадцать</string>
+    <string name="text_clock_hours_one">Час</string>
+    <string name="text_clock_hours_two">Два</string>
+    <string name="text_clock_hours_three">Три</string>
+    <string name="text_clock_hours_four">Четыре</string>
+    <string name="text_clock_hours_five">Пять</string>
+    <string name="text_clock_hours_six">Шесть</string>
+    <string name="text_clock_hours_seven">Семь</string>
+    <string name="text_clock_hours_eight">Восемь</string>
+    <string name="text_clock_hours_nine">Девять</string>
+    <string name="text_clock_hours_ten">Десять</string>
+    <string name="text_clock_hours_eleven">Одиннадцать</string>
+    <string name="text_clock_hours_twelve">Двенадцать</string>
+    <string name="text_clock_hours_thirteen">Тринадцать</string>
+    <string name="text_clock_hours_fourteen">Четырнадцать</string>
+    <string name="text_clock_hours_fifteen">Пятнадцать</string>
+    <string name="text_clock_hours_sixteen">Шестнадцать</string>
+    <string name="text_clock_hours_seventeen">Семнадцать</string>
+    <string name="text_clock_hours_eighteen">Восемнадцать</string>
+    <string name="text_clock_hours_nineteen">Девятнадцать</string>
+    <string name="text_clock_hours_twenty">Двадцать</string>
+    <string name="text_clock_hours_twentyone">"Двадцать
+Один"</string>
+    <string name="text_clock_hours_twentytwo">"Двадцать
+Два"</string>
+    <string name="text_clock_hours_twentythree">"Двадцать
+Три"</string>
+    <string name="text_clock_minutes_zero">Ровно</string>
+    <string name="text_clock_minutes_one">"Ноль
+Одна"</string>
+    <string name="text_clock_minutes_two">"Ноль
+Две"</string>
+    <string name="text_clock_minutes_three">"Ноль
+Три"</string>
+    <string name="text_clock_minutes_four">"Ноль
+Четыре"</string>
+    <string name="text_clock_minutes_five">"Ноль
+Пять"</string>
+    <string name="text_clock_minutes_six">"Ноль
+Шесть"</string>
+    <string name="text_clock_minutes_seven">"Ноль
+Семь"</string>
+    <string name="text_clock_minutes_eight">"Ноль
+Восемь"</string>
+    <string name="text_clock_minutes_nine">"Ноль
+Девять"</string>
+    <string name="text_clock_minutes_ten">Десять</string>
+    <string name="text_clock_minutes_eleven">Одиннадцать</string>
+    <string name="text_clock_minutes_twelve">Двенадцать</string>
+    <string name="text_clock_minutes_thirteen">Тринадцать</string>
+    <string name="text_clock_minutes_fourteen">Четырнадцать</string>
+    <string name="text_clock_minutes_fifteen">Пятнадцать</string>
+    <string name="text_clock_minutes_sixteen">Шестнадцать</string>
+    <string name="text_clock_minutes_seventeen">Семнадцать</string>
+    <string name="text_clock_minutes_eighteen">Восемнадцать</string>
+    <string name="text_clock_minutes_nineteen">Девятнадцать</string>
+    <string name="text_clock_minutes_twenty">Двадцать</string>
+    <string name="text_clock_minutes_twentyone">"Двадцать
+Одна"</string>
+    <string name="text_clock_minutes_twentytwo">"Двадцать
+Две"</string>
+    <string name="text_clock_minutes_twentythree">"Двадцать
+Три"</string>
+    <string name="text_clock_minutes_twentyfour">"Двадцать
+Четыре"</string>
+    <string name="text_clock_minutes_twentyfive">"Двадцать
+Пять"</string>
+    <string name="text_clock_minutes_twentysix">"Двадцать
+Шесть"</string>
+    <string name="text_clock_minutes_twentyseven">"Двадцать
+Семь"</string>
+    <string name="text_clock_minutes_twentyeight">"Двадцать
+Восемь"</string>
+    <string name="text_clock_minutes_twentynine">"Двадцать
+Девять"</string>
+    <string name="text_clock_minutes_thirty">Тридцать</string>
+    <string name="text_clock_minutes_thirtyone">"Тридцать
+Одна"</string>
+    <string name="text_clock_minutes_thirtytwo">"Тридцать
+Две"</string>
+    <string name="text_clock_minutes_thirtythree">"Тридцать
+Три"</string>
+    <string name="text_clock_minutes_thirtyfour">"Тридцать
+Четыре"</string>
+    <string name="text_clock_minutes_thirtyfive">"Тридцать
+Пять"</string>
+    <string name="text_clock_minutes_thirtysix">"Тридцать
+Шесть"</string>
+    <string name="text_clock_minutes_thirtyseven">"Тридцать
+Семь"</string>
+    <string name="text_clock_minutes_thirtyeight">"Тридцать
+Восемь"</string>
+    <string name="text_clock_minutes_thirtynine">"Тридцать
+Девять"</string>
+    <string name="text_clock_minutes_forty">Сорок</string>
+    <string name="text_clock_minutes_fortyone">"Сорок
+Одна"</string>
+    <string name="text_clock_minutes_fortytwo">"Сорок
+Две"</string>
+    <string name="text_clock_minutes_fortythree">"Сорок
+Три"</string>
+    <string name="text_clock_minutes_fortyfour">"Сорок
+Четыре"</string>
+    <string name="text_clock_minutes_fortyfive">"Сорок
+Пять"</string>
+    <string name="text_clock_minutes_fortysix">"Сорок
+Шесть"</string>
+    <string name="text_clock_minutes_fortyseven">"Сорок
+Семь"</string>
+    <string name="text_clock_minutes_fortyeight">"Сорок
+Восемь"</string>
+    <string name="text_clock_minutes_fortynine">"Сорок
+Девять"</string>
+    <string name="text_clock_minutes_fifty">Пятьдесят</string>
+    <string name="text_clock_minutes_fiftyone">"Пятьдесят
+Одна"</string>
+    <string name="text_clock_minutes_fiftytwo">"Пятьдесят
+Две"</string>
+    <string name="text_clock_minutes_fiftythree">"Пятьдесят
+Три"</string>
+    <string name="text_clock_minutes_fiftyfour">"Пятьдесят
+Четыре"</string>
+    <string name="text_clock_minutes_fiftyfive">"Пятьдесят
+Пять"</string>
+    <string name="text_clock_minutes_fiftysix">"Пятьдесят
+Шесть"</string>
+    <string name="text_clock_minutes_fiftyseven">"Пятьдесят
+Семь"</string>
+    <string name="text_clock_minutes_fiftyeight">"Пятьдесят
+Восемь"</string>
+    <string name="text_clock_minutes_fiftynine">"Пятьдесят
+Девять"</string>
+    <string name="text_clock_header_few">Сейчас</string>
+    <string name="text_clock_header_multiple">Сейчас</string>
 </resources>

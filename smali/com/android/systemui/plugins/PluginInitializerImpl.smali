@@ -7,7 +7,7 @@
 
 
 # static fields
-.field private static final WTFS_SHOULD_CRASH:Z = false
+.field private static final WTFS_SHOULD_CRASH:Z
 
 
 # instance fields

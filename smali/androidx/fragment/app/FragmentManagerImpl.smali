@@ -21,7 +21,7 @@
 
 
 # static fields
-.field static DEBUG:Z = false
+.field static DEBUG:Z
 
 .field static final DECELERATE_CUBIC:Landroid/view/animation/Interpolator;
 

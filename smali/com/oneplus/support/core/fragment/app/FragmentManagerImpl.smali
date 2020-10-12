@@ -27,7 +27,7 @@
 
 .field static final ACCELERATE_QUINT:Landroid/view/animation/Interpolator;
 
-.field static DEBUG:Z = false
+.field static DEBUG:Z
 
 .field static final DECELERATE_CUBIC:Landroid/view/animation/Interpolator;
 

@@ -14,11 +14,11 @@
 # static fields
 .field private static final IS_SUPPORT_POCKET_SWITCH:Z
 
-.field private static mPreventModeActive:Z = false
+.field private static mPreventModeActive:Z
 
-.field private static mPreventModeNoBackground:Z = false
+.field private static mPreventModeNoBackground:Z
 
-.field private static mProximitySensorEnabled:Z = false
+.field private static mProximitySensorEnabled:Z
 
 
 # instance fields

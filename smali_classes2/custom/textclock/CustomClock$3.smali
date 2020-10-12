@@ -25,7 +25,7 @@
 
 # direct methods
 .method constructor <init>(Lcustom/textclock/CustomClock;Landroid/text/SpannableString;)V
-    .registers 3
+    .locals 0
     .param p1, "this$0"    # Lcustom/textclock/CustomClock;
 
     .prologue
@@ -42,7 +42,7 @@
 
 # virtual methods
 .method public onAnimationEnd(Landroid/view/animation/Animation;)V
-    .registers 11
+    .locals 9
     .param p1, "animation"    # Landroid/view/animation/Animation;
 
     .prologue
@@ -190,7 +190,7 @@
 .end method
 
 .method public onAnimationRepeat(Landroid/view/animation/Animation;)V
-    .registers 2
+    .locals 0
     .param p1, "animation"    # Landroid/view/animation/Animation;
 
     .prologue
@@ -199,7 +199,7 @@
 .end method
 
 .method public onAnimationStart(Landroid/view/animation/Animation;)V
-    .registers 2
+    .locals 0
     .param p1, "animation"    # Landroid/view/animation/Animation;
 
     .prologue
