@@ -18,7 +18,7 @@
 .method private constructor <init>()V
     .locals 0
 
-    .line 102
+    .line 107
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -27,7 +27,7 @@
 .method synthetic constructor <init>(Lcom/android/systemui/glwallpaper/ImageProcessHelper$1;)V
     .locals 0
 
-    .line 102
+    .line 107
     invoke-direct {p0}, Lcom/android/systemui/glwallpaper/ImageProcessHelper$Threshold;-><init>()V
 
     return-void
@@ -36,12 +36,12 @@
 .method private getHistogram(Landroid/graphics/Bitmap;)[I
     .locals 10
 
-    .line 130
+    .line 136
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result p0
 
-    .line 131
+    .line 137
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->getHeight()I
 
     move-result v0
@@ -62,12 +62,12 @@
     :goto_1
     if-ge v5, p0, :cond_2
 
-    .line 137
+    .line 143
     invoke-virtual {p1, v5, v4}, Landroid/graphics/Bitmap;->getPixel(II)I
 
     move-result v6
 
-    .line 138
+    .line 144
     invoke-static {v6}, Landroid/graphics/Color;->red(I)I
 
     move-result v7
@@ -88,7 +88,7 @@
 
     if-ge v7, v1, :cond_0
 
-    .line 144
+    .line 150
     aget v6, v2, v7
 
     add-int/lit8 v6, v6, 0x1
@@ -97,13 +97,13 @@
 
     goto :goto_2
 
-    .line 145
+    .line 151
     :cond_0
     sget-boolean v6, Landroid/os/Build;->DEBUG_ONEPLUS:Z
 
     if-eqz v6, :cond_1
 
-    .line 146
+    .line 152
     invoke-static {}, Lcom/android/systemui/glwallpaper/ImageProcessHelper;->access$200()Ljava/lang/String;
 
     move-result-object v6
@@ -142,7 +142,7 @@
 .method private isSolidColor(Landroid/graphics/Bitmap;[I)Z
     .locals 3
 
-    .line 157
+    .line 163
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result p0
@@ -153,7 +153,7 @@
 
     mul-int/2addr p0, p1
 
-    .line 161
+    .line 167
     array-length p1, p2
 
     const/4 v0, 0x0
@@ -191,31 +191,38 @@
 .method private toGrayscale(Landroid/graphics/Bitmap;)Landroid/graphics/Bitmap;
     .locals 4
 
-    .line 116
+    .line 121
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result p0
 
-    .line 117
+    .line 122
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->getHeight()I
 
     move-result v0
 
-    .line 119
+    .line 125
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->getConfig()Landroid/graphics/Bitmap$Config;
 
     move-result-object v1
 
-    invoke-static {p0, v0, v1}, Landroid/graphics/Bitmap;->createBitmap(IILandroid/graphics/Bitmap$Config;)Landroid/graphics/Bitmap;
+    invoke-virtual {p1}, Landroid/graphics/Bitmap;->getColorSpace()Landroid/graphics/ColorSpace;
+
+    move-result-object v2
+
+    const/4 v3, 0x0
+
+    .line 124
+    invoke-static {p0, v0, v1, v3, v2}, Landroid/graphics/Bitmap;->createBitmap(IILandroid/graphics/Bitmap$Config;ZLandroid/graphics/ColorSpace;)Landroid/graphics/Bitmap;
 
     move-result-object p0
 
-    .line 120
+    .line 126
     new-instance v0, Landroid/graphics/Canvas;
 
     invoke-direct {v0, p0}, Landroid/graphics/Canvas;-><init>(Landroid/graphics/Bitmap;)V
 
-    .line 121
+    .line 127
     new-instance v1, Landroid/graphics/ColorMatrix;
 
     invoke-static {}, Lcom/android/systemui/glwallpaper/ImageProcessHelper;->access$500()[F
@@ -224,19 +231,19 @@
 
     invoke-direct {v1, v2}, Landroid/graphics/ColorMatrix;-><init>([F)V
 
-    .line 122
+    .line 128
     new-instance v2, Landroid/graphics/Paint;
 
     invoke-direct {v2}, Landroid/graphics/Paint;-><init>()V
 
-    .line 123
+    .line 129
     new-instance v3, Landroid/graphics/ColorMatrixColorFilter;
 
     invoke-direct {v3, v1}, Landroid/graphics/ColorMatrixColorFilter;-><init>(Landroid/graphics/ColorMatrix;)V
 
     invoke-virtual {v2, v3}, Landroid/graphics/Paint;->setColorFilter(Landroid/graphics/ColorFilter;)Landroid/graphics/ColorFilter;
 
-    .line 124
+    .line 130
     new-instance v1, Landroid/graphics/Matrix;
 
     invoke-direct {v1}, Landroid/graphics/Matrix;-><init>()V
@@ -251,17 +258,17 @@
 .method public compute(Landroid/graphics/Bitmap;)F
     .locals 2
 
-    .line 104
+    .line 109
     invoke-direct {p0, p1}, Lcom/android/systemui/glwallpaper/ImageProcessHelper$Threshold;->toGrayscale(Landroid/graphics/Bitmap;)Landroid/graphics/Bitmap;
 
     move-result-object p1
 
-    .line 105
+    .line 110
     invoke-direct {p0, p1}, Lcom/android/systemui/glwallpaper/ImageProcessHelper$Threshold;->getHistogram(Landroid/graphics/Bitmap;)[I
 
     move-result-object v0
 
-    .line 106
+    .line 111
     invoke-direct {p0, p1, v0}, Lcom/android/systemui/glwallpaper/ImageProcessHelper$Threshold;->isSolidColor(Landroid/graphics/Bitmap;[I)Z
 
     move-result p0
@@ -270,7 +277,7 @@
 
     if-eqz p0, :cond_0
 
-    .line 111
+    .line 116
     new-instance p0, Lcom/android/systemui/glwallpaper/ImageProcessHelper$Percentile85;
 
     invoke-direct {p0, v1}, Lcom/android/systemui/glwallpaper/ImageProcessHelper$Percentile85;-><init>(Lcom/android/systemui/glwallpaper/ImageProcessHelper$1;)V
@@ -282,7 +289,7 @@
 
     invoke-direct {p0, v1}, Lcom/android/systemui/glwallpaper/ImageProcessHelper$Otsus;-><init>(Lcom/android/systemui/glwallpaper/ImageProcessHelper$1;)V
 
-    .line 112
+    .line 117
     :goto_0
     invoke-interface {p0, p1, v0}, Lcom/android/systemui/glwallpaper/ImageProcessHelper$ThresholdAlgorithm;->compute(Landroid/graphics/Bitmap;[I)F
 

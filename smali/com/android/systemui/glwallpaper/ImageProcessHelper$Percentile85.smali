@@ -21,7 +21,7 @@
 .method private constructor <init>()V
     .locals 0
 
-    .line 174
+    .line 180
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -30,7 +30,7 @@
 .method synthetic constructor <init>(Lcom/android/systemui/glwallpaper/ImageProcessHelper$1;)V
     .locals 0
 
-    .line 174
+    .line 180
     invoke-direct {p0}, Lcom/android/systemui/glwallpaper/ImageProcessHelper$Percentile85;-><init>()V
 
     return-void
@@ -41,7 +41,7 @@
 .method public compute(Landroid/graphics/Bitmap;[I)F
     .locals 7
 
-    .line 178
+    .line 184
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result p0
@@ -60,13 +60,13 @@
 
     const/4 v1, 0x0
 
-    .line 180
+    .line 186
     :goto_0
     array-length v2, p1
 
     if-ge v1, v2, :cond_3
 
-    .line 181
+    .line 187
     aget v2, p2, v1
 
     int-to-float v2, v2
@@ -86,10 +86,10 @@
     :cond_0
     add-int/lit8 v2, v1, -0x1
 
-    .line 182
+    .line 188
     aget v2, p1, v2
 
-    .line 183
+    .line 189
     :goto_1
     aget v3, p1, v1
 
@@ -118,7 +118,7 @@
     :cond_1
     if-lez v1, :cond_2
 
-    .line 190
+    .line 196
     aget v2, p1, v1
 
     add-int/lit8 v3, v1, -0x1

@@ -432,7 +432,7 @@
 
     move-result-object v11
 
-    const/4 v12, 0x0
+    const/high16 v12, 0x4000000
 
     const/4 v13, 0x0
 
@@ -486,7 +486,7 @@
 
     move-result-object v11
 
-    const/4 v12, 0x0
+    const/high16 v12, 0x4000000
 
     const/4 v0, 0x0
 
@@ -567,7 +567,7 @@
 
     const/4 v10, 0x0
 
-    const/4 v12, 0x0
+    const/high16 v12, 0x4000000
 
     const/4 v0, 0x0
 
@@ -695,13 +695,12 @@
 
     const/4 v10, 0x0
 
-    const/4 v12, 0x0
+    const/high16 v12, 0x4000000
 
     const/4 v13, 0x0
 
     move-object v14, v15
 
-    .line 357
     invoke-static/range {v9 .. v14}, Landroid/app/PendingIntent;->getActivityAsUser(Landroid/content/Context;ILandroid/content/Intent;ILandroid/os/Bundle;Landroid/os/UserHandle;)Landroid/app/PendingIntent;
 
     move-result-object v0

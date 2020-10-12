@@ -21,7 +21,7 @@
 .method private constructor <init>()V
     .locals 0
 
-    .line 197
+    .line 203
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -30,7 +30,7 @@
 .method synthetic constructor <init>(Lcom/android/systemui/glwallpaper/ImageProcessHelper$1;)V
     .locals 0
 
-    .line 197
+    .line 203
     invoke-direct {p0}, Lcom/android/systemui/glwallpaper/ImageProcessHelper$Otsus;-><init>()V
 
     return-void
@@ -41,7 +41,7 @@
 .method public compute(Landroid/graphics/Bitmap;[I)F
     .locals 11
 
-    .line 202
+    .line 208
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result p0
@@ -66,7 +66,7 @@
 
     move v3, v2
 
-    .line 207
+    .line 213
     :goto_0
     array-length v4, p2
 
@@ -74,7 +74,7 @@
 
     if-ge v3, v4, :cond_0
 
-    .line 208
+    .line 214
     aget v4, v1, v5
 
     aget v6, p2, v3
@@ -102,13 +102,13 @@
 
     move v3, v2
 
-    .line 212
+    .line 218
     :goto_1
     array-length v7, p2
 
     if-ge v3, v7, :cond_3
 
-    .line 215
+    .line 221
     aget v7, p2, v3
 
     int-to-float v7, v7
@@ -117,21 +117,21 @@
 
     mul-float v9, v7, v8
 
-    .line 217
+    .line 223
     aget v10, v0, v2
 
     add-float/2addr v10, v7
 
     aput v10, v0, v2
 
-    .line 218
+    .line 224
     aget v10, v0, v5
 
     sub-float/2addr v10, v7
 
     aput v10, v0, v5
 
-    .line 220
+    .line 226
     aget v7, v0, v2
 
     cmpl-float v7, v7, p0
@@ -146,7 +146,7 @@
 
     goto :goto_2
 
-    .line 224
+    .line 230
     :cond_1
     aget v7, v1, v2
 
@@ -154,14 +154,14 @@
 
     aput v7, v1, v2
 
-    .line 225
+    .line 231
     aget v7, v1, v5
 
     sub-float/2addr v7, v9
 
     aput v7, v1, v5
 
-    .line 226
+    .line 232
     aget v7, v1, v2
 
     aget v9, v0, v2
@@ -170,7 +170,7 @@
 
     aput v7, p1, v2
 
-    .line 227
+    .line 233
     aget v7, v1, v5
 
     aget v9, v0, v5
@@ -179,14 +179,14 @@
 
     aput v7, p1, v5
 
-    .line 228
+    .line 234
     aget v7, p1, v2
 
     aget v9, p1, v5
 
     sub-float/2addr v7, v9
 
-    .line 229
+    .line 235
     aget v9, v0, v2
 
     aget v10, v0, v5
@@ -205,7 +205,7 @@
 
     add-float/2addr v8, v4
 
-    .line 232
+    .line 238
     array-length v4, p2
 
     int-to-float v4, v4

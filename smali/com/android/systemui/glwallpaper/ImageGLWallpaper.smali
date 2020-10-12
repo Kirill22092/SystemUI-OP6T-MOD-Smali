@@ -263,16 +263,16 @@
 
     new-array v1, v0, [I
 
-    if-nez p1, :cond_0
+    if-eqz p1, :cond_2
 
-    .line 171
-    sget-object p0, Lcom/android/systemui/glwallpaper/ImageGLWallpaper;->TAG:Ljava/lang/String;
+    .line 170
+    invoke-virtual {p1}, Landroid/graphics/Bitmap;->isRecycled()Z
 
-    const-string p1, "setupTexture: invalid bitmap"
+    move-result v2
 
-    invoke-static {p0, p1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+    if-eqz v2, :cond_0
 
-    return-void
+    goto :goto_1
 
     :cond_0
     const/4 v2, 0x0
@@ -294,33 +294,76 @@
 
     return-void
 
-    .line 183
+    .line 184
     :cond_1
+    :try_start_0
     aget v0, v1, v2
 
     const/16 v3, 0xde1
 
     invoke-static {v3, v0}, Landroid/opengl/GLES20;->glBindTexture(II)V
 
-    .line 185
+    .line 187
     invoke-static {v3, v2, p1, v2}, Landroid/opengl/GLUtils;->texImage2D(IILandroid/graphics/Bitmap;I)V
 
     const/16 p1, 0x2801
 
     const/16 v0, 0x2601
 
-    .line 187
+    .line 189
     invoke-static {v3, p1, v0}, Landroid/opengl/GLES20;->glTexParameteri(III)V
 
     const/16 p1, 0x2800
 
-    .line 189
+    .line 191
     invoke-static {v3, p1, v0}, Landroid/opengl/GLES20;->glTexParameteri(III)V
 
-    .line 191
+    .line 192
     aget p1, v1, v2
 
     iput p1, p0, Lcom/android/systemui/glwallpaper/ImageGLWallpaper;->mTextureId:I
+    :try_end_0
+    .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_0
+
+    :catch_0
+    move-exception p0
+
+    .line 194
+    sget-object p1, Lcom/android/systemui/glwallpaper/ImageGLWallpaper;->TAG:Ljava/lang/String;
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v1, "Failed uploading texture: "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0}, Ljava/lang/IllegalArgumentException;->getLocalizedMessage()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-static {p1, p0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    :goto_0
+    return-void
+
+    .line 171
+    :cond_2
+    :goto_1
+    sget-object p0, Lcom/android/systemui/glwallpaper/ImageGLWallpaper;->TAG:Ljava/lang/String;
+
+    const-string p1, "setupTexture: invalid bitmap"
+
+    invoke-static {p0, p1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 .end method
@@ -380,7 +423,7 @@
 .method adjustTextureCoordinates(Landroid/graphics/Rect;Landroid/graphics/Rect;FF)V
     .locals 8
 
-    .line 217
+    .line 221
     sget-object v0, Lcom/android/systemui/glwallpaper/ImageGLWallpaper;->TEXTURES:[F
 
     invoke-virtual {v0}, [F->clone()Ljava/lang/Object;
@@ -399,23 +442,23 @@
 
     goto/16 :goto_6
 
-    .line 225
+    .line 229
     :cond_0
     invoke-virtual {p1}, Landroid/graphics/Rect;->width()I
 
     move-result v1
 
-    .line 226
+    .line 230
     invoke-virtual {p1}, Landroid/graphics/Rect;->height()I
 
     move-result p1
 
-    .line 227
+    .line 231
     invoke-virtual {p2}, Landroid/graphics/Rect;->width()I
 
     move-result v2
 
-    .line 228
+    .line 232
     invoke-virtual {p2}, Landroid/graphics/Rect;->height()I
 
     move-result p2
@@ -430,7 +473,7 @@
 
     mul-float/2addr v4, p3
 
-    .line 232
+    .line 236
     invoke-static {v4}, Ljava/lang/Math;->round(F)I
 
     move-result p3
@@ -467,7 +510,7 @@
     :cond_2
     move v4, v0
 
-    .line 245
+    .line 249
     :goto_0
     iget-object v6, p0, Lcom/android/systemui/glwallpaper/ImageGLWallpaper;->mCurrentTexCoordinate:[F
 
@@ -489,13 +532,13 @@
 
     goto :goto_1
 
-    .line 250
+    .line 254
     :cond_3
     aput p3, v6, v4
 
     goto :goto_2
 
-    .line 248
+    .line 252
     :cond_4
     :goto_1
     iget-object v6, p0, Lcom/android/systemui/glwallpaper/ImageGLWallpaper;->mCurrentTexCoordinate:[F
@@ -522,7 +565,7 @@
 
     mul-float/2addr p3, p4
 
-    .line 257
+    .line 261
     invoke-static {p3}, Ljava/lang/Math;->round(F)I
 
     move-result p3
@@ -561,7 +604,7 @@
 
     move p4, p1
 
-    .line 270
+    .line 274
     :goto_3
     iget-object v1, p0, Lcom/android/systemui/glwallpaper/ImageGLWallpaper;->mCurrentTexCoordinate:[F
 
@@ -581,13 +624,13 @@
 
     goto :goto_4
 
-    .line 275
+    .line 279
     :cond_8
     aput p3, v1, p4
 
     goto :goto_5
 
-    .line 273
+    .line 277
     :cond_9
     :goto_4
     iget-object v1, p0, Lcom/android/systemui/glwallpaper/ImageGLWallpaper;->mCurrentTexCoordinate:[F
@@ -605,7 +648,7 @@
 
     goto :goto_3
 
-    .line 280
+    .line 284
     :cond_a
     iget-object p1, p0, Lcom/android/systemui/glwallpaper/ImageGLWallpaper;->mTextureBuffer:Ljava/nio/FloatBuffer;
 
@@ -613,14 +656,14 @@
 
     invoke-virtual {p1, p2}, Ljava/nio/FloatBuffer;->put([F)Ljava/nio/FloatBuffer;
 
-    .line 281
+    .line 285
     iget-object p0, p0, Lcom/android/systemui/glwallpaper/ImageGLWallpaper;->mTextureBuffer:Ljava/nio/FloatBuffer;
 
     invoke-virtual {p0, v0}, Ljava/nio/FloatBuffer;->position(I)Ljava/nio/Buffer;
 
     return-void
 
-    .line 220
+    .line 224
     :cond_b
     :goto_6
     iget-object p1, p0, Lcom/android/systemui/glwallpaper/ImageGLWallpaper;->mTextureBuffer:Ljava/nio/FloatBuffer;
@@ -629,7 +672,7 @@
 
     invoke-virtual {p1, p2}, Ljava/nio/FloatBuffer;->put([F)Ljava/nio/FloatBuffer;
 
-    .line 221
+    .line 225
     iget-object p0, p0, Lcom/android/systemui/glwallpaper/ImageGLWallpaper;->mTextureBuffer:Ljava/nio/FloatBuffer;
 
     invoke-virtual {p0, v0}, Ljava/nio/FloatBuffer;->position(I)Ljava/nio/Buffer;
@@ -659,24 +702,24 @@
 .method public dump(Ljava/lang/String;Ljava/io/FileDescriptor;Ljava/io/PrintWriter;[Ljava/lang/String;)V
     .locals 2
 
-    .line 292
+    .line 296
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
 
     const/16 p4, 0x7b
 
-    .line 293
+    .line 297
     invoke-virtual {p2, p4}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 294
+    .line 298
     iget-object p4, p0, Lcom/android/systemui/glwallpaper/ImageGLWallpaper;->mCurrentTexCoordinate:[F
 
     if-eqz p4, :cond_1
 
     const/4 p4, 0x0
 
-    .line 295
+    .line 299
     :goto_0
     iget-object v0, p0, Lcom/android/systemui/glwallpaper/ImageGLWallpaper;->mCurrentTexCoordinate:[F
 
@@ -684,7 +727,7 @@
 
     if-ge p4, v1, :cond_1
 
-    .line 296
+    .line 300
     aget v0, v0, p4
 
     invoke-virtual {p2, v0}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
@@ -693,7 +736,7 @@
 
     invoke-virtual {p2, v0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 297
+    .line 301
     iget-object v0, p0, Lcom/android/systemui/glwallpaper/ImageGLWallpaper;->mCurrentTexCoordinate:[F
 
     array-length v0, v0
@@ -702,7 +745,7 @@
 
     if-ne p4, v0, :cond_0
 
-    .line 298
+    .line 302
     invoke-virtual {p2}, Ljava/lang/StringBuilder;->length()I
 
     move-result v0
@@ -719,10 +762,10 @@
     :cond_1
     const/16 p0, 0x7d
 
-    .line 302
+    .line 306
     invoke-virtual {p2, p0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 303
+    .line 307
     invoke-virtual {p3, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     const-string p0, "mTexCoordinates="
@@ -926,17 +969,17 @@
 
     const v0, 0x84c0
 
-    .line 196
+    .line 200
     invoke-static {v0}, Landroid/opengl/GLES20;->glActiveTexture(I)V
 
-    .line 198
+    .line 202
     iget v0, p0, Lcom/android/systemui/glwallpaper/ImageGLWallpaper;->mTextureId:I
 
     const/16 v1, 0xde1
 
     invoke-static {v1, v0}, Landroid/opengl/GLES20;->glBindTexture(II)V
 
-    .line 200
+    .line 204
     iget p0, p0, Lcom/android/systemui/glwallpaper/ImageGLWallpaper;->mUniTexture:I
 
     const/4 v0, 0x0
