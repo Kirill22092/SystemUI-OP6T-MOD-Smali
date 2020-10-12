@@ -9,6 +9,6 @@
         <TextView android:id="@android:id/summary" android:layout_width="fill_parent" android:layout_height="wrap_content" android:textDirection="locale" style="@style/oneplus_contorl_text_style_body1_local" />
     </LinearLayout>
     <FrameLayout android:layout_width="@dimen/op_output_chooser_dialog_detail_item_icon_2_width" android:layout_height="fill_parent">
-        <ImageView android:layout_gravity="center_vertical" android:id="@android:id/icon2" android:focusable="true" android:clickable="true" android:layout_width="@dimen/op_output_chooser_dialog_detail_item_icon_size" android:layout_height="@dimen/op_output_chooser_dialog_detail_item_icon_size" android:scaleType="center" android:tint="?android:textColorPrimary" android:contentDescription="@android:string/mediasize_iso_a4" android:layout_marginStart="@dimen/op_output_chooser_dialog_detail_item_icon_2_margen_start" style="@style/QSBorderlessButton" />
+        <ImageView android:layout_gravity="center_vertical" android:id="@android:id/icon2" android:focusable="true" android:clickable="true" android:layout_width="@dimen/op_output_chooser_dialog_detail_item_icon_size" android:layout_height="@dimen/op_output_chooser_dialog_detail_item_icon_size" android:scaleType="center" android:tint="?android:textColorPrimary" android:contentDescription="@android:string/mediasize_chinese_prc_4" android:layout_marginStart="@dimen/op_output_chooser_dialog_detail_item_icon_2_margen_start" style="@style/QSBorderlessButton" />
     </FrameLayout>
 </LinearLayout>

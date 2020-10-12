@@ -696,7 +696,7 @@ If you resume, charges may apply for data usage."</string>
     <string name="force_rtl_layout_all_locales">Force RTL layout direction</string>
     <string name="force_rtl_layout_all_locales_summary">Force screen layout direction to RTL for all locales</string>
     <string name="forced_resizable_secondary_display">App may not work on a secondary display.</string>
-    <string name="global_action_emergency">@android:string/granularity_label_word</string>
+    <string name="global_action_emergency">@android:string/global_actions_airplane_mode_on_status</string>
     <string name="global_action_screenshot">Screenshot</string>
     <string name="go_to_web">Go to browser</string>
     <string name="got_it">Got it</string>
@@ -1717,7 +1717,7 @@ be monitored"</string>
     <string name="switch_bar_off">Off</string>
     <string name="switch_bar_on">On</string>
     <string name="system_ui_aod_date_pattern">eeeMMMd</string>
-    <string name="system_ui_date_pattern">@android:string/unsupported_display_size_show</string>
+    <string name="system_ui_date_pattern">@android:string/time_picker_minute_label</string>
     <string name="system_ui_tuner">System UI Tuner</string>
     <string name="tag_status_bar">statusBar</string>
     <string name="tap_to_sign_up">Tap to sign up</string>

@@ -56,7 +56,7 @@
     </style>
     <style name="AppEntitiesHeader.Text" parent="@android:style/TextAppearance.Material.Subhead">
         <item name="android:textColor">?android:textColorPrimary</item>
-        <item name="android:fontFamily">@android:string/config_networkLocationProviderPackageName</item>
+        <item name="android:fontFamily">@android:string/config_mainBuiltInDisplayCutoutRectApproximation</item>
     </style>
     <style name="AppEntitiesHeader.Text.HeaderTitle" parent="@style/AppEntitiesHeader.Text">
         <item name="android:textSize">14.0sp</item>
@@ -76,7 +76,7 @@
     </style>
     <style name="BarChart.Text" parent="@android:style/TextAppearance.Material.Subhead">
         <item name="android:textColor">?android:textColorPrimary</item>
-        <item name="android:fontFamily">@android:string/config_networkLocationProviderPackageName</item>
+        <item name="android:fontFamily">@android:string/config_mainBuiltInDisplayCutoutRectApproximation</item>
     </style>
     <style name="BarChart.Text.HeaderTitle" parent="@style/BarChart.Text">
         <item name="android:textSize">14.0sp</item>
@@ -933,7 +933,7 @@
     </style>
     <style name="BorderlessButton">
         <item name="android:gravity">center</item>
-        <item name="android:background">@android:drawable/btn_browser_zoom_page_overview</item>
+        <item name="android:background">@android:drawable/btn_browser_zoom_fit_page</item>
         <item name="android:padding">12.0dip</item>
     </style>
     <style name="BouncerSecurityContainer">
@@ -1055,9 +1055,9 @@
         <item name="android:background">@null</item>
     </style>
     <style name="LockPatternStyle">
-        <item name="android:errorMessageBackground">?android:colorError</item>
-        <item name="android:requestDetail">?wallpaperTextColor</item>
-        <item name="android:textAppearanceEasyCorrectSuggestion">?wallpaperTextColor</item>
+        <item name="android:errorMessageAboveBackground">?android:colorError</item>
+        <item name="android:removeBeforeMRelease">?wallpaperTextColor</item>
+        <item name="android:tabLayout">?wallpaperTextColor</item>
     </style>
     <style name="OPAnimation.AppCompat.DropDownUp" parent="@android:style/Animation">
         <item name="android:windowEnterAnimation">@anim/op_abc_grow_fade_in_from_bottom</item>
@@ -3708,7 +3708,7 @@
     </style>
     <style name="TextAppearance.AppOpsDialog.Title" parent="@style/TextAppearance.AppOpsDialog">
         <item name="android:textSize">@dimen/ongoing_appops_dialog_title_size</item>
-        <item name="android:fontFamily">@android:string/config_networkLocationProviderPackageName</item>
+        <item name="android:fontFamily">@android:string/config_mainBuiltInDisplayCutoutRectApproximation</item>
     </style>
     <style name="TextAppearance.Compat.Notification" parent="@android:style/TextAppearance.Material.Notification" />
     <style name="TextAppearance.Compat.Notification.Info" parent="@android:style/TextAppearance.Material.Notification.Info" />
@@ -3751,7 +3751,7 @@
     <style name="TextAppearance.EntityHeaderTitle" parent="@android:style/TextAppearance.Material.Subhead">
         <item name="android:textSize">20.0sp</item>
         <item name="android:textColor">?android:textColorPrimary</item>
-        <item name="android:fontFamily">@android:string/config_networkLocationProviderPackageName</item>
+        <item name="android:fontFamily">@android:string/config_mainBuiltInDisplayCutoutRectApproximation</item>
     </style>
     <style name="TextAppearance.HeadsUpStatusBarText" parent="@android:style/TextAppearance.DeviceDefault.Notification.Info" />
     <style name="TextAppearance.Keyguard" parent="@style/TextAppearance">
@@ -3759,7 +3759,7 @@
         <item name="android:ellipsize">end</item>
         <item name="android:gravity">center</item>
         <item name="android:maxLines">2</item>
-        <item name="android:fontFamily">@android:string/config_networkCaptivePortalServerUrl</item>
+        <item name="android:fontFamily">@android:string/config_mainBuiltInDisplayCutout</item>
     </style>
     <style name="TextAppearance.Keyguard.BottomArea" parent="@style/TextAppearance.Keyguard">
         <item name="android:textAppearance">@style/oneplus_contorl_text_style_body1</item>
@@ -3934,17 +3934,17 @@
         <item name="android:textSize">@dimen/notification_importance_button_text</item>
         <item name="android:textColor">@color/notification_guts_priority_contents</item>
         <item name="android:gravity">center</item>
-        <item name="android:fontFamily">@android:string/config_networkLocationProviderPackageName</item>
+        <item name="android:fontFamily">@android:string/config_mainBuiltInDisplayCutoutRectApproximation</item>
     </style>
     <style name="TextAppearance.NotificationImportanceChannel" parent="@style/TextAppearance">
         <item name="android:textSize">@dimen/notification_importance_channel_text</item>
         <item name="android:textColor">@color/notification_guts_header_text_color</item>
-        <item name="android:fontFamily">@android:string/config_networkLocationProviderPackageName</item>
+        <item name="android:fontFamily">@android:string/config_mainBuiltInDisplayCutoutRectApproximation</item>
     </style>
     <style name="TextAppearance.NotificationImportanceChannelGroup" parent="@style/TextAppearance">
         <item name="android:textSize">@dimen/notification_importance_channel_group_text</item>
         <item name="android:textColor">@color/notification_guts_sub_text_color</item>
-        <item name="android:fontFamily">@android:string/config_networkCaptivePortalServerUrl</item>
+        <item name="android:fontFamily">@android:string/config_mainBuiltInDisplayCutout</item>
     </style>
     <style name="TextAppearance.NotificationImportanceDetail" parent="@style/TextAppearance">
         <item name="android:textSize">@dimen/notification_importance_description_text</item>
@@ -3955,7 +3955,7 @@
     <style name="TextAppearance.NotificationImportanceHeader" parent="@style/TextAppearance">
         <item name="android:textSize">@dimen/notification_importance_header_text</item>
         <item name="android:textColor">@color/notification_guts_header_text_color</item>
-        <item name="android:fontFamily">@android:string/config_networkCaptivePortalServerUrl</item>
+        <item name="android:fontFamily">@android:string/config_mainBuiltInDisplayCutout</item>
     </style>
     <style name="TextAppearance.NotificationInfo" parent="@style/TextAppearance">
         <item name="android:textColor">@color/notification_primary_text_color</item>
@@ -3967,7 +3967,7 @@
         <item name="android:gravity">center_vertical</item>
         <item name="android:background">@drawable/btn_borderless_rect</item>
         <item name="android:focusable">true</item>
-        <item name="android:fontFamily">@android:string/config_networkLocationProviderPackageName</item>
+        <item name="android:fontFamily">@android:string/config_mainBuiltInDisplayCutoutRectApproximation</item>
     </style>
     <style name="TextAppearance.NotificationInfo.Confirmation" parent="@style/TextAppearance.NotificationInfo">
         <item name="android:textSize">14.0sp</item>
@@ -4040,7 +4040,7 @@
     </style>
     <style name="TextAppearance.QS.TileLabel" parent="@style/TextAppearance.QS">
         <item name="android:textSize">@dimen/qs_tile_text_size</item>
-        <item name="android:fontFamily">@android:string/config_networkCaptivePortalServerUrl</item>
+        <item name="android:fontFamily">@android:string/config_mainBuiltInDisplayCutout</item>
     </style>
     <style name="TextAppearance.QS.TileLabel.Secondary" parent="@style/TextAppearance.QS.TileLabel">
         <item name="android:textSize">@dimen/qs_tile_text_size</item>
@@ -4077,7 +4077,7 @@
         <item name="android:textSize">@dimen/qs_time_expanded_size</item>
         <item name="android:textStyle">normal</item>
         <item name="android:textColor">?android:textColorPrimary</item>
-        <item name="android:fontFamily">@android:string/config_networkLocationProviderPackageName</item>
+        <item name="android:fontFamily">@android:string/config_mainBuiltInDisplayCutoutRectApproximation</item>
     </style>
     <style name="TextAppearance.StatusBar.Expanded.Date" parent="@style/TextAppearance.StatusBar.Expanded">
         <item name="android:textSize">@dimen/qs_time_expanded_size</item>
@@ -4357,7 +4357,7 @@
         <item name="android:colorError">@android:color/error_color_material_dark</item>
         <item name="android:forceDarkAllowed">false</item>
         <item name="android:isLightTheme">false</item>
-        <item name="android:magnifierElevation">@style/LockPatternStyle</item>
+        <item name="android:magnifierColorOverlay">@style/LockPatternStyle</item>
         <item name="backgroundProtectedStyle">@style/BackgroundProtectedStyle</item>
         <item name="darkIconTheme">@style/DualToneDarkTheme</item>
         <item name="lightIconTheme">@style/DualToneLightTheme</item>
@@ -5380,7 +5380,7 @@
         <item name="android:textSize">@dimen/widget_big_font_size</item>
         <item name="android:paddingBottom">@dimen/oneplus_bottom_text_spacing_digital</item>
         <item name="android:fontFamily">sans-serif-light</item>
-        <item name="android:fontFeatureSettings">@android:string/config_networkOverLimitComponent</item>
+        <item name="android:fontFeatureSettings">@android:string/config_managed_provisioning_package</item>
     </style>
     <style name="owner_view">
         <item name="android:textSize">13.0dip</item>
@@ -5449,7 +5449,7 @@
         <item name="android:shadowColor">@color/keyguard_shadow_color</item>
         <item name="android:shadowRadius">?shadowRadius</item>
         <item name="android:fontFamily">sans-serif-light</item>
-        <item name="android:fontFeatureSettings">@android:string/config_networkOverLimitComponent</item>
+        <item name="android:fontFeatureSettings">@android:string/config_managed_provisioning_package</item>
     </style>
     <style name="widget_label">
         <item name="android:textSize">@dimen/widget_label_font_size</item>
@@ -5461,7 +5461,7 @@
         <item name="android:paddingBottom">@dimen/bottom_text_spacing_digital</item>
         <item name="android:shadowColor">@color/keyguard_shadow_color</item>
         <item name="android:shadowRadius">?shadowRadius</item>
-        <item name="android:fontFamily">@android:string/config_networkCaptivePortalServerUrl</item>
+        <item name="android:fontFamily">@android:string/config_mainBuiltInDisplayCutout</item>
     </style>
     <style name="widget_title_bold">
         <item name="android:textSize">@dimen/widget_title_font_size</item>
@@ -5470,6 +5470,6 @@
         <item name="android:paddingBottom">@dimen/widget_vertical_padding_clock</item>
         <item name="android:shadowColor">@color/keyguard_shadow_color</item>
         <item name="android:shadowRadius">?shadowRadius</item>
-        <item name="android:fontFamily">@android:string/config_networkCaptivePortalServerUrl</item>
+        <item name="android:fontFamily">@android:string/config_mainBuiltInDisplayCutout</item>
     </style>
 </resources>
