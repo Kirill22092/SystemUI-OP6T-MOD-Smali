@@ -23,11 +23,11 @@
 
 # direct methods
 .method constructor <init>(Lcustom/textclock/CustomClock;)V
-    .locals 0
+    .registers 2
     .param p1, "this$0"    # Lcustom/textclock/CustomClock;
 
     .prologue
-    .line 71
+    .line 72
     iput-object p1, p0, Lcustom/textclock/CustomClock$2;->this$0:Lcustom/textclock/CustomClock;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,22 +38,22 @@
 
 # virtual methods
 .method public run()V
-    .locals 8
+    .registers 9
 
     .prologue
     const-wide/16 v6, 0x3e8
 
-    .line 74
+    .line 75
     iget-object v2, p0, Lcustom/textclock/CustomClock$2;->this$0:Lcustom/textclock/CustomClock;
 
     invoke-virtual {v2}, Lcustom/textclock/CustomClock;->onTimeChanged()V
 
-    .line 75
+    .line 76
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v0
 
-    .line 76
+    .line 77
     .local v0, "uptimeMillis":J
     iget-object v2, p0, Lcustom/textclock/CustomClock$2;->this$0:Lcustom/textclock/CustomClock;
 
@@ -75,6 +75,6 @@
 
     invoke-virtual {v2, v3, v4, v5}, Landroid/os/Handler;->postAtTime(Ljava/lang/Runnable;J)Z
 
-    .line 77
+    .line 78
     return-void
 .end method

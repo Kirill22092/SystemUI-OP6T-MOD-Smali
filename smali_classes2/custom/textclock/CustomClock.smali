@@ -35,24 +35,24 @@
 
 # direct methods
 .method public constructor <init>(Landroid/content/Context;)V
-    .locals 1
+    .registers 3
     .param p1, "context"    # Landroid/content/Context;
     .annotation build Landroidx/annotation/RequiresApi;
         api = 0x17
     .end annotation
 
     .prologue
-    .line 39
+    .line 40
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, v0}, Lcustom/textclock/CustomClock;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 40
+    .line 41
     return-void
 .end method
 
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
-    .locals 1
+    .registers 4
     .param p1, "context"    # Landroid/content/Context;
     .param p2, "set"    # Landroid/util/AttributeSet;
     .annotation build Landroidx/annotation/RequiresApi;
@@ -60,17 +60,17 @@
     .end annotation
 
     .prologue
-    .line 44
+    .line 45
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, p2, v0}, Lcustom/textclock/CustomClock;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    .line 45
+    .line 46
     return-void
 .end method
 
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
-    .locals 8
+    .registers 12
     .param p1, "context"    # Landroid/content/Context;
     .param p2, "set"    # Landroid/util/AttributeSet;
     .param p3, "n"    # I
@@ -89,33 +89,33 @@
 
     const/4 v4, 0x0
 
-    .line 49
+    .line 50
     invoke-direct {p0, p1, p2, p3}, Landroidx/appcompat/widget/AppCompatTextView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    .line 50
+    .line 51
     iput v0, p0, Lcustom/textclock/CustomClock;->mCurrentHour:I
 
-    .line 51
+    .line 52
     iput v0, p0, Lcustom/textclock/CustomClock;->mCurrentMinute:I
 
-    .line 52
+    .line 53
     iput-boolean v2, p0, Lcustom/textclock/CustomClock;->mTransition:Z
 
-    .line 53
+    .line 54
     new-instance v0, Lcustom/textclock/CustomClock$1;
 
     invoke-direct {v0, p0}, Lcustom/textclock/CustomClock$1;-><init>(Lcustom/textclock/CustomClock;)V
 
     iput-object v0, p0, Lcustom/textclock/CustomClock;->mTimeZoneChangedReceiver:Landroid/content/BroadcastReceiver;
 
-    .line 71
+    .line 72
     new-instance v0, Lcustom/textclock/CustomClock$2;
 
     invoke-direct {v0, p0}, Lcustom/textclock/CustomClock$2;-><init>(Lcustom/textclock/CustomClock;)V
 
     iput-object v0, p0, Lcustom/textclock/CustomClock;->mTicker:Ljava/lang/Runnable;
 
-    .line 79
+    .line 80
     invoke-static {}, Ljava/util/TimeZone;->getDefault()Ljava/util/TimeZone;
 
     move-result-object v0
@@ -126,7 +126,7 @@
 
     iput-object v0, p0, Lcustom/textclock/CustomClock;->mTime:Ljava/util/Calendar;
 
-    .line 80
+    .line 81
     invoke-static {p1}, Landroid/text/format/DateFormat;->getTimeFormat(Landroid/content/Context;)Ljava/text/DateFormat;
 
     move-result-object v0
@@ -139,14 +139,14 @@
 
     iput-object v0, p0, Lcustom/textclock/CustomClock;->mDescFormat:Ljava/lang/String;
 
-    .line 81
+    .line 82
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
     iput-object v0, p0, Lcustom/textclock/CustomClock;->mResources:Landroid/content/res/Resources;
 
-    .line 82
+    .line 83
     iget-object v0, p0, Lcustom/textclock/CustomClock;->mResources:Landroid/content/res/Resources;
 
     const v1, 0x7f03013c
@@ -157,7 +157,7 @@
 
     iput-object v0, p0, Lcustom/textclock/CustomClock;->mHours:[Ljava/lang/String;
 
-    .line 83
+    .line 84
     iget-object v0, p0, Lcustom/textclock/CustomClock;->mResources:Landroid/content/res/Resources;
 
     const v1, 0x7f03013d
@@ -168,7 +168,7 @@
 
     iput-object v0, p0, Lcustom/textclock/CustomClock;->mMinutes:[Ljava/lang/String;
 
-    .line 84
+    .line 85
     const-string v0, "text.clock_accent_switch"
 
     invoke-static {v0, v2}, Lcom/android/wubydax/GearUtils;->getDbIntForKey(Ljava/lang/String;I)I
@@ -177,9 +177,9 @@
 
     const/4 v1, 0x1
 
-    if-ne v0, v1, :cond_0
+    if-ne v0, v1, :cond_94
 
-    .line 85
+    .line 86
     const-string v0, "text.clock_accent_color"
 
     const v1, -0xcc4a1b
@@ -190,8 +190,8 @@
 
     iput v0, p0, Lcustom/textclock/CustomClock;->mAccentColor:I
 
-    .line 88
-    :goto_0
+    .line 89
+    :goto_64
     new-instance v0, Landroid/view/animation/AlphaAnimation;
 
     invoke-direct {v0, v4, v5}, Landroid/view/animation/AlphaAnimation;-><init>(FF)V
@@ -204,14 +204,14 @@
 
     invoke-virtual {v0, v1}, Landroid/view/animation/Animation;->setInterpolator(Landroid/view/animation/Interpolator;)V
 
-    .line 89
+    .line 90
     iget-object v0, p0, Lcustom/textclock/CustomClock;->fadeIn:Landroid/view/animation/Animation;
 
     const-wide/16 v2, 0x64
 
     invoke-virtual {v0, v2, v3}, Landroid/view/animation/Animation;->setDuration(J)V
 
-    .line 90
+    .line 91
     new-instance v0, Landroid/view/animation/AlphaAnimation;
 
     invoke-direct {v0, v5, v4}, Landroid/view/animation/AlphaAnimation;-><init>(FF)V
@@ -224,21 +224,21 @@
 
     invoke-virtual {v0, v1}, Landroid/view/animation/Animation;->setInterpolator(Landroid/view/animation/Interpolator;)V
 
-    .line 91
+    .line 92
     iget-object v0, p0, Lcustom/textclock/CustomClock;->fadeOut:Landroid/view/animation/Animation;
 
     invoke-virtual {v0, v6, v7}, Landroid/view/animation/Animation;->setStartOffset(J)V
 
-    .line 92
+    .line 93
     iget-object v0, p0, Lcustom/textclock/CustomClock;->fadeOut:Landroid/view/animation/Animation;
 
     invoke-virtual {v0, v6, v7}, Landroid/view/animation/Animation;->setDuration(J)V
 
-    .line 93
+    .line 94
     return-void
 
-    .line 87
-    :cond_0
+    .line 88
+    :cond_94
     iget-object v0, p0, Lcustom/textclock/CustomClock;->mResources:Landroid/content/res/Resources;
 
     const v1, 0x7f0604af
@@ -251,141 +251,141 @@
 
     iput v0, p0, Lcustom/textclock/CustomClock;->mAccentColor:I
 
-    goto :goto_0
+    goto :goto_64
 .end method
 
 .method static synthetic access$000(Lcustom/textclock/CustomClock;)Landroid/content/res/Resources;
-    .locals 1
+    .registers 2
     .param p0, "x0"    # Lcustom/textclock/CustomClock;
 
     .prologue
-    .line 20
+    .line 21
     iget-object v0, p0, Lcustom/textclock/CustomClock;->mResources:Landroid/content/res/Resources;
 
     return-object v0
 .end method
 
 .method static synthetic access$002(Lcustom/textclock/CustomClock;Landroid/content/res/Resources;)Landroid/content/res/Resources;
-    .locals 0
+    .registers 2
     .param p0, "x0"    # Lcustom/textclock/CustomClock;
     .param p1, "x1"    # Landroid/content/res/Resources;
 
     .prologue
-    .line 20
+    .line 21
     iput-object p1, p0, Lcustom/textclock/CustomClock;->mResources:Landroid/content/res/Resources;
 
     return-object p1
 .end method
 
 .method static synthetic access$100(Lcustom/textclock/CustomClock;)[Ljava/lang/String;
-    .locals 1
+    .registers 2
     .param p0, "x0"    # Lcustom/textclock/CustomClock;
 
     .prologue
-    .line 20
+    .line 21
     iget-object v0, p0, Lcustom/textclock/CustomClock;->mHours:[Ljava/lang/String;
 
     return-object v0
 .end method
 
 .method static synthetic access$102(Lcustom/textclock/CustomClock;[Ljava/lang/String;)[Ljava/lang/String;
-    .locals 0
+    .registers 2
     .param p0, "x0"    # Lcustom/textclock/CustomClock;
     .param p1, "x1"    # [Ljava/lang/String;
 
     .prologue
-    .line 20
+    .line 21
     iput-object p1, p0, Lcustom/textclock/CustomClock;->mHours:[Ljava/lang/String;
 
     return-object p1
 .end method
 
 .method static synthetic access$200(Lcustom/textclock/CustomClock;)[Ljava/lang/String;
-    .locals 1
+    .registers 2
     .param p0, "x0"    # Lcustom/textclock/CustomClock;
 
     .prologue
-    .line 20
+    .line 21
     iget-object v0, p0, Lcustom/textclock/CustomClock;->mMinutes:[Ljava/lang/String;
 
     return-object v0
 .end method
 
 .method static synthetic access$202(Lcustom/textclock/CustomClock;[Ljava/lang/String;)[Ljava/lang/String;
-    .locals 0
+    .registers 2
     .param p0, "x0"    # Lcustom/textclock/CustomClock;
     .param p1, "x1"    # [Ljava/lang/String;
 
     .prologue
-    .line 20
+    .line 21
     iput-object p1, p0, Lcustom/textclock/CustomClock;->mMinutes:[Ljava/lang/String;
 
     return-object p1
 .end method
 
 .method static synthetic access$302(Lcustom/textclock/CustomClock;Ljava/lang/String;)Ljava/lang/String;
-    .locals 0
+    .registers 2
     .param p0, "x0"    # Lcustom/textclock/CustomClock;
     .param p1, "x1"    # Ljava/lang/String;
 
     .prologue
-    .line 20
+    .line 21
     iput-object p1, p0, Lcustom/textclock/CustomClock;->mDescFormat:Ljava/lang/String;
 
     return-object p1
 .end method
 
 .method static synthetic access$402(Lcustom/textclock/CustomClock;Z)Z
-    .locals 0
+    .registers 2
     .param p0, "x0"    # Lcustom/textclock/CustomClock;
     .param p1, "x1"    # Z
 
     .prologue
-    .line 20
+    .line 21
     iput-boolean p1, p0, Lcustom/textclock/CustomClock;->mTransition:Z
 
     return p1
 .end method
 
 .method static synthetic access$500(Lcustom/textclock/CustomClock;)Ljava/lang/Runnable;
-    .locals 1
+    .registers 2
     .param p0, "x0"    # Lcustom/textclock/CustomClock;
 
     .prologue
-    .line 20
+    .line 21
     iget-object v0, p0, Lcustom/textclock/CustomClock;->mTicker:Ljava/lang/Runnable;
 
     return-object v0
 .end method
 
 .method static synthetic access$600(Lcustom/textclock/CustomClock;)I
-    .locals 1
+    .registers 2
     .param p0, "x0"    # Lcustom/textclock/CustomClock;
 
     .prologue
-    .line 20
+    .line 21
     iget v0, p0, Lcustom/textclock/CustomClock;->mCurrentHour:I
 
     return v0
 .end method
 
 .method static synthetic access$700(Lcustom/textclock/CustomClock;)I
-    .locals 1
+    .registers 2
     .param p0, "x0"    # Lcustom/textclock/CustomClock;
 
     .prologue
-    .line 20
+    .line 21
     iget v0, p0, Lcustom/textclock/CustomClock;->mCurrentMinute:I
 
     return v0
 .end method
 
 .method static synthetic access$800(Lcustom/textclock/CustomClock;)Landroid/view/animation/Animation;
-    .locals 1
+    .registers 2
     .param p0, "x0"    # Lcustom/textclock/CustomClock;
 
     .prologue
-    .line 20
+    .line 21
     iget-object v0, p0, Lcustom/textclock/CustomClock;->fadeIn:Landroid/view/animation/Animation;
 
     return-object v0
@@ -394,66 +394,66 @@
 
 # virtual methods
 .method public hasOverlappingRendering()Z
-    .locals 1
+    .registers 2
 
     .prologue
-    .line 96
+    .line 97
     const/4 v0, 0x0
 
     return v0
 .end method
 
 .method protected onAttachedToWindow()V
-    .locals 5
+    .registers 6
 
     .prologue
-    .line 100
+    .line 101
     invoke-super {p0}, Landroidx/appcompat/widget/AppCompatTextView;->onAttachedToWindow()V
 
-    .line 101
+    .line 102
     iget-object v1, p0, Lcustom/textclock/CustomClock;->mTime:Ljava/util/Calendar;
 
-    .line 102
+    .line 103
     .local v1, "mTime":Ljava/util/Calendar;
     iget-object v2, p0, Lcustom/textclock/CustomClock;->mTimeZone:Ljava/util/TimeZone;
 
-    .line 103
+    .line 104
     .local v2, "timeZone":Ljava/util/TimeZone;
-    if-nez v2, :cond_0
+    if-nez v2, :cond_d
 
     invoke-static {}, Ljava/util/TimeZone;->getDefault()Ljava/util/TimeZone;
 
     move-result-object v2
 
-    .line 104
-    :cond_0
+    .line 105
+    :cond_d
     invoke-virtual {v1, v2}, Ljava/util/Calendar;->setTimeZone(Ljava/util/TimeZone;)V
 
-    .line 105
+    .line 106
     invoke-virtual {p0}, Lcustom/textclock/CustomClock;->onTimeChanged()V
 
-    .line 106
+    .line 107
     new-instance v0, Landroid/content/IntentFilter;
 
     invoke-direct {v0}, Landroid/content/IntentFilter;-><init>()V
 
-    .line 107
+    .line 108
     .local v0, "intentFilter":Landroid/content/IntentFilter;
     const-string v3, "android.intent.action.TIME_SET"
 
     invoke-virtual {v0, v3}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 108
+    .line 109
     const-string v3, "android.intent.action.TIMEZONE_CHANGED"
 
     invoke-virtual {v0, v3}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 109
+    .line 110
     const-string v3, "android.intent.action.LOCALE_CHANGED"
 
     invoke-virtual {v0, v3}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 110
+    .line 111
     invoke-virtual {p0}, Lcustom/textclock/CustomClock;->getContext()Landroid/content/Context;
 
     move-result-object v3
@@ -462,23 +462,23 @@
 
     invoke-virtual {v3, v4, v0}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 111
+    .line 112
     iget-object v3, p0, Lcustom/textclock/CustomClock;->mTicker:Ljava/lang/Runnable;
 
     invoke-interface {v3}, Ljava/lang/Runnable;->run()V
 
-    .line 112
+    .line 113
     return-void
 .end method
 
 .method protected onDetachedFromWindow()V
-    .locals 2
+    .registers 3
 
     .prologue
-    .line 115
+    .line 116
     invoke-super {p0}, Landroidx/appcompat/widget/AppCompatTextView;->onDetachedFromWindow()V
 
-    .line 116
+    .line 117
     invoke-virtual {p0}, Lcustom/textclock/CustomClock;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -487,7 +487,7 @@
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
-    .line 117
+    .line 118
     invoke-virtual {p0}, Lcustom/textclock/CustomClock;->getHandler()Landroid/os/Handler;
 
     move-result-object v0
@@ -496,15 +496,15 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 118
+    .line 119
     return-void
 .end method
 
 .method public onTimeChanged()V
-    .locals 18
+    .registers 19
 
     .prologue
-    .line 121
+    .line 122
     move-object/from16 v0, p0
 
     iget-object v12, v0, Lcustom/textclock/CustomClock;->mTime:Ljava/util/Calendar;
@@ -515,7 +515,7 @@
 
     invoke-virtual {v12, v14, v15}, Ljava/util/Calendar;->setTimeInMillis(J)V
 
-    .line 122
+    .line 123
     move-object/from16 v0, p0
 
     iget-object v12, v0, Lcustom/textclock/CustomClock;->mDescFormat:Ljava/lang/String;
@@ -532,7 +532,7 @@
 
     invoke-virtual {v0, v12}, Lcustom/textclock/CustomClock;->setContentDescription(Ljava/lang/CharSequence;)V
 
-    .line 123
+    .line 124
     invoke-virtual/range {p0 .. p0}, Lcustom/textclock/CustomClock;->getContext()Landroid/content/Context;
 
     move-result-object v12
@@ -541,7 +541,7 @@
 
     move-result v4
 
-    .line 124
+    .line 125
     .local v4, "is24HourFormat":Z
     move-object/from16 v0, p0
 
@@ -553,18 +553,18 @@
 
     move-result v11
 
-    .line 126
+    .line 127
     .local v11, "value":I
-    if-eqz v4, :cond_3
+    if-eqz v4, :cond_b6
 
     const/16 v7, 0x18
 
-    .line 128
+    .line 129
     .local v7, "n":I
-    :goto_0
+    :goto_32
     rem-int v8, v11, v7
 
-    .line 129
+    .line 130
     .local v8, "n2":I
     move-object/from16 v0, p0
 
@@ -578,20 +578,20 @@
 
     rem-int/lit8 v6, v12, 0x3c
 
-    .line 130
+    .line 131
     .local v6, "mCurrentMinute":I
     move v5, v8
 
-    .line 131
+    .line 132
     .local v5, "mCurrentHour":I
-    if-nez v8, :cond_0
+    if-nez v8, :cond_47
 
-    if-nez v4, :cond_0
+    if-nez v4, :cond_47
 
     const/16 v5, 0xc
 
-    .line 132
-    :cond_0
+    .line 133
+    :cond_47
     move-object/from16 v0, p0
 
     iget-boolean v13, v0, Lcustom/textclock/CustomClock;->mTransition:Z
@@ -600,35 +600,35 @@
 
     iget v12, v0, Lcustom/textclock/CustomClock;->mCurrentHour:I
 
-    if-ne v12, v5, :cond_1
+    if-ne v12, v5, :cond_57
 
     move-object/from16 v0, p0
 
     iget v12, v0, Lcustom/textclock/CustomClock;->mCurrentMinute:I
 
-    if-eq v12, v6, :cond_4
+    if-eq v12, v6, :cond_ba
 
-    :cond_1
+    :cond_57
     const/4 v12, 0x1
 
-    :goto_1
+    :goto_58
     or-int/2addr v12, v13
 
     move-object/from16 v0, p0
 
     iput-boolean v12, v0, Lcustom/textclock/CustomClock;->mTransition:Z
 
-    .line 133
+    .line 134
     move-object/from16 v0, p0
 
     iput v5, v0, Lcustom/textclock/CustomClock;->mCurrentHour:I
 
-    .line 134
+    .line 135
     move-object/from16 v0, p0
 
     iput v6, v0, Lcustom/textclock/CustomClock;->mCurrentMinute:I
 
-    .line 135
+    .line 136
     move-object/from16 v0, p0
 
     iget-object v12, v0, Lcustom/textclock/CustomClock;->mResources:Landroid/content/res/Resources;
@@ -641,7 +641,7 @@
 
     check-cast v10, Landroid/text/SpannedString;
 
-    .line 136
+    .line 137
     .local v10, "spannedString":Landroid/text/SpannedString;
     const/4 v12, 0x0
 
@@ -661,24 +661,24 @@
 
     check-cast v3, [Landroid/text/Annotation;
 
-    .line 137
+    .line 138
     .local v3, "array":[Landroid/text/Annotation;
     new-instance v9, Landroid/text/SpannableString;
 
     invoke-direct {v9, v10}, Landroid/text/SpannableString;-><init>(Ljava/lang/CharSequence;)V
 
-    .line 138
+    .line 139
     .local v9, "spannableString":Landroid/text/SpannableString;
     array-length v13, v3
 
     const/4 v12, 0x0
 
-    :goto_2
-    if-ge v12, v13, :cond_5
+    :goto_89
+    if-ge v12, v13, :cond_bc
 
     aget-object v2, v3, v12
 
-    .line 139
+    .line 140
     .local v2, "annotation":Landroid/text/Annotation;
     const-string v14, "header_color"
 
@@ -690,9 +690,9 @@
 
     move-result v14
 
-    if-eqz v14, :cond_2
+    if-eqz v14, :cond_b3
 
-    .line 140
+    .line 141
     new-instance v14, Landroid/text/style/ForegroundColorSpan;
 
     move-object/from16 v0, p0
@@ -717,13 +717,13 @@
 
     invoke-virtual {v9, v14, v15, v0, v1}, Landroid/text/SpannableString;->setSpan(Ljava/lang/Object;III)V
 
-    .line 138
-    :cond_2
+    .line 139
+    :cond_b3
     add-int/lit8 v12, v12, 0x1
 
-    goto :goto_2
+    goto :goto_89
 
-    .line 127
+    .line 128
     .end local v2    # "annotation":Landroid/text/Annotation;
     .end local v3    # "array":[Landroid/text/Annotation;
     .end local v5    # "mCurrentHour":I
@@ -732,26 +732,26 @@
     .end local v8    # "n2":I
     .end local v9    # "spannableString":Landroid/text/SpannableString;
     .end local v10    # "spannedString":Landroid/text/SpannedString;
-    :cond_3
+    :cond_b6
     const/16 v7, 0xc
 
     .restart local v7    # "n":I
-    goto/16 :goto_0
+    goto/16 :goto_32
 
-    .line 132
+    .line 133
     .restart local v5    # "mCurrentHour":I
     .restart local v6    # "mCurrentMinute":I
     .restart local v8    # "n2":I
-    :cond_4
+    :cond_ba
     const/4 v12, 0x0
 
-    goto :goto_1
+    goto :goto_58
 
-    .line 143
+    .line 144
     .restart local v3    # "array":[Landroid/text/Annotation;
     .restart local v9    # "spannableString":Landroid/text/SpannableString;
     .restart local v10    # "spannedString":Landroid/text/SpannedString;
-    :cond_5
+    :cond_bc
     move-object/from16 v0, p0
 
     iget-object v12, v0, Lcustom/textclock/CustomClock;->fadeOut:Landroid/view/animation/Animation;
@@ -764,14 +764,14 @@
 
     invoke-virtual {v12, v13}, Landroid/view/animation/Animation;->setAnimationListener(Landroid/view/animation/Animation$AnimationListener;)V
 
-    .line 160
+    .line 161
     move-object/from16 v0, p0
 
     iget-boolean v12, v0, Lcustom/textclock/CustomClock;->mTransition:Z
 
-    if-eqz v12, :cond_6
+    if-eqz v12, :cond_d9
 
-    .line 161
+    .line 162
     move-object/from16 v0, p0
 
     iget-object v12, v0, Lcustom/textclock/CustomClock;->fadeOut:Landroid/view/animation/Animation;
@@ -780,31 +780,31 @@
 
     invoke-virtual {v0, v12}, Lcustom/textclock/CustomClock;->startAnimation(Landroid/view/animation/Animation;)V
 
-    .line 163
-    :cond_6
+    .line 164
+    :cond_d9
     const/4 v12, 0x0
 
     move-object/from16 v0, p0
 
     iput-boolean v12, v0, Lcustom/textclock/CustomClock;->mTransition:Z
 
-    .line 164
+    .line 165
     return-void
 .end method
 
 .method public onTimeZoneChanged(Ljava/util/TimeZone;)V
-    .locals 1
+    .registers 3
     .param p1, "timeZone"    # Ljava/util/TimeZone;
 
     .prologue
-    .line 167
+    .line 168
     iput-object p1, p0, Lcustom/textclock/CustomClock;->mTimeZone:Ljava/util/TimeZone;
 
-    .line 168
+    .line 169
     iget-object v0, p0, Lcustom/textclock/CustomClock;->mTime:Ljava/util/Calendar;
 
     invoke-virtual {v0, p1}, Ljava/util/Calendar;->setTimeZone(Ljava/util/TimeZone;)V
 
-    .line 169
+    .line 170
     return-void
 .end method

@@ -25,11 +25,11 @@
 
 # direct methods
 .method constructor <init>(Lcustom/textclock/CustomClock;Landroid/text/SpannableString;)V
-    .locals 0
+    .registers 3
     .param p1, "this$0"    # Lcustom/textclock/CustomClock;
 
     .prologue
-    .line 143
+    .line 144
     iput-object p1, p0, Lcustom/textclock/CustomClock$3;->this$0:Lcustom/textclock/CustomClock;
 
     iput-object p2, p0, Lcustom/textclock/CustomClock$3;->val$spannableString:Landroid/text/SpannableString;
@@ -42,18 +42,16 @@
 
 # virtual methods
 .method public onAnimationEnd(Landroid/view/animation/Animation;)V
-    .locals 9
+    .registers 10
     .param p1, "animation"    # Landroid/view/animation/Animation;
 
     .prologue
-    const/4 v8, 0x2
-
     const/4 v7, 0x0
 
-    .line 145
+    .line 146
     iget-object v0, p0, Lcustom/textclock/CustomClock$3;->this$0:Lcustom/textclock/CustomClock;
 
-    .line 146
+    .line 147
     .local v0, "this$0":Lcustom/textclock/CustomClock;
     iget-object v2, p0, Lcustom/textclock/CustomClock$3;->val$spannableString:Landroid/text/SpannableString;
 
@@ -91,21 +89,23 @@
 
     aput-object v5, v3, v4
 
-    iget-object v4, p0, Lcustom/textclock/CustomClock$3;->this$0:Lcustom/textclock/CustomClock;
-
-    invoke-static {v4}, Lcustom/textclock/CustomClock;->access$200(Lcustom/textclock/CustomClock;)[Ljava/lang/String;
-
-    move-result-object v4
+    const/4 v4, 0x2
 
     iget-object v5, p0, Lcustom/textclock/CustomClock$3;->this$0:Lcustom/textclock/CustomClock;
 
-    invoke-static {v5}, Lcustom/textclock/CustomClock;->access$700(Lcustom/textclock/CustomClock;)I
+    invoke-static {v5}, Lcustom/textclock/CustomClock;->access$200(Lcustom/textclock/CustomClock;)[Ljava/lang/String;
 
-    move-result v5
+    move-result-object v5
 
-    aget-object v4, v4, v5
+    iget-object v6, p0, Lcustom/textclock/CustomClock$3;->this$0:Lcustom/textclock/CustomClock;
 
-    aput-object v4, v3, v8
+    invoke-static {v6}, Lcustom/textclock/CustomClock;->access$700(Lcustom/textclock/CustomClock;)I
+
+    move-result v6
+
+    aget-object v5, v5, v6
+
+    aput-object v5, v3, v4
 
     invoke-static {v2, v3}, Landroid/text/TextUtils;->expandTemplate(Ljava/lang/CharSequence;[Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
 
@@ -113,12 +113,12 @@
 
     invoke-virtual {v0, v2}, Lcustom/textclock/CustomClock;->setText(Ljava/lang/CharSequence;)V
 
-    .line 147
+    .line 148
     iget-object v2, p0, Lcustom/textclock/CustomClock$3;->this$0:Lcustom/textclock/CustomClock;
 
     const-string v3, "text.clock_color"
 
-    const v4, -0xb6a00
+    const/4 v4, -0x1
 
     invoke-static {v3, v4}, Lcom/android/wubydax/GearUtils;->getDbIntForKey(Ljava/lang/String;I)I
 
@@ -126,12 +126,12 @@
 
     invoke-virtual {v2, v3}, Lcustom/textclock/CustomClock;->setTextColor(I)V
 
-    .line 148
+    .line 149
     iget-object v2, p0, Lcustom/textclock/CustomClock$3;->this$0:Lcustom/textclock/CustomClock;
 
     const-string v3, "text.clock_size"
 
-    const/16 v4, 0x22
+    const/16 v4, 0x32
 
     invoke-static {v3, v4}, Lcom/android/wubydax/GearUtils;->getDbIntForKey(Ljava/lang/String;I)I
 
@@ -139,9 +139,9 @@
 
     int-to-float v3, v3
 
-    invoke-virtual {v2, v8, v3}, Lcustom/textclock/CustomClock;->setTextSize(IF)V
+    invoke-virtual {v2, v3}, Lcustom/textclock/CustomClock;->setTextSize(F)V
 
-    .line 149
+    .line 150
     iget-object v2, p0, Lcustom/textclock/CustomClock$3;->this$0:Lcustom/textclock/CustomClock;
 
     const-string v3, "text.clock_padding_left"
@@ -154,7 +154,7 @@
 
     const-string v4, "text.clock_padding_top"
 
-    const/16 v5, 0xc8
+    const/16 v5, 0xf
 
     invoke-static {v4, v5}, Lcom/android/wubydax/GearUtils;->getDbIntForKey(Ljava/lang/String;I)I
 
@@ -174,10 +174,10 @@
 
     invoke-virtual {v2, v3, v4, v5, v6}, Lcustom/textclock/CustomClock;->setPadding(IIII)V
 
-    .line 150
+    .line 151
     iget-object v1, p0, Lcustom/textclock/CustomClock$3;->this$0:Lcustom/textclock/CustomClock;
 
-    .line 151
+    .line 152
     .local v1, "this$2":Lcustom/textclock/CustomClock;
     invoke-static {v1}, Lcustom/textclock/CustomClock;->access$800(Lcustom/textclock/CustomClock;)Landroid/view/animation/Animation;
 
@@ -185,24 +185,24 @@
 
     invoke-virtual {v1, v2}, Lcustom/textclock/CustomClock;->startAnimation(Landroid/view/animation/Animation;)V
 
-    .line 152
+    .line 153
     return-void
 .end method
 
 .method public onAnimationRepeat(Landroid/view/animation/Animation;)V
-    .locals 0
+    .registers 2
     .param p1, "animation"    # Landroid/view/animation/Animation;
 
     .prologue
-    .line 155
+    .line 156
     return-void
 .end method
 
 .method public onAnimationStart(Landroid/view/animation/Animation;)V
-    .locals 0
+    .registers 2
     .param p1, "animation"    # Landroid/view/animation/Animation;
 
     .prologue
-    .line 158
+    .line 159
     return-void
 .end method

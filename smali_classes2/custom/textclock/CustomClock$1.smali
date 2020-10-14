@@ -20,11 +20,11 @@
 
 # direct methods
 .method constructor <init>(Lcustom/textclock/CustomClock;)V
-    .locals 0
+    .registers 2
     .param p1, "this$0"    # Lcustom/textclock/CustomClock;
 
     .prologue
-    .line 53
+    .line 54
     iput-object p1, p0, Lcustom/textclock/CustomClock$1;->this$0:Lcustom/textclock/CustomClock;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -35,12 +35,12 @@
 
 # virtual methods
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
-    .locals 4
+    .registers 7
     .param p1, "context"    # Landroid/content/Context;
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 55
+    .line 56
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v2
@@ -51,9 +51,9 @@
 
     move-result v2
 
-    if-eqz v2, :cond_1
+    if-eqz v2, :cond_21
 
-    .line 56
+    .line 57
     iget-object v2, p0, Lcustom/textclock/CustomClock$1;->this$0:Lcustom/textclock/CustomClock;
 
     const-string v3, "time-zone"
@@ -68,18 +68,18 @@
 
     invoke-virtual {v2, v3}, Lcustom/textclock/CustomClock;->onTimeZoneChanged(Ljava/util/TimeZone;)V
 
-    .line 57
+    .line 58
     iget-object v2, p0, Lcustom/textclock/CustomClock$1;->this$0:Lcustom/textclock/CustomClock;
 
     invoke-virtual {v2}, Lcustom/textclock/CustomClock;->onTimeChanged()V
 
-    .line 69
-    :cond_0
-    :goto_0
+    .line 70
+    :cond_20
+    :goto_20
     return-void
 
-    .line 59
-    :cond_1
+    .line 60
+    :cond_21
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v2
@@ -90,7 +90,7 @@
 
     move-result v2
 
-    if-nez v2, :cond_2
+    if-nez v2, :cond_39
 
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
@@ -102,10 +102,10 @@
 
     move-result v2
 
-    if-eqz v2, :cond_0
+    if-eqz v2, :cond_20
 
-    .line 60
-    :cond_2
+    .line 61
+    :cond_39
     iget-object v2, p0, Lcustom/textclock/CustomClock$1;->this$0:Lcustom/textclock/CustomClock;
 
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -114,10 +114,10 @@
 
     invoke-static {v2, v3}, Lcustom/textclock/CustomClock;->access$002(Lcustom/textclock/CustomClock;Landroid/content/res/Resources;)Landroid/content/res/Resources;
 
-    .line 61
+    .line 62
     iget-object v0, p0, Lcustom/textclock/CustomClock$1;->this$0:Lcustom/textclock/CustomClock;
 
-    .line 62
+    .line 63
     .local v0, "this$0":Lcustom/textclock/CustomClock;
     invoke-static {v0}, Lcustom/textclock/CustomClock;->access$000(Lcustom/textclock/CustomClock;)Landroid/content/res/Resources;
 
@@ -131,10 +131,10 @@
 
     invoke-static {v0, v2}, Lcustom/textclock/CustomClock;->access$102(Lcustom/textclock/CustomClock;[Ljava/lang/String;)[Ljava/lang/String;
 
-    .line 63
+    .line 64
     iget-object v1, p0, Lcustom/textclock/CustomClock$1;->this$0:Lcustom/textclock/CustomClock;
 
-    .line 64
+    .line 65
     .local v1, "this$2":Lcustom/textclock/CustomClock;
     invoke-static {v1}, Lcustom/textclock/CustomClock;->access$000(Lcustom/textclock/CustomClock;)Landroid/content/res/Resources;
 
@@ -148,7 +148,7 @@
 
     invoke-static {v1, v2}, Lcustom/textclock/CustomClock;->access$202(Lcustom/textclock/CustomClock;[Ljava/lang/String;)[Ljava/lang/String;
 
-    .line 65
+    .line 66
     iget-object v3, p0, Lcustom/textclock/CustomClock$1;->this$0:Lcustom/textclock/CustomClock;
 
     invoke-static {p1}, Landroid/text/format/DateFormat;->getTimeFormat(Landroid/content/Context;)Ljava/text/DateFormat;
@@ -163,17 +163,17 @@
 
     invoke-static {v3, v2}, Lcustom/textclock/CustomClock;->access$302(Lcustom/textclock/CustomClock;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 66
+    .line 67
     iget-object v2, p0, Lcustom/textclock/CustomClock$1;->this$0:Lcustom/textclock/CustomClock;
 
     const/4 v3, 0x1
 
     invoke-static {v2, v3}, Lcustom/textclock/CustomClock;->access$402(Lcustom/textclock/CustomClock;Z)Z
 
-    .line 67
+    .line 68
     iget-object v2, p0, Lcustom/textclock/CustomClock$1;->this$0:Lcustom/textclock/CustomClock;
 
     invoke-virtual {v2}, Lcustom/textclock/CustomClock;->onTimeChanged()V
 
-    goto :goto_0
+    goto :goto_20
 .end method

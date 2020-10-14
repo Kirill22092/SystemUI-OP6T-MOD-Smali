@@ -2,9 +2,16 @@
 <com.oneplus.aod.OpDateTimeView android:orientation="vertical" android:id="@id/date_time_view" android:layout_width="fill_parent" android:layout_height="wrap_content"
   xmlns:android="http://schemas.android.com/apk/res/android">
     <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/keyguard_clock_container" android:layout_width="fill_parent" android:layout_height="wrap_content">
-        <com.oneplus.aod.OpTextClock android:id="@id/clock_view" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:format12Hour="@string/keyguard_widget_12_hours_format" android:format24Hour="@string/keyguard_widget_24_hours_format" />
-        <include layout="@layout/aod_analog_clock_view" />
-        <include layout="@layout/aod_minimalism_clock_view" />
-        <include layout="@layout/aod_keyguard_status_area" />
+		<mickles.app.statusbar.mLinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" VisiblyKey="aod.text.clock_enable" VisiblyValue="1" PaddingKey="aod.text.clock_padding">
+			<custom.textclock.CustomClock android:layout_gravity="start|bottom|center" android:orientation="vertical" android:id="@id/custom_textclock_view" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_alignParentTop="true" android:paddingStart="40.0dip" android:letterSpacing="-0.03" />
+		</mickles.app.statusbar.mLinearLayout>
+		<mickles.app.statusbar.mLinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" VisiblyKey="aod.text.clock_enable" VisiblyValue="0" PaddingKey="aod.text.clock_padding">
+			<com.oneplus.aod.OpTextClock android:id="@id/clock_view" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:format12Hour="@string/keyguard_widget_12_hours_format" android:format24Hour="@string/keyguard_widget_24_hours_format" />
+			<include layout="@layout/aod_analog_clock_view" />
+			<include layout="@layout/aod_minimalism_clock_view" />
+		</mickles.app.statusbar.mLinearLayout>
+		<mickles.app.statusbar.mLinearLayout android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" VisiblyKey="aod.text.data_enable" android:paddingTop="5dp" VisiblyValue="1" PaddingKey="aod.text.data_padding">
+			<include layout="@layout/aod_keyguard_status_area" />
+		</mickles.app.statusbar.mLinearLayout>
     </LinearLayout>
 </com.oneplus.aod.OpDateTimeView>
