@@ -29,7 +29,7 @@
     .param p1, "this$0"    # Lcustom/textclock/CustomClock;
 
     .prologue
-    .line 144
+    .line 159
     iput-object p1, p0, Lcustom/textclock/CustomClock$3;->this$0:Lcustom/textclock/CustomClock;
 
     iput-object p2, p0, Lcustom/textclock/CustomClock$3;->val$spannableString:Landroid/text/SpannableString;
@@ -48,10 +48,10 @@
     .prologue
     const/4 v7, 0x0
 
-    .line 146
+    .line 161
     iget-object v0, p0, Lcustom/textclock/CustomClock$3;->this$0:Lcustom/textclock/CustomClock;
 
-    .line 147
+    .line 162
     .local v0, "this$0":Lcustom/textclock/CustomClock;
     iget-object v2, p0, Lcustom/textclock/CustomClock$3;->val$spannableString:Landroid/text/SpannableString;
 
@@ -113,7 +113,7 @@
 
     invoke-virtual {v0, v2}, Lcustom/textclock/CustomClock;->setText(Ljava/lang/CharSequence;)V
 
-    .line 148
+    .line 163
     iget-object v2, p0, Lcustom/textclock/CustomClock$3;->this$0:Lcustom/textclock/CustomClock;
 
     const-string v3, "text.clock_color"
@@ -126,10 +126,14 @@
 
     invoke-virtual {v2, v3}, Lcustom/textclock/CustomClock;->setTextColor(I)V
 
-    .line 149
+    .line 164
     iget-object v2, p0, Lcustom/textclock/CustomClock$3;->this$0:Lcustom/textclock/CustomClock;
 
-    const-string v3, "text.clock_size"
+    iget-object v3, p0, Lcustom/textclock/CustomClock$3;->this$0:Lcustom/textclock/CustomClock;
+
+    invoke-static {v3}, Lcustom/textclock/CustomClock;->access$800(Lcustom/textclock/CustomClock;)Ljava/lang/String;
+
+    move-result-object v3
 
     const/16 v4, 0x32
 
@@ -141,10 +145,14 @@
 
     invoke-virtual {v2, v3}, Lcustom/textclock/CustomClock;->setTextSize(F)V
 
-    .line 150
+    .line 165
     iget-object v2, p0, Lcustom/textclock/CustomClock$3;->this$0:Lcustom/textclock/CustomClock;
 
-    const-string v3, "text.clock_padding_left"
+    iget-object v3, p0, Lcustom/textclock/CustomClock$3;->this$0:Lcustom/textclock/CustomClock;
+
+    invoke-static {v3}, Lcustom/textclock/CustomClock;->access$900(Lcustom/textclock/CustomClock;)Ljava/lang/String;
+
+    move-result-object v3
 
     const/16 v4, 0x28
 
@@ -152,7 +160,11 @@
 
     move-result v3
 
-    const-string v4, "text.clock_padding_top"
+    iget-object v4, p0, Lcustom/textclock/CustomClock$3;->this$0:Lcustom/textclock/CustomClock;
+
+    invoke-static {v4}, Lcustom/textclock/CustomClock;->access$1000(Lcustom/textclock/CustomClock;)Ljava/lang/String;
+
+    move-result-object v4
 
     const/16 v5, 0xf
 
@@ -160,32 +172,20 @@
 
     move-result v4
 
-    const-string v5, "text.clock_padding_right"
+    invoke-virtual {v2, v3, v4, v7, v7}, Lcustom/textclock/CustomClock;->setPadding(IIII)V
 
-    invoke-static {v5, v7}, Lcom/android/wubydax/GearUtils;->getDbIntForKey(Ljava/lang/String;I)I
-
-    move-result v5
-
-    const-string v6, "text.clock_padding_bottom"
-
-    invoke-static {v6, v7}, Lcom/android/wubydax/GearUtils;->getDbIntForKey(Ljava/lang/String;I)I
-
-    move-result v6
-
-    invoke-virtual {v2, v3, v4, v5, v6}, Lcustom/textclock/CustomClock;->setPadding(IIII)V
-
-    .line 151
+    .line 166
     iget-object v1, p0, Lcustom/textclock/CustomClock$3;->this$0:Lcustom/textclock/CustomClock;
 
-    .line 152
+    .line 167
     .local v1, "this$2":Lcustom/textclock/CustomClock;
-    invoke-static {v1}, Lcustom/textclock/CustomClock;->access$800(Lcustom/textclock/CustomClock;)Landroid/view/animation/Animation;
+    invoke-static {v1}, Lcustom/textclock/CustomClock;->access$1100(Lcustom/textclock/CustomClock;)Landroid/view/animation/Animation;
 
     move-result-object v2
 
     invoke-virtual {v1, v2}, Lcustom/textclock/CustomClock;->startAnimation(Landroid/view/animation/Animation;)V
 
-    .line 153
+    .line 168
     return-void
 .end method
 
@@ -194,7 +194,7 @@
     .param p1, "animation"    # Landroid/view/animation/Animation;
 
     .prologue
-    .line 156
+    .line 171
     return-void
 .end method
 
@@ -203,6 +203,6 @@
     .param p1, "animation"    # Landroid/view/animation/Animation;
 
     .prologue
-    .line 159
+    .line 174
     return-void
 .end method
