@@ -5107,15 +5107,15 @@
     .registers 8
 
     .prologue
-    const v6, 0x7f0813ec
+    const v6, 0x7f0813eb
 
-    const v5, 0x7f0813eb
+    const v5, 0x7f0813ea
 
-    const v4, 0x7f0813ea
+    const v4, 0x7f0813e9
 
-    const v3, 0x7f0813e9
+    const v3, 0x7f0813e8
 
-    const v2, 0x7f0813e8
+    const v2, 0x7f080581
 
     .line 158
     const-string v0, "sys.fingerprint_icon"
@@ -5126,9 +5126,9 @@
 
     move-result v0
 
-    packed-switch v0, :pswitch_data_388
+    packed-switch v0, :pswitch_data_3ae
 
-    .line 256
+    .line 260
     :goto_19
     return-void
 
@@ -5142,7 +5142,7 @@
 
     move-result-object v1
 
-    invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
+    invoke-virtual {v1, v3}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
     move-result-object v1
 
@@ -5157,7 +5157,7 @@
 
     move-result-object v1
 
-    invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
+    invoke-virtual {v1, v3}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
     move-result-object v1
 
@@ -5175,7 +5175,7 @@
 
     move-result-object v1
 
-    invoke-virtual {v1, v3}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
+    invoke-virtual {v1, v4}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
     move-result-object v1
 
@@ -5190,7 +5190,7 @@
 
     move-result-object v1
 
-    invoke-virtual {v1, v3}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
+    invoke-virtual {v1, v4}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
     move-result-object v1
 
@@ -5208,7 +5208,7 @@
 
     move-result-object v1
 
-    invoke-virtual {v1, v4}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
+    invoke-virtual {v1, v5}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
     move-result-object v1
 
@@ -5223,7 +5223,7 @@
 
     move-result-object v1
 
-    invoke-virtual {v1, v4}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
+    invoke-virtual {v1, v5}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
     move-result-object v1
 
@@ -5241,7 +5241,7 @@
 
     move-result-object v1
 
-    invoke-virtual {v1, v5}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
+    invoke-virtual {v1, v6}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
     move-result-object v1
 
@@ -5256,7 +5256,7 @@
 
     move-result-object v1
 
-    invoke-virtual {v1, v5}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
+    invoke-virtual {v1, v6}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
     move-result-object v1
 
@@ -5274,7 +5274,9 @@
 
     move-result-object v1
 
-    invoke-virtual {v1, v6}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
+    const v2, 0x7f0813ec
+
+    invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
     move-result-object v1
 
@@ -5289,7 +5291,9 @@
 
     move-result-object v1
 
-    invoke-virtual {v1, v6}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
+    const v2, 0x7f0813ec
+
+    invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
     move-result-object v1
 
@@ -5298,7 +5302,7 @@
     goto/16 :goto_19
 
     .line 180
-    :pswitch_b6
+    :pswitch_bc
     iget-object v0, p0, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;->mIconNormal:Lcom/oneplus/systemui/biometrics/OpCircleImageView;
 
     iget-object v1, p0, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;->mContext:Landroid/content/Context;
@@ -5335,7 +5339,7 @@
     goto/16 :goto_19
 
     .line 184
-    :pswitch_dc
+    :pswitch_e2
     iget-object v0, p0, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;->mIconNormal:Lcom/oneplus/systemui/biometrics/OpCircleImageView;
 
     iget-object v1, p0, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;->mContext:Landroid/content/Context;
@@ -5372,7 +5376,7 @@
     goto/16 :goto_19
 
     .line 188
-    :pswitch_102
+    :pswitch_108
     iget-object v0, p0, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;->mIconNormal:Lcom/oneplus/systemui/biometrics/OpCircleImageView;
 
     iget-object v1, p0, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;->mContext:Landroid/content/Context;
@@ -5409,7 +5413,7 @@
     goto/16 :goto_19
 
     .line 192
-    :pswitch_128
+    :pswitch_12e
     iget-object v0, p0, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;->mIconNormal:Lcom/oneplus/systemui/biometrics/OpCircleImageView;
 
     iget-object v1, p0, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;->mContext:Landroid/content/Context;
@@ -5446,7 +5450,7 @@
     goto/16 :goto_19
 
     .line 196
-    :pswitch_14e
+    :pswitch_154
     iget-object v0, p0, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;->mIconNormal:Lcom/oneplus/systemui/biometrics/OpCircleImageView;
 
     iget-object v1, p0, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;->mContext:Landroid/content/Context;
@@ -5483,7 +5487,7 @@
     goto/16 :goto_19
 
     .line 200
-    :pswitch_174
+    :pswitch_17a
     iget-object v0, p0, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;->mIconNormal:Lcom/oneplus/systemui/biometrics/OpCircleImageView;
 
     iget-object v1, p0, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;->mContext:Landroid/content/Context;
@@ -5520,7 +5524,7 @@
     goto/16 :goto_19
 
     .line 204
-    :pswitch_19a
+    :pswitch_1a0
     iget-object v0, p0, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;->mIconNormal:Lcom/oneplus/systemui/biometrics/OpCircleImageView;
 
     iget-object v1, p0, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;->mContext:Landroid/content/Context;
@@ -5557,7 +5561,7 @@
     goto/16 :goto_19
 
     .line 208
-    :pswitch_1c0
+    :pswitch_1c6
     iget-object v0, p0, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;->mIconNormal:Lcom/oneplus/systemui/biometrics/OpCircleImageView;
 
     iget-object v1, p0, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;->mContext:Landroid/content/Context;
@@ -5594,7 +5598,7 @@
     goto/16 :goto_19
 
     .line 212
-    :pswitch_1e6
+    :pswitch_1ec
     iget-object v0, p0, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;->mIconNormal:Lcom/oneplus/systemui/biometrics/OpCircleImageView;
 
     iget-object v1, p0, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;->mContext:Landroid/content/Context;
@@ -5631,7 +5635,7 @@
     goto/16 :goto_19
 
     .line 216
-    :pswitch_20c
+    :pswitch_212
     iget-object v0, p0, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;->mIconNormal:Lcom/oneplus/systemui/biometrics/OpCircleImageView;
 
     iget-object v1, p0, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;->mContext:Landroid/content/Context;
@@ -5668,7 +5672,7 @@
     goto/16 :goto_19
 
     .line 220
-    :pswitch_232
+    :pswitch_238
     iget-object v0, p0, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;->mIconNormal:Lcom/oneplus/systemui/biometrics/OpCircleImageView;
 
     iget-object v1, p0, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;->mContext:Landroid/content/Context;
@@ -5705,7 +5709,7 @@
     goto/16 :goto_19
 
     .line 224
-    :pswitch_258
+    :pswitch_25e
     iget-object v0, p0, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;->mIconNormal:Lcom/oneplus/systemui/biometrics/OpCircleImageView;
 
     iget-object v1, p0, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;->mContext:Landroid/content/Context;
@@ -5742,7 +5746,7 @@
     goto/16 :goto_19
 
     .line 228
-    :pswitch_27e
+    :pswitch_284
     iget-object v0, p0, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;->mIconNormal:Lcom/oneplus/systemui/biometrics/OpCircleImageView;
 
     iget-object v1, p0, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;->mContext:Landroid/content/Context;
@@ -5779,7 +5783,7 @@
     goto/16 :goto_19
 
     .line 232
-    :pswitch_2a4
+    :pswitch_2aa
     iget-object v0, p0, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;->mIconNormal:Lcom/oneplus/systemui/biometrics/OpCircleImageView;
 
     iget-object v1, p0, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;->mContext:Landroid/content/Context;
@@ -5816,7 +5820,7 @@
     goto/16 :goto_19
 
     .line 236
-    :pswitch_2ca
+    :pswitch_2d0
     iget-object v0, p0, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;->mIconNormal:Lcom/oneplus/systemui/biometrics/OpCircleImageView;
 
     iget-object v1, p0, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;->mContext:Landroid/content/Context;
@@ -5853,7 +5857,7 @@
     goto/16 :goto_19
 
     .line 240
-    :pswitch_2f0
+    :pswitch_2f6
     iget-object v0, p0, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;->mIconNormal:Lcom/oneplus/systemui/biometrics/OpCircleImageView;
 
     iget-object v1, p0, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;->mContext:Landroid/content/Context;
@@ -5890,7 +5894,7 @@
     goto/16 :goto_19
 
     .line 244
-    :pswitch_316
+    :pswitch_31c
     iget-object v0, p0, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;->mIconNormal:Lcom/oneplus/systemui/biometrics/OpCircleImageView;
 
     iget-object v1, p0, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;->mContext:Landroid/content/Context;
@@ -5927,7 +5931,7 @@
     goto/16 :goto_19
 
     .line 248
-    :pswitch_33c
+    :pswitch_342
     iget-object v0, p0, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;->mIconNormal:Lcom/oneplus/systemui/biometrics/OpCircleImageView;
 
     iget-object v1, p0, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;->mContext:Landroid/content/Context;
@@ -5964,7 +5968,7 @@
     goto/16 :goto_19
 
     .line 252
-    :pswitch_362
+    :pswitch_368
     iget-object v0, p0, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;->mIconNormal:Lcom/oneplus/systemui/biometrics/OpCircleImageView;
 
     iget-object v1, p0, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;->mContext:Landroid/content/Context;
@@ -6000,33 +6004,67 @@
 
     goto/16 :goto_19
 
+    .line 256
+    :pswitch_38e
+    iget-object v0, p0, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;->mIconNormal:Lcom/oneplus/systemui/biometrics/OpCircleImageView;
+
+    iget-object v1, p0, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;->mContext:Landroid/content/Context;
+
+    invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Lcom/oneplus/systemui/biometrics/OpCircleImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
+
+    .line 257
+    iget-object v0, p0, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;->mIconDim:Lcom/oneplus/systemui/biometrics/OpCircleImageView;
+
+    iget-object v1, p0, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;->mContext:Landroid/content/Context;
+
+    invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Lcom/oneplus/systemui/biometrics/OpCircleImageView;->setBackground(Landroid/graphics/drawable/Drawable;)V
+
+    goto/16 :goto_19
+
     .line 158
-    :pswitch_data_388
+    :pswitch_data_3ae
     .packed-switch 0x1
         :pswitch_1a
         :pswitch_39
         :pswitch_58
         :pswitch_77
         :pswitch_96
-        :pswitch_b6
-        :pswitch_dc
-        :pswitch_102
-        :pswitch_128
-        :pswitch_14e
-        :pswitch_174
-        :pswitch_19a
-        :pswitch_1c0
-        :pswitch_1e6
-        :pswitch_20c
-        :pswitch_232
-        :pswitch_258
-        :pswitch_27e
-        :pswitch_2a4
-        :pswitch_2ca
-        :pswitch_2f0
-        :pswitch_316
-        :pswitch_33c
-        :pswitch_362
+        :pswitch_bc
+        :pswitch_e2
+        :pswitch_108
+        :pswitch_12e
+        :pswitch_154
+        :pswitch_17a
+        :pswitch_1a0
+        :pswitch_1c6
+        :pswitch_1ec
+        :pswitch_212
+        :pswitch_238
+        :pswitch_25e
+        :pswitch_284
+        :pswitch_2aa
+        :pswitch_2d0
+        :pswitch_2f6
+        :pswitch_31c
+        :pswitch_342
+        :pswitch_368
+        :pswitch_38e
     .end packed-switch
 .end method
 
