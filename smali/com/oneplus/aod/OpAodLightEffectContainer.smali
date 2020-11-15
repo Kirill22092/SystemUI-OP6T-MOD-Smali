@@ -100,9 +100,9 @@
     iput v0, p0, Lcom/oneplus/aod/OpAodLightEffectContainer;->mRepeatCount:I
 
     .line 61
-    new-instance v0, Lcom/oneplus/aod/OpAodLightEffectContainer$1;
+    new-instance v0, Lcom/oneplus/aod/OpAodLightEffectContainer$2;
 
-    invoke-direct {v0, p0}, Lcom/oneplus/aod/OpAodLightEffectContainer$1;-><init>(Lcom/oneplus/aod/OpAodLightEffectContainer;)V
+    invoke-direct {v0, p0}, Lcom/oneplus/aod/OpAodLightEffectContainer$2;-><init>(Lcom/oneplus/aod/OpAodLightEffectContainer;)V
 
     iput-object v0, p0, Lcom/oneplus/aod/OpAodLightEffectContainer;->mFrameRunnable:Ljava/lang/Runnable;
 
@@ -137,9 +137,9 @@
     iput v0, p0, Lcom/oneplus/aod/OpAodLightEffectContainer;->mRepeatCount:I
 
     .line 75
-    new-instance v0, Lcom/oneplus/aod/OpAodLightEffectContainer$1;
+    new-instance v0, Lcom/oneplus/aod/OpAodLightEffectContainer$3;
 
-    invoke-direct {v0, p0}, Lcom/oneplus/aod/OpAodLightEffectContainer$1;-><init>(Lcom/oneplus/aod/OpAodLightEffectContainer;)V
+    invoke-direct {v0, p0}, Lcom/oneplus/aod/OpAodLightEffectContainer$3;-><init>(Lcom/oneplus/aod/OpAodLightEffectContainer;)V
 
     iput-object v0, p0, Lcom/oneplus/aod/OpAodLightEffectContainer;->mFrameRunnable:Ljava/lang/Runnable;
 
@@ -175,9 +175,9 @@
     iput v0, p0, Lcom/oneplus/aod/OpAodLightEffectContainer;->mRepeatCount:I
 
     .line 90
-    new-instance v0, Lcom/oneplus/aod/OpAodLightEffectContainer$1;
+    new-instance v0, Lcom/oneplus/aod/OpAodLightEffectContainer$4;
 
-    invoke-direct {v0, p0}, Lcom/oneplus/aod/OpAodLightEffectContainer$1;-><init>(Lcom/oneplus/aod/OpAodLightEffectContainer;)V
+    invoke-direct {v0, p0}, Lcom/oneplus/aod/OpAodLightEffectContainer$4;-><init>(Lcom/oneplus/aod/OpAodLightEffectContainer;)V
 
     iput-object v0, p0, Lcom/oneplus/aod/OpAodLightEffectContainer;->mFrameRunnable:Ljava/lang/Runnable;
 
@@ -516,9 +516,9 @@
     .line 147
     iget-object v2, p0, Lcom/oneplus/aod/OpAodLightEffectContainer;->mLightAnimator:Landroid/animation/ValueAnimator;
 
-    new-instance v3, Lcom/oneplus/aod/OpAodLightEffectContainer$2;
+    new-instance v3, Lcom/oneplus/aod/OpAodLightEffectContainer$5;
 
-    invoke-direct {v3, p0}, Lcom/oneplus/aod/OpAodLightEffectContainer$2;-><init>(Lcom/oneplus/aod/OpAodLightEffectContainer;)V
+    invoke-direct {v3, p0}, Lcom/oneplus/aod/OpAodLightEffectContainer$5;-><init>(Lcom/oneplus/aod/OpAodLightEffectContainer;)V
 
     invoke-virtual {v2, v3}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 
@@ -995,7 +995,7 @@
     invoke-virtual {v0}, Landroid/os/HandlerThread;->start()V
 
     .line 251
-    new-instance v0, Lcom/oneplus/aod/OpAodLightEffectContainer$3;
+    new-instance v0, Lcom/oneplus/aod/OpAodLightEffectContainer$6;
 
     iget-object v1, p0, Lcom/oneplus/aod/OpAodLightEffectContainer;->mHandlerThread:Landroid/os/HandlerThread;
 
@@ -1003,7 +1003,7 @@
 
     move-result-object v1
 
-    invoke-direct {v0, p0, v1}, Lcom/oneplus/aod/OpAodLightEffectContainer$3;-><init>(Lcom/oneplus/aod/OpAodLightEffectContainer;Landroid/os/Looper;)V
+    invoke-direct {v0, p0, v1}, Lcom/oneplus/aod/OpAodLightEffectContainer$6;-><init>(Lcom/oneplus/aod/OpAodLightEffectContainer;Landroid/os/Looper;)V
 
     iput-object v0, p0, Lcom/oneplus/aod/OpAodLightEffectContainer;->mBgHandler:Landroid/os/Handler;
 
