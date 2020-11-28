@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/oneplus/systemui/statusbar/phone/OpStatusBar$5;)V
     .locals 0
 
-    .line 349
+    .line 353
     iput-object p1, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar$5$1;->this$1:Lcom/oneplus/systemui/statusbar/phone/OpStatusBar$5;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +38,7 @@
 .method public run()V
     .locals 2
 
-    .line 352
+    .line 356
     sget-boolean v0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->DEBUG:Z
 
     if-eqz v0, :cond_0
@@ -47,10 +47,10 @@
 
     const-string v1, "theme setting changed."
 
-    .line 353
+    .line 357
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 355
+    .line 359
     :cond_0
     iget-object p0, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar$5$1;->this$1:Lcom/oneplus/systemui/statusbar/phone/OpStatusBar$5;
 

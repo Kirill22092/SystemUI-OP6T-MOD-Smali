@@ -1187,27 +1187,27 @@
 ‒ Показывать полноэкранные уведомления.
 ‒ Показывать всплывающие уведомления.
 Уровень 4
-
+"<b></b>"
 ‒ Не показывать полноэкранные уведомления.
 ‒ Показывать всплывающие уведомления.
 Уровень 3
-
+"<b></b>"
 ‒ Не показывать полноэкранные уведомления.
 ‒ Не показывать всплывающие уведомления.
 Уровень 2
-
+"<b></b>"
 ‒ Не показывать полноэкранные уведомления.
 ‒ Не показывать всплывающие уведомления.
 ‒ Не использовать звук и вибрацию.
 Уровень 1
-
+"<b></b>"
 ‒ Не показывать полноэкранные уведомления.
 ‒ Не показывать всплывающие уведомления.
 ‒ Не использовать звук и вибрацию.
 ‒ Не показывать на экране блокировки и в строке состояния.
 ‒ Помещать уведомления в конец списка.
 Уровень 0
-
+"<b></b>"
 ‒ Блокировать все уведомления приложения."</string>
     <string name="power_remaining_charging_duration_only">Ещё %1$s до полной зарядки</string>
     <string name="power_remaining_duration_only">Заряда хватит примерно на %1$s</string>
@@ -1756,9 +1756,8 @@
     <string name="zen_priority_introduction">Вас не будут отвлекать звуки и вибрация, за исключением сигналов будильника, напоминаний, уведомлений о мероприятиях и звонков от помеченных контактов. Вы по-прежнему будете слышать включенную вами музыку, видео, игры и т. д.</string>
     <string name="zen_silence_introduction">В этом режиме будут отключены вибросигнал и все звуки (в том числе для будильника, музыкального проигрывателя, игр и видео).</string>
     <string name="zen_silence_introduction_voice">Этот режим заблокирует все звуки и вибрацию, в том числе для будильника, музыки, видео и игр. Вы сможете разговаривать по телефону.</string>
-    <string name="text_clock_string_format"><annotation name="header_color">"^1
-"</annotation>"^2
-^3"</string>
+	<string name="text_clock_header_few">Сейчас</string>
+    <string name="text_clock_header_multiple">Сейчас</string>
     <string name="text_clock_header_one">Сейчас</string>
     <string name="text_clock_hours_midnight">Двенадцать</string>
     <string name="text_clock_hours_one">Час</string>
@@ -1892,6 +1891,4 @@
 Восемь"</string>
     <string name="text_clock_minutes_fiftynine">"Пятьдесят
 Девять"</string>
-    <string name="text_clock_header_few">Сейчас</string>
-    <string name="text_clock_header_multiple">Сейчас</string>
 </resources>

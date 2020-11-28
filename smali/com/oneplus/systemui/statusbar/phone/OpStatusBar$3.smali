@@ -22,7 +22,7 @@
 .method constructor <init>(Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;Landroid/os/Handler;)V
     .locals 0
 
-    .line 284
+    .line 288
     iput-object p1, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar$3;->this$0:Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;
 
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
@@ -35,7 +35,7 @@
 .method public onChange(Z)V
     .locals 3
 
-    .line 287
+    .line 291
     iget-object p1, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar$3;->this$0:Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;
 
     iget-object p1, p1, Lcom/android/systemui/SystemUI;->mContext:Landroid/content/Context;
@@ -54,7 +54,7 @@
 
     move-result p1
 
-    .line 290
+    .line 294
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -73,7 +73,7 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 291
+    .line 295
     iget-object p0, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar$3;->this$0:Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;
 
     invoke-static {p0, p1}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->access$302(Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;I)I

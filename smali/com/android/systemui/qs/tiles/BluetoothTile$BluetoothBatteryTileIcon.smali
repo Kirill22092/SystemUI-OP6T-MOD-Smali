@@ -26,15 +26,15 @@
 .method constructor <init>(Lcom/android/systemui/qs/tiles/BluetoothTile;IF)V
     .locals 0
 
-    .line 301
+    .line 584
     iput-object p1, p0, Lcom/android/systemui/qs/tiles/BluetoothTile$BluetoothBatteryTileIcon;->this$0:Lcom/android/systemui/qs/tiles/BluetoothTile;
 
     invoke-direct {p0}, Lcom/android/systemui/plugins/qs/QSTile$Icon;-><init>()V
 
-    .line 302
+    .line 585
     iput p2, p0, Lcom/android/systemui/qs/tiles/BluetoothTile$BluetoothBatteryTileIcon;->mBatteryLevel:I
 
-    .line 303
+    .line 586
     iput p3, p0, Lcom/android/systemui/qs/tiles/BluetoothTile$BluetoothBatteryTileIcon;->mIconScale:F
 
     return-void
@@ -45,7 +45,7 @@
 .method public getDrawable(Landroid/content/Context;)Landroid/graphics/drawable/Drawable;
     .locals 2
 
-    .line 309
+    .line 592
     sget v0, Lcom/android/systemui/R$drawable;->ic_bluetooth_connected:I
 
     iget v1, p0, Lcom/android/systemui/qs/tiles/BluetoothTile$BluetoothBatteryTileIcon;->mBatteryLevel:I

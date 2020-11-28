@@ -17,7 +17,7 @@
 
 
 # static fields
-.field private static mPreventModeNoBackground:Z
+.field private static mPreventModeNoBackground:Z = false
 
 
 # instance fields

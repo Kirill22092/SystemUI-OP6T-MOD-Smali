@@ -79,21 +79,21 @@
 
     sput-object v0, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_ANIMATION_DEFAULT:[I
 
-    .line 38
+    .line 93
     new-array v0, v1, [I
 
     fill-array-data v0, :array_212
 
     sput-object v0, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_ANIMATION_02:[I
 
-    .line 39
+    .line 119
     new-array v0, v1, [I
 
     fill-array-data v0, :array_2de
 
     sput-object v0, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_ANIMATION_03:[I
 
-    .line 40
+    .line 145
     const/16 v0, 0x3c
 
     new-array v0, v0, [I
@@ -102,63 +102,63 @@
 
     sput-object v0, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_ANIMATION_MCL:[I
 
-    .line 41
+    .line 166
     new-array v0, v1, [I
 
     fill-array-data v0, :array_426
 
     sput-object v0, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->UP_ANIMATION_DEFAULT:[I
 
-    .line 42
+    .line 216
     new-array v0, v1, [I
 
     fill-array-data v0, :array_4f2
 
     sput-object v0, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_CUST01_ANIMATION:[I
 
-    .line 43
+    .line 267
     new-array v0, v1, [I
 
     fill-array-data v0, :array_5be
 
     sput-object v0, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_CUST02_ANIMATION:[I
 
-    .line 44
+    .line 318
     new-array v0, v1, [I
 
     fill-array-data v0, :array_68a
 
     sput-object v0, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_CUST03_ANIMATION:[I
 
-    .line 45
+    .line 369
     new-array v0, v1, [I
 
     fill-array-data v0, :array_756
 
     sput-object v0, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_CUST04_ANIMATION:[I
 
-    .line 46
+    .line 420
     new-array v0, v1, [I
 
     fill-array-data v0, :array_822
 
     sput-object v0, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_CUST05_ANIMATION:[I
 
-    .line 47
+    .line 471
     new-array v0, v1, [I
 
     fill-array-data v0, :array_8ee
 
     sput-object v0, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_CUST06_ANIMATION:[I
 
-    .line 48
+    .line 522
     new-array v0, v1, [I
 
     fill-array-data v0, :array_9ba
 
     sput-object v0, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_CUST07_ANIMATION:[I
 
-    .line 49
+    .line 573
     const/16 v0, 0x10
 
     new-array v0, v0, [I
@@ -167,14 +167,14 @@
 
     sput-object v0, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_CUST08_ANIMATION:[I
 
-    .line 50
+    .line 582
     new-array v0, v2, [I
 
     fill-array-data v0, :array_aaa
 
     sput-object v0, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_CUST09_ANIMATION:[I
 
-    .line 51
+    .line 606
     const/16 v0, 0x22
 
     new-array v0, v0, [I
@@ -183,7 +183,7 @@
 
     sput-object v0, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_CUST10_ANIMATION:[I
 
-    .line 52
+    .line 624
     const/16 v0, 0x17
 
     new-array v0, v0, [I
@@ -192,56 +192,56 @@
 
     sput-object v0, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_CUST11_ANIMATION:[I
 
-    .line 53
+    .line 636
     new-array v0, v5, [I
 
     fill-array-data v0, :array_b84
 
     sput-object v0, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_CUST12_ANIMATION:[I
 
-    .line 54
+    .line 662
     new-array v0, v5, [I
 
     fill-array-data v0, :array_bee
 
     sput-object v0, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_CUST13_ANIMATION:[I
 
-    .line 55
+    .line 688
     new-array v0, v3, [I
 
     fill-array-data v0, :array_c58
 
     sput-object v0, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_CUST14_ANIMATION:[I
 
-    .line 56
+    .line 708
     new-array v0, v2, [I
 
     fill-array-data v0, :array_ca8
 
     sput-object v0, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_CUST15_ANIMATION:[I
 
-    .line 57
+    .line 732
     new-array v0, v2, [I
 
     fill-array-data v0, :array_d08
 
     sput-object v0, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_CUST16_ANIMATION:[I
 
-    .line 58
+    .line 756
     new-array v0, v3, [I
 
     fill-array-data v0, :array_d68
 
     sput-object v0, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_CUST17_ANIMATION:[I
 
-    .line 59
+    .line 776
     new-array v0, v4, [I
 
     fill-array-data v0, :array_db8
 
     sput-object v0, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_CUST18_ANIMATION:[I
 
-    .line 60
+    .line 797
     const/16 v0, 0x29
 
     new-array v0, v0, [I
@@ -250,20 +250,19 @@
 
     sput-object v0, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_CUST19_ANIMATION:[I
 
-    .line 61
+    .line 818
     new-array v0, v4, [I
 
     fill-array-data v0, :array_e62
 
     sput-object v0, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_CUST20_ANIMATION:[I
 
-    .line 62
+    .line 839
     return-void
 
     .line 37
     :array_c6
     .array-data 4
-        0x7f08048c
         0x7f08048d
         0x7f08048e
         0x7f08048f
@@ -363,76 +362,76 @@
         0x7f0804ed
         0x7f0804ee
         0x7f0804ef
-        0x7f080e94
-        0x7f080e95
-        0x7f080e96
-        0x7f080e97
-        0x7f080e98
-        0x7f080e99
-        0x7f080e9a
-        0x7f080e9b
-        0x7f080e9c
-        0x7f080e9d
-        0x7f080e9e
-        0x7f080e9f
-        0x7f080ea0
-        0x7f080ea1
-        0x7f080ea2
-        0x7f080ea3
-        0x7f080ea4
-        0x7f080ea5
-        0x7f080ea6
-        0x7f080ea7
-        0x7f080ea8
-        0x7f080ea9
-        0x7f080eaa
-        0x7f080eab
-        0x7f080eac
-        0x7f080ead
-        0x7f080eae
-        0x7f080eaf
-        0x7f080eb0
-        0x7f080eb1
-        0x7f080eb2
-        0x7f080eb3
-        0x7f080eb4
-        0x7f080eb5
-        0x7f080eb6
-        0x7f080eb7
-        0x7f080eb8
-        0x7f080eb9
-        0x7f080eba
-        0x7f080ebb
-        0x7f080ebc
-        0x7f080ebd
-        0x7f080ebe
-        0x7f080ebf
-        0x7f080ec0
-        0x7f080ec1
-        0x7f080ec2
-        0x7f080ec3
-        0x7f080ec4
-        0x7f080ec5
-        0x7f080ec6
-        0x7f080ec7
-        0x7f080ec8
-        0x7f080ec9
-        0x7f080eca
-        0x7f080ecb
-        0x7f080ecc
-        0x7f080ecd
-        0x7f080ece
-        0x7f080ecf
-        0x7f080ed0
-        0x7f080ed1
-        0x7f080ed2
-        0x7f080ed3
+        0x7f0804f0
+        0x7f0813a9
+        0x7f0813aa
+        0x7f0813ab
+        0x7f0813ac
+        0x7f0813ad
+        0x7f0813ae
+        0x7f0813af
+        0x7f0813b0
+        0x7f0813b1
+        0x7f0813b2
+        0x7f0813b3
+        0x7f0813b4
+        0x7f0813b5
+        0x7f0813b6
+        0x7f0813b7
+        0x7f0813b8
+        0x7f0813b9
+        0x7f0813ba
+        0x7f0813bb
+        0x7f0813bc
+        0x7f0813bd
+        0x7f0813be
+        0x7f0813bf
+        0x7f0813c0
+        0x7f0813c1
+        0x7f0813c2
+        0x7f0813c3
+        0x7f0813c4
+        0x7f0813c5
+        0x7f0813c6
+        0x7f0813c7
+        0x7f0813c8
+        0x7f0813c9
+        0x7f0813ca
+        0x7f0813cb
+        0x7f0813cc
+        0x7f0813cd
+        0x7f0813ce
+        0x7f0813cf
+        0x7f0813d0
+        0x7f0813d1    # 1.808779E38f
+        0x7f0813d2
+        0x7f0813d3
+        0x7f0813d4
+        0x7f0813d5
+        0x7f0813d6
+        0x7f0813d7
+        0x7f0813d8
+        0x7f0813d9
+        0x7f0813da
+        0x7f0813db
+        0x7f0813dc
+        0x7f0813dd
+        0x7f0813de
+        0x7f0813df
+        0x7f0813e0
+        0x7f0813e1
+        0x7f0813e2
+        0x7f0813e3
+        0x7f0813e4
+        0x7f0813e5
+        0x7f0813e6
+        0x7f0813e7
+        0x7f0813e8
     .end array-data
 
-    .line 38
+    .line 93
     :array_212
     .array-data 4
-        0x7f080360
         0x7f080361
         0x7f080362
         0x7f080363
@@ -532,12 +531,12 @@
         0x7f0803c1
         0x7f0803c2
         0x7f0803c3
+        0x7f0803c4
     .end array-data
 
-    .line 39
+    .line 119
     :array_2de
     .array-data 4
-        0x7f0803c4
         0x7f0803c5
         0x7f0803c6
         0x7f0803c7
@@ -637,12 +636,12 @@
         0x7f080425
         0x7f080426
         0x7f080427
+        0x7f080428
     .end array-data
 
-    .line 40
+    .line 145
     :array_3aa
     .array-data 4
-        0x7f0805a2
         0x7f0805a3
         0x7f0805a4
         0x7f0805a5
@@ -702,12 +701,12 @@
         0x7f0805db
         0x7f0805dc
         0x7f0805dd
+        0x7f0805de
     .end array-data
 
-    .line 41
+    .line 166
     :array_426
     .array-data 4
-        0x7f0804f0
         0x7f0804f1
         0x7f0804f2
         0x7f0804f3
@@ -807,12 +806,12 @@
         0x7f080551
         0x7f080552
         0x7f080553
+        0x7f080554
     .end array-data
 
-    .line 42
+    .line 216
     :array_4f2
     .array-data 4
-        0x7f080428
         0x7f080429
         0x7f08042a
         0x7f08042b
@@ -912,13 +911,13 @@
         0x7f080489
         0x7f08048a
         0x7f08048b
+        0x7f08048c
     .end array-data
 
-    .line 43
+    .line 267
     :array_5be
     .array-data 4
-        0x7f080c3c
-        0x7f080c3d
+        0x7f080225
         0x7f080c3e
         0x7f080c3f
         0x7f080c40
@@ -1017,12 +1016,12 @@
         0x7f080c9d
         0x7f080c9e
         0x7f080c9f
+        0x7f080ca0
     .end array-data
 
-    .line 44
+    .line 318
     :array_68a
     .array-data 4
-        0x7f080ca0
         0x7f080ca1
         0x7f080ca2
         0x7f080ca3
@@ -1122,12 +1121,12 @@
         0x7f080d01
         0x7f080d02
         0x7f080d03
+        0x7f080d04
     .end array-data
 
-    .line 45
+    .line 369
     :array_756
     .array-data 4
-        0x7f080d04
         0x7f080d05
         0x7f080d06
         0x7f080d07
@@ -1227,12 +1226,12 @@
         0x7f080d65
         0x7f080d66
         0x7f080d67
+        0x7f080d68
     .end array-data
 
-    .line 46
+    .line 420
     :array_822
     .array-data 4
-        0x7f080d68
         0x7f080d69
         0x7f080d6a
         0x7f080d6b
@@ -1332,12 +1331,12 @@
         0x7f080dc9
         0x7f080dca
         0x7f080dcb
+        0x7f080dcc
     .end array-data
 
-    .line 47
+    .line 471
     :array_8ee
     .array-data 4
-        0x7f080dcc
         0x7f080dcd
         0x7f080dce
         0x7f080dcf
@@ -1437,12 +1436,12 @@
         0x7f080e2d
         0x7f080e2e
         0x7f080e2f
+        0x7f080e30
     .end array-data
 
-    .line 48
+    .line 522
     :array_9ba
     .array-data 4
-        0x7f080e30
         0x7f080e31
         0x7f080e32
         0x7f080e33
@@ -1542,69 +1541,84 @@
         0x7f080e91
         0x7f080e92
         0x7f080e93
+        0x7f080e94
     .end array-data
 
-    .line 49
+    .line 573
     :array_a86
     .array-data 4
-        0x7f080ed4
-        0x7f080ed5
-        0x7f080ed6
-        0x7f080ed7
-        0x7f080ed8
-        0x7f080ed9
-        0x7f080eda
-        0x7f080edb
-        0x7f080edc
-        0x7f080edd
-        0x7f080ede
-        0x7f080edf
-        0x7f080ee0
-        0x7f080ee1
-        0x7f080ee2
-        0x7f080ee3
+        0x7f080e95
+        0x7f080e96
+        0x7f080e97
+        0x7f080e98
+        0x7f080e99
+        0x7f080e9a
+        0x7f080e9b
+        0x7f080e9c
+        0x7f080e9d
+        0x7f080e9e
+        0x7f080e9f
+        0x7f080ea0
+        0x7f080ea1
+        0x7f080ea2
+        0x7f080ea3
+        0x7f080ea4
     .end array-data
 
-    .line 50
+    .line 582
     :array_aaa
     .array-data 4
-        0x7f080f38
-        0x7f080f39
-        0x7f080f3a
-        0x7f080f3b
-        0x7f080f3c
-        0x7f080f3d
-        0x7f080f3e
-        0x7f080f3f
-        0x7f080f40
-        0x7f080f41
-        0x7f080f42
-        0x7f080f43
-        0x7f080f44
-        0x7f080f45
-        0x7f080f46
-        0x7f080f47
-        0x7f080f48
-        0x7f080f49
-        0x7f080f4a
-        0x7f080f4b
-        0x7f080f4c
-        0x7f080f4d
-        0x7f080f4e
-        0x7f080f4f
-        0x7f080f50
-        0x7f080f51
-        0x7f080f52
-        0x7f080f53
-        0x7f080f54
-        0x7f080f55
-        0x7f080f56
-        0x7f080f57
-        0x7f080f58
-        0x7f080f59
-        0x7f080f5a
-        0x7f080f5b
-        0x7f080f5c
+        0x7f080ef9
+        0x7f080efa
+        0x7f080efb
+        0x7f080efc
+        0x7f080efd
+        0x7f080efe
+        0x7f080eff
+        0x7f080f00
+        0x7f080f01
+        0x7f080f02
+        0x7f080f03
+        0x7f080f04
+        0x7f080f05
+        0x7f080f06
+        0x7f080f07
+        0x7f080f08
+        0x7f080f09
+        0x7f080f0a
+        0x7f080f0b
+        0x7f080f0c
+        0x7f080f0d
+        0x7f080f0e
+        0x7f080f0f
+        0x7f080f10
+        0x7f080f11
+        0x7f080f12
+        0x7f080f13
+        0x7f080f14
+        0x7f080f15
+        0x7f080f16
+        0x7f080f17
+        0x7f080f18
+        0x7f080f19
+        0x7f080f1a
+        0x7f080f1b
+        0x7f080f1c
+        0x7f080f1d
+        0x7f080f1e
+        0x7f080f1f
+        0x7f080f20
+        0x7f080f21
+        0x7f080f22
+        0x7f080f23
+        0x7f080f24
+        0x7f080f25
+        0x7f080f26
+    .end array-data
+
+    .line 606
+    :array_b0a
+    .array-data 4
         0x7f080f5d
         0x7f080f5e
         0x7f080f5f
@@ -1614,115 +1628,120 @@
         0x7f080f63
         0x7f080f64
         0x7f080f65
+        0x7f080f66
+        0x7f080f67
+        0x7f080f68
+        0x7f080f69
+        0x7f080f6a
+        0x7f080f6b
+        0x7f080f6c
+        0x7f080f6d
+        0x7f080f6e
+        0x7f080f6f
+        0x7f080f70
+        0x7f080f71
+        0x7f080f72
+        0x7f080f73
+        0x7f080f74
+        0x7f080f75
+        0x7f080f76
+        0x7f080f77
+        0x7f080f78
+        0x7f080f79
+        0x7f080f7a
+        0x7f080f7b
+        0x7f080f7c
+        0x7f080f7d
+        0x7f080f7e
     .end array-data
 
-    .line 51
-    :array_b0a
-    .array-data 4
-        0x7f080f9c
-        0x7f080f9d
-        0x7f080f9e
-        0x7f080f9f
-        0x7f080fa0
-        0x7f080fa1
-        0x7f080fa2
-        0x7f080fa3
-        0x7f080fa4
-        0x7f080fa5
-        0x7f080fa6
-        0x7f080fa7
-        0x7f080fa8
-        0x7f080fa9
-        0x7f080faa
-        0x7f080fab
-        0x7f080fac
-        0x7f080fad
-        0x7f080fae
-        0x7f080faf
-        0x7f080fb0
-        0x7f080fb1
-        0x7f080fb2
-        0x7f080fb3
-        0x7f080fb4
-        0x7f080fb5
-        0x7f080fb6
-        0x7f080fb7
-        0x7f080fb8
-        0x7f080fb9
-        0x7f080fba
-        0x7f080fbb
-        0x7f080fbc
-        0x7f080fbd
-    .end array-data
-
-    .line 52
+    .line 624
     :array_b52
     .array-data 4
-        0x7f081000
-        0x7f081001
-        0x7f081002
-        0x7f081003
-        0x7f081004
-        0x7f081005
-        0x7f081006
-        0x7f081007
-        0x7f081008
-        0x7f081009
-        0x7f08100a
-        0x7f08100b
-        0x7f08100c
-        0x7f08100d
-        0x7f08100e
-        0x7f08100f
-        0x7f081010
-        0x7f081011
-        0x7f081012
-        0x7f081013
-        0x7f081014
-        0x7f081015
-        0x7f081016
+        0x7f080fc1
+        0x7f080fc2
+        0x7f080fc3
+        0x7f080fc4
+        0x7f080fc5
+        0x7f080fc6
+        0x7f080fc7
+        0x7f080fc8
+        0x7f080fc9
+        0x7f080fca
+        0x7f080fcb
+        0x7f080fcc
+        0x7f080fcd
+        0x7f080fce
+        0x7f080fcf
+        0x7f080fd0
+        0x7f080fd1
+        0x7f080fd2
+        0x7f080fd3
+        0x7f080fd4
+        0x7f080fd5
+        0x7f080fd6
+        0x7f080fd7
     .end array-data
 
-    .line 53
+    .line 636
     :array_b84
     .array-data 4
-        0x7f081064
-        0x7f081065
-        0x7f081066
-        0x7f081067
-        0x7f081068
-        0x7f081069
-        0x7f08106a
-        0x7f08106b
-        0x7f08106c
-        0x7f08106d
-        0x7f08106e
-        0x7f08106f
-        0x7f081070
-        0x7f081071
-        0x7f081072
-        0x7f081073
-        0x7f081074
-        0x7f081075
-        0x7f081076
-        0x7f081077
-        0x7f081078
-        0x7f081079
-        0x7f08107a
-        0x7f08107b
-        0x7f08107c
-        0x7f08107d
-        0x7f08107e
-        0x7f08107f
-        0x7f081080
-        0x7f081081
-        0x7f081082
-        0x7f081083
-        0x7f081084
-        0x7f081085
-        0x7f081086
-        0x7f081087
-        0x7f081088
+        0x7f081025
+        0x7f081026
+        0x7f081027
+        0x7f081028
+        0x7f081029
+        0x7f08102a
+        0x7f08102b
+        0x7f08102c
+        0x7f08102d
+        0x7f08102e
+        0x7f08102f
+        0x7f081030
+        0x7f081031
+        0x7f081032
+        0x7f081033
+        0x7f081034
+        0x7f081035
+        0x7f081036
+        0x7f081037
+        0x7f081038    # 1.8085922E38f
+        0x7f081039
+        0x7f08103a
+        0x7f08103b
+        0x7f08103c
+        0x7f08103d
+        0x7f08103e
+        0x7f08103f
+        0x7f081040
+        0x7f081041
+        0x7f081042
+        0x7f081043
+        0x7f081044
+        0x7f081045
+        0x7f081046
+        0x7f081047
+        0x7f081048
+        0x7f081049
+        0x7f08104a
+        0x7f08104b
+        0x7f08104c
+        0x7f08104d
+        0x7f08104e
+        0x7f08104f
+        0x7f081050
+        0x7f081051
+        0x7f081052
+        0x7f081053
+        0x7f081054
+        0x7f081055
+        0x7f081056
+        0x7f081057
+    .end array-data
+
+    .line 662
+    :array_bee
+    .array-data 4
         0x7f081089
         0x7f08108a
         0x7f08108b
@@ -1737,48 +1756,48 @@
         0x7f081094
         0x7f081095
         0x7f081096
+        0x7f081097
+        0x7f081098
+        0x7f081099
+        0x7f08109a
+        0x7f08109b
+        0x7f08109c
+        0x7f08109d
+        0x7f08109e
+        0x7f08109f
+        0x7f0810a0
+        0x7f0810a1
+        0x7f0810a2
+        0x7f0810a3
+        0x7f0810a4
+        0x7f0810a5
+        0x7f0810a6
+        0x7f0810a7
+        0x7f0810a8
+        0x7f0810a9
+        0x7f0810aa
+        0x7f0810ab
+        0x7f0810ac
+        0x7f0810ad
+        0x7f0810ae
+        0x7f0810af
+        0x7f0810b0
+        0x7f0810b1
+        0x7f0810b2
+        0x7f0810b3
+        0x7f0810b4
+        0x7f0810b5
+        0x7f0810b6
+        0x7f0810b7
+        0x7f0810b8
+        0x7f0810b9
+        0x7f0810ba
+        0x7f0810bb
     .end array-data
 
-    .line 54
-    :array_bee
+    .line 688
+    :array_c58
     .array-data 4
-        0x7f0810c8
-        0x7f0810c9
-        0x7f0810ca
-        0x7f0810cb
-        0x7f0810cc
-        0x7f0810cd
-        0x7f0810ce
-        0x7f0810cf
-        0x7f0810d0
-        0x7f0810d1
-        0x7f0810d2
-        0x7f0810d3
-        0x7f0810d4
-        0x7f0810d5
-        0x7f0810d6
-        0x7f0810d7
-        0x7f0810d8
-        0x7f0810d9
-        0x7f0810da
-        0x7f0810db
-        0x7f0810dc
-        0x7f0810dd
-        0x7f0810de
-        0x7f0810df
-        0x7f0810e0
-        0x7f0810e1
-        0x7f0810e2
-        0x7f0810e3
-        0x7f0810e4
-        0x7f0810e5
-        0x7f0810e6
-        0x7f0810e7
-        0x7f0810e8
-        0x7f0810e9
-        0x7f0810ea
-        0x7f0810eb
-        0x7f0810ec
         0x7f0810ed
         0x7f0810ee
         0x7f0810ef
@@ -1793,91 +1812,86 @@
         0x7f0810f8
         0x7f0810f9
         0x7f0810fa
+        0x7f0810fb
+        0x7f0810fc
+        0x7f0810fd
+        0x7f0810fe
+        0x7f0810ff
+        0x7f081100
+        0x7f081101
+        0x7f081102
+        0x7f081103
+        0x7f081104
+        0x7f081105
+        0x7f081106
+        0x7f081107
+        0x7f081108
+        0x7f081109
+        0x7f08110a
+        0x7f08110b
+        0x7f08110c
+        0x7f08110d
+        0x7f08110e
+        0x7f08110f
+        0x7f081110
+        0x7f081111
+        0x7f081112
     .end array-data
 
-    .line 55
-    :array_c58
-    .array-data 4
-        0x7f08112c
-        0x7f08112d
-        0x7f08112e
-        0x7f08112f
-        0x7f081130
-        0x7f081131
-        0x7f081132
-        0x7f081133
-        0x7f081134
-        0x7f081135
-        0x7f081136
-        0x7f081137
-        0x7f081138
-        0x7f081139
-        0x7f08113a
-        0x7f08113b
-        0x7f08113c
-        0x7f08113d
-        0x7f08113e
-        0x7f08113f
-        0x7f081140
-        0x7f081141
-        0x7f081142
-        0x7f081143
-        0x7f081144
-        0x7f081145
-        0x7f081146
-        0x7f081147
-        0x7f081148
-        0x7f081149
-        0x7f08114a
-        0x7f08114b
-        0x7f08114c
-        0x7f08114d
-        0x7f08114e
-        0x7f08114f
-        0x7f081150
-        0x7f081151
-    .end array-data
-
-    .line 56
+    .line 708
     :array_ca8
     .array-data 4
-        0x7f081190
-        0x7f081191
-        0x7f081192
-        0x7f081193
-        0x7f081194
-        0x7f081195
-        0x7f081196
-        0x7f081197
-        0x7f081198
-        0x7f081199
-        0x7f08119a    # 1.808664E38f
-        0x7f08119b
-        0x7f08119c
-        0x7f08119d
-        0x7f08119e
-        0x7f08119f
-        0x7f0811a0
-        0x7f0811a1
-        0x7f0811a2
-        0x7f0811a3
-        0x7f0811a4
-        0x7f0811a5
-        0x7f0811a6
-        0x7f0811a7
-        0x7f0811a8
-        0x7f0811a9
-        0x7f0811aa
-        0x7f0811ab
-        0x7f0811ac
-        0x7f0811ad
-        0x7f0811ae
-        0x7f0811af
-        0x7f0811b0
-        0x7f0811b1
-        0x7f0811b2
-        0x7f0811b3
-        0x7f0811b4
+        0x7f081151
+        0x7f081152
+        0x7f081153
+        0x7f081154
+        0x7f081155    # 1.80865E38f
+        0x7f081156
+        0x7f081157
+        0x7f081158
+        0x7f081159
+        0x7f08115a
+        0x7f08115b
+        0x7f08115c
+        0x7f08115d
+        0x7f08115e
+        0x7f08115f
+        0x7f081160
+        0x7f081161
+        0x7f081162
+        0x7f081163
+        0x7f081164
+        0x7f081165
+        0x7f081166
+        0x7f081167
+        0x7f081168
+        0x7f081169
+        0x7f08116a
+        0x7f08116b
+        0x7f08116c
+        0x7f08116d
+        0x7f08116e
+        0x7f08116f
+        0x7f081170
+        0x7f081171
+        0x7f081172
+        0x7f081173
+        0x7f081174
+        0x7f081175
+        0x7f081176
+        0x7f081177
+        0x7f081178
+        0x7f081179
+        0x7f08117a
+        0x7f08117b
+        0x7f08117c
+        0x7f08117d
+        0x7f08117e
+    .end array-data
+
+    .line 732
+    :array_d08
+    .array-data 4
         0x7f0811b5
         0x7f0811b6
         0x7f0811b7
@@ -1887,48 +1901,48 @@
         0x7f0811bb
         0x7f0811bc
         0x7f0811bd
+        0x7f0811be
+        0x7f0811bf
+        0x7f0811c0
+        0x7f0811c1
+        0x7f0811c2
+        0x7f0811c3
+        0x7f0811c4
+        0x7f0811c5
+        0x7f0811c6
+        0x7f0811c7
+        0x7f0811c8
+        0x7f0811c9
+        0x7f0811ca
+        0x7f0811cb
+        0x7f0811cc
+        0x7f0811cd
+        0x7f0811ce
+        0x7f0811cf
+        0x7f0811d0
+        0x7f0811d1
+        0x7f0811d2
+        0x7f0811d3
+        0x7f0811d4
+        0x7f0811d5
+        0x7f0811d6
+        0x7f0811d7
+        0x7f0811d8
+        0x7f0811d9
+        0x7f0811da
+        0x7f0811db
+        0x7f0811dc
+        0x7f0811dd
+        0x7f0811de
+        0x7f0811df
+        0x7f0811e0
+        0x7f0811e1
+        0x7f0811e2
     .end array-data
 
-    .line 57
-    :array_d08
+    .line 756
+    :array_d68
     .array-data 4
-        0x7f0811f4
-        0x7f0811f5
-        0x7f0811f6
-        0x7f0811f7
-        0x7f0811f8
-        0x7f0811f9
-        0x7f0811fa
-        0x7f0811fb
-        0x7f0811fc
-        0x7f0811fd
-        0x7f0811fe
-        0x7f0811ff
-        0x7f081200
-        0x7f081201
-        0x7f081202
-        0x7f081203
-        0x7f081204
-        0x7f081205
-        0x7f081206
-        0x7f081207
-        0x7f081208
-        0x7f081209
-        0x7f08120a
-        0x7f08120b
-        0x7f08120c
-        0x7f08120d
-        0x7f08120e
-        0x7f08120f
-        0x7f081210
-        0x7f081211
-        0x7f081212
-        0x7f081213
-        0x7f081214
-        0x7f081215
-        0x7f081216
-        0x7f081217
-        0x7f081218
         0x7f081219
         0x7f08121a
         0x7f08121b
@@ -1938,185 +1952,171 @@
         0x7f08121f
         0x7f081220
         0x7f081221
+        0x7f081222
+        0x7f081223
+        0x7f081224
+        0x7f081225
+        0x7f081226
+        0x7f081227
+        0x7f081228
+        0x7f081229
+        0x7f08122a
+        0x7f08122b
+        0x7f08122c
+        0x7f08122d
+        0x7f08122e
+        0x7f08122f
+        0x7f081230
+        0x7f081231
+        0x7f081232
+        0x7f081233
+        0x7f081234
+        0x7f081235
+        0x7f081236
+        0x7f081237
+        0x7f081238
+        0x7f081239
+        0x7f08123a
+        0x7f08123b
+        0x7f08123c
+        0x7f08123d
+        0x7f08123e
     .end array-data
 
-    .line 58
-    :array_d68
-    .array-data 4
-        0x7f081258
-        0x7f081259
-        0x7f08125a
-        0x7f08125b
-        0x7f08125c
-        0x7f08125d
-        0x7f08125e
-        0x7f08125f
-        0x7f081260
-        0x7f081261
-        0x7f081262
-        0x7f081263
-        0x7f081264
-        0x7f081265
-        0x7f081266
-        0x7f081267
-        0x7f081268
-        0x7f081269
-        0x7f08126a
-        0x7f08126b
-        0x7f08126c
-        0x7f08126d
-        0x7f08126e
-        0x7f08126f
-        0x7f081270
-        0x7f081271
-        0x7f081272
-        0x7f081273
-        0x7f081274
-        0x7f081275
-        0x7f081276
-        0x7f081277
-        0x7f081278
-        0x7f081279
-        0x7f08127a
-        0x7f08127b
-        0x7f08127c
-        0x7f08127d
-    .end array-data
-
-    .line 59
+    .line 776
     :array_db8
     .array-data 4
-        0x7f0812bc
-        0x7f0812bd
-        0x7f0812be
-        0x7f0812bf
-        0x7f0812c0
-        0x7f0812c1
-        0x7f0812c2
-        0x7f0812c3
-        0x7f0812c4
-        0x7f0812c5
-        0x7f0812c6
-        0x7f0812c7
-        0x7f0812c8
-        0x7f0812c9
-        0x7f0812ca
-        0x7f0812cb
-        0x7f0812cc
-        0x7f0812cd
-        0x7f0812ce
-        0x7f0812cf
-        0x7f0812d0
-        0x7f0812d1
-        0x7f0812d2
-        0x7f0812d3
-        0x7f0812d4
-        0x7f0812d5
-        0x7f0812d6
-        0x7f0812d7
-        0x7f0812d8
-        0x7f0812d9
-        0x7f0812da
-        0x7f0812db
-        0x7f0812dc
-        0x7f0812dd
-        0x7f0812de
-        0x7f0812df
-        0x7f0812e0
+        0x7f08127d
+        0x7f08127e
+        0x7f08127f
+        0x7f081280
+        0x7f081281
+        0x7f081282
+        0x7f081283
+        0x7f081284
+        0x7f081285
+        0x7f081286
+        0x7f081287
+        0x7f081288
+        0x7f081289
+        0x7f08128a
+        0x7f08128b
+        0x7f08128c
+        0x7f08128d
+        0x7f08128e
+        0x7f08128f
+        0x7f081290
+        0x7f081291
+        0x7f081292    # 1.8087143E38f
+        0x7f081293
+        0x7f081294
+        0x7f081295
+        0x7f081296
+        0x7f081297
+        0x7f081298
+        0x7f081299
+        0x7f08129a
+        0x7f08129b
+        0x7f08129c
+        0x7f08129d
+        0x7f08129e
+        0x7f08129f
+        0x7f0812a0
+        0x7f0812a1
+        0x7f0812a2
+        0x7f0812a3
+        0x7f0812a4
+    .end array-data
+
+    .line 797
+    :array_e0c
+    .array-data 4
         0x7f0812e1
         0x7f0812e2
         0x7f0812e3
+        0x7f0812e4
+        0x7f0812e5
+        0x7f0812e6
+        0x7f0812e7
+        0x7f0812e8
+        0x7f0812e9
+        0x7f0812ea
+        0x7f0812eb
+        0x7f0812ec
+        0x7f0812ed
+        0x7f0812ee
+        0x7f0812ef
+        0x7f0812f0
+        0x7f0812f1
+        0x7f0812f2
+        0x7f0812f3
+        0x7f0812f4
+        0x7f0812f5
+        0x7f0812f6
+        0x7f0812f7
+        0x7f0812f8
+        0x7f0812f9
+        0x7f0812fa
+        0x7f0812fb
+        0x7f0812fc
+        0x7f0812fd
+        0x7f0812fe
+        0x7f0812ff
+        0x7f081300
+        0x7f081301
+        0x7f081302
+        0x7f081303
+        0x7f081304
+        0x7f081305
+        0x7f081306
+        0x7f081307
+        0x7f081308
+        0x7f081309
     .end array-data
 
-    .line 60
-    :array_e0c
+    .line 818
+    :array_e62
     .array-data 4
-        0x7f081320
-        0x7f081321
-        0x7f081322
-        0x7f081323
-        0x7f081324
-        0x7f081325
-        0x7f081326
-        0x7f081327
-        0x7f081328
-        0x7f081329
-        0x7f08132a
-        0x7f08132b
-        0x7f08132c
-        0x7f08132d
-        0x7f08132e
-        0x7f08132f
-        0x7f081330
-        0x7f081331
-        0x7f081332
-        0x7f081333
-        0x7f081334
-        0x7f081335
-        0x7f081336
-        0x7f081337
-        0x7f081338
-        0x7f081339
-        0x7f08133a
-        0x7f08133b
-        0x7f08133c
-        0x7f08133d
-        0x7f08133e
-        0x7f08133f
-        0x7f081340
-        0x7f081341
-        0x7f081342    # 1.80875E38f
-        0x7f081343
-        0x7f081344
         0x7f081345
         0x7f081346
         0x7f081347
         0x7f081348
-    .end array-data
-
-    .line 61
-    :array_e62
-    .array-data 4
-        0x7f081384
-        0x7f081385
-        0x7f081386
-        0x7f081387
-        0x7f081388
-        0x7f081389
-        0x7f08138a
-        0x7f08138b
-        0x7f08138c
-        0x7f08138d
-        0x7f08138e
-        0x7f08138f
-        0x7f081390
-        0x7f081391
-        0x7f081392
-        0x7f081393
-        0x7f081394
-        0x7f081395
-        0x7f081396
-        0x7f081397
-        0x7f081398
-        0x7f081399
-        0x7f08139a
-        0x7f08139b
-        0x7f08139c
-        0x7f08139d
-        0x7f08139e
-        0x7f08139f
-        0x7f0813a0
-        0x7f0813a1
-        0x7f0813a2
-        0x7f0813a3
-        0x7f0813a4
-        0x7f0813a5
-        0x7f0813a6
-        0x7f0813a7
-        0x7f0813a8
-        0x7f0813a9
-        0x7f0813aa
-        0x7f0813ab
+        0x7f081349
+        0x7f08134a
+        0x7f08134b
+        0x7f08134c
+        0x7f08134d
+        0x7f08134e
+        0x7f08134f
+        0x7f081350
+        0x7f081351
+        0x7f081352
+        0x7f081353
+        0x7f081354
+        0x7f081355
+        0x7f081356
+        0x7f081357
+        0x7f081358
+        0x7f081359
+        0x7f08135a
+        0x7f08135b
+        0x7f08135c
+        0x7f08135d
+        0x7f08135e
+        0x7f08135f
+        0x7f081360
+        0x7f081361
+        0x7f081362
+        0x7f081363
+        0x7f081364
+        0x7f081365
+        0x7f081366
+        0x7f081367
+        0x7f081368
+        0x7f081369
+        0x7f08136a
+        0x7f08136b
+        0x7f08136c
     .end array-data
 .end method
 
@@ -2136,699 +2136,487 @@
     .param p1, "n"    # I
 
     .prologue
-    .line 65
-    if-nez p1, :cond_5
-
-    .line 66
-    sget-object v0, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_ANIMATION_DEFAULT:[I
-
-    .line 143
-    :goto_4
-    return-object v0
-
-    .line 68
-    :cond_5
+    .line 842
     const/4 v0, 0x1
 
-    if-ne p1, v0, :cond_b
+    if-ne p1, v0, :cond_6
 
-    .line 69
+    .line 843
     sget-object v0, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_ANIMATION_02:[I
 
-    goto :goto_4
+    .line 914
+    :goto_5
+    return-object v0
 
-    .line 71
-    :cond_b
+    .line 845
+    :cond_6
     const/4 v0, 0x2
 
-    if-ne p1, v0, :cond_11
+    if-ne p1, v0, :cond_c
 
-    .line 72
+    .line 846
     sget-object v0, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_ANIMATION_03:[I
 
-    goto :goto_4
+    goto :goto_5
 
-    .line 74
-    :cond_11
+    .line 848
+    :cond_c
     const/4 v0, 0x3
 
-    if-ne p1, v0, :cond_17
+    if-eq p1, v0, :cond_13
 
-    .line 75
-    sget-object v0, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_ANIMATION_MCL:[I
-
-    goto :goto_4
-
-    .line 77
-    :cond_17
-    const/16 v0, 0x9
-
-    if-ne p1, v0, :cond_1d
-
-    .line 78
-    const/4 v0, 0x0
-
-    goto :goto_4
-
-    .line 80
-    :cond_1d
     const/16 v0, 0xa
 
-    if-ne p1, v0, :cond_24
+    if-ne p1, v0, :cond_16
 
-    .line 81
+    .line 849
+    :cond_13
     sget-object v0, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_ANIMATION_MCL:[I
 
-    goto :goto_4
+    goto :goto_5
 
-    .line 83
-    :cond_24
+    .line 851
+    :cond_16
+    const/16 v0, 0x9
+
+    if-ne p1, v0, :cond_1c
+
+    .line 852
+    const/4 v0, 0x0
+
+    goto :goto_5
+
+    .line 854
+    :cond_1c
     const/16 v0, 0xb
 
-    if-ne p1, v0, :cond_2b
+    if-ne p1, v0, :cond_23
 
-    .line 84
+    .line 855
     sget-object v0, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_CUST01_ANIMATION:[I
 
-    goto :goto_4
+    goto :goto_5
 
-    .line 86
-    :cond_2b
+    .line 857
+    :cond_23
     const/16 v0, 0xc
 
-    if-ne p1, v0, :cond_32
+    if-ne p1, v0, :cond_2a
 
-    .line 87
+    .line 858
     sget-object v0, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_CUST02_ANIMATION:[I
 
-    goto :goto_4
+    goto :goto_5
 
-    .line 89
-    :cond_32
+    .line 860
+    :cond_2a
     const/16 v0, 0xd
 
-    if-ne p1, v0, :cond_39
+    if-ne p1, v0, :cond_31
 
-    .line 90
+    .line 861
     sget-object v0, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_CUST03_ANIMATION:[I
 
-    goto :goto_4
+    goto :goto_5
 
-    .line 92
-    :cond_39
+    .line 863
+    :cond_31
     const/16 v0, 0xe
 
-    if-ne p1, v0, :cond_40
+    if-ne p1, v0, :cond_38
 
-    .line 93
+    .line 864
     sget-object v0, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_CUST04_ANIMATION:[I
 
-    goto :goto_4
+    goto :goto_5
 
-    .line 95
-    :cond_40
+    .line 866
+    :cond_38
     const/16 v0, 0xf
 
-    if-ne p1, v0, :cond_47
+    if-ne p1, v0, :cond_3f
 
-    .line 96
+    .line 867
     sget-object v0, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_CUST05_ANIMATION:[I
 
-    goto :goto_4
+    goto :goto_5
 
-    .line 98
-    :cond_47
+    .line 869
+    :cond_3f
     const/16 v0, 0x10
 
-    if-ne p1, v0, :cond_4e
+    if-ne p1, v0, :cond_46
 
-    .line 99
+    .line 870
     sget-object v0, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_CUST06_ANIMATION:[I
 
-    goto :goto_4
+    goto :goto_5
 
-    .line 101
-    :cond_4e
+    .line 872
+    :cond_46
     const/16 v0, 0x11
 
-    if-ne p1, v0, :cond_55
+    if-ne p1, v0, :cond_4d
 
-    .line 102
+    .line 873
     sget-object v0, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_CUST07_ANIMATION:[I
 
-    goto :goto_4
+    goto :goto_5
 
-    .line 104
-    :cond_55
+    .line 875
+    :cond_4d
     const/16 v0, 0x12
 
-    if-ne p1, v0, :cond_5c
+    if-ne p1, v0, :cond_54
 
-    .line 105
+    .line 876
     sget-object v0, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_CUST08_ANIMATION:[I
 
-    goto :goto_4
+    goto :goto_5
 
-    .line 107
-    :cond_5c
+    .line 878
+    :cond_54
     const/16 v0, 0x13
 
-    if-ne p1, v0, :cond_63
+    if-ne p1, v0, :cond_5b
 
-    .line 108
+    .line 879
     sget-object v0, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_CUST09_ANIMATION:[I
 
-    goto :goto_4
+    goto :goto_5
 
-    .line 110
-    :cond_63
+    .line 881
+    :cond_5b
     const/16 v0, 0x14
 
-    if-ne p1, v0, :cond_6a
+    if-ne p1, v0, :cond_62
 
-    .line 111
+    .line 882
     sget-object v0, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_CUST10_ANIMATION:[I
 
-    goto :goto_4
+    goto :goto_5
 
-    .line 113
-    :cond_6a
+    .line 884
+    :cond_62
     const/16 v0, 0x15
 
-    if-ne p1, v0, :cond_71
+    if-ne p1, v0, :cond_69
 
-    .line 114
+    .line 885
     sget-object v0, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_CUST11_ANIMATION:[I
 
-    goto :goto_4
+    goto :goto_5
 
-    .line 116
-    :cond_71
+    .line 887
+    :cond_69
     const/16 v0, 0x16
 
-    if-ne p1, v0, :cond_78
+    if-ne p1, v0, :cond_70
 
-    .line 117
+    .line 888
     sget-object v0, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_CUST12_ANIMATION:[I
 
-    goto :goto_4
+    goto :goto_5
 
-    .line 119
-    :cond_78
+    .line 890
+    :cond_70
     const/16 v0, 0x17
 
-    if-ne p1, v0, :cond_7f
+    if-ne p1, v0, :cond_77
 
-    .line 120
+    .line 891
     sget-object v0, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_CUST13_ANIMATION:[I
 
-    goto :goto_4
+    goto :goto_5
 
-    .line 122
-    :cond_7f
+    .line 893
+    :cond_77
     const/16 v0, 0x18
 
-    if-ne p1, v0, :cond_87
+    if-ne p1, v0, :cond_7e
 
-    .line 123
+    .line 894
     sget-object v0, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_CUST14_ANIMATION:[I
 
-    goto/16 :goto_4
+    goto :goto_5
 
-    .line 125
-    :cond_87
+    .line 896
+    :cond_7e
     const/16 v0, 0x19
 
-    if-ne p1, v0, :cond_8f
+    if-ne p1, v0, :cond_85
 
-    .line 126
+    .line 897
     sget-object v0, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_CUST15_ANIMATION:[I
 
-    goto/16 :goto_4
+    goto :goto_5
 
-    .line 128
-    :cond_8f
+    .line 899
+    :cond_85
     const/16 v0, 0x1a
 
-    if-ne p1, v0, :cond_97
+    if-ne p1, v0, :cond_8d
 
-    .line 129
+    .line 900
     sget-object v0, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_CUST16_ANIMATION:[I
 
-    goto/16 :goto_4
+    goto/16 :goto_5
 
-    .line 131
-    :cond_97
+    .line 902
+    :cond_8d
     const/16 v0, 0x1b
 
-    if-ne p1, v0, :cond_9f
+    if-ne p1, v0, :cond_95
 
-    .line 132
+    .line 903
     sget-object v0, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_CUST17_ANIMATION:[I
 
-    goto/16 :goto_4
+    goto/16 :goto_5
 
-    .line 134
-    :cond_9f
+    .line 905
+    :cond_95
     const/16 v0, 0x1c
 
-    if-ne p1, v0, :cond_a7
+    if-ne p1, v0, :cond_9d
 
-    .line 135
+    .line 906
     sget-object v0, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_CUST18_ANIMATION:[I
 
-    goto/16 :goto_4
+    goto/16 :goto_5
 
-    .line 137
-    :cond_a7
+    .line 908
+    :cond_9d
     const/16 v0, 0x1d
 
-    if-ne p1, v0, :cond_af
+    if-ne p1, v0, :cond_a5
 
-    .line 138
+    .line 909
     sget-object v0, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_CUST19_ANIMATION:[I
 
-    goto/16 :goto_4
+    goto/16 :goto_5
 
-    .line 140
-    :cond_af
+    .line 911
+    :cond_a5
     const/16 v0, 0x1e
 
-    if-ne p1, v0, :cond_b7
+    if-ne p1, v0, :cond_ad
 
-    .line 141
+    .line 912
     sget-object v0, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_CUST20_ANIMATION:[I
 
-    goto/16 :goto_4
+    goto/16 :goto_5
 
-    .line 143
-    :cond_b7
+    .line 914
+    :cond_ad
     sget-object v0, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_ANIMATION_DEFAULT:[I
 
-    goto/16 :goto_4
+    goto/16 :goto_5
 .end method
 
 .method public static getDownEndFrameIndex(Landroid/content/Context;I)I
-    .registers 8
+    .registers 6
     .param p0, "context"    # Landroid/content/Context;
     .param p1, "n"    # I
 
     .prologue
-    const/16 v4, 0x27
-
-    const/16 v3, 0x25
+    const/16 v0, 0x1a
 
     const/16 v2, 0x16
 
-    const/16 v0, 0xf
+    const/16 v1, 0xf
 
-    const/16 v1, 0x2d
+    .line 918
+    const/4 v3, 0x1
 
-    .line 147
-    if-nez p1, :cond_18
+    if-eq p1, v3, :cond_19
 
-    .line 148
-    invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+    const/16 v3, 0xe
 
-    move-result-object v0
+    if-eq p1, v3, :cond_19
 
-    const v1, 0x7f0b0035
+    const/16 v3, 0x10
 
-    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getInteger(I)I
+    if-eq p1, v3, :cond_19
 
-    move-result v0
+    const/16 v3, 0x18
 
-    .line 225
-    :cond_17
-    :goto_17
+    if-eq p1, v3, :cond_19
+
+    const/16 v3, 0x1b
+
+    if-ne p1, v3, :cond_1c
+
+    .line 919
+    :cond_19
+    const/16 v0, 0x25
+
+    .line 957
+    :cond_1b
+    :goto_1b
     return v0
 
-    .line 150
-    :cond_18
-    const/4 v5, 0x1
+    .line 921
+    :cond_1c
+    const/4 v3, 0x2
 
-    if-ne p1, v5, :cond_27
+    if-eq p1, v3, :cond_1b
 
-    .line 151
-    invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+    .line 924
+    const/4 v3, 0x3
 
-    move-result-object v0
+    if-eq p1, v3, :cond_26
 
-    const v1, 0x7f0b002d
+    const/16 v3, 0xa
 
-    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getInteger(I)I
+    if-ne p1, v3, :cond_29
 
-    move-result v0
+    .line 925
+    :cond_26
+    const/16 v0, 0x3b
 
-    goto :goto_17
+    goto :goto_1b
 
-    .line 153
-    :cond_27
-    const/4 v5, 0x2
+    .line 927
+    :cond_29
+    const/16 v3, 0x9
 
-    if-ne p1, v5, :cond_36
+    if-ne p1, v3, :cond_2f
 
-    .line 154
-    invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    const v1, 0x7f0b002f
-
-    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getInteger(I)I
-
-    move-result v0
-
-    goto :goto_17
-
-    .line 156
-    :cond_36
-    const/4 v5, 0x3
-
-    if-ne p1, v5, :cond_45
-
-    .line 157
-    invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    const v1, 0x7f0b0039
-
-    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getInteger(I)I
-
-    move-result v0
-
-    goto :goto_17
-
-    .line 159
-    :cond_45
-    const/16 v5, 0x9
-
-    if-ne p1, v5, :cond_4b
-
-    .line 160
+    .line 928
     const/4 v0, -0x1
 
-    goto :goto_17
+    goto :goto_1b
 
-    .line 162
-    :cond_4b
-    const/16 v5, 0xa
+    .line 930
+    :cond_2f
+    const/16 v3, 0xb
 
-    if-ne p1, v5, :cond_5b
+    if-ne p1, v3, :cond_36
 
-    .line 163
-    invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+    .line 931
+    const/16 v0, 0x2c
 
-    move-result-object v0
+    goto :goto_1b
 
-    const v1, 0x7f0b0039
+    .line 933
+    :cond_36
+    const/16 v3, 0xc
 
-    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getInteger(I)I
+    if-ne p1, v3, :cond_3d
 
-    move-result v0
+    .line 934
+    const/16 v0, 0x45
 
-    goto :goto_17
+    goto :goto_1b
 
-    .line 165
+    .line 936
+    :cond_3d
+    const/16 v3, 0xd
+
+    if-eq p1, v3, :cond_45
+
+    const/16 v3, 0x14
+
+    if-ne p1, v3, :cond_48
+
+    .line 937
+    :cond_45
+    const/16 v0, 0x21
+
+    goto :goto_1b
+
+    .line 939
+    :cond_48
+    if-eq p1, v1, :cond_58
+
+    const/16 v3, 0x11
+
+    if-eq p1, v3, :cond_58
+
+    const/16 v3, 0x13
+
+    if-eq p1, v3, :cond_58
+
+    const/16 v3, 0x19
+
+    if-eq p1, v3, :cond_58
+
+    if-ne p1, v0, :cond_5b
+
+    .line 940
+    :cond_58
+    const/16 v0, 0x2d
+
+    goto :goto_1b
+
+    .line 942
     :cond_5b
-    const/16 v5, 0xb
+    const/16 v0, 0x12
 
-    if-ne p1, v5, :cond_6b
-
-    .line 166
-    invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    const v1, 0x7f0b0033
-
-    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getInteger(I)I
-
-    move-result v0
-
-    goto :goto_17
-
-    .line 168
-    :cond_6b
-    const/16 v5, 0xc
-
-    if-ne p1, v5, :cond_7b
-
-    .line 169
-    invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    const v1, 0x7f0b00aa
-
-    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getInteger(I)I
-
-    move-result v0
-
-    goto :goto_17
-
-    .line 171
-    :cond_7b
-    const/16 v5, 0xd
-
-    if-ne p1, v5, :cond_8b
-
-    .line 172
-    invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    const v1, 0x7f0b00ac
-
-    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getInteger(I)I
-
-    move-result v0
-
-    goto :goto_17
-
-    .line 174
-    :cond_8b
-    const/16 v5, 0xe
-
-    if-ne p1, v5, :cond_9c
-
-    .line 175
-    invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    const v1, 0x7f0b00ae
-
-    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getInteger(I)I
-
-    move-result v0
-
-    goto/16 :goto_17
-
-    .line 177
-    :cond_9c
-    if-ne p1, v0, :cond_ab
-
-    .line 178
-    invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    const v1, 0x7f0b00b0
-
-    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getInteger(I)I
-
-    move-result v0
-
-    goto/16 :goto_17
-
-    .line 180
-    :cond_ab
-    const/16 v5, 0x10
-
-    if-ne p1, v5, :cond_bc
-
-    .line 181
-    invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    const v1, 0x7f0b00b2
-
-    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getInteger(I)I
-
-    move-result v0
-
-    goto/16 :goto_17
-
-    .line 183
-    :cond_bc
-    const/16 v5, 0x11
-
-    if-ne p1, v5, :cond_cd
-
-    .line 184
-    invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    const v1, 0x7f0b00b4
-
-    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getInteger(I)I
-
-    move-result v0
-
-    goto/16 :goto_17
-
-    .line 186
-    :cond_cd
-    const/16 v5, 0x12
-
-    if-eq p1, v5, :cond_17
-
-    .line 189
-    const/16 v0, 0x13
-
-    if-ne p1, v0, :cond_d8
+    if-ne p1, v0, :cond_61
 
     move v0, v1
 
-    .line 190
-    goto/16 :goto_17
+    .line 943
+    goto :goto_1b
 
-    .line 192
-    :cond_d8
-    const/16 v0, 0x14
-
-    if-ne p1, v0, :cond_e0
-
-    .line 193
-    const/16 v0, 0x21
-
-    goto/16 :goto_17
-
-    .line 195
-    :cond_e0
+    .line 945
+    :cond_61
     const/16 v0, 0x15
 
-    if-ne p1, v0, :cond_e7
+    if-ne p1, v0, :cond_67
 
     move v0, v2
 
-    .line 196
-    goto/16 :goto_17
+    .line 946
+    goto :goto_1b
 
-    .line 198
-    :cond_e7
-    if-ne p1, v2, :cond_ed
+    .line 948
+    :cond_67
+    if-eq p1, v2, :cond_6d
 
-    .line 199
-    const/16 v0, 0x32
-
-    goto/16 :goto_17
-
-    .line 201
-    :cond_ed
     const/16 v0, 0x17
 
-    if-ne p1, v0, :cond_f5
+    if-ne p1, v0, :cond_70
 
-    .line 202
+    .line 949
+    :cond_6d
     const/16 v0, 0x32
 
-    goto/16 :goto_17
+    goto :goto_1b
 
-    .line 204
-    :cond_f5
-    const/16 v0, 0x18
-
-    if-ne p1, v0, :cond_fc
-
-    move v0, v3
-
-    .line 205
-    goto/16 :goto_17
-
-    .line 207
-    :cond_fc
-    const/16 v0, 0x19
-
-    if-ne p1, v0, :cond_103
-
-    move v0, v1
-
-    .line 208
-    goto/16 :goto_17
-
-    .line 210
-    :cond_103
-    const/16 v0, 0x1a
-
-    if-ne p1, v0, :cond_10a
-
-    move v0, v1
-
-    .line 211
-    goto/16 :goto_17
-
-    .line 213
-    :cond_10a
-    const/16 v0, 0x1b
-
-    if-ne p1, v0, :cond_111
-
-    move v0, v3
-
-    .line 214
-    goto/16 :goto_17
-
-    .line 216
-    :cond_111
+    .line 951
+    :cond_70
     const/16 v0, 0x1c
 
-    if-ne p1, v0, :cond_118
+    if-eq p1, v0, :cond_78
 
-    move v0, v4
-
-    .line 217
-    goto/16 :goto_17
-
-    .line 219
-    :cond_118
-    const/16 v0, 0x1d
-
-    if-ne p1, v0, :cond_120
-
-    .line 220
-    const/16 v0, 0x28
-
-    goto/16 :goto_17
-
-    .line 222
-    :cond_120
     const/16 v0, 0x1e
 
-    if-ne p1, v0, :cond_127
+    if-ne p1, v0, :cond_7b
 
-    move v0, v4
+    .line 952
+    :cond_78
+    const/16 v0, 0x27
 
-    .line 223
-    goto/16 :goto_17
+    goto :goto_1b
 
-    .line 225
-    :cond_127
-    invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+    .line 954
+    :cond_7b
+    const/16 v0, 0x1d
 
-    move-result-object v0
+    if-ne p1, v0, :cond_82
 
-    const v1, 0x7f0b0035
+    .line 955
+    const/16 v0, 0x28
 
-    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getInteger(I)I
+    goto :goto_1b
 
-    move-result v0
+    .line 957
+    :cond_82
+    const/16 v0, 0xa3
 
-    goto/16 :goto_17
+    goto :goto_1b
 .end method
 
 .method public static getDownPlayFrameNum(Landroid/content/Context;I)I
@@ -2839,699 +2627,379 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 229
+    .line 961
     invoke-static {p0, p1}, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->getDownStartFrameIndex(Landroid/content/Context;I)I
 
     move-result v1
 
-    .line 230
+    .line 962
     .local v1, "downStartFrameIndex":I
     invoke-static {p0, p1}, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->getDownEndFrameIndex(Landroid/content/Context;I)I
 
     move-result v0
 
-    .line 231
+    .line 963
     .local v0, "downEndFrameIndex":I
-    if-ltz v1, :cond_17
+    if-ltz v1, :cond_f
 
-    if-ltz v0, :cond_17
+    if-ltz v0, :cond_f
 
-    if-gt v1, v0, :cond_17
+    if-le v1, v0, :cond_d8
 
-    .line 232
-    if-ne v1, v0, :cond_12
-
-    .line 316
-    :cond_11
-    :goto_11
-    return v2
-
-    .line 235
-    :cond_12
-    sub-int v2, v0, v1
-
-    add-int/lit8 v2, v2, 0x1
-
-    goto :goto_11
-
-    .line 238
-    :cond_17
-    if-nez p1, :cond_1d
-
-    .line 239
-    sget-object v2, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_ANIMATION_DEFAULT:[I
-
-    array-length v2, v2
-
-    goto :goto_11
-
-    .line 241
-    :cond_1d
+    .line 965
+    :cond_f
     const/4 v3, 0x1
 
-    if-ne p1, v3, :cond_24
+    if-ne p1, v3, :cond_16
 
-    .line 242
+    .line 966
     sget-object v2, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_ANIMATION_02:[I
 
     array-length v2, v2
 
-    goto :goto_11
+    .line 1041
+    :cond_15
+    :goto_15
+    return v2
 
-    .line 244
-    :cond_24
+    .line 968
+    :cond_16
     const/4 v3, 0x2
 
-    if-ne p1, v3, :cond_2b
+    if-ne p1, v3, :cond_1d
 
-    .line 245
+    .line 969
     sget-object v2, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_ANIMATION_03:[I
 
     array-length v2, v2
 
-    goto :goto_11
+    goto :goto_15
 
-    .line 247
-    :cond_2b
+    .line 971
+    :cond_1d
     const/4 v3, 0x3
 
-    if-ne p1, v3, :cond_32
+    if-eq p1, v3, :cond_24
 
-    .line 248
+    const/16 v3, 0xa
+
+    if-ne p1, v3, :cond_28
+
+    .line 972
+    :cond_24
     sget-object v2, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_ANIMATION_MCL:[I
 
     array-length v2, v2
 
-    goto :goto_11
+    goto :goto_15
 
-    .line 250
-    :cond_32
+    .line 974
+    :cond_28
     const/16 v3, 0x9
 
-    if-eq p1, v3, :cond_11
+    if-eq p1, v3, :cond_15
 
-    .line 253
-    const/16 v2, 0xa
-
-    if-ne p1, v2, :cond_3e
-
-    .line 254
-    sget-object v2, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_ANIMATION_MCL:[I
-
-    array-length v2, v2
-
-    goto :goto_11
-
-    .line 256
-    :cond_3e
+    .line 977
     const/16 v2, 0xb
 
-    if-ne p1, v2, :cond_46
+    if-ne p1, v2, :cond_34
 
-    .line 257
+    .line 978
     sget-object v2, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_CUST01_ANIMATION:[I
 
     array-length v2, v2
 
-    goto :goto_11
+    goto :goto_15
 
-    .line 259
-    :cond_46
+    .line 980
+    :cond_34
     const/16 v2, 0xc
 
-    if-ne p1, v2, :cond_4e
+    if-ne p1, v2, :cond_3c
 
-    .line 260
+    .line 981
     sget-object v2, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_CUST02_ANIMATION:[I
 
     array-length v2, v2
 
-    goto :goto_11
+    goto :goto_15
 
-    .line 262
-    :cond_4e
+    .line 983
+    :cond_3c
     const/16 v2, 0xd
 
-    if-ne p1, v2, :cond_56
+    if-ne p1, v2, :cond_44
 
-    .line 263
+    .line 984
     sget-object v2, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_CUST03_ANIMATION:[I
 
     array-length v2, v2
 
-    goto :goto_11
+    goto :goto_15
 
-    .line 265
-    :cond_56
+    .line 986
+    :cond_44
     const/16 v2, 0xe
 
-    if-ne p1, v2, :cond_5e
+    if-ne p1, v2, :cond_4c
 
-    .line 266
+    .line 987
     sget-object v2, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_CUST04_ANIMATION:[I
 
     array-length v2, v2
 
-    goto :goto_11
+    goto :goto_15
 
-    .line 268
-    :cond_5e
+    .line 989
+    :cond_4c
     const/16 v2, 0xf
 
-    if-ne p1, v2, :cond_66
+    if-ne p1, v2, :cond_54
 
-    .line 269
+    .line 990
     sget-object v2, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_CUST05_ANIMATION:[I
 
     array-length v2, v2
 
-    goto :goto_11
+    goto :goto_15
 
-    .line 271
-    :cond_66
+    .line 992
+    :cond_54
     const/16 v2, 0x10
 
-    if-ne p1, v2, :cond_6e
+    if-ne p1, v2, :cond_5c
 
-    .line 272
+    .line 993
     sget-object v2, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_CUST06_ANIMATION:[I
 
     array-length v2, v2
 
-    goto :goto_11
+    goto :goto_15
 
-    .line 274
-    :cond_6e
+    .line 995
+    :cond_5c
     const/16 v2, 0x11
 
-    if-ne p1, v2, :cond_76
+    if-ne p1, v2, :cond_64
 
-    .line 275
+    .line 996
     sget-object v2, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_CUST07_ANIMATION:[I
 
     array-length v2, v2
 
-    goto :goto_11
+    goto :goto_15
 
-    .line 277
-    :cond_76
+    .line 998
+    :cond_64
     const/16 v2, 0x12
 
-    if-ne p1, v2, :cond_7e
+    if-ne p1, v2, :cond_6c
 
-    .line 278
+    .line 999
     sget-object v2, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_CUST08_ANIMATION:[I
 
     array-length v2, v2
 
-    goto :goto_11
+    goto :goto_15
 
-    .line 280
-    :cond_7e
+    .line 1001
+    :cond_6c
     const/16 v2, 0x13
 
-    if-ne p1, v2, :cond_86
+    if-ne p1, v2, :cond_74
 
-    .line 281
+    .line 1002
     sget-object v2, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_CUST09_ANIMATION:[I
 
     array-length v2, v2
 
-    goto :goto_11
+    goto :goto_15
 
-    .line 283
-    :cond_86
+    .line 1004
+    :cond_74
     const/16 v2, 0x14
 
-    if-ne p1, v2, :cond_8e
+    if-ne p1, v2, :cond_7c
 
-    .line 284
+    .line 1005
     sget-object v2, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_CUST10_ANIMATION:[I
 
     array-length v2, v2
 
-    goto :goto_11
+    goto :goto_15
 
-    .line 286
-    :cond_8e
+    .line 1007
+    :cond_7c
     const/16 v2, 0x15
 
-    if-ne p1, v2, :cond_97
+    if-ne p1, v2, :cond_84
 
-    .line 287
+    .line 1008
     sget-object v2, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_CUST11_ANIMATION:[I
 
     array-length v2, v2
 
-    goto/16 :goto_11
+    goto :goto_15
 
-    .line 289
-    :cond_97
+    .line 1010
+    :cond_84
     const/16 v2, 0x16
 
-    if-ne p1, v2, :cond_a0
+    if-ne p1, v2, :cond_8c
 
-    .line 290
+    .line 1011
     sget-object v2, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_CUST12_ANIMATION:[I
 
     array-length v2, v2
 
-    goto/16 :goto_11
+    goto :goto_15
 
-    .line 292
-    :cond_a0
+    .line 1013
+    :cond_8c
     const/16 v2, 0x17
 
-    if-ne p1, v2, :cond_a9
+    if-ne p1, v2, :cond_94
 
-    .line 293
+    .line 1014
     sget-object v2, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_CUST13_ANIMATION:[I
 
     array-length v2, v2
 
-    goto/16 :goto_11
+    goto :goto_15
 
-    .line 295
-    :cond_a9
+    .line 1016
+    :cond_94
     const/16 v2, 0x18
 
-    if-ne p1, v2, :cond_b2
+    if-ne p1, v2, :cond_9d
 
-    .line 296
+    .line 1017
     sget-object v2, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_CUST14_ANIMATION:[I
 
     array-length v2, v2
 
-    goto/16 :goto_11
+    goto/16 :goto_15
 
-    .line 298
-    :cond_b2
+    .line 1019
+    :cond_9d
     const/16 v2, 0x19
 
-    if-ne p1, v2, :cond_bb
+    if-ne p1, v2, :cond_a6
 
-    .line 299
+    .line 1020
     sget-object v2, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_CUST15_ANIMATION:[I
 
     array-length v2, v2
 
-    goto/16 :goto_11
+    goto/16 :goto_15
 
-    .line 301
-    :cond_bb
+    .line 1022
+    :cond_a6
     const/16 v2, 0x1a
 
-    if-ne p1, v2, :cond_c4
+    if-ne p1, v2, :cond_af
 
-    .line 302
+    .line 1023
     sget-object v2, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_CUST16_ANIMATION:[I
 
     array-length v2, v2
 
-    goto/16 :goto_11
+    goto/16 :goto_15
 
-    .line 304
-    :cond_c4
+    .line 1025
+    :cond_af
     const/16 v2, 0x1b
 
-    if-ne p1, v2, :cond_cd
+    if-ne p1, v2, :cond_b8
 
-    .line 305
+    .line 1026
     sget-object v2, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_CUST17_ANIMATION:[I
 
     array-length v2, v2
 
-    goto/16 :goto_11
+    goto/16 :goto_15
 
-    .line 307
-    :cond_cd
+    .line 1028
+    :cond_b8
     const/16 v2, 0x1c
 
-    if-ne p1, v2, :cond_d6
+    if-ne p1, v2, :cond_c1
 
-    .line 308
+    .line 1029
     sget-object v2, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_CUST18_ANIMATION:[I
 
     array-length v2, v2
 
-    goto/16 :goto_11
+    goto/16 :goto_15
 
-    .line 310
-    :cond_d6
+    .line 1031
+    :cond_c1
     const/16 v2, 0x1d
 
-    if-ne p1, v2, :cond_df
+    if-ne p1, v2, :cond_ca
 
-    .line 311
+    .line 1032
     sget-object v2, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_CUST19_ANIMATION:[I
 
     array-length v2, v2
 
-    goto/16 :goto_11
+    goto/16 :goto_15
 
-    .line 313
-    :cond_df
+    .line 1034
+    :cond_ca
     const/16 v2, 0x1e
 
-    if-ne p1, v2, :cond_e8
+    if-ne p1, v2, :cond_d3
 
-    .line 314
+    .line 1035
     sget-object v2, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_CUST20_ANIMATION:[I
 
     array-length v2, v2
 
-    goto/16 :goto_11
+    goto/16 :goto_15
 
-    .line 316
-    :cond_e8
+    .line 1037
+    :cond_d3
     sget-object v2, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_ANIMATION_DEFAULT:[I
 
     array-length v2, v2
 
-    goto/16 :goto_11
+    goto/16 :goto_15
+
+    .line 1038
+    :cond_d8
+    if-eq v1, v0, :cond_15
+
+    .line 1041
+    sub-int v2, v0, v1
+
+    add-int/lit8 v2, v2, 0x1
+
+    goto/16 :goto_15
 .end method
 
 .method public static getDownStartFrameIndex(Landroid/content/Context;I)I
-    .registers 6
+    .registers 3
     .param p0, "context"    # Landroid/content/Context;
     .param p1, "n"    # I
 
     .prologue
-    const v3, 0x7f0b003a
+    .line 1046
+    const/16 v0, 0x9
 
-    const v2, 0x7f0b0036
+    if-ne p1, v0, :cond_6
 
-    const/4 v0, 0x0
-
-    .line 321
-    if-nez p1, :cond_12
-
-    .line 322
-    invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getInteger(I)I
-
-    move-result v0
-
-    .line 399
-    :cond_11
-    :goto_11
-    return v0
-
-    .line 324
-    :cond_12
-    const/4 v1, 0x1
-
-    if-ne p1, v1, :cond_21
-
-    .line 325
-    invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    const v1, 0x7f0b002e
-
-    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getInteger(I)I
-
-    move-result v0
-
-    goto :goto_11
-
-    .line 327
-    :cond_21
-    const/4 v1, 0x2
-
-    if-ne p1, v1, :cond_30
-
-    .line 328
-    invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    const v1, 0x7f0b0030
-
-    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getInteger(I)I
-
-    move-result v0
-
-    goto :goto_11
-
-    .line 330
-    :cond_30
-    const/4 v1, 0x3
-
-    if-ne p1, v1, :cond_3c
-
-    .line 331
-    invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v3}, Landroid/content/res/Resources;->getInteger(I)I
-
-    move-result v0
-
-    goto :goto_11
-
-    .line 333
-    :cond_3c
-    const/16 v1, 0x9
-
-    if-ne p1, v1, :cond_42
-
-    .line 334
+    .line 1047
     const/4 v0, -0x1
 
-    goto :goto_11
+    .line 1049
+    :goto_5
+    return v0
 
-    .line 336
-    :cond_42
-    const/16 v1, 0xa
+    :cond_6
+    const/4 v0, 0x0
 
-    if-ne p1, v1, :cond_4f
-
-    .line 337
-    invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v3}, Landroid/content/res/Resources;->getInteger(I)I
-
-    move-result v0
-
-    goto :goto_11
-
-    .line 339
-    :cond_4f
-    const/16 v1, 0xb
-
-    if-ne p1, v1, :cond_5f
-
-    .line 340
-    invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    const v1, 0x7f0b0034
-
-    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getInteger(I)I
-
-    move-result v0
-
-    goto :goto_11
-
-    .line 342
-    :cond_5f
-    const/16 v1, 0xc
-
-    if-ne p1, v1, :cond_6f
-
-    .line 343
-    invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    const v1, 0x7f0b00ab
-
-    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getInteger(I)I
-
-    move-result v0
-
-    goto :goto_11
-
-    .line 345
-    :cond_6f
-    const/16 v1, 0xd
-
-    if-ne p1, v1, :cond_7f
-
-    .line 346
-    invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    const v1, 0x7f0b00ad
-
-    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getInteger(I)I
-
-    move-result v0
-
-    goto :goto_11
-
-    .line 348
-    :cond_7f
-    const/16 v1, 0xe
-
-    if-ne p1, v1, :cond_8f
-
-    .line 349
-    invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    const v1, 0x7f0b00af
-
-    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getInteger(I)I
-
-    move-result v0
-
-    goto :goto_11
-
-    .line 351
-    :cond_8f
-    const/16 v1, 0xf
-
-    if-ne p1, v1, :cond_a0
-
-    .line 352
-    invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    const v1, 0x7f0b00b1
-
-    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getInteger(I)I
-
-    move-result v0
-
-    goto/16 :goto_11
-
-    .line 354
-    :cond_a0
-    const/16 v1, 0x10
-
-    if-ne p1, v1, :cond_b1
-
-    .line 355
-    invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    const v1, 0x7f0b00b3
-
-    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getInteger(I)I
-
-    move-result v0
-
-    goto/16 :goto_11
-
-    .line 357
-    :cond_b1
-    const/16 v1, 0x11
-
-    if-ne p1, v1, :cond_c2
-
-    .line 358
-    invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    const v1, 0x7f0b00b5
-
-    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getInteger(I)I
-
-    move-result v0
-
-    goto/16 :goto_11
-
-    .line 360
-    :cond_c2
-    const/16 v1, 0x12
-
-    if-eq p1, v1, :cond_11
-
-    .line 363
-    const/16 v1, 0x13
-
-    if-eq p1, v1, :cond_11
-
-    .line 366
-    const/16 v1, 0x14
-
-    if-eq p1, v1, :cond_11
-
-    .line 369
-    const/16 v1, 0x15
-
-    if-eq p1, v1, :cond_11
-
-    .line 372
-    const/16 v1, 0x16
-
-    if-eq p1, v1, :cond_11
-
-    .line 375
-    const/16 v1, 0x17
-
-    if-eq p1, v1, :cond_11
-
-    .line 378
-    const/16 v1, 0x18
-
-    if-eq p1, v1, :cond_11
-
-    .line 381
-    const/16 v1, 0x19
-
-    if-eq p1, v1, :cond_11
-
-    .line 384
-    const/16 v1, 0x1a
-
-    if-eq p1, v1, :cond_11
-
-    .line 387
-    const/16 v1, 0x1b
-
-    if-eq p1, v1, :cond_11
-
-    .line 390
-    const/16 v1, 0x1c
-
-    if-eq p1, v1, :cond_11
-
-    .line 393
-    const/16 v1, 0x1d
-
-    if-eq p1, v1, :cond_11
-
-    .line 396
-    const/16 v1, 0x1e
-
-    if-eq p1, v1, :cond_11
-
-    .line 399
-    invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getInteger(I)I
-
-    move-result v0
-
-    goto/16 :goto_11
+    goto :goto_5
 .end method
 
 .method public static getUpAnimationRes(I)[I
@@ -3539,13 +3007,13 @@
     .param p0, "n"    # I
 
     .prologue
-    .line 403
+    .line 1053
     if-nez p0, :cond_5
 
-    .line 404
+    .line 1054
     sget-object v0, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->UP_ANIMATION_DEFAULT:[I
 
-    .line 406
+    .line 1056
     :goto_4
     return-object v0
 
@@ -3558,116 +3026,81 @@
 .end method
 
 .method public static getUpEndFrameIndex(Landroid/content/Context;I)I
-    .registers 4
+    .registers 3
     .param p0, "context"    # Landroid/content/Context;
     .param p1, "n"    # I
 
     .prologue
-    .line 410
-    if-nez p1, :cond_e
-
-    .line 411
-    invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    const v1, 0x7f0b0037
-
-    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getInteger(I)I
-
-    move-result v0
-
-    .line 413
-    :goto_d
-    return v0
-
-    :cond_e
+    .line 1075
     const/4 v0, 0x0
 
-    goto :goto_d
+    return v0
 .end method
 
 .method public static getUpPlayFrameNum(Landroid/content/Context;I)I
-    .registers 4
+    .registers 5
     .param p0, "context"    # Landroid/content/Context;
     .param p1, "upEndFrameIndex"    # I
 
     .prologue
-    const/4 v1, 0x0
+    const/4 v2, 0x0
 
-    .line 417
+    .line 1060
     if-eqz p1, :cond_4
 
-    .line 428
+    .line 1071
     :cond_3
     :goto_3
-    return v1
+    return v2
 
-    .line 420
+    .line 1063
     :cond_4
     invoke-static {p0, p1}, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->getUpStartFrameIndex(Landroid/content/Context;I)I
 
-    move-result v0
+    move-result v1
 
-    .line 421
-    .local v0, "upStartFrameIndex":I
+    .line 1064
+    .local v1, "upStartFrameIndex":I
     invoke-static {p0, p1}, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->getUpEndFrameIndex(Landroid/content/Context;I)I
 
-    move-result p1
+    move-result v0
 
-    .line 422
+    .line 1065
+    .local v0, "upEndFrameIndex2":I
+    if-ltz v1, :cond_12
+
     if-ltz v0, :cond_12
 
-    if-ltz p1, :cond_12
+    if-le v1, v0, :cond_16
 
-    if-le v0, p1, :cond_16
-
-    .line 423
+    .line 1066
     :cond_12
-    sget-object v1, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->UP_ANIMATION_DEFAULT:[I
+    sget-object v2, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->UP_ANIMATION_DEFAULT:[I
 
-    array-length v1, v1
+    array-length v2, v2
 
     goto :goto_3
 
-    .line 425
+    .line 1068
     :cond_16
-    if-eq v0, p1, :cond_3
+    if-eq v1, v0, :cond_3
 
-    .line 428
-    sub-int v1, p1, v0
+    .line 1069
+    sub-int v2, v0, v1
 
-    add-int/lit8 v1, v1, 0x1
+    add-int/lit8 v2, v2, 0x1
 
     goto :goto_3
 .end method
 
 .method public static getUpStartFrameIndex(Landroid/content/Context;I)I
-    .registers 4
+    .registers 3
     .param p0, "context"    # Landroid/content/Context;
     .param p1, "n"    # I
 
     .prologue
-    .line 432
-    if-nez p1, :cond_e
-
-    .line 433
-    invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    const v1, 0x7f0b0038
-
-    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getInteger(I)I
-
-    move-result v0
-
-    .line 435
-    :goto_d
-    return v0
-
-    :cond_e
+    .line 1079
     const/4 v0, 0x0
 
-    goto :goto_d
+    return v0
 .end method

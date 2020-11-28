@@ -24,7 +24,7 @@
 .method constructor <init>(Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;)V
     .locals 0
 
-    .line 884
+    .line 888
     iput-object p1, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar$7;->this$0:Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
@@ -39,7 +39,7 @@
 
     const/4 p1, 0x1
 
-    .line 897
+    .line 901
     iput-boolean p1, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar$7;->mCancelled:Z
 
     return-void
@@ -48,12 +48,12 @@
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .locals 1
 
-    .line 902
+    .line 906
     sget-boolean p1, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->DEBUG:Z
 
     if-eqz p1, :cond_0
 
-    .line 903
+    .line 907
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -72,7 +72,7 @@
 
     iget-object v0, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar$7;->this$0:Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;
 
-    .line 904
+    .line 908
     invoke-static {v0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->access$900(Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;)Z
 
     move-result v0
@@ -85,10 +85,10 @@
 
     const-string v0, "OpStatusBar"
 
-    .line 903
+    .line 907
     invoke-static {v0, p1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 907
+    .line 911
     :cond_0
     iget-object p1, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar$7;->this$0:Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;
 
@@ -98,21 +98,21 @@
 
     if-nez p1, :cond_1
 
-    .line 908
+    .line 912
     iget-object p1, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar$7;->this$0:Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;
 
     iget-object p1, p1, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mAodWindowManager:Lcom/oneplus/aod/OpAodWindowManager;
 
     invoke-virtual {p1}, Lcom/oneplus/aod/OpAodWindowManager;->stopDozing()V
 
-    .line 909
+    .line 913
     iget-object p1, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar$7;->this$0:Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;
 
     iget-object p1, p1, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mAodDisplayViewManager:Lcom/oneplus/aod/OpAodDisplayViewManager;
 
     invoke-virtual {p1}, Lcom/oneplus/aod/OpAodDisplayViewManager;->stopDozing()V
 
-    .line 910
+    .line 914
     iget-object p0, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar$7;->this$0:Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;
 
     iget-object p0, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mAodDisplayViewManager:Lcom/oneplus/aod/OpAodDisplayViewManager;
@@ -128,10 +128,10 @@
 
     const/4 p1, 0x0
 
-    .line 889
+    .line 893
     iput-boolean p1, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar$7;->mCancelled:Z
 
-    .line 890
+    .line 894
     sget-boolean p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->DEBUG:Z
 
     if-eqz p0, :cond_0
@@ -140,7 +140,7 @@
 
     const-string p1, "mWakingUpAnimation onAnimationStart"
 
-    .line 891
+    .line 895
     invoke-static {p0, p1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_0

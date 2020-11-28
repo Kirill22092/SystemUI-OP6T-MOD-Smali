@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/android/systemui/statusbar/phone/PanelView;)V
     .locals 0
 
-    .line 1198
+    .line 1232
     iput-object p1, p0, Lcom/android/systemui/statusbar/phone/PanelView$3;->this$0:Lcom/android/systemui/statusbar/phone/PanelView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +38,7 @@
 .method public run()V
     .locals 3
 
-    .line 1201
+    .line 1235
     iget-object p0, p0, Lcom/android/systemui/statusbar/phone/PanelView$3;->this$0:Lcom/android/systemui/statusbar/phone/PanelView;
 
     invoke-static {p0}, Lcom/android/systemui/statusbar/phone/PanelView;->access$300(Lcom/android/systemui/statusbar/phone/PanelView;)F

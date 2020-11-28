@@ -27,7 +27,7 @@
 .method constructor <init>(Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;I)V
     .locals 0
 
-    .line 1084
+    .line 1088
     iput-object p1, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar$8;->this$0:Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;
 
     iput p2, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar$8;->val$status:I
@@ -42,7 +42,7 @@
 .method public run()V
     .locals 1
 
-    .line 1087
+    .line 1091
     iget-object v0, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar$8;->this$0:Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;
 
     invoke-static {v0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->access$1000(Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;)Lcom/oneplus/systemui/statusbar/phone/OpStatusBar$OpDozeCallbacks;
@@ -51,7 +51,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 1088
+    .line 1092
     iget-object v0, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar$8;->this$0:Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;
 
     invoke-static {v0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->access$1000(Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;)Lcom/oneplus/systemui/statusbar/phone/OpStatusBar$OpDozeCallbacks;

@@ -22,10 +22,10 @@
 .method public constructor <init>(Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;Landroid/os/Looper;)V
     .locals 0
 
-    .line 550
+    .line 577
     iput-object p1, p0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler$OemGestureButtonHandler;->this$0:Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;
 
-    .line 551
+    .line 578
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
     return-void
@@ -36,7 +36,7 @@
 .method public handleMessage(Landroid/os/Message;)V
     .locals 4
 
-    .line 556
+    .line 583
     iget p1, p1, Landroid/os/Message;->what:I
 
     const/4 v0, 0x0
@@ -55,7 +55,7 @@
 
     goto/16 :goto_0
 
-    .line 575
+    .line 602
     :cond_0
     iget-object p1, p0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler$OemGestureButtonHandler;->this$0:Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;
 
@@ -63,7 +63,7 @@
 
     if-eqz v3, :cond_4
 
-    .line 576
+    .line 603
     invoke-static {p1}, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->access$900(Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;)I
 
     move-result p1
@@ -78,14 +78,14 @@
 
     if-gt p1, v3, :cond_1
 
-    .line 577
+    .line 604
     iget-object p1, p0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler$OemGestureButtonHandler;->this$0:Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;
 
     iget-object p1, p1, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mEdgeEffectView:Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler$EdgeEffectView;
 
     invoke-virtual {p1}, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler$EdgeEffectView;->setSize()V
 
-    .line 578
+    .line 605
     iget-object p1, p0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler$OemGestureButtonHandler;->this$0:Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;
 
     iget-object p1, p1, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mEdgeEffectView:Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler$EdgeEffectView;
@@ -104,12 +104,12 @@
 
     invoke-virtual {p1, v0}, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler$EdgeEffectView;->onPull(F)V
 
-    .line 579
+    .line 606
     iget-object p1, p0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler$OemGestureButtonHandler;->this$0:Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;
 
     invoke-static {p1}, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->access$908(Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;)I
 
-    .line 580
+    .line 607
     iget-object p0, p0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler$OemGestureButtonHandler;->this$0:Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;
 
     iget-object p0, p0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mOemGestureButtonAnimHandler:Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler$OemGestureButtonHandler;
@@ -120,7 +120,7 @@
 
     goto :goto_0
 
-    .line 583
+    .line 610
     :cond_1
     iget-object p1, p0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler$OemGestureButtonHandler;->this$0:Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;
 
@@ -128,14 +128,14 @@
 
     invoke-virtual {p1}, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler$EdgeEffectView;->onRelease()V
 
-    .line 584
+    .line 611
     iget-object p0, p0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler$OemGestureButtonHandler;->this$0:Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;
 
     invoke-static {p0, v0}, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->access$902(Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;I)I
 
     goto :goto_0
 
-    .line 572
+    .line 599
     :cond_2
     iget-object p0, p0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler$OemGestureButtonHandler;->this$0:Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;
 
@@ -143,7 +143,7 @@
 
     goto :goto_0
 
-    .line 558
+    .line 585
     :cond_3
     new-instance p1, Ljava/lang/StringBuilder;
 
@@ -165,26 +165,26 @@
 
     invoke-static {v3, p1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 559
+    .line 586
     iget-object p1, p0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler$OemGestureButtonHandler;->this$0:Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;
 
     const/4 v3, 0x4
 
     invoke-static {p1, v0, v3}, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->access$600(Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;II)V
 
-    .line 560
+    .line 587
     iget-object p1, p0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler$OemGestureButtonHandler;->this$0:Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;
 
     invoke-static {p1, v2, v3}, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->access$600(Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;II)V
 
-    .line 563
+    .line 590
     iget-object p1, p0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler$OemGestureButtonHandler;->this$0:Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;
 
     iget-object p1, p1, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mEdgeEffectView:Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler$EdgeEffectView;
 
     invoke-virtual {p1}, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler$EdgeEffectView;->vibrate()V
 
-    .line 566
+    .line 593
     iget-object p1, p0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler$OemGestureButtonHandler;->this$0:Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;
 
     invoke-static {p1}, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->access$700(Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;)Z
@@ -197,7 +197,7 @@
 
     if-nez p1, :cond_4
 
-    .line 567
+    .line 594
     iget-object p0, p0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler$OemGestureButtonHandler;->this$0:Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;
 
     iget-object p0, p0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mOemGestureButtonAnimHandler:Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler$OemGestureButtonHandler;

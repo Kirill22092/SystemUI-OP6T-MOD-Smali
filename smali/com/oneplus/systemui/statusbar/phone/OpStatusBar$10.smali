@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;)V
     .locals 0
 
-    .line 1106
+    .line 1110
     iput-object p1, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar$10;->this$0:Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +38,7 @@
 .method public run()V
     .locals 1
 
-    .line 1109
+    .line 1113
     iget-object v0, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar$10;->this$0:Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;
 
     invoke-static {v0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->access$1000(Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;)Lcom/oneplus/systemui/statusbar/phone/OpStatusBar$OpDozeCallbacks;
@@ -47,7 +47,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 1110
+    .line 1114
     iget-object p0, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar$10;->this$0:Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;
 
     invoke-static {p0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->access$1000(Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;)Lcom/oneplus/systemui/statusbar/phone/OpStatusBar$OpDozeCallbacks;

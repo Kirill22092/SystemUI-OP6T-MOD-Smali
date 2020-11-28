@@ -11,6 +11,7 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
+        Lcom/oneplus/systemui/statusbar/phone/OpStatusBar$StatusBarCollapseListener;,
         Lcom/oneplus/systemui/statusbar/phone/OpStatusBar$OpDozeCallbacks;
     }
 .end annotation
@@ -95,6 +96,8 @@
 
 .field protected mStartDozingRequested:Z
 
+.field protected mStatusBarCollapseListener:Lcom/oneplus/systemui/statusbar/phone/OpStatusBar$StatusBarCollapseListener;
+
 .field protected mTelecomManager:Landroid/telecom/TelecomManager;
 
 .field private mThemeColor:I
@@ -153,39 +156,39 @@
     .line 203
     iput-boolean v0, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->isCTSStart:Z
 
-    .line 462
+    .line 466
     iput v0, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mNavType:I
 
     const/4 v1, 0x1
 
-    .line 463
+    .line 467
     iput-boolean v1, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mNavShowing:Z
 
     const-wide/16 v1, 0x0
 
-    .line 464
+    .line 468
     iput-wide v1, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mLastUpdateNavBarTime:J
 
-    .line 487
+    .line 491
     new-instance v1, Lcom/oneplus/systemui/statusbar/phone/-$$Lambda$OpStatusBar$b4K8-DVbezRw2CdKDCQbZqxi8NU;
 
     invoke-direct {v1, p0}, Lcom/oneplus/systemui/statusbar/phone/-$$Lambda$OpStatusBar$b4K8-DVbezRw2CdKDCQbZqxi8NU;-><init>(Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;)V
 
     iput-object v1, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mCheckNavigationBarTask:Ljava/lang/Runnable;
 
-    .line 575
+    .line 579
     iput-boolean v0, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mQsDisabled:Z
 
-    .line 576
+    .line 580
     iput v0, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mDisableQs:I
 
-    .line 788
+    .line 792
     iput-boolean v0, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mPreHideAod:Z
 
-    .line 831
+    .line 835
     iput-boolean v0, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mWakingUpAnimationStart:Z
 
-    .line 1434
+    .line 1438
     iput v0, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mOutOfBoundThenRelayoutTimes:I
 
     return-void
@@ -319,7 +322,7 @@
 .method private checkBarModes()V
     .locals 3
 
-    .line 1376
+    .line 1380
     const-class v0, Lcom/android/systemui/statusbar/phone/StatusBar;
 
     const/4 v1, 0x0
@@ -336,14 +339,14 @@
 .method private checkIfThemeChanged()V
     .locals 7
 
-    .line 1156
+    .line 1160
     iget-object v0, p0, Lcom/android/systemui/SystemUI;->mContext:Landroid/content/Context;
 
     invoke-static {v0}, Lcom/oneplus/util/OpUtils;->getThemeColor(Landroid/content/Context;)I
 
     move-result v0
 
-    .line 1157
+    .line 1161
     iget-object v1, p0, Lcom/android/systemui/SystemUI;->mContext:Landroid/content/Context;
 
     sget v2, Lcom/android/systemui/R$color;->qs_tile_icon:I
@@ -352,14 +355,14 @@
 
     move-result v1
 
-    .line 1158
+    .line 1162
     iget-object v2, p0, Lcom/android/systemui/SystemUI;->mContext:Landroid/content/Context;
 
     invoke-static {v2}, Lcom/oneplus/util/OpUtils;->isSpecialTheme(Landroid/content/Context;)Z
 
     move-result v2
 
-    .line 1159
+    .line 1163
     iget-object v3, p0, Lcom/android/systemui/SystemUI;->mContext:Landroid/content/Context;
 
     invoke-static {v3}, Lcom/oneplus/util/OpUtils;->isGoogleDarkTheme(Landroid/content/Context;)Z
@@ -370,10 +373,10 @@
 
     new-array v4, v4, [Ljava/lang/Object;
 
-    .line 1161
+    .line 1165
     iget v5, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mThemeColor:I
 
-    .line 1165
+    .line 1169
     invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v5
@@ -410,7 +413,7 @@
 
     iget-boolean v5, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mSpecialTheme:Z
 
-    .line 1166
+    .line 1170
     invoke-static {v5}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v5
@@ -447,7 +450,7 @@
 
     const-string v5, "mThemeColor=0x%x -> 0x%x, mAccentColor=0x%x -> 0x%x, mSpecialTheme=%b -> %b, mGoogleDarkTheme=%b -> %b"
 
-    .line 1161
+    .line 1165
     invoke-static {v5, v4}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v4
@@ -456,7 +459,7 @@
 
     invoke-static {v5, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1168
+    .line 1172
     iget v4, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mThemeColor:I
 
     if-ne v4, v0, :cond_0
@@ -473,27 +476,27 @@
 
     if-eq v4, v3, :cond_3
 
-    .line 1173
+    .line 1177
     :cond_0
     iput v0, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mThemeColor:I
 
-    .line 1174
+    .line 1178
     iput v1, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mAccentColor:I
 
-    .line 1175
+    .line 1179
     iput-boolean v2, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mSpecialTheme:Z
 
-    .line 1177
+    .line 1181
     iget-object v0, p0, Lcom/android/systemui/SystemUI;->mContext:Landroid/content/Context;
 
     invoke-static {v0}, Lcom/oneplus/util/ThemeColorUtils;->init(Landroid/content/Context;)V
 
-    .line 1179
+    .line 1183
     iget-boolean v0, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mGoogleDarkTheme:Z
 
     if-ne v0, v3, :cond_1
 
-    .line 1180
+    .line 1184
     invoke-direct {p0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->getStatusBarWindow()Lcom/android/systemui/statusbar/phone/StatusBarWindowView;
 
     move-result-object v0
@@ -504,16 +507,16 @@
 
     invoke-virtual {v0}, Lcom/android/systemui/fragments/FragmentHostManager;->reloadFragments()V
 
-    .line 1183
+    .line 1187
     :cond_1
     iget-object v0, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mOpFacelockController:Lcom/oneplus/faceunlock/OpFacelockController;
 
     if-eqz v0, :cond_2
 
-    .line 1184
+    .line 1188
     invoke-virtual {v0}, Lcom/oneplus/faceunlock/OpFacelockController;->onThemeColorUpdate()V
 
-    .line 1188
+    .line 1192
     :cond_2
     iput-boolean v3, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mGoogleDarkTheme:Z
 
@@ -526,14 +529,14 @@
 
     if-eqz p0, :cond_0
 
-    .line 1272
+    .line 1276
     invoke-static {p0}, Landroid/app/ActivityOptions;->makeRemoteAnimation(Landroid/view/RemoteAnimationAdapter;)Landroid/app/ActivityOptions;
 
     move-result-object p0
 
     goto :goto_0
 
-    .line 1274
+    .line 1278
     :cond_0
     invoke-static {}, Landroid/app/ActivityOptions;->makeBasic()Landroid/app/ActivityOptions;
 
@@ -542,7 +545,7 @@
     :goto_0
     const/4 v0, 0x4
 
-    .line 1278
+    .line 1282
     invoke-virtual {p0, v0}, Landroid/app/ActivityOptions;->setLaunchWindowingMode(I)V
 
     return-object p0
@@ -551,7 +554,7 @@
 .method private getBiometricUnlockController()Lcom/android/systemui/statusbar/phone/BiometricUnlockController;
     .locals 2
 
-    .line 1386
+    .line 1390
     const-class v0, Lcom/android/systemui/statusbar/phone/StatusBar;
 
     const-string v1, "mBiometricUnlockController"
@@ -568,7 +571,7 @@
 .method private getBouncerShowing()Z
     .locals 2
 
-    .line 1524
+    .line 1528
     const-class v0, Lcom/android/systemui/statusbar/phone/StatusBar;
 
     const-string v1, "mBouncerShowing"
@@ -589,7 +592,7 @@
 .method private getBubbleController()Lcom/android/systemui/bubbles/BubbleController;
     .locals 2
 
-    .line 1584
+    .line 1588
     const-class v0, Lcom/android/systemui/statusbar/phone/StatusBar;
 
     const-string v1, "mBubbleController"
@@ -606,7 +609,7 @@
 .method private getDozeScrimController()Lcom/android/systemui/statusbar/phone/DozeScrimController;
     .locals 2
 
-    .line 1484
+    .line 1488
     const-class v0, Lcom/android/systemui/statusbar/phone/StatusBar;
 
     const-string v1, "mDozeScrimController"
@@ -623,7 +626,7 @@
 .method private getDozeServiceHost()Lcom/oneplus/systemui/statusbar/phone/OpStatusBar$OpDozeCallbacks;
     .locals 2
 
-    .line 1509
+    .line 1513
     const-class v0, Lcom/android/systemui/statusbar/phone/StatusBar;
 
     const-string v1, "mDozeServiceHost"
@@ -640,7 +643,7 @@
 .method private getEntryManager()Lcom/android/systemui/statusbar/notification/NotificationEntryManager;
     .locals 2
 
-    .line 1361
+    .line 1365
     const-class v0, Lcom/android/systemui/statusbar/phone/StatusBar;
 
     const-string v1, "mEntryManager"
@@ -657,7 +660,7 @@
 .method private getHandler()Landroid/os/Handler;
     .locals 2
 
-    .line 1381
+    .line 1385
     const-class v0, Lcom/android/systemui/statusbar/phone/StatusBar;
 
     const-string v1, "mHandler"
@@ -674,7 +677,7 @@
 .method private getHeadsUpAppearanceController()Lcom/android/systemui/statusbar/phone/HeadsUpAppearanceController;
     .locals 2
 
-    .line 1494
+    .line 1498
     const-class v0, Lcom/android/systemui/statusbar/phone/StatusBar;
 
     const-string v1, "mHeadsUpAppearanceController"
@@ -691,7 +694,7 @@
 .method private getHeadsUpManager()Lcom/android/systemui/statusbar/phone/HeadsUpManagerPhone;
     .locals 2
 
-    .line 1366
+    .line 1370
     const-class v0, Lcom/android/systemui/statusbar/phone/StatusBar;
 
     const-string v1, "mHeadsUpManager"
@@ -708,7 +711,7 @@
 .method private getIsKeyguard()Z
     .locals 2
 
-    .line 1579
+    .line 1583
     const-class v0, Lcom/android/systemui/statusbar/phone/StatusBar;
 
     const-string v1, "mIsKeyguard"
@@ -729,7 +732,7 @@
 .method private getIsOccluded()Z
     .locals 2
 
-    .line 1519
+    .line 1523
     const-class v0, Lcom/android/systemui/statusbar/phone/StatusBar;
 
     const-string v1, "mIsOccluded"
@@ -750,7 +753,7 @@
 .method private getKeyguardUpdateMonitor()Lcom/android/keyguard/KeyguardUpdateMonitor;
     .locals 2
 
-    .line 1489
+    .line 1493
     const-class v0, Lcom/android/systemui/statusbar/phone/StatusBar;
 
     const-string v1, "mKeyguardUpdateMonitor"
@@ -767,7 +770,7 @@
 .method private getKeyguardViewMediator()Lcom/android/systemui/keyguard/KeyguardViewMediator;
     .locals 2
 
-    .line 1391
+    .line 1395
     const-class v0, Lcom/android/systemui/statusbar/phone/StatusBar;
 
     const-string v1, "mKeyguardViewMediator"
@@ -784,7 +787,7 @@
 .method private getLockscreenUserManager()Lcom/android/systemui/statusbar/NotificationLockscreenUserManager;
     .locals 2
 
-    .line 1596
+    .line 1600
     const-class v0, Lcom/android/systemui/statusbar/phone/StatusBar;
 
     const-string v1, "mLockscreenUserManager"
@@ -801,7 +804,7 @@
 .method private getNavigationBarView()Lcom/android/systemui/statusbar/phone/NavigationBarView;
     .locals 3
 
-    .line 1499
+    .line 1503
     const-class v0, Lcom/android/systemui/statusbar/phone/StatusBar;
 
     const/4 v1, 0x0
@@ -822,7 +825,7 @@
 .method private getNetworkController()Lcom/android/systemui/statusbar/policy/NetworkController;
     .locals 2
 
-    .line 1504
+    .line 1508
     const-class v0, Lcom/android/systemui/statusbar/phone/StatusBar;
 
     const-string v1, "mNetworkController"
@@ -839,7 +842,7 @@
 .method private getNotificationPanelView()Lcom/android/systemui/statusbar/phone/NotificationPanelView;
     .locals 2
 
-    .line 1348
+    .line 1352
     const-class v0, Lcom/android/systemui/statusbar/phone/StatusBar;
 
     const-string v1, "mNotificationPanel"
@@ -856,7 +859,7 @@
 .method private getPanel()Lcom/android/systemui/statusbar/phone/NotificationPanelView;
     .locals 3
 
-    .line 1371
+    .line 1375
     const-class v0, Lcom/android/systemui/statusbar/phone/StatusBar;
 
     const/4 v1, 0x0
@@ -877,7 +880,7 @@
 .method private getScrimController()Lcom/android/systemui/statusbar/phone/ScrimController;
     .locals 2
 
-    .line 1401
+    .line 1405
     const-class v0, Lcom/android/systemui/statusbar/phone/StatusBar;
 
     const-string v1, "mScrimController"
@@ -894,7 +897,7 @@
 .method private getState()I
     .locals 2
 
-    .line 1544
+    .line 1548
     const-class v0, Lcom/android/systemui/statusbar/phone/StatusBar;
 
     const-string v1, "mState"
@@ -915,7 +918,7 @@
 .method private getStatusBarKeyguardViewManager()Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager;
     .locals 2
 
-    .line 1529
+    .line 1533
     const-class v0, Lcom/android/systemui/statusbar/phone/StatusBar;
 
     const-string v1, "mStatusBarKeyguardViewManager"
@@ -932,7 +935,7 @@
 .method private getStatusBarWindow()Lcom/android/systemui/statusbar/phone/StatusBarWindowView;
     .locals 2
 
-    .line 1514
+    .line 1518
     const-class v0, Lcom/android/systemui/statusbar/phone/StatusBar;
 
     const-string v1, "mStatusBarWindow"
@@ -949,7 +952,7 @@
 .method private getUnlockScrimCallback()Lcom/android/systemui/statusbar/phone/ScrimController$Callback;
     .locals 2
 
-    .line 1564
+    .line 1568
     const-class v0, Lcom/android/systemui/statusbar/phone/StatusBar;
 
     const-string v1, "mUnlockScrimCallback"
@@ -966,19 +969,19 @@
 .method private initDetectCTSReceiver()V
     .locals 2
 
-    .line 376
+    .line 380
     sget-object v0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->sPkgReceiver:Landroid/content/BroadcastReceiver;
 
     if-nez v0, :cond_0
 
-    .line 377
+    .line 381
     new-instance v0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar$6;
 
     invoke-direct {v0, p0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar$6;-><init>(Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;)V
 
     sput-object v0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->sPkgReceiver:Landroid/content/BroadcastReceiver;
 
-    .line 411
+    .line 415
     new-instance v0, Landroid/content/IntentFilter;
 
     const-string v1, "android.intent.action.PACKAGE_ADDED"
@@ -987,15 +990,15 @@
 
     const-string v1, "android.intent.action.PACKAGE_REMOVED"
 
-    .line 412
+    .line 416
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
     const-string v1, "package"
 
-    .line 413
+    .line 417
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addDataScheme(Ljava/lang/String;)V
 
-    .line 414
+    .line 418
     iget-object p0, p0, Lcom/android/systemui/SystemUI;->mContext:Landroid/content/Context;
 
     sget-object v1, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->sPkgReceiver:Landroid/content/BroadcastReceiver;
@@ -1009,7 +1012,7 @@
 .method private instantCollapseNotificationPanel()V
     .locals 3
 
-    .line 1539
+    .line 1543
     const-class v0, Lcom/android/systemui/statusbar/phone/StatusBar;
 
     const/4 v1, 0x0
@@ -1026,7 +1029,7 @@
 .method private instantExpandNotificationsPanel()V
     .locals 3
 
-    .line 1534
+    .line 1538
     const-class v0, Lcom/android/systemui/statusbar/phone/StatusBar;
 
     const/4 v1, 0x0
@@ -1043,7 +1046,7 @@
 .method private isBrightnessMirrorVisible()Z
     .locals 2
 
-    .line 1569
+    .line 1573
     const-class v0, Lcom/android/systemui/statusbar/phone/StatusBar;
 
     const-string v1, "mBrightnessMirrorVisible"
@@ -1064,7 +1067,7 @@
 .method private isDozing()Z
     .locals 2
 
-    .line 1406
+    .line 1410
     const-class v0, Lcom/android/systemui/statusbar/phone/StatusBar;
 
     const-string v1, "mDozing"
@@ -1085,7 +1088,7 @@
 .method private isInLaunchTransition()Z
     .locals 3
 
-    .line 1554
+    .line 1558
     const-class v0, Lcom/android/systemui/statusbar/phone/StatusBar;
 
     const/4 v1, 0x0
@@ -1110,7 +1113,7 @@
 .method private isKeyguardSecure()Z
     .locals 3
 
-    .line 599
+    .line 603
     const-class v0, Lcom/android/systemui/statusbar/phone/StatusBar;
 
     const/4 v1, 0x0
@@ -1135,7 +1138,7 @@
 .method private isKeyguardShowing()Z
     .locals 3
 
-    .line 1549
+    .line 1553
     const-class v0, Lcom/android/systemui/statusbar/phone/StatusBar;
 
     const/4 v1, 0x0
@@ -1160,7 +1163,7 @@
 .method private isLaunchCameraWhenFinishedWaking()Z
     .locals 2
 
-    .line 1559
+    .line 1563
     const-class v0, Lcom/android/systemui/statusbar/phone/StatusBar;
 
     const-string v1, "mLaunchCameraWhenFinishedWaking"
@@ -1181,7 +1184,7 @@
 .method private isPulsing()Z
     .locals 3
 
-    .line 1574
+    .line 1578
     const-class v0, Lcom/android/systemui/statusbar/phone/StatusBar;
 
     const/4 v1, 0x0
@@ -1206,7 +1209,7 @@
 .method static synthetic lambda$checkGestureStartAssist$1(Landroid/os/Bundle;)V
     .locals 1
 
-    .line 566
+    .line 570
     const-class v0, Lcom/android/systemui/assist/AssistManager;
 
     invoke-static {v0}, Lcom/android/systemui/Dependency;->get(Ljava/lang/Class;)Ljava/lang/Object;
@@ -1223,7 +1226,7 @@
 .method private updateDozing()V
     .locals 3
 
-    .line 1479
+    .line 1483
     const-class v0, Lcom/android/systemui/statusbar/phone/StatusBar;
 
     const/4 v1, 0x0
@@ -1240,7 +1243,7 @@
 .method private updateIsKeyguard()Z
     .locals 3
 
-    .line 1474
+    .line 1478
     const-class v0, Lcom/android/systemui/statusbar/phone/StatusBar;
 
     const/4 v1, 0x0
@@ -1267,12 +1270,12 @@
 .method public checkGestureStartAssist(Landroid/os/Bundle;)Z
     .locals 1
 
-    .line 565
+    .line 569
     iget-boolean v0, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mNavShowing:Z
 
     if-nez v0, :cond_0
 
-    .line 566
+    .line 570
     invoke-direct {p0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->getHandler()Landroid/os/Handler;
 
     move-result-object p0
@@ -1287,7 +1290,7 @@
 
     const-string p1, "startAssist"
 
-    .line 567
+    .line 571
     invoke-static {p0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 p0, 0x1
@@ -1303,17 +1306,17 @@
 .method public checkNavigationBarState()V
     .locals 6
 
-    .line 472
+    .line 476
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v0
 
-    .line 473
+    .line 477
     iget-wide v2, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mLastUpdateNavBarTime:J
 
     sub-long v2, v0, v2
 
-    .line 474
+    .line 478
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -1340,7 +1343,7 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 476
+    .line 480
     invoke-direct {p0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->getHandler()Landroid/os/Handler;
 
     move-result-object v0
@@ -1359,7 +1362,7 @@
 
     if-gez v2, :cond_0
 
-    .line 478
+    .line 482
     invoke-direct {p0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->getHandler()Landroid/os/Handler;
 
     move-result-object v2
@@ -1374,7 +1377,7 @@
 
     goto :goto_0
 
-    .line 480
+    .line 484
     :cond_0
     invoke-direct {p0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->getHandler()Landroid/os/Handler;
 
@@ -1389,7 +1392,7 @@
     :cond_1
     const-string p0, "checkNavigationBarState: already scheduled, skip."
 
-    .line 483
+    .line 487
     invoke-static {v1, p0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     :goto_0
@@ -1399,14 +1402,14 @@
 .method protected checkToStartDozing()V
     .locals 3
 
-    .line 726
+    .line 730
     sget-boolean v0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->DEBUG:Z
 
     const-string v1, "OpStatusBar"
 
     if-eqz v0, :cond_0
 
-    .line 727
+    .line 731
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1433,7 +1436,7 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 730
+    .line 734
     :cond_0
     iget-boolean v0, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mStartDozingRequested:Z
 
@@ -1445,25 +1448,25 @@
 
     const/4 v0, 0x1
 
-    .line 731
+    .line 735
     iput-boolean v0, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mOpDozingRequested:Z
 
-    .line 734
+    .line 738
     iget-boolean v0, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mWakingUpAnimationStart:Z
 
     if-eqz v0, :cond_2
 
     const/4 v0, 0x0
 
-    .line 735
+    .line 739
     iput-boolean v0, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mWakingUpAnimationStart:Z
 
-    .line 739
+    .line 743
     iget-boolean v0, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->isCTSStart:Z
 
     if-nez v0, :cond_1
 
-    .line 740
+    .line 744
     iget-object v0, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mOpWakingUpScrimController:Lcom/oneplus/systemui/statusbar/phone/OpWakingUpScrimController;
 
     invoke-virtual {v0}, Lcom/oneplus/systemui/statusbar/phone/OpWakingUpScrimController;->prepare()V
@@ -1473,22 +1476,22 @@
     :cond_1
     const-string v0, "don\'t request show wakingUpScrim for PIP window test"
 
-    .line 742
+    .line 746
     invoke-static {v1, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 748
+    .line 752
     :cond_2
     :goto_0
     iget-object v0, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mAodWindowManager:Lcom/oneplus/aod/OpAodWindowManager;
 
     invoke-virtual {v0}, Lcom/oneplus/aod/OpAodWindowManager;->startDozing()V
 
-    .line 751
+    .line 755
     iget-object v0, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mAodDisplayViewManager:Lcom/oneplus/aod/OpAodDisplayViewManager;
 
     invoke-virtual {v0}, Lcom/oneplus/aod/OpAodDisplayViewManager;->startDozing()V
 
-    .line 753
+    .line 757
     iget-object v0, p0, Lcom/android/systemui/SystemUI;->mContext:Landroid/content/Context;
 
     invoke-direct {p0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->isDozing()Z
@@ -1497,10 +1500,10 @@
 
     invoke-static {v0, v1}, Lcom/android/systemui/doze/DozeLog;->traceDozing(Landroid/content/Context;Z)V
 
-    .line 754
+    .line 758
     invoke-virtual {p0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->opUpdateDozing()V
 
-    .line 755
+    .line 759
     invoke-direct {p0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->updateIsKeyguard()Z
 
     :cond_3
@@ -1510,12 +1513,12 @@
 .method protected checkToStopDozing()V
     .locals 2
 
-    .line 760
+    .line 764
     sget-boolean v0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->DEBUG:Z
 
     if-eqz v0, :cond_0
 
-    .line 761
+    .line 765
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1544,33 +1547,33 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 766
+    .line 770
     :cond_0
     iget-boolean v0, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->isCTSStart:Z
 
     if-eqz v0, :cond_2
 
-    .line 767
+    .line 771
     iget-boolean v0, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mOpDozingRequested:Z
 
     if-eqz v0, :cond_1
 
-    .line 768
+    .line 772
     iget-object v0, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mAodWindowManager:Lcom/oneplus/aod/OpAodWindowManager;
 
     invoke-virtual {v0}, Lcom/oneplus/aod/OpAodWindowManager;->stopDozing()V
 
-    .line 769
+    .line 773
     iget-object v0, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mAodDisplayViewManager:Lcom/oneplus/aod/OpAodDisplayViewManager;
 
     invoke-virtual {v0}, Lcom/oneplus/aod/OpAodDisplayViewManager;->stopDozing()V
 
-    .line 770
+    .line 774
     iget-object v0, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mAodDisplayViewManager:Lcom/oneplus/aod/OpAodDisplayViewManager;
 
     invoke-virtual {v0}, Lcom/oneplus/aod/OpAodDisplayViewManager;->resetStatus()V
 
-    .line 772
+    .line 776
     :cond_1
     iget-object v0, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mOpWakingUpScrimController:Lcom/oneplus/systemui/statusbar/phone/OpWakingUpScrimController;
 
@@ -1580,11 +1583,11 @@
 
     goto :goto_0
 
-    .line 775
+    .line 779
     :cond_2
     invoke-virtual {p0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->startWakingUpAnimation()V
 
-    .line 780
+    .line 784
     :goto_0
     iget-boolean v0, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mOpDozingRequested:Z
 
@@ -1592,10 +1595,10 @@
 
     const/4 v0, 0x0
 
-    .line 781
+    .line 785
     iput-boolean v0, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mOpDozingRequested:Z
 
-    .line 782
+    .line 786
     iget-object v0, p0, Lcom/android/systemui/SystemUI;->mContext:Landroid/content/Context;
 
     invoke-direct {p0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->isDozing()Z
@@ -1604,7 +1607,7 @@
 
     invoke-static {v0, v1}, Lcom/android/systemui/doze/DozeLog;->traceDozing(Landroid/content/Context;Z)V
 
-    .line 783
+    .line 787
     invoke-direct {p0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->updateDozing()V
 
     :cond_3
@@ -1620,14 +1623,14 @@
 
     if-eqz p2, :cond_1
 
-    .line 952
+    .line 956
     invoke-direct {p0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->getNavigationBarView()Lcom/android/systemui/statusbar/phone/NavigationBarView;
 
     move-result-object p2
 
     if-eqz p2, :cond_1
 
-    .line 953
+    .line 957
     invoke-direct {p0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->getNavigationBarView()Lcom/android/systemui/statusbar/phone/NavigationBarView;
 
     move-result-object p0
@@ -1657,40 +1660,40 @@
 .method public dump(Ljava/io/FileDescriptor;Ljava/io/PrintWriter;[Ljava/lang/String;)V
     .locals 1
 
-    .line 1195
+    .line 1199
     iget-object v0, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mOpFacelockController:Lcom/oneplus/faceunlock/OpFacelockController;
 
     if-eqz v0, :cond_0
 
-    .line 1196
+    .line 1200
     invoke-virtual {p2}, Ljava/io/PrintWriter;->println()V
 
-    .line 1197
+    .line 1201
     iget-object v0, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mOpFacelockController:Lcom/oneplus/faceunlock/OpFacelockController;
 
     invoke-virtual {v0, p1, p2, p3}, Lcom/oneplus/faceunlock/OpFacelockController;->dump(Ljava/io/FileDescriptor;Ljava/io/PrintWriter;[Ljava/lang/String;)V
 
-    .line 1198
+    .line 1202
     invoke-virtual {p2}, Ljava/io/PrintWriter;->println()V
 
-    .line 1201
+    .line 1205
     :cond_0
     iget-object p1, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mAodDisplayViewManager:Lcom/oneplus/aod/OpAodDisplayViewManager;
 
     if-eqz p1, :cond_1
 
-    .line 1202
+    .line 1206
     invoke-virtual {p2}, Ljava/io/PrintWriter;->println()V
 
-    .line 1203
+    .line 1207
     iget-object p1, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mAodDisplayViewManager:Lcom/oneplus/aod/OpAodDisplayViewManager;
 
     invoke-virtual {p1, p2}, Lcom/oneplus/aod/OpAodDisplayViewManager;->dump(Ljava/io/PrintWriter;)V
 
-    .line 1204
+    .line 1208
     invoke-virtual {p2}, Ljava/io/PrintWriter;->println()V
 
-    .line 1207
+    .line 1211
     :cond_1
     new-instance p1, Ljava/lang/StringBuilder;
 
@@ -1710,7 +1713,7 @@
 
     invoke-virtual {p2, p1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1210
+    .line 1214
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1741,12 +1744,12 @@
 .method public flingToStartFacelock()V
     .locals 0
 
-    .line 977
+    .line 981
     iget-object p0, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mOpFacelockController:Lcom/oneplus/faceunlock/OpFacelockController;
 
     if-eqz p0, :cond_0
 
-    .line 978
+    .line 982
     invoke-virtual {p0}, Lcom/oneplus/faceunlock/OpFacelockController;->tryToStartFaceLockInBouncer()Z
 
     :cond_0
@@ -1756,7 +1759,7 @@
 .method public getActivityLaunchAnimator()Lcom/android/systemui/statusbar/notification/ActivityLaunchAnimator;
     .locals 2
 
-    .line 1264
+    .line 1268
     const-class v0, Lcom/android/systemui/statusbar/phone/StatusBar;
 
     const-string v1, "mActivityLaunchAnimator"
@@ -1773,7 +1776,7 @@
 .method public getDisableFlag()I
     .locals 2
 
-    .line 1590
+    .line 1594
     const-class v0, Lcom/android/systemui/statusbar/phone/StatusBar;
 
     const-string v1, "mDisabled1"
@@ -1800,14 +1803,14 @@
 
     if-ne p1, v0, :cond_1
 
-    .line 435
+    .line 439
     iget p0, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mDoubaleTapPowerApp:I
 
     if-eqz p0, :cond_1
 
     if-ne p0, v0, :cond_0
 
-    .line 438
+    .line 442
     new-instance p0, Landroid/content/Intent;
 
     const-string p1, "coloros.wallet.intent.action.OPEN"
@@ -1816,12 +1819,12 @@
 
     const p1, 0x10008000
 
-    .line 439
+    .line 443
     invoke-virtual {p0, p1}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
 
     move-object v1, p0
 
-    .line 442
+    .line 446
     :cond_0
     new-instance p0, Ljava/lang/StringBuilder;
 
@@ -1848,7 +1851,7 @@
 .method public getFacelockController()Lcom/oneplus/faceunlock/OpFacelockController;
     .locals 0
 
-    .line 1014
+    .line 1018
     iget-object p0, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mOpFacelockController:Lcom/oneplus/faceunlock/OpFacelockController;
 
     return-object p0
@@ -1857,7 +1860,7 @@
 .method public getNavigationBarHiddenMode()I
     .locals 0
 
-    .line 468
+    .line 472
     iget p0, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mNavType:I
 
     return p0
@@ -1866,7 +1869,7 @@
 .method public getOpStatusBarView()Landroid/view/View;
     .locals 3
 
-    .line 1355
+    .line 1359
     const-class v0, Lcom/android/systemui/statusbar/phone/StatusBar;
 
     const/4 v1, 0x0
@@ -1887,7 +1890,7 @@
 .method public getStatusBarWindowController()Lcom/android/systemui/statusbar/phone/StatusBarWindowController;
     .locals 2
 
-    .line 1396
+    .line 1400
     const-class v0, Lcom/android/systemui/statusbar/phone/StatusBar;
 
     const-string v1, "mStatusBarWindowController"
@@ -1904,7 +1907,7 @@
 .method public getSystemIconAreaMaxWidth(I)I
     .locals 7
 
-    .line 1439
+    .line 1443
     invoke-virtual {p0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->getOpStatusBarView()Landroid/view/View;
 
     move-result-object p0
@@ -1917,7 +1920,7 @@
 
     return p1
 
-    .line 1443
+    .line 1447
     :cond_0
     sget v0, Lcom/android/systemui/R$id;->status_bar_contents:I
 
@@ -1929,14 +1932,14 @@
 
     if-eqz v0, :cond_3
 
-    .line 1446
+    .line 1450
     sget v1, Lcom/android/systemui/R$id;->clock:I
 
     invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
 
     move-result-object v1
 
-    .line 1447
+    .line 1451
     sget v2, Lcom/android/systemui/R$id;->system_icon_area:I
 
     invoke-virtual {v0, v2}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
@@ -1947,7 +1950,7 @@
 
     if-eqz v2, :cond_3
 
-    .line 1449
+    .line 1453
     sget v3, Lcom/android/systemui/R$id;->battery:I
 
     invoke-virtual {v2, v3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -1956,7 +1959,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 1450
+    .line 1454
     invoke-virtual {v0}, Landroid/view/ViewGroup;->getPaddingStart()I
 
     move-result v3
@@ -1966,7 +1969,7 @@
     :cond_1
     move v3, p1
 
-    .line 1451
+    .line 1455
     :goto_0
     const-class v4, Lcom/android/systemui/statusbar/phone/HighlightHintController;
 
@@ -1980,21 +1983,21 @@
 
     move-result v4
 
-    .line 1452
+    .line 1456
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->getLayoutDirection()I
 
     move-result v5
 
     const/4 v6, 0x1
 
-    .line 1453
+    .line 1457
     invoke-virtual {v0}, Landroid/view/ViewGroup;->getWidth()I
 
     move-result v0
 
     mul-int/lit8 v3, v3, 0x2
 
-    .line 1454
+    .line 1458
     invoke-virtual {v2}, Landroid/view/View;->getMeasuredWidth()I
 
     move-result v2
@@ -2027,10 +2030,19 @@
     return v0
 .end method
 
+.method public getmStatusBarCollapseListener()Lcom/oneplus/systemui/statusbar/phone/OpStatusBar$StatusBarCollapseListener;
+    .locals 0
+
+    .line 1610
+    iget-object p0, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mStatusBarCollapseListener:Lcom/oneplus/systemui/statusbar/phone/OpStatusBar$StatusBarCollapseListener;
+
+    return-object p0
+.end method
+
 .method protected inflateOPAodView(Landroid/content/Context;)V
     .locals 2
 
-    .line 615
+    .line 619
     sget v0, Lcom/android/systemui/R$layout;->op_aod_view:I
 
     const/4 v1, 0x0
@@ -2057,12 +2069,12 @@
 .method protected isNotificationLightBlinking()Z
     .locals 1
 
-    .line 1412
+    .line 1416
     iget-object v0, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mOpNotificationController:Lcom/oneplus/notification/OpNotificationController;
 
     if-eqz v0, :cond_0
 
-    .line 1413
+    .line 1417
     invoke-direct {p0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->getEntryManager()Lcom/android/systemui/statusbar/notification/NotificationEntryManager;
 
     move-result-object p0
@@ -2095,7 +2107,7 @@
 .method public isQsDisabled()Z
     .locals 0
 
-    .line 604
+    .line 608
     iget-boolean p0, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mQsDisabled:Z
 
     return p0
@@ -2104,7 +2116,7 @@
 .method public synthetic lambda$new$0$OpStatusBar()V
     .locals 9
 
-    .line 488
+    .line 492
     const-class v0, Lcom/android/systemui/recents/OverviewProxyService;
 
     invoke-static {v0}, Lcom/android/systemui/Dependency;->get(Ljava/lang/Class;)Ljava/lang/Object;
@@ -2113,12 +2125,12 @@
 
     check-cast v0, Lcom/android/systemui/recents/OverviewProxyService;
 
-    .line 489
+    .line 493
     invoke-virtual {v0}, Lcom/android/systemui/recents/OverviewProxyService;->getNavBarMode()I
 
     move-result v1
 
-    .line 490
+    .line 494
     const-class v2, Lcom/android/systemui/statusbar/NavigationBarController;
 
     invoke-static {v2}, Lcom/android/systemui/Dependency;->get(Ljava/lang/Class;)Ljava/lang/Object;
@@ -2137,7 +2149,7 @@
 
     if-eqz v2, :cond_0
 
-    .line 491
+    .line 495
     invoke-virtual {v2}, Landroid/view/View;->isAttachedToWindow()Z
 
     move-result v5
@@ -2151,7 +2163,7 @@
     :cond_0
     move v5, v3
 
-    .line 493
+    .line 497
     :goto_0
     new-instance v6, Ljava/lang/StringBuilder;
 
@@ -2209,10 +2221,10 @@
 
     invoke-static {v7, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 494
+    .line 498
     iget-boolean v6, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mNavShowing:Z
 
-    .line 500
+    .line 504
     iget v8, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mNavType:I
 
     if-eq v8, v4, :cond_2
@@ -2221,7 +2233,7 @@
 
     if-nez v8, :cond_6
 
-    .line 502
+    .line 506
     :cond_2
     invoke-static {v1}, Lcom/android/systemui/shared/system/QuickStepContract;->isGesturalMode(I)Z
 
@@ -2231,35 +2243,35 @@
 
     if-eqz v5, :cond_4
 
-    .line 504
+    .line 508
     iget-boolean v5, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mNavShowing:Z
 
     if-eqz v5, :cond_4
 
     const-string v5, "NavBar remove it"
 
-    .line 506
+    .line 510
     invoke-static {v7, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 507
+    .line 511
     iget-object v5, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mWindowManager:Landroid/view/WindowManager;
 
     invoke-interface {v5, v2}, Landroid/view/WindowManager;->removeViewImmediate(Landroid/view/View;)V
 
-    .line 508
+    .line 512
     iput-boolean v3, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mNavShowing:Z
 
-    .line 510
+    .line 514
     sget-boolean v2, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->DEBUG:Z
 
     if-eqz v2, :cond_3
 
     const-string v2, "OpStatusBar new OpEdgeBackGestureHandler when NavBar hidden"
 
-    .line 511
+    .line 515
     invoke-static {v7, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 513
+    .line 517
     :cond_3
     new-instance v2, Lcom/oneplus/systemui/statusbar/phone/OpEdgeBackGestureHandler;
 
@@ -2269,7 +2281,7 @@
 
     iput-object v2, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mOpEdgeBackGestureHandler:Lcom/oneplus/systemui/statusbar/phone/OpEdgeBackGestureHandler;
 
-    .line 514
+    .line 518
     const-class v0, Lcom/android/systemui/statusbar/phone/NavigationModeController;
 
     invoke-static {v0}, Lcom/android/systemui/Dependency;->get(Ljava/lang/Class;)Ljava/lang/Object;
@@ -2282,35 +2294,35 @@
 
     move-result-object v0
 
-    .line 515
+    .line 519
     iget-object v2, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mOpEdgeBackGestureHandler:Lcom/oneplus/systemui/statusbar/phone/OpEdgeBackGestureHandler;
 
     invoke-virtual {v2, v1, v0}, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->onNavigationModeChanged(ILandroid/content/Context;)V
 
-    .line 516
+    .line 520
     iget-object v0, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mOpEdgeBackGestureHandler:Lcom/oneplus/systemui/statusbar/phone/OpEdgeBackGestureHandler;
 
     invoke-virtual {v0}, Lcom/oneplus/systemui/statusbar/phone/OpEdgeBackGestureHandler;->onNavigationBarHidden()V
 
     goto :goto_2
 
-    .line 521
+    .line 525
     :cond_4
     iget-object v0, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mOpEdgeBackGestureHandler:Lcom/oneplus/systemui/statusbar/phone/OpEdgeBackGestureHandler;
 
     if-eqz v0, :cond_8
 
-    .line 522
+    .line 526
     sget-boolean v0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->DEBUG:Z
 
     if-eqz v0, :cond_5
 
     const-string v0, "OpEdgeBackGestureHandler update window"
 
-    .line 523
+    .line 527
     invoke-static {v7, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 525
+    .line 529
     :cond_5
     iget-object v0, p0, Lcom/android/systemui/SystemUI;->mContext:Landroid/content/Context;
 
@@ -2322,12 +2334,12 @@
 
     check-cast v0, Landroid/view/WindowManager;
 
-    .line 526
+    .line 530
     invoke-interface {v0}, Landroid/view/WindowManager;->getDefaultDisplay()Landroid/view/Display;
 
     move-result-object v0
 
-    .line 527
+    .line 531
     iget-object v1, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mOpEdgeBackGestureHandler:Lcom/oneplus/systemui/statusbar/phone/OpEdgeBackGestureHandler;
 
     invoke-virtual {v0}, Landroid/view/Display;->getRotation()I
@@ -2341,7 +2353,7 @@
     :cond_6
     if-eqz v2, :cond_8
 
-    .line 534
+    .line 538
     invoke-virtual {v2}, Landroid/view/View;->isAttachedToWindow()Z
 
     move-result v0
@@ -2354,10 +2366,10 @@
 
     const-string v0, "NavBar add it"
 
-    .line 536
+    .line 540
     invoke-static {v7, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 537
+    .line 541
     iget-object v0, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mWindowManager:Landroid/view/WindowManager;
 
     invoke-virtual {v2}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
@@ -2366,25 +2378,25 @@
 
     invoke-interface {v0, v2, v1}, Landroid/view/WindowManager;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 538
+    .line 542
     iput-boolean v4, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mNavShowing:Z
 
-    .line 540
+    .line 544
     iget-object v0, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mOpEdgeBackGestureHandler:Lcom/oneplus/systemui/statusbar/phone/OpEdgeBackGestureHandler;
 
     if-eqz v0, :cond_8
 
-    .line 541
+    .line 545
     sget-boolean v0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->DEBUG:Z
 
     if-eqz v0, :cond_7
 
     const-string v0, "OpStatusBar release OpEdgeBackGestureHandler when NavBar show"
 
-    .line 542
+    .line 546
     invoke-static {v7, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 544
+    .line 548
     :cond_7
     iget-object v0, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mOpEdgeBackGestureHandler:Lcom/oneplus/systemui/statusbar/phone/OpEdgeBackGestureHandler;
 
@@ -2392,39 +2404,39 @@
 
     const/4 v0, 0x0
 
-    .line 545
+    .line 549
     iput-object v0, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mOpEdgeBackGestureHandler:Lcom/oneplus/systemui/statusbar/phone/OpEdgeBackGestureHandler;
 
-    .line 550
+    .line 554
     :cond_8
     :goto_2
     iget-boolean v0, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mNavShowing:Z
 
     if-eq v6, v0, :cond_9
 
-    .line 551
+    .line 555
     iget-object v0, p0, Lcom/android/systemui/SystemUI;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    .line 552
+    .line 556
     iget-boolean v1, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mNavShowing:Z
 
     const-string v2, "buttons_show_on_screen_navkeys"
 
-    .line 551
+    .line 555
     invoke-static {v0, v2, v1}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
-    .line 554
+    .line 558
     invoke-direct {p0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->getStatusBarKeyguardViewManager()Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager;
 
     move-result-object v0
 
     if-eqz v0, :cond_9
 
-    .line 555
+    .line 559
     invoke-direct {p0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->getStatusBarKeyguardViewManager()Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager;
 
     move-result-object v0
@@ -2435,7 +2447,7 @@
 
     invoke-virtual {v0, v1}, Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager;->onHideNavBar(Z)V
 
-    .line 559
+    .line 563
     :cond_9
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
@@ -2453,10 +2465,10 @@
 
     const-string v1, "launchHighlightHintAp"
 
-    .line 651
+    .line 655
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 652
+    .line 656
     invoke-direct {p0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->getEntryManager()Lcom/android/systemui/statusbar/notification/NotificationEntryManager;
 
     move-result-object v0
@@ -2471,7 +2483,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 653
+    .line 657
     invoke-virtual {v0}, Landroid/service/notification/StatusBarNotification;->getNotification()Landroid/app/Notification;
 
     move-result-object v0
@@ -2488,7 +2500,7 @@
     :goto_0
     if-eqz v0, :cond_1
 
-    .line 655
+    .line 659
     iget-object p0, p0, Lcom/android/systemui/SystemUI;->mContext:Landroid/content/Context;
 
     new-instance v1, Landroid/os/UserHandle;
@@ -2510,7 +2522,7 @@
 .method protected makeStatusBarView(Landroid/content/Context;)V
     .locals 1
 
-    .line 450
+    .line 454
     const-class p1, Lcom/oneplus/networkspeed/NetworkSpeedController;
 
     invoke-static {p1}, Lcom/android/systemui/Dependency;->get(Ljava/lang/Class;)Ljava/lang/Object;
@@ -2521,7 +2533,7 @@
 
     iput-object p1, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mNetworkSpeedController:Lcom/oneplus/networkspeed/NetworkSpeedController;
 
-    .line 451
+    .line 455
     invoke-direct {p0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->getNetworkController()Lcom/android/systemui/statusbar/policy/NetworkController;
 
     move-result-object p1
@@ -2530,7 +2542,7 @@
 
     invoke-interface {p1, v0}, Lcom/android/systemui/statusbar/policy/NetworkController;->setNetworkSpeedController(Lcom/oneplus/networkspeed/NetworkSpeedController;)V
 
-    .line 456
+    .line 460
     iget-object p1, p0, Lcom/android/systemui/SystemUI;->mContext:Landroid/content/Context;
 
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -2545,7 +2557,7 @@
 
     iput p1, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mOrientation:I
 
-    .line 457
+    .line 461
     invoke-virtual {p0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->setUpHighlightHintInfo()V
 
     return-void
@@ -2554,7 +2566,7 @@
 .method public needRefreshExpanded()Z
     .locals 2
 
-    .line 1419
+    .line 1423
     invoke-direct {p0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->getNotificationPanelView()Lcom/android/systemui/statusbar/phone/NotificationPanelView;
 
     move-result-object v0
@@ -2565,7 +2577,7 @@
 
     return v1
 
-    .line 1423
+    .line 1427
     :cond_0
     const-class v0, Lcom/android/systemui/recents/OverviewProxyService;
 
@@ -2575,7 +2587,7 @@
 
     check-cast v0, Lcom/android/systemui/recents/OverviewProxyService;
 
-    .line 1424
+    .line 1428
     invoke-virtual {v0}, Lcom/android/systemui/recents/OverviewProxyService;->getSystemUiStateFlags()I
 
     move-result v0
@@ -2584,7 +2596,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 1425
+    .line 1429
     invoke-direct {p0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->getNotificationPanelView()Lcom/android/systemui/statusbar/phone/NotificationPanelView;
 
     move-result-object p0
@@ -2606,12 +2618,12 @@
 .method public notifyBarHeightChange(I)V
     .locals 3
 
-    .line 1030
+    .line 1034
     invoke-direct {p0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->getNotificationPanelView()Lcom/android/systemui/statusbar/phone/NotificationPanelView;
 
     move-result-object v0
 
-    .line 1031
+    .line 1035
     invoke-direct {p0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->getKeyguardViewMediator()Lcom/android/systemui/keyguard/KeyguardViewMediator;
 
     move-result-object v1
@@ -2624,12 +2636,12 @@
 
     if-eqz v0, :cond_3
 
-    .line 1032
+    .line 1036
     sget-boolean v1, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->DEBUG:Z
 
     if-eqz v1, :cond_0
 
-    .line 1033
+    .line 1037
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -2658,7 +2670,7 @@
 
     invoke-static {v2, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1036
+    .line 1040
     :cond_0
     sget-boolean v1, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->DEBUG:Z
 
@@ -2670,14 +2682,14 @@
 
     if-eqz v1, :cond_1
 
-    .line 1037
+    .line 1041
     invoke-virtual {p0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->getStatusBarWindowController()Lcom/android/systemui/statusbar/phone/StatusBarWindowController;
 
     move-result-object v1
 
     invoke-virtual {v1}, Lcom/android/systemui/statusbar/phone/StatusBarWindowController;->debugBarHeight()V
 
-    .line 1040
+    .line 1044
     :cond_1
     invoke-virtual {v0}, Landroid/widget/FrameLayout;->getAlpha()F
 
@@ -2693,7 +2705,7 @@
 
     if-eq p1, v1, :cond_2
 
-    .line 1041
+    .line 1045
     invoke-direct {p0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->getKeyguardViewMediator()Lcom/android/systemui/keyguard/KeyguardViewMediator;
 
     move-result-object v0
@@ -2705,21 +2717,21 @@
     :cond_2
     if-eq p1, v1, :cond_3
 
-    .line 1043
+    .line 1047
     invoke-direct {p0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->getScrimController()Lcom/android/systemui/statusbar/phone/ScrimController;
 
     move-result-object v0
 
     if-eqz v0, :cond_3
 
-    .line 1044
+    .line 1048
     invoke-direct {p0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->getScrimController()Lcom/android/systemui/statusbar/phone/ScrimController;
 
     move-result-object v0
 
     invoke-virtual {v0}, Lcom/android/systemui/statusbar/phone/ScrimController;->resetForceHide()V
 
-    .line 1048
+    .line 1052
     :cond_3
     :goto_0
     iput p1, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mLastBarHeight:I
@@ -2730,14 +2742,14 @@
 .method public notifyCameraLaunching(Ljava/lang/String;)Z
     .locals 1
 
-    .line 1007
+    .line 1011
     iget-object p0, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mOpFacelockController:Lcom/oneplus/faceunlock/OpFacelockController;
 
     if-eqz p0, :cond_0
 
     const/4 v0, 0x1
 
-    .line 1008
+    .line 1012
     invoke-virtual {p0, v0, p1}, Lcom/oneplus/faceunlock/OpFacelockController;->notifyCameraLaunching(ZLjava/lang/String;)Z
 
     move-result p0
@@ -2753,21 +2765,21 @@
 .method public onBrickModeChanged(Z)V
     .locals 1
 
-    .line 963
+    .line 967
     invoke-direct {p0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->getHeadsUpAppearanceController()Lcom/android/systemui/statusbar/phone/HeadsUpAppearanceController;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 964
+    .line 968
     invoke-direct {p0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->getHeadsUpAppearanceController()Lcom/android/systemui/statusbar/phone/HeadsUpAppearanceController;
 
     move-result-object v0
 
     invoke-virtual {v0}, Lcom/android/systemui/statusbar/phone/HeadsUpAppearanceController;->updateTopEntry()V
 
-    .line 966
+    .line 970
     :cond_0
     invoke-direct {p0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->getKeyguardUpdateMonitor()Lcom/android/keyguard/KeyguardUpdateMonitor;
 
@@ -2777,12 +2789,12 @@
 
     if-eqz p1, :cond_1
 
-    .line 969
+    .line 973
     invoke-virtual {p0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->checkToStopDozing()V
 
     goto :goto_0
 
-    .line 971
+    .line 975
     :cond_1
     invoke-virtual {p0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->checkToStartDozing()V
 
@@ -2793,7 +2805,7 @@
 .method public onEmptySpaceClick()V
     .locals 4
 
-    .line 984
+    .line 988
     invoke-direct {p0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->getNotificationPanelView()Lcom/android/systemui/statusbar/phone/NotificationPanelView;
 
     move-result-object v0
@@ -2832,7 +2844,7 @@
 
     if-eqz v0, :cond_2
 
-    .line 985
+    .line 989
     invoke-direct {p0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->getNotificationPanelView()Lcom/android/systemui/statusbar/phone/NotificationPanelView;
 
     move-result-object p0
@@ -2848,14 +2860,14 @@
 .method public onFingerprintAuthenticated()V
     .locals 3
 
-    .line 790
+    .line 794
     sget-boolean v0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->DEBUG:Z
 
     const-string v1, "OpStatusBar"
 
     if-eqz v0, :cond_0
 
-    .line 791
+    .line 795
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2874,7 +2886,7 @@
 
     iget-object v2, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mAodDisplayViewManager:Lcom/oneplus/aod/OpAodDisplayViewManager;
 
-    .line 792
+    .line 796
     invoke-virtual {v2}, Lcom/oneplus/aod/OpAodDisplayViewManager;->playAodWakingUpAnimation()Z
 
     move-result v2
@@ -2885,10 +2897,10 @@
 
     move-result-object v0
 
-    .line 791
+    .line 795
     invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 794
+    .line 798
     :cond_0
     iget-boolean v0, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mOpDozingRequested:Z
 
@@ -2904,39 +2916,39 @@
 
     const/4 v0, 0x1
 
-    .line 795
+    .line 799
     iput-boolean v0, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mPreHideAod:Z
 
-    .line 796
+    .line 800
     sget-boolean v2, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->DEBUG:Z
 
     if-eqz v2, :cond_1
 
     const-string v2, "onFingerprintAuthenticated"
 
-    .line 797
+    .line 801
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 799
+    .line 803
     :cond_1
     iget-object v1, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mAodDisplayViewManager:Lcom/oneplus/aod/OpAodDisplayViewManager;
 
     invoke-virtual {v1, v0}, Lcom/oneplus/aod/OpAodDisplayViewManager;->onPlayFingerprintUnlockAnimation(Z)V
 
-    .line 800
+    .line 804
     invoke-virtual {p0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->startWakingUpAnimation()V
 
-    .line 803
+    .line 807
     iget-object v0, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mAodWindowManager:Lcom/oneplus/aod/OpAodWindowManager;
 
     invoke-virtual {v0}, Lcom/oneplus/aod/OpAodWindowManager;->stopDozing()V
 
-    .line 804
+    .line 808
     iget-object v0, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mAodDisplayViewManager:Lcom/oneplus/aod/OpAodDisplayViewManager;
 
     invoke-virtual {v0}, Lcom/oneplus/aod/OpAodDisplayViewManager;->stopDozing()V
 
-    .line 805
+    .line 809
     iget-object p0, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mAodDisplayViewManager:Lcom/oneplus/aod/OpAodDisplayViewManager;
 
     invoke-virtual {p0}, Lcom/oneplus/aod/OpAodDisplayViewManager;->resetStatus()V
@@ -2948,7 +2960,7 @@
 .method public onFingerprintPoke()V
     .locals 2
 
-    .line 1106
+    .line 1110
     invoke-direct {p0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->getHandler()Landroid/os/Handler;
 
     move-result-object v0
@@ -2965,7 +2977,7 @@
 .method public onHighlightHintInfoChange()V
     .locals 1
 
-    .line 679
+    .line 683
     const-class v0, Lcom/android/systemui/statusbar/phone/HighlightHintController;
 
     invoke-static {v0}, Lcom/android/systemui/Dependency;->get(Ljava/lang/Class;)Ljava/lang/Object;
@@ -2980,7 +2992,7 @@
 
     iput v0, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mHighlightColor:I
 
-    .line 680
+    .line 684
     invoke-direct {p0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->checkBarModes()V
 
     return-void
@@ -2989,7 +3001,7 @@
 .method public onHighlightHintStateChange()V
     .locals 1
 
-    .line 661
+    .line 665
     const-class v0, Lcom/android/systemui/statusbar/phone/HighlightHintController;
 
     invoke-static {v0}, Lcom/android/systemui/Dependency;->get(Ljava/lang/Class;)Ljava/lang/Object;
@@ -3004,10 +3016,10 @@
 
     iput v0, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mHighlightColor:I
 
-    .line 662
+    .line 666
     invoke-direct {p0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->checkBarModes()V
 
-    .line 664
+    .line 668
     invoke-virtual {p0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->setUpHighlightHintInfo()V
 
     return-void
@@ -3016,7 +3028,7 @@
 .method public onKeyguardShowingChanged()V
     .locals 0
 
-    .line 609
+    .line 613
     invoke-virtual {p0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->updateQsEnabled()V
 
     return-void
@@ -3025,12 +3037,12 @@
 .method protected onNotificationShelfClicked()V
     .locals 2
 
-    .line 992
+    .line 996
     invoke-direct {p0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->getNotificationPanelView()Lcom/android/systemui/statusbar/phone/NotificationPanelView;
 
     move-result-object p0
 
-    .line 993
+    .line 997
     invoke-virtual {p0}, Lcom/android/systemui/statusbar/phone/NotificationPanelView;->isExpanding()Z
 
     move-result v0
@@ -3053,7 +3065,7 @@
 
     const/4 v1, 0x1
 
-    .line 994
+    .line 998
     invoke-virtual {p0, v0, v1}, Lcom/android/systemui/statusbar/phone/NotificationPanelView;->flingSettings(FI)V
 
     :cond_0
@@ -3063,7 +3075,7 @@
 .method public onPackagePreferencesCleared()V
     .locals 0
 
-    .line 1001
+    .line 1005
     iget-object p0, p0, Lcom/android/systemui/SystemUI;->mContext:Landroid/content/Context;
 
     invoke-static {p0}, Lcom/android/systemui/util/NotificationChannels;->createAll(Landroid/content/Context;)V
@@ -3074,7 +3086,7 @@
 .method public onSingleTap()V
     .locals 2
 
-    .line 1095
+    .line 1099
     invoke-direct {p0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->getHandler()Landroid/os/Handler;
 
     move-result-object v0
@@ -3091,7 +3103,7 @@
 .method public onThreeKeyStatus(I)V
     .locals 2
 
-    .line 1079
+    .line 1083
     invoke-static {}, Lcom/oneplus/aod/OpAodUtils;->isMotionAwakeOn()Z
 
     move-result v0
@@ -3106,7 +3118,7 @@
 
     return-void
 
-    .line 1084
+    .line 1088
     :cond_0
     invoke-direct {p0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->getHandler()Landroid/os/Handler;
 
@@ -3124,22 +3136,22 @@
 .method public onWakingAndUnlocking()V
     .locals 2
 
-    .line 629
+    .line 633
     iget-object v0, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mAodWindowManager:Lcom/oneplus/aod/OpAodWindowManager;
 
     if-eqz v0, :cond_0
 
-    .line 630
+    .line 634
     invoke-virtual {v0}, Lcom/oneplus/aod/OpAodWindowManager;->onWakingAndUnlocking()V
 
     const-string v0, "OpStatusBar"
 
     const-string v1, "onWakingAndUnlocking"
 
-    .line 632
+    .line 636
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 633
+    .line 637
     iget-object v0, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mAodWindowManager:Lcom/oneplus/aod/OpAodWindowManager;
 
     invoke-virtual {v0}, Lcom/oneplus/aod/OpAodWindowManager;->isWakingAndUnlockByFP()Z
@@ -3148,7 +3160,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 634
+    .line 638
     invoke-virtual {p0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->checkToStopDozing()V
 
     :cond_0
@@ -3158,14 +3170,14 @@
 .method public onWallpaperChange(Landroid/graphics/Bitmap;)V
     .locals 1
 
-    .line 1338
+    .line 1342
     invoke-virtual {p0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->getStatusBarWindowController()Lcom/android/systemui/statusbar/phone/StatusBarWindowController;
 
     move-result-object v0
 
     if-eqz v0, :cond_1
 
-    .line 1339
+    .line 1343
     invoke-virtual {p0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->getStatusBarWindowController()Lcom/android/systemui/statusbar/phone/StatusBarWindowController;
 
     move-result-object p0
@@ -3189,7 +3201,7 @@
 
     const-string p1, "getStatusBarWindowController is null"
 
-    .line 1341
+    .line 1345
     invoke-static {p0, p1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
     :goto_1
@@ -3199,14 +3211,14 @@
 .method protected opOnConfigChanged(Landroid/content/res/Configuration;)V
     .locals 3
 
-    .line 1128
+    .line 1132
     sget-boolean v0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->DEBUG:Z
 
     const-string v1, "OpStatusBar"
 
     if-eqz v0, :cond_0
 
-    .line 1129
+    .line 1133
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -3223,7 +3235,7 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1133
+    .line 1137
     :cond_0
     iget v0, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mOrientation:I
 
@@ -3231,37 +3243,37 @@
 
     if-eq v0, v2, :cond_1
 
-    .line 1134
+    .line 1138
     iput v2, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mOrientation:I
 
-    .line 1137
+    .line 1141
     :cond_1
     invoke-virtual {p0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->setUpHighlightHintInfo()V
 
-    .line 1139
+    .line 1143
     invoke-direct {p0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->checkIfThemeChanged()V
 
-    .line 1141
+    .line 1145
     iget-object v0, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mAodDisplayViewManager:Lcom/oneplus/aod/OpAodDisplayViewManager;
 
     invoke-virtual {v0, p1}, Lcom/oneplus/aod/OpAodDisplayViewManager;->onConfigChanged(Landroid/content/res/Configuration;)V
 
-    .line 1144
+    .line 1148
     iget-object p1, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mOpEdgeBackGestureHandler:Lcom/oneplus/systemui/statusbar/phone/OpEdgeBackGestureHandler;
 
     if-eqz p1, :cond_3
 
-    .line 1145
+    .line 1149
     sget-boolean p1, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->DEBUG:Z
 
     if-eqz p1, :cond_2
 
     const-string p1, "OpEdgeBackGestureHandler onConfigurationChanged "
 
-    .line 1146
+    .line 1150
     invoke-static {v1, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1148
+    .line 1152
     :cond_2
     iget-object p1, p0, Lcom/android/systemui/SystemUI;->mContext:Landroid/content/Context;
 
@@ -3273,12 +3285,12 @@
 
     check-cast p1, Landroid/view/WindowManager;
 
-    .line 1149
+    .line 1153
     invoke-interface {p1}, Landroid/view/WindowManager;->getDefaultDisplay()Landroid/view/Display;
 
     move-result-object p1
 
-    .line 1150
+    .line 1154
     iget-object p0, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mOpEdgeBackGestureHandler:Lcom/oneplus/systemui/statusbar/phone/OpEdgeBackGestureHandler;
 
     invoke-virtual {p1}, Landroid/view/Display;->getRotation()I
@@ -3294,17 +3306,17 @@
 .method protected opOnDensityOrFontScaleChanged()V
     .locals 3
 
-    .line 621
+    .line 625
     iget-object v0, p0, Lcom/android/systemui/SystemUI;->mContext:Landroid/content/Context;
 
     invoke-virtual {p0, v0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->inflateOPAodView(Landroid/content/Context;)V
 
-    .line 622
+    .line 626
     iget-object v0, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mAodWindowManager:Lcom/oneplus/aod/OpAodWindowManager;
 
     invoke-virtual {v0}, Lcom/oneplus/aod/OpAodWindowManager;->unregisterCallback()V
 
-    .line 623
+    .line 627
     new-instance v0, Lcom/oneplus/aod/OpAodWindowManager;
 
     iget-object v1, p0, Lcom/android/systemui/SystemUI;->mContext:Landroid/content/Context;
@@ -3315,7 +3327,7 @@
 
     iput-object v0, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mAodWindowManager:Lcom/oneplus/aod/OpAodWindowManager;
 
-    .line 625
+    .line 629
     iget-object v0, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mAodDisplayViewManager:Lcom/oneplus/aod/OpAodDisplayViewManager;
 
     iget-object p0, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mOPAodWindow:Landroid/widget/RelativeLayout;
@@ -3330,34 +3342,34 @@
 
     const/4 v0, 0x0
 
-    .line 811
+    .line 815
     iput-boolean v0, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mPreHideAod:Z
 
-    .line 812
+    .line 816
     iget-object v1, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mWakingUpAnimation:Landroid/animation/AnimatorSet;
 
     if-eqz v1, :cond_0
 
-    .line 813
+    .line 817
     invoke-virtual {v1}, Landroid/animation/AnimatorSet;->cancel()V
 
-    .line 815
+    .line 819
     :cond_0
     iput-boolean v0, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mWakingUpAnimationStart:Z
 
-    .line 816
+    .line 820
     iget-object v1, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mAodDisplayViewManager:Lcom/oneplus/aod/OpAodDisplayViewManager;
 
     invoke-virtual {v1, v0}, Lcom/oneplus/aod/OpAodDisplayViewManager;->onPlayFingerprintUnlockAnimation(Z)V
 
-    .line 820
+    .line 824
     iget-boolean v0, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->isCTSStart:Z
 
     const-string v1, "OpStatusBar"
 
     if-nez v0, :cond_1
 
-    .line 821
+    .line 825
     iget-object p0, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mOpWakingUpScrimController:Lcom/oneplus/systemui/statusbar/phone/OpWakingUpScrimController;
 
     invoke-virtual {p0}, Lcom/oneplus/systemui/statusbar/phone/OpWakingUpScrimController;->prepare()V
@@ -3367,13 +3379,13 @@
     :cond_1
     const-string p0, "don\'t request show wakingUpScrim for PIP window test"
 
-    .line 823
+    .line 827
     invoke-static {v1, p0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     :goto_0
     const-string p0, "opOnScreenTurnedOff"
 
-    .line 826
+    .line 830
     invoke-static {v1, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
@@ -3382,7 +3394,7 @@
 .method protected opOnUiModeChanged()V
     .locals 2
 
-    .line 1121
+    .line 1125
     sget-boolean v0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->DEBUG:Z
 
     if-eqz v0, :cond_0
@@ -3391,10 +3403,10 @@
 
     const-string v1, "opOnUiModeChanged"
 
-    .line 1122
+    .line 1126
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1124
+    .line 1128
     :cond_0
     invoke-direct {p0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->checkIfThemeChanged()V
 
@@ -3404,14 +3416,14 @@
 .method protected opUpdateDozing()V
     .locals 3
 
-    .line 686
+    .line 690
     iget-boolean v0, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mOpDozingRequested:Z
 
     const/4 v1, 0x0
 
     if-nez v0, :cond_1
 
-    .line 687
+    .line 691
     invoke-direct {p0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->getBiometricUnlockController()Lcom/android/systemui/statusbar/phone/BiometricUnlockController;
 
     move-result-object v0
@@ -3420,7 +3432,7 @@
 
     move-result v0
 
-    .line 688
+    .line 692
     invoke-direct {p0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->getBiometricUnlockController()Lcom/android/systemui/statusbar/phone/BiometricUnlockController;
 
     const/4 v2, 0x2
@@ -3438,7 +3450,7 @@
     :goto_0
     const/4 v0, 0x1
 
-    .line 700
+    .line 704
     :goto_1
     invoke-direct {p0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->getBiometricUnlockController()Lcom/android/systemui/statusbar/phone/BiometricUnlockController;
 
@@ -3452,16 +3464,16 @@
 
     move v0, v1
 
-    .line 706
+    .line 710
     :cond_2
     iget-boolean v1, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mCustomDozing:Z
 
     if-eq v1, v0, :cond_3
 
-    .line 707
+    .line 711
     iput-boolean v0, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mCustomDozing:Z
 
-    .line 708
+    .line 712
     invoke-direct {p0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->getDozeScrimController()Lcom/android/systemui/statusbar/phone/DozeScrimController;
 
     move-result-object v0
@@ -3470,7 +3482,7 @@
 
     invoke-virtual {v0, v1}, Lcom/android/systemui/statusbar/phone/DozeScrimController;->setDozing(Z)V
 
-    .line 709
+    .line 713
     invoke-direct {p0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->getEntryManager()Lcom/android/systemui/statusbar/notification/NotificationEntryManager;
 
     move-result-object p0
@@ -3484,7 +3496,7 @@
 .method protected opUpdatePanelExpansionForKeyguard()V
     .locals 2
 
-    .line 1229
+    .line 1233
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -3509,7 +3521,7 @@
 
     iget-object v1, p0, Lcom/android/systemui/SystemUI;->mContext:Landroid/content/Context;
 
-    .line 1231
+    .line 1235
     invoke-static {v1}, Lcom/android/keyguard/KeyguardUpdateMonitor;->getInstance(Landroid/content/Context;)Lcom/android/keyguard/KeyguardUpdateMonitor;
 
     move-result-object v1
@@ -3526,10 +3538,10 @@
 
     const-string v1, "OpStatusBar"
 
-    .line 1229
+    .line 1233
     invoke-static {v1, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1232
+    .line 1236
     invoke-direct {p0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->getState()I
 
     move-result v0
@@ -3548,14 +3560,14 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 1234
+    .line 1238
     invoke-direct {p0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->getBouncerShowing()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 1237
+    .line 1241
     invoke-direct {p0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->getBiometricUnlockController()Lcom/android/systemui/statusbar/phone/BiometricUnlockController;
 
     move-result-object v0
@@ -3570,7 +3582,7 @@
 
     iget-object v0, p0, Lcom/android/systemui/SystemUI;->mContext:Landroid/content/Context;
 
-    .line 1240
+    .line 1244
     invoke-static {v0}, Lcom/android/keyguard/KeyguardUpdateMonitor;->getInstance(Landroid/content/Context;)Lcom/android/keyguard/KeyguardUpdateMonitor;
 
     move-result-object v0
@@ -3581,12 +3593,12 @@
 
     if-nez v0, :cond_0
 
-    .line 1242
+    .line 1246
     invoke-direct {p0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->instantExpandNotificationsPanel()V
 
     goto :goto_0
 
-    .line 1243
+    .line 1247
     :cond_0
     invoke-direct {p0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->getState()I
 
@@ -3596,7 +3608,7 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 1244
+    .line 1248
     invoke-direct {p0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->instantCollapseNotificationPanel()V
 
     :cond_1
@@ -3609,10 +3621,10 @@
 
     const-string v0, "StatusBar#updateScrimController"
 
-    .line 1284
+    .line 1288
     invoke-static {v0}, Landroid/os/Trace;->beginSection(Ljava/lang/String;)V
 
-    .line 1287
+    .line 1291
     invoke-direct {p0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->getBiometricUnlockController()Lcom/android/systemui/statusbar/phone/BiometricUnlockController;
 
     move-result-object v0
@@ -3621,12 +3633,12 @@
 
     move-result v0
 
-    .line 1290
+    .line 1294
     invoke-direct {p0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->getScrimController()Lcom/android/systemui/statusbar/phone/ScrimController;
 
     move-result-object v1
 
-    .line 1292
+    .line 1296
     invoke-direct {p0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->getBiometricUnlockController()Lcom/android/systemui/statusbar/phone/BiometricUnlockController;
 
     move-result-object v2
@@ -3637,10 +3649,10 @@
 
     xor-int/lit8 v2, v2, 0x1
 
-    .line 1291
+    .line 1295
     invoke-virtual {v1, v2}, Lcom/android/systemui/statusbar/phone/ScrimController;->setExpansionAffectsAlpha(Z)V
 
-    .line 1295
+    .line 1299
     invoke-direct {p0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->getNotificationPanelView()Lcom/android/systemui/statusbar/phone/NotificationPanelView;
 
     move-result-object v2
@@ -3649,17 +3661,17 @@
 
     move-result v2
 
-    .line 1296
+    .line 1300
     invoke-virtual {v1, v2}, Lcom/android/systemui/statusbar/phone/ScrimController;->setLaunchingAffordanceWithPreview(Z)V
 
-    .line 1303
+    .line 1307
     invoke-direct {p0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->getBouncerShowing()Z
 
     move-result v3
 
     if-nez v3, :cond_a
 
-    .line 1304
+    .line 1308
     invoke-direct {p0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->getBiometricUnlockController()Lcom/android/systemui/statusbar/phone/BiometricUnlockController;
 
     move-result-object v3
@@ -3672,7 +3684,7 @@
 
     if-eq v3, v4, :cond_0
 
-    .line 1305
+    .line 1309
     invoke-direct {p0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->getBiometricUnlockController()Lcom/android/systemui/statusbar/phone/BiometricUnlockController;
 
     move-result-object v3
@@ -3683,7 +3695,7 @@
 
     if-ne v3, v4, :cond_1
 
-    .line 1306
+    .line 1310
     :cond_0
     invoke-direct {p0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->isKeyguardShowing()Z
 
@@ -3693,7 +3705,7 @@
 
     goto/16 :goto_1
 
-    .line 1315
+    .line 1319
     :cond_1
     invoke-direct {p0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->isInLaunchTransition()Z
 
@@ -3718,7 +3730,7 @@
 
     goto :goto_0
 
-    .line 1319
+    .line 1323
     :cond_3
     invoke-direct {p0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->isBrightnessMirrorVisible()Z
 
@@ -3726,14 +3738,14 @@
 
     if-eqz v2, :cond_4
 
-    .line 1320
+    .line 1324
     sget-object p0, Lcom/android/systemui/statusbar/phone/ScrimState;->BRIGHTNESS_MIRROR:Lcom/android/systemui/statusbar/phone/ScrimState;
 
     invoke-virtual {v1, p0}, Lcom/android/systemui/statusbar/phone/ScrimController;->transitionTo(Lcom/android/systemui/statusbar/phone/ScrimState;)V
 
     goto :goto_3
 
-    .line 1321
+    .line 1325
     :cond_4
     invoke-direct {p0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->isPulsing()Z
 
@@ -3741,10 +3753,10 @@
 
     if-eqz v2, :cond_5
 
-    .line 1322
+    .line 1326
     sget-object v0, Lcom/android/systemui/statusbar/phone/ScrimState;->PULSING:Lcom/android/systemui/statusbar/phone/ScrimState;
 
-    .line 1323
+    .line 1327
     invoke-direct {p0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->getDozeScrimController()Lcom/android/systemui/statusbar/phone/DozeScrimController;
 
     move-result-object p0
@@ -3753,12 +3765,12 @@
 
     move-result-object p0
 
-    .line 1322
+    .line 1326
     invoke-virtual {v1, v0, p0}, Lcom/android/systemui/statusbar/phone/ScrimController;->transitionTo(Lcom/android/systemui/statusbar/phone/ScrimState;Lcom/android/systemui/statusbar/phone/ScrimController$Callback;)V
 
     goto :goto_3
 
-    .line 1324
+    .line 1328
     :cond_5
     invoke-direct {p0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->isDozing()Z
 
@@ -3768,14 +3780,14 @@
 
     if-nez v0, :cond_6
 
-    .line 1325
+    .line 1329
     sget-object p0, Lcom/android/systemui/statusbar/phone/ScrimState;->AOD:Lcom/android/systemui/statusbar/phone/ScrimState;
 
     invoke-virtual {v1, p0}, Lcom/android/systemui/statusbar/phone/ScrimController;->transitionTo(Lcom/android/systemui/statusbar/phone/ScrimState;)V
 
     goto :goto_3
 
-    .line 1326
+    .line 1330
     :cond_6
     invoke-direct {p0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->getIsKeyguard()Z
 
@@ -3785,14 +3797,14 @@
 
     if-nez v0, :cond_7
 
-    .line 1327
+    .line 1331
     sget-object p0, Lcom/android/systemui/statusbar/phone/ScrimState;->KEYGUARD:Lcom/android/systemui/statusbar/phone/ScrimState;
 
     invoke-virtual {v1, p0}, Lcom/android/systemui/statusbar/phone/ScrimController;->transitionTo(Lcom/android/systemui/statusbar/phone/ScrimState;)V
 
     goto :goto_3
 
-    .line 1328
+    .line 1332
     :cond_7
     invoke-direct {p0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->getBubbleController()Lcom/android/systemui/bubbles/BubbleController;
 
@@ -3804,14 +3816,14 @@
 
     if-eqz v0, :cond_8
 
-    .line 1329
+    .line 1333
     sget-object p0, Lcom/android/systemui/statusbar/phone/ScrimState;->BUBBLE_EXPANDED:Lcom/android/systemui/statusbar/phone/ScrimState;
 
     invoke-virtual {v1, p0}, Lcom/android/systemui/statusbar/phone/ScrimController;->transitionTo(Lcom/android/systemui/statusbar/phone/ScrimState;)V
 
     goto :goto_3
 
-    .line 1331
+    .line 1335
     :cond_8
     sget-object v0, Lcom/android/systemui/statusbar/phone/ScrimState;->UNLOCKED:Lcom/android/systemui/statusbar/phone/ScrimState;
 
@@ -3823,7 +3835,7 @@
 
     goto :goto_3
 
-    .line 1318
+    .line 1322
     :cond_9
     :goto_0
     sget-object v0, Lcom/android/systemui/statusbar/phone/ScrimState;->UNLOCKED:Lcom/android/systemui/statusbar/phone/ScrimState;
@@ -3836,7 +3848,7 @@
 
     goto :goto_3
 
-    .line 1311
+    .line 1315
     :cond_a
     :goto_1
     invoke-direct {p0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->getStatusBarKeyguardViewManager()Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager;
@@ -3849,7 +3861,7 @@
 
     if-eqz p0, :cond_b
 
-    .line 1312
+    .line 1316
     sget-object p0, Lcom/android/systemui/statusbar/phone/ScrimState;->BOUNCER_SCRIMMED:Lcom/android/systemui/statusbar/phone/ScrimState;
 
     goto :goto_2
@@ -3857,11 +3869,11 @@
     :cond_b
     sget-object p0, Lcom/android/systemui/statusbar/phone/ScrimState;->BOUNCER:Lcom/android/systemui/statusbar/phone/ScrimState;
 
-    .line 1313
+    .line 1317
     :goto_2
     invoke-virtual {v1, p0}, Lcom/android/systemui/statusbar/phone/ScrimController;->transitionTo(Lcom/android/systemui/statusbar/phone/ScrimState;)V
 
-    .line 1333
+    .line 1337
     :goto_3
     invoke-static {}, Landroid/os/Trace;->endSection()V
 
@@ -3871,7 +3883,7 @@
 .method protected opVibrateForCameraGesture(Landroid/content/Context;Landroid/os/Vibrator;)Z
     .locals 1
 
-    .line 1216
+    .line 1220
     invoke-static {}, Lcom/oneplus/util/OpUtils;->isSupportLinearVibration()Z
 
     move-result p0
@@ -3880,14 +3892,14 @@
 
     const/16 p0, 0x400
 
-    .line 1218
+    .line 1222
     invoke-static {p1, p0}, Lcom/oneplus/util/VibratorSceneUtils;->isVibratorSceneSupported(Landroid/content/Context;I)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 1219
+    .line 1223
     invoke-static {p1, p2, p0}, Lcom/oneplus/util/VibratorSceneUtils;->doVibrateWithSceneIfNeeded(Landroid/content/Context;Landroid/os/Vibrator;I)Z
 
     :cond_0
@@ -3904,23 +3916,23 @@
 .method public removeHeadsUps()V
     .locals 1
 
-    .line 1250
+    .line 1254
     invoke-direct {p0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->getHeadsUpManager()Lcom/android/systemui/statusbar/phone/HeadsUpManagerPhone;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 1253
+    .line 1257
     invoke-virtual {v0}, Lcom/android/systemui/statusbar/AlertingNotificationManager;->releaseAllImmediately()V
 
-    .line 1256
+    .line 1260
     :cond_0
     iget-object p0, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mOpNotificationController:Lcom/oneplus/notification/OpNotificationController;
 
     if-eqz p0, :cond_1
 
-    .line 1257
+    .line 1261
     invoke-virtual {p0}, Lcom/oneplus/notification/OpNotificationController;->hideSimpleHeadsUps()V
 
     :cond_1
@@ -3930,7 +3942,7 @@
 .method protected setUpHighlightHintInfo()V
     .locals 2
 
-    .line 669
+    .line 673
     const-class v0, Lcom/android/systemui/statusbar/phone/HighlightHintController;
 
     invoke-static {v0}, Lcom/android/systemui/Dependency;->get(Ljava/lang/Class;)Ljava/lang/Object;
@@ -3951,14 +3963,14 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 671
+    .line 675
     invoke-direct {p0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->getPanel()Lcom/android/systemui/statusbar/phone/NotificationPanelView;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 672
+    .line 676
     invoke-direct {p0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->getPanel()Lcom/android/systemui/statusbar/phone/NotificationPanelView;
 
     move-result-object p0
@@ -3969,10 +3981,19 @@
     return-void
 .end method
 
+.method public setmStatusBarCollapseListener(Lcom/oneplus/systemui/statusbar/phone/OpStatusBar$StatusBarCollapseListener;)V
+    .locals 0
+
+    .line 1606
+    iput-object p1, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mStatusBarCollapseListener:Lcom/oneplus/systemui/statusbar/phone/OpStatusBar$StatusBarCollapseListener;
+
+    return-void
+.end method
+
 .method public shouldHideSensitive(Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;)Z
     .locals 1
 
-    .line 1117
+    .line 1121
     const-class p0, Lcom/android/systemui/statusbar/NotificationViewHierarchyManager;
 
     invoke-static {p0}, Lcom/android/systemui/Dependency;->get(Ljava/lang/Class;)Ljava/lang/Object;
@@ -3995,12 +4016,12 @@
 .method public start()V
     .locals 9
 
-    .line 213
+    .line 217
     iget-object v0, p0, Lcom/android/systemui/SystemUI;->mContext:Landroid/content/Context;
 
     invoke-static {v0}, Lcom/oneplus/util/ThemeColorUtils;->init(Landroid/content/Context;)V
 
-    .line 216
+    .line 220
     iget-object v0, p0, Lcom/android/systemui/SystemUI;->mContext:Landroid/content/Context;
 
     const-string v1, "window"
@@ -4013,7 +4034,7 @@
 
     iput-object v0, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mWindowManager:Landroid/view/WindowManager;
 
-    .line 219
+    .line 223
     new-instance v0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar$1;
 
     invoke-direct {p0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->getHandler()Landroid/os/Handler;
@@ -4024,14 +4045,14 @@
 
     iput-object v0, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mOtaWizardObserver:Landroid/database/ContentObserver;
 
-    .line 234
+    .line 238
     iget-object v0, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mOtaWizardObserver:Landroid/database/ContentObserver;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Landroid/database/ContentObserver;->onChange(Z)V
 
-    .line 235
+    .line 239
     iget-object v0, p0, Lcom/android/systemui/SystemUI;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -4040,7 +4061,7 @@
 
     const-string v2, "oneplus_need_show_ota_wizard"
 
-    .line 236
+    .line 240
     invoke-static {v2}, Landroid/provider/Settings$Global;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v2
@@ -4049,10 +4070,10 @@
 
     const/4 v4, -0x1
 
-    .line 235
+    .line 239
     invoke-virtual {v0, v2, v1, v3, v4}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;I)V
 
-    .line 240
+    .line 244
     const-class v0, Lcom/android/systemui/statusbar/policy/KeyguardMonitor;
 
     invoke-static {v0}, Lcom/android/systemui/Dependency;->get(Ljava/lang/Class;)Ljava/lang/Object;
@@ -4063,12 +4084,12 @@
 
     iput-object v0, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mKeyguardMonitor:Lcom/android/systemui/statusbar/policy/KeyguardMonitor;
 
-    .line 241
+    .line 245
     iget-object v0, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mKeyguardMonitor:Lcom/android/systemui/statusbar/policy/KeyguardMonitor;
 
     invoke-interface {v0, p0}, Lcom/android/systemui/statusbar/policy/CallbackController;->addCallback(Ljava/lang/Object;)V
 
-    .line 243
+    .line 247
     new-instance v0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar$2;
 
     invoke-direct {p0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->getHandler()Landroid/os/Handler;
@@ -4083,15 +4104,15 @@
 
     const-string v2, "FullScreenGestureObserver internal onChange"
 
-    .line 265
+    .line 269
     invoke-static {v0, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 267
+    .line 271
     iget-object v0, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mFullScreenGestureObserver:Landroid/database/ContentObserver;
 
     invoke-virtual {v0, v1}, Landroid/database/ContentObserver;->onChange(Z)V
 
-    .line 268
+    .line 272
     iget-object v0, p0, Lcom/android/systemui/SystemUI;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -4100,17 +4121,17 @@
 
     const-string v2, "oneplus_fullscreen_gesture_type"
 
-    .line 269
+    .line 273
     invoke-static {v2}, Landroid/provider/Settings$System;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v2
 
     iget-object v3, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mFullScreenGestureObserver:Landroid/database/ContentObserver;
 
-    .line 268
+    .line 272
     invoke-virtual {v0, v2, v1, v3, v4}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;I)V
 
-    .line 275
+    .line 279
     iget-object v0, p0, Lcom/android/systemui/SystemUI;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -4119,17 +4140,17 @@
 
     const-string v2, "op_gesture_button_side_enabled"
 
-    .line 276
+    .line 280
     invoke-static {v2}, Landroid/provider/Settings$System;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v2
 
     iget-object v3, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mFullScreenGestureObserver:Landroid/database/ContentObserver;
 
-    .line 275
+    .line 279
     invoke-virtual {v0, v2, v1, v3, v4}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;I)V
 
-    .line 284
+    .line 288
     new-instance v0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar$3;
 
     invoke-direct {p0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->getHandler()Landroid/os/Handler;
@@ -4140,12 +4161,12 @@
 
     iput-object v0, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mDoubleTapPowerObserver:Landroid/database/ContentObserver;
 
-    .line 294
+    .line 298
     iget-object v0, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mDoubleTapPowerObserver:Landroid/database/ContentObserver;
 
     invoke-virtual {v0, v1}, Landroid/database/ContentObserver;->onChange(Z)V
 
-    .line 295
+    .line 299
     iget-object v0, p0, Lcom/android/systemui/SystemUI;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -4154,17 +4175,17 @@
 
     const-string v2, "op_app_double_tap_power_gesture"
 
-    .line 296
+    .line 300
     invoke-static {v2}, Landroid/provider/Settings$Secure;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v2
 
     iget-object v3, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mDoubleTapPowerObserver:Landroid/database/ContentObserver;
 
-    .line 295
+    .line 299
     invoke-virtual {v0, v2, v1, v3, v4}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;I)V
 
-    .line 301
+    .line 305
     new-instance v0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar$4;
 
     invoke-direct {p0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->getHandler()Landroid/os/Handler;
@@ -4175,12 +4196,12 @@
 
     iput-object v0, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mDisableQsObserver:Landroid/database/ContentObserver;
 
-    .line 312
+    .line 316
     iget-object v0, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mDisableQsObserver:Landroid/database/ContentObserver;
 
     invoke-virtual {v0, v1}, Landroid/database/ContentObserver;->onChange(Z)V
 
-    .line 313
+    .line 317
     iget-object v0, p0, Lcom/android/systemui/SystemUI;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -4189,17 +4210,17 @@
 
     const-string v2, "oneplus_disable_qs_when_locked"
 
-    .line 314
+    .line 318
     invoke-static {v2}, Landroid/provider/Settings$Secure;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v2
 
     iget-object v3, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mDisableQsObserver:Landroid/database/ContentObserver;
 
-    .line 313
+    .line 317
     invoke-virtual {v0, v2, v1, v3, v4}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;I)V
 
-    .line 320
+    .line 324
     const-class v0, Lcom/oneplus/opzenmode/OpZenModeController;
 
     invoke-static {v0}, Lcom/android/systemui/Dependency;->get(Ljava/lang/Class;)Ljava/lang/Object;
@@ -4210,7 +4231,7 @@
 
     invoke-interface {v0, p0}, Lcom/android/systemui/statusbar/policy/CallbackController;->addCallback(Ljava/lang/Object;)V
 
-    .line 323
+    .line 327
     iget-object v0, p0, Lcom/android/systemui/SystemUI;->mContext:Landroid/content/Context;
 
     invoke-static {v0}, Lcom/oneplus/util/OpUtils;->getThemeColor(Landroid/content/Context;)I
@@ -4219,7 +4240,7 @@
 
     iput v0, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mThemeColor:I
 
-    .line 324
+    .line 328
     iget-object v0, p0, Lcom/android/systemui/SystemUI;->mContext:Landroid/content/Context;
 
     sget v2, Lcom/android/systemui/R$color;->qs_tile_icon:I
@@ -4230,12 +4251,12 @@
 
     iput v0, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mAccentColor:I
 
-    .line 325
+    .line 329
     iget-object v0, p0, Lcom/android/systemui/SystemUI;->mContext:Landroid/content/Context;
 
     invoke-static {v0}, Lcom/oneplus/util/ThemeColorUtils;->init(Landroid/content/Context;)V
 
-    .line 328
+    .line 332
     iget-object v0, p0, Lcom/android/systemui/SystemUI;->mContext:Landroid/content/Context;
 
     invoke-static {v0}, Lcom/oneplus/util/OpUtils;->isSpecialTheme(Landroid/content/Context;)Z
@@ -4244,7 +4265,7 @@
 
     iput-boolean v0, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mSpecialTheme:Z
 
-    .line 330
+    .line 334
     iget-object v0, p0, Lcom/android/systemui/SystemUI;->mContext:Landroid/content/Context;
 
     invoke-static {v0}, Lcom/oneplus/util/OpUtils;->isGoogleDarkTheme(Landroid/content/Context;)Z
@@ -4253,7 +4274,7 @@
 
     iput-boolean v0, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mGoogleDarkTheme:Z
 
-    .line 332
+    .line 336
     const-class v0, Lcom/oneplus/notification/OpNotificationController;
 
     invoke-static {v0}, Lcom/android/systemui/Dependency;->get(Ljava/lang/Class;)Ljava/lang/Object;
@@ -4264,19 +4285,19 @@
 
     iput-object v0, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mOpNotificationController:Lcom/oneplus/notification/OpNotificationController;
 
-    .line 333
+    .line 337
     iget-object v0, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mOpNotificationController:Lcom/oneplus/notification/OpNotificationController;
 
     if-eqz v0, :cond_0
 
-    .line 334
+    .line 338
     invoke-direct {p0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->getEntryManager()Lcom/android/systemui/statusbar/notification/NotificationEntryManager;
 
     move-result-object v2
 
     invoke-virtual {v0, v2}, Lcom/oneplus/notification/OpNotificationController;->setEntryManager(Lcom/android/systemui/statusbar/notification/NotificationEntryManager;)V
 
-    .line 336
+    .line 340
     :cond_0
     const-class v0, Lcom/oneplus/scene/OpSceneModeObserver;
 
@@ -4288,22 +4309,22 @@
 
     iput-object v0, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mOpSceneModeObserver:Lcom/oneplus/scene/OpSceneModeObserver;
 
-    .line 339
+    .line 343
     iget-object v0, p0, Lcom/android/systemui/SystemUI;->mContext:Landroid/content/Context;
 
     invoke-static {v0}, Lcom/oneplus/util/OpUtils;->init(Landroid/content/Context;)V
 
-    .line 343
+    .line 347
     iget-object v0, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mThemeSetting:Lcom/oneplus/util/SystemSetting;
 
     if-eqz v0, :cond_1
 
     const/4 v2, 0x0
 
-    .line 344
+    .line 348
     invoke-virtual {v0, v2}, Lcom/oneplus/util/SystemSetting;->setListening(Z)V
 
-    .line 346
+    .line 350
     :cond_1
     new-instance v0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar$5;
 
@@ -4323,12 +4344,12 @@
 
     iput-object v0, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mThemeSetting:Lcom/oneplus/util/SystemSetting;
 
-    .line 360
+    .line 364
     iget-object v0, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mThemeSetting:Lcom/oneplus/util/SystemSetting;
 
     invoke-virtual {v0, v1}, Lcom/oneplus/util/SystemSetting;->setListening(Z)V
 
-    .line 363
+    .line 367
     new-instance v0, Lcom/oneplus/systemui/statusbar/phone/OpWakingUpScrimController;
 
     iget-object v1, p0, Lcom/android/systemui/SystemUI;->mContext:Landroid/content/Context;
@@ -4337,10 +4358,10 @@
 
     iput-object v0, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mOpWakingUpScrimController:Lcom/oneplus/systemui/statusbar/phone/OpWakingUpScrimController;
 
-    .line 366
+    .line 370
     invoke-direct {p0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->initDetectCTSReceiver()V
 
-    .line 370
+    .line 374
     iget-object v0, p0, Lcom/android/systemui/SystemUI;->mContext:Landroid/content/Context;
 
     const-string v1, "telecom"
@@ -4359,7 +4380,7 @@
 .method public startFacelockFailAnimation()V
     .locals 0
 
-    .line 1018
+    .line 1022
     invoke-direct {p0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->getNotificationPanelView()Lcom/android/systemui/statusbar/phone/NotificationPanelView;
 
     return-void
@@ -4368,7 +4389,7 @@
 .method protected startInner()V
     .locals 2
 
-    .line 421
+    .line 425
     invoke-direct {p0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->getLockscreenUserManager()Lcom/android/systemui/statusbar/NotificationLockscreenUserManager;
 
     move-result-object v0
@@ -4377,12 +4398,12 @@
 
     move-result v0
 
-    .line 423
+    .line 427
     iget-object v1, p0, Lcom/android/systemui/SystemUI;->mContext:Landroid/content/Context;
 
     invoke-static {v1, v0}, Lcom/oneplus/aod/OpAodUtils;->checkAodSettingsState(Landroid/content/Context;I)V
 
-    .line 427
+    .line 431
     iget-object p0, p0, Lcom/android/systemui/SystemUI;->mContext:Landroid/content/Context;
 
     invoke-static {p0, v0}, Lcom/oneplus/aod/OpAodUtils;->checkAodStyle(Landroid/content/Context;I)V
@@ -4393,7 +4414,7 @@
 .method protected startWakingUpAnimation()V
     .locals 11
 
-    .line 833
+    .line 837
     iget-boolean v0, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mWakingUpAnimationStart:Z
 
     const-string v1, "OpStatusBar"
@@ -4402,7 +4423,7 @@
 
     const-string p0, "don\'t startWakingUpAnimation since animation started"
 
-    .line 834
+    .line 838
     invoke-static {v1, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
@@ -4410,17 +4431,17 @@
     :cond_0
     const/4 v0, 0x1
 
-    .line 837
+    .line 841
     iput-boolean v0, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mWakingUpAnimationStart:Z
 
-    .line 838
+    .line 842
     iget-object v2, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mAodDisplayViewManager:Lcom/oneplus/aod/OpAodDisplayViewManager;
 
     invoke-virtual {v2}, Lcom/oneplus/aod/OpAodDisplayViewManager;->playAodWakingUpAnimation()Z
 
     move-result v2
 
-    .line 839
+    .line 843
     invoke-direct {p0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->getStatusBarKeyguardViewManager()Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager;
 
     move-result-object v3
@@ -4429,7 +4450,7 @@
 
     move-result v3
 
-    .line 840
+    .line 844
     invoke-static {}, Lcom/oneplus/plugin/OpLsState;->getInstance()Lcom/oneplus/plugin/OpLsState;
 
     move-result-object v4
@@ -4442,7 +4463,7 @@
 
     move-result v4
 
-    .line 841
+    .line 845
     const-class v5, Lcom/oneplus/battery/OpChargingAnimationController;
 
     invoke-static {v5}, Lcom/android/systemui/Dependency;->get(Ljava/lang/Class;)Ljava/lang/Object;
@@ -4455,7 +4476,7 @@
 
     move-result v5
 
-    .line 842
+    .line 846
     invoke-direct {p0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->getBouncerShowing()Z
 
     move-result v6
@@ -4464,7 +4485,7 @@
 
     if-nez v6, :cond_1
 
-    .line 843
+    .line 847
     invoke-direct {p0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->getIsOccluded()Z
 
     move-result v6
@@ -4477,14 +4498,14 @@
 
     if-eqz v6, :cond_1
 
-    .line 844
+    .line 848
     invoke-virtual {v6}, Lcom/oneplus/faceunlock/OpFacelockController;->isScreenOffUnlock()Z
 
     move-result v6
 
     if-nez v6, :cond_1
 
-    .line 846
+    .line 850
     invoke-direct {p0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->getKeyguardUpdateMonitor()Lcom/android/keyguard/KeyguardUpdateMonitor;
 
     move-result-object v6
@@ -4506,7 +4527,7 @@
     :cond_1
     move v6, v7
 
-    .line 852
+    .line 856
     :goto_0
     invoke-direct {p0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->getKeyguardUpdateMonitor()Lcom/android/keyguard/KeyguardUpdateMonitor;
 
@@ -4516,12 +4537,12 @@
 
     move-result v8
 
-    .line 853
+    .line 857
     sget-boolean v9, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->DEBUG:Z
 
     if-eqz v9, :cond_2
 
-    .line 854
+    .line 858
     new-instance v9, Ljava/lang/StringBuilder;
 
     invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
@@ -4542,7 +4563,7 @@
 
     invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 856
+    .line 860
     invoke-direct {p0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->getBouncerShowing()Z
 
     move-result v10
@@ -4559,7 +4580,7 @@
 
     invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 857
+    .line 861
     invoke-direct {p0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->getIsOccluded()Z
 
     move-result v10
@@ -4578,7 +4599,7 @@
 
     iget-object v10, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mOpFacelockController:Lcom/oneplus/faceunlock/OpFacelockController;
 
-    .line 858
+    .line 862
     invoke-virtual {v10}, Lcom/oneplus/faceunlock/OpFacelockController;->isScreenOffUnlock()Z
 
     move-result v10
@@ -4589,7 +4610,7 @@
 
     invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 859
+    .line 863
     invoke-direct {p0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->getKeyguardUpdateMonitor()Lcom/android/keyguard/KeyguardUpdateMonitor;
 
     move-result-object v10
@@ -4616,19 +4637,19 @@
 
     move-result-object v4
 
-    .line 854
+    .line 858
     invoke-static {v1, v4}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 864
+    .line 868
     :cond_2
     iget-object v4, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mWakingUpAnimation:Landroid/animation/AnimatorSet;
 
     if-eqz v4, :cond_3
 
-    .line 865
+    .line 869
     invoke-virtual {v4}, Landroid/animation/AnimatorSet;->cancel()V
 
-    .line 869
+    .line 873
     :cond_3
     new-instance v4, Landroid/animation/AnimatorSet;
 
@@ -4638,14 +4659,14 @@
 
     if-eqz v2, :cond_6
 
-    .line 872
+    .line 876
     iget-object v2, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mAodWindowManager:Lcom/oneplus/aod/OpAodWindowManager;
 
     invoke-virtual {v2}, Lcom/oneplus/aod/OpAodWindowManager;->getAodDisappearAnimation()Landroid/animation/AnimatorSet;
 
     move-result-object v2
 
-    .line 873
+    .line 877
     invoke-direct {p0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->getNotificationPanelView()Lcom/android/systemui/statusbar/phone/NotificationPanelView;
 
     move-result-object v3
@@ -4658,12 +4679,12 @@
 
     if-eqz v6, :cond_4
 
-    .line 876
+    .line 880
     iget-object v4, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mOpWakingUpScrimController:Lcom/oneplus/systemui/statusbar/phone/OpWakingUpScrimController;
 
     invoke-virtual {v4, v0}, Lcom/oneplus/systemui/statusbar/phone/OpWakingUpScrimController;->startAnimation(Z)V
 
-    .line 877
+    .line 881
     iget-object v4, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mWakingUpAnimation:Landroid/animation/AnimatorSet;
 
     const/4 v5, 0x2
@@ -4678,18 +4699,18 @@
 
     const-string v0, "mWakingUpAnimation case 1"
 
-    .line 878
+    .line 882
     invoke-static {v1, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_2
 
-    .line 880
+    .line 884
     :cond_4
     iget-object v3, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mWakingUpAnimation:Landroid/animation/AnimatorSet;
 
     invoke-virtual {v3, v2}, Landroid/animation/AnimatorSet;->play(Landroid/animation/Animator;)Landroid/animation/AnimatorSet$Builder;
 
-    .line 881
+    .line 885
     iget-object v2, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mOpWakingUpScrimController:Lcom/oneplus/systemui/statusbar/phone/OpWakingUpScrimController;
 
     if-nez v8, :cond_5
@@ -4704,10 +4725,10 @@
 
     const-string v0, "mWakingUpAnimation case 2"
 
-    .line 882
+    .line 886
     invoke-static {v1, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 884
+    .line 888
     :goto_2
     iget-object v0, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mWakingUpAnimation:Landroid/animation/AnimatorSet;
 
@@ -4717,35 +4738,35 @@
 
     invoke-virtual {v0, v1}, Landroid/animation/AnimatorSet;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
-    .line 915
+    .line 919
     iget-object p0, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mWakingUpAnimation:Landroid/animation/AnimatorSet;
 
     invoke-virtual {p0}, Landroid/animation/AnimatorSet;->start()V
 
     goto :goto_3
 
-    .line 917
+    .line 921
     :cond_6
     iget-object v2, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mAodWindowManager:Lcom/oneplus/aod/OpAodWindowManager;
 
     invoke-virtual {v2}, Lcom/oneplus/aod/OpAodWindowManager;->stopDozing()V
 
-    .line 918
+    .line 922
     iget-object v2, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mAodDisplayViewManager:Lcom/oneplus/aod/OpAodDisplayViewManager;
 
     invoke-virtual {v2}, Lcom/oneplus/aod/OpAodDisplayViewManager;->stopDozing()V
 
-    .line 919
+    .line 923
     iget-object v2, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mAodDisplayViewManager:Lcom/oneplus/aod/OpAodDisplayViewManager;
 
     invoke-virtual {v2}, Lcom/oneplus/aod/OpAodDisplayViewManager;->resetStatus()V
 
     const-string v2, "stopDozing"
 
-    .line 920
+    .line 924
     invoke-static {v1, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 921
+    .line 925
     invoke-direct {p0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->getNotificationPanelView()Lcom/android/systemui/statusbar/phone/NotificationPanelView;
 
     move-result-object v2
@@ -4756,7 +4777,7 @@
 
     if-eqz v3, :cond_8
 
-    .line 924
+    .line 928
     invoke-direct {p0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->getKeyguardUpdateMonitor()Lcom/android/keyguard/KeyguardUpdateMonitor;
 
     move-result-object v3
@@ -4769,17 +4790,17 @@
 
     if-eqz v6, :cond_7
 
-    .line 927
+    .line 931
     iget-object v0, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mWakingUpAnimation:Landroid/animation/AnimatorSet;
 
     invoke-virtual {v0, v2}, Landroid/animation/AnimatorSet;->play(Landroid/animation/Animator;)Landroid/animation/AnimatorSet$Builder;
 
-    .line 928
+    .line 932
     iget-object v0, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mWakingUpAnimation:Landroid/animation/AnimatorSet;
 
     invoke-virtual {v0}, Landroid/animation/AnimatorSet;->start()V
 
-    .line 930
+    .line 934
     :cond_7
     iget-object p0, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mOpWakingUpScrimController:Lcom/oneplus/systemui/statusbar/phone/OpWakingUpScrimController;
 
@@ -4787,12 +4808,12 @@
 
     const-string p0, "mWakingUpAnimation case 3"
 
-    .line 931
+    .line 935
     invoke-static {v1, p0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_3
 
-    .line 933
+    .line 937
     :cond_8
     iget-object p0, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mOpWakingUpScrimController:Lcom/oneplus/systemui/statusbar/phone/OpWakingUpScrimController;
 
@@ -4800,7 +4821,7 @@
 
     const-string p0, "mWakingUpAnimation case 4"
 
-    .line 934
+    .line 938
     invoke-static {v1, p0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     :goto_3
@@ -4810,7 +4831,7 @@
 .method public updateQsEnabled()V
     .locals 3
 
-    .line 582
+    .line 586
     iget v0, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mDisableQs:I
 
     const-string v1, "OpStatusBar"
@@ -4819,14 +4840,14 @@
 
     if-ne v0, v2, :cond_1
 
-    .line 583
+    .line 587
     invoke-direct {p0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->getStatusBarKeyguardViewManager()Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager;
 
     move-result-object v0
 
     if-eqz v0, :cond_1
 
-    .line 584
+    .line 588
     invoke-direct {p0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->getStatusBarKeyguardViewManager()Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager;
 
     move-result-object v0
@@ -4837,30 +4858,30 @@
 
     if-eqz v0, :cond_1
 
-    .line 585
+    .line 589
     invoke-direct {p0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->isKeyguardSecure()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 586
+    .line 590
     iget-boolean v0, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mQsDisabled:Z
 
     if-nez v0, :cond_0
 
     const-string v0, "disable QS"
 
-    .line 587
+    .line 591
     invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 589
+    .line 593
     :cond_0
     iput-boolean v2, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mQsDisabled:Z
 
     goto :goto_0
 
-    .line 591
+    .line 595
     :cond_1
     iget-boolean v0, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mQsDisabled:Z
 
@@ -4868,13 +4889,13 @@
 
     const-string v0, "enable QS"
 
-    .line 592
+    .line 596
     invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_2
     const/4 v0, 0x0
 
-    .line 594
+    .line 598
     iput-boolean v0, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mQsDisabled:Z
 
     :goto_0
@@ -4897,7 +4918,7 @@
     :cond_0
     const/16 p1, 0x76
 
-    .line 946
+    .line 950
     :goto_0
     invoke-virtual {p3, p1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
@@ -4912,7 +4933,7 @@
     :cond_1
     const/16 p0, 0x20
 
-    .line 947
+    .line 951
     :goto_1
     invoke-virtual {p3, p0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 

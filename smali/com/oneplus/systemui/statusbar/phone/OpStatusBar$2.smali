@@ -22,7 +22,7 @@
 .method constructor <init>(Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;Landroid/os/Handler;)V
     .locals 0
 
-    .line 243
+    .line 247
     iput-object p1, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar$2;->this$0:Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;
 
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
@@ -35,7 +35,7 @@
 .method public onChange(Z)V
     .locals 4
 
-    .line 246
+    .line 250
     iget-object p1, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar$2;->this$0:Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;
 
     iget-object p1, p1, Lcom/android/systemui/SystemUI;->mContext:Landroid/content/Context;
@@ -52,7 +52,7 @@
 
     move-result p1
 
-    .line 248
+    .line 252
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -83,12 +83,12 @@
 
     invoke-static {v2, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 249
+    .line 253
     iget-object v1, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar$2;->this$0:Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;
 
     invoke-static {v1, p1}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->access$202(Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;I)I
 
-    .line 253
+    .line 257
     iget-object p1, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar$2;->this$0:Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;
 
     iget-object p1, p1, Lcom/android/systemui/SystemUI;->mContext:Landroid/content/Context;
@@ -109,13 +109,13 @@
 
     move v0, v1
 
-    .line 255
+    .line 259
     :cond_0
     sget-boolean p1, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->sSideGestureEnabled:Z
 
     if-eq p1, v0, :cond_1
 
-    .line 256
+    .line 260
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -132,10 +132,10 @@
 
     invoke-static {v2, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 257
+    .line 261
     sput-boolean v0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->sSideGestureEnabled:Z
 
-    .line 260
+    .line 264
     :cond_1
     iget-object p0, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar$2;->this$0:Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;
 

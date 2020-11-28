@@ -26,7 +26,7 @@
 .method constructor <init>(Lcom/android/systemui/statusbar/phone/PanelView;Ljava/lang/Runnable;)V
     .locals 0
 
-    .line 1332
+    .line 1368
     iput-object p1, p0, Lcom/android/systemui/statusbar/phone/PanelView$5;->this$0:Lcom/android/systemui/statusbar/phone/PanelView;
 
     iput-object p2, p0, Lcom/android/systemui/statusbar/phone/PanelView$5;->val$onAnimationFinished:Ljava/lang/Runnable;
@@ -43,7 +43,7 @@
 
     const/4 p1, 0x1
 
-    .line 1337
+    .line 1373
     iput-boolean p1, p0, Lcom/android/systemui/statusbar/phone/PanelView$5;->mCancelled:Z
 
     return-void
@@ -52,26 +52,26 @@
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .locals 1
 
-    .line 1342
+    .line 1378
     iget-boolean p1, p0, Lcom/android/systemui/statusbar/phone/PanelView$5;->mCancelled:Z
 
     if-eqz p1, :cond_0
 
-    .line 1343
+    .line 1379
     iget-object p1, p0, Lcom/android/systemui/statusbar/phone/PanelView$5;->this$0:Lcom/android/systemui/statusbar/phone/PanelView;
 
     const/4 v0, 0x0
 
     invoke-static {p1, v0}, Lcom/android/systemui/statusbar/phone/PanelView;->access$200(Lcom/android/systemui/statusbar/phone/PanelView;Landroid/animation/ValueAnimator;)V
 
-    .line 1344
+    .line 1380
     iget-object p0, p0, Lcom/android/systemui/statusbar/phone/PanelView$5;->val$onAnimationFinished:Ljava/lang/Runnable;
 
     invoke-interface {p0}, Ljava/lang/Runnable;->run()V
 
     goto :goto_0
 
-    .line 1346
+    .line 1382
     :cond_0
     iget-object p1, p0, Lcom/android/systemui/statusbar/phone/PanelView$5;->this$0:Lcom/android/systemui/statusbar/phone/PanelView;
 

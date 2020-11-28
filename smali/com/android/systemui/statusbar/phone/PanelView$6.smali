@@ -24,7 +24,7 @@
 .method constructor <init>(Lcom/android/systemui/statusbar/phone/PanelView;Ljava/lang/Runnable;)V
     .locals 0
 
-    .line 1388
+    .line 1424
     iput-object p1, p0, Lcom/android/systemui/statusbar/phone/PanelView$6;->this$0:Lcom/android/systemui/statusbar/phone/PanelView;
 
     iput-object p2, p0, Lcom/android/systemui/statusbar/phone/PanelView$6;->val$onAnimationFinished:Ljava/lang/Runnable;
@@ -39,19 +39,19 @@
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .locals 1
 
-    .line 1391
+    .line 1427
     iget-object p1, p0, Lcom/android/systemui/statusbar/phone/PanelView$6;->this$0:Lcom/android/systemui/statusbar/phone/PanelView;
 
     const/4 v0, 0x0
 
     invoke-static {p1, v0}, Lcom/android/systemui/statusbar/phone/PanelView;->access$200(Lcom/android/systemui/statusbar/phone/PanelView;Landroid/animation/ValueAnimator;)V
 
-    .line 1392
+    .line 1428
     iget-object p1, p0, Lcom/android/systemui/statusbar/phone/PanelView$6;->val$onAnimationFinished:Ljava/lang/Runnable;
 
     invoke-interface {p1}, Ljava/lang/Runnable;->run()V
 
-    .line 1393
+    .line 1429
     iget-object p0, p0, Lcom/android/systemui/statusbar/phone/PanelView$6;->this$0:Lcom/android/systemui/statusbar/phone/PanelView;
 
     invoke-virtual {p0}, Lcom/android/systemui/statusbar/phone/PanelView;->notifyBarPanelExpansionChanged()V

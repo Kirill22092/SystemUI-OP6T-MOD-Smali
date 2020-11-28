@@ -22,7 +22,7 @@
 .method constructor <init>(Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;Landroid/os/Handler;)V
     .locals 0
 
-    .line 301
+    .line 305
     iput-object p1, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar$4;->this$0:Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;
 
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
@@ -35,7 +35,7 @@
 .method public onChange(Z)V
     .locals 3
 
-    .line 304
+    .line 308
     iget-object p1, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar$4;->this$0:Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;
 
     iget-object p1, p1, Lcom/android/systemui/SystemUI;->mContext:Landroid/content/Context;
@@ -46,7 +46,7 @@
 
     iget-object v0, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar$4;->this$0:Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;
 
-    .line 306
+    .line 310
     invoke-static {v0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->access$400(Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;)Lcom/android/keyguard/KeyguardUpdateMonitor;
 
     invoke-static {}, Lcom/android/keyguard/KeyguardUpdateMonitor;->getCurrentUser()I
@@ -57,12 +57,12 @@
 
     const/4 v2, 0x0
 
-    .line 304
+    .line 308
     invoke-static {p1, v1, v2, v0}, Landroid/provider/Settings$Secure;->getIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)I
 
     move-result p1
 
-    .line 307
+    .line 311
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -95,12 +95,12 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 308
+    .line 312
     iget-object v0, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar$4;->this$0:Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;
 
     invoke-static {v0, p1}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->access$502(Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;I)I
 
-    .line 309
+    .line 313
     iget-object p0, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar$4;->this$0:Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;
 
     invoke-virtual {p0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->updateQsEnabled()V

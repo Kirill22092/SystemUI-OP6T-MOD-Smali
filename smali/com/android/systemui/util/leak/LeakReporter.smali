@@ -33,7 +33,7 @@
 .method private getIntent(Ljava/io/File;Ljava/io/File;)Landroid/content/Intent;
     .locals 6
 
-    .line 117
+    .line 121
     iget-object v0, p0, Lcom/android/systemui/util/leak/LeakReporter;->mContext:Landroid/content/Context;
 
     const-string v1, "com.android.systemui.fileprovider"
@@ -42,14 +42,14 @@
 
     move-result-object p2
 
-    .line 118
+    .line 122
     iget-object v0, p0, Lcom/android/systemui/util/leak/LeakReporter;->mContext:Landroid/content/Context;
 
     invoke-static {v0, v1, p1}, Landroidx/core/content/FileProvider;->getUriForFile(Landroid/content/Context;Ljava/lang/String;Ljava/io/File;)Landroid/net/Uri;
 
     move-result-object p1
 
-    .line 120
+    .line 124
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "android.intent.action.SEND_MULTIPLE"
@@ -58,27 +58,27 @@
 
     const/4 v1, 0x1
 
-    .line 123
+    .line 127
     invoke-virtual {v0, v1}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
     const-string v2, "android.intent.category.DEFAULT"
 
-    .line 124
+    .line 128
     invoke-virtual {v0, v2}, Landroid/content/Intent;->addCategory(Ljava/lang/String;)Landroid/content/Intent;
 
     const-string v2, "application/vnd.android.leakreport"
 
-    .line 125
+    .line 129
     invoke-virtual {v0, v2}, Landroid/content/Intent;->setType(Ljava/lang/String;)Landroid/content/Intent;
 
     const-string v3, "android.intent.extra.SUBJECT"
 
     const-string v4, "SystemUI leak report"
 
-    .line 128
+    .line 132
     invoke-virtual {v0, v3, v4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 133
+    .line 137
     new-instance v3, Ljava/lang/StringBuilder;
 
     const-string v4, "Build info: "
@@ -87,14 +87,14 @@
 
     const-string v4, "ro.build.description"
 
-    .line 134
+    .line 138
     invoke-static {v4}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 135
+    .line 139
     invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v3
@@ -103,7 +103,7 @@
 
     invoke-virtual {v0, v4, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 136
+    .line 140
     new-instance v3, Landroid/content/ClipData;
 
     filled-new-array {v2}, [Ljava/lang/String;
@@ -124,30 +124,30 @@
 
     aput-object p2, v2, v4
 
-    .line 138
+    .line 142
     invoke-static {v2}, Lcom/google/android/collect/Lists;->newArrayList([Ljava/lang/Object;)Ljava/util/ArrayList;
 
     move-result-object p2
 
-    .line 140
+    .line 144
     new-instance v2, Landroid/content/ClipData$Item;
 
     invoke-direct {v2, v5, v5, v5, p1}, Landroid/content/ClipData$Item;-><init>(Ljava/lang/CharSequence;Ljava/lang/String;Landroid/content/Intent;Landroid/net/Uri;)V
 
     invoke-virtual {v3, v2}, Landroid/content/ClipData;->addItem(Landroid/content/ClipData$Item;)V
 
-    .line 141
+    .line 145
     invoke-virtual {p2, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 143
+    .line 147
     invoke-virtual {v0, v3}, Landroid/content/Intent;->setClipData(Landroid/content/ClipData;)V
 
     const-string p1, "android.intent.extra.STREAM"
 
-    .line 144
+    .line 148
     invoke-virtual {v0, p1, p2}, Landroid/content/Intent;->putParcelableArrayListExtra(Ljava/lang/String;Ljava/util/ArrayList;)Landroid/content/Intent;
 
-    .line 146
+    .line 150
     iget-object p0, p0, Lcom/android/systemui/util/leak/LeakReporter;->mLeakReportEmail:Ljava/lang/String;
 
     if-eqz p0, :cond_0
@@ -158,7 +158,7 @@
 
     const-string p0, "android.intent.extra.EMAIL"
 
-    .line 148
+    .line 152
     invoke-virtual {v0, p0, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;[Ljava/lang/String;)Landroid/content/Intent;
 
     :cond_0
@@ -353,12 +353,12 @@
 
     const/4 v11, 0x0
 
-    .line 108
+    .line 110
     invoke-direct {v0, v4, v5}, Lcom/android/systemui/util/leak/LeakReporter;->getIntent(Ljava/io/File;Ljava/io/File;)Landroid/content/Intent;
 
     move-result-object v12
 
-    const/high16 v13, 0x8000000
+    const/high16 v13, 0xc000000
 
     const/4 v14, 0x0
 
@@ -373,7 +373,7 @@
 
     move-result-object v0
 
-    .line 110
+    .line 114
     invoke-virtual {v0}, Landroid/app/Notification$Builder;->build()Landroid/app/Notification;
 
     move-result-object v0
@@ -426,7 +426,7 @@
 
     const-string v1, "Couldn\'t dump heap for leak"
 
-    .line 112
+    .line 116
     invoke-static {v2, v1, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_1

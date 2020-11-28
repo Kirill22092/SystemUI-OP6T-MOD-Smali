@@ -41,9 +41,9 @@
     .registers 14
 
     .prologue
-    const v12, 0x7f0805a0
+    const v12, 0x7f0805a1
 
-    const v11, 0x7f080581
+    const v11, 0x7f080582
 
     const/4 v10, 0x1
 

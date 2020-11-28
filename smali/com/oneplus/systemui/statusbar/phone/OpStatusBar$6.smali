@@ -22,7 +22,7 @@
 .method constructor <init>(Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;)V
     .locals 0
 
-    .line 377
+    .line 381
     iput-object p1, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar$6;->this$0:Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -37,30 +37,30 @@
 
     const-string v0, "OpStatusBar"
 
-    .line 384
+    .line 388
     :try_start_0
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 385
+    .line 389
     invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
-    .line 386
+    .line 390
     invoke-virtual {p2}, Landroid/content/Intent;->getData()Landroid/net/Uri;
 
     move-result-object p1
 
     if-eqz p1, :cond_1
 
-    .line 388
+    .line 392
     invoke-virtual {p1}, Landroid/net/Uri;->getSchemeSpecificPart()Ljava/lang/String;
 
     move-result-object p1
 
     const-string p2, "android.intent.action.PACKAGE_ADDED"
 
-    .line 389
+    .line 393
     invoke-virtual {p2, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p2
@@ -69,26 +69,26 @@
 
     const-string p2, "com.android.compatibility.common.deviceinfo"
 
-    .line 390
+    .line 394
     invoke-virtual {p2, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p1
 
     if-eqz p1, :cond_1
 
-    .line 392
+    .line 396
     iget-object p0, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar$6;->this$0:Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;
 
     const/4 p1, 0x1
 
     invoke-static {p0, p1}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->access$802(Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;Z)Z
 
-    .line 393
+    .line 397
     invoke-static {p1}, Lcom/oneplus/util/OpUtils;->setCTSAdded(Z)V
 
     const-string p0, "isSpecial case start"
 
-    .line 394
+    .line 398
     invoke-static {v0, p0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_0
@@ -96,26 +96,26 @@
     :cond_0
     const-string p2, "com.android.tradefed.utils.wifi"
 
-    .line 397
+    .line 401
     invoke-virtual {p2, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p1
 
     if-eqz p1, :cond_1
 
-    .line 399
+    .line 403
     iget-object p0, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar$6;->this$0:Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;
 
     const/4 p1, 0x0
 
     invoke-static {p0, p1}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->access$802(Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;Z)Z
 
-    .line 400
+    .line 404
     invoke-static {p1}, Lcom/oneplus/util/OpUtils;->setCTSAdded(Z)V
 
     const-string p0, "isSpecial case end"
 
-    .line 401
+    .line 405
     invoke-static {v0, p0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
@@ -127,7 +127,7 @@
 
     const-string p1, "sPkgReceiver error."
 
-    .line 406
+    .line 410
     invoke-static {v0, p1, p0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :cond_1

@@ -40,7 +40,14 @@
 
 .field private mNotificationScrollLayout:Landroid/view/ViewGroup;
 
+.field final mSettingsListener:Lcom/android/systemui/statusbar/NotificationListener$NotificationSettingsListener;
+    .annotation build Lcom/android/internal/annotations/VisibleForTesting;
+    .end annotation
+.end field
+
 .field private mShelfIcons:Lcom/android/systemui/statusbar/phone/NotificationIconContainer;
+
+.field private mShowLowPriority:Z
 
 .field private mStatusBar:Lcom/android/systemui/statusbar/phone/StatusBar;
 
@@ -55,7 +62,7 @@
 .method public constructor <init>(Landroid/content/Context;Lcom/android/systemui/statusbar/phone/StatusBar;Lcom/android/systemui/plugins/statusbar/StatusBarStateController;Lcom/android/systemui/statusbar/NotificationMediaManager;)V
     .locals 1
 
-    .line 86
+    .line 99
     invoke-direct {p0}, Lcom/oneplus/systemui/statusbar/phone/OpNotificationIconAreaController;-><init>()V
 
     .line 57
@@ -80,20 +87,32 @@
 
     iput-object v0, p0, Lcom/android/systemui/statusbar/phone/NotificationIconAreaController;->mTintArea:Landroid/graphics/Rect;
 
-    .line 87
+    const/4 v0, 0x1
+
+    .line 83
+    iput-boolean v0, p0, Lcom/android/systemui/statusbar/phone/NotificationIconAreaController;->mShowLowPriority:Z
+
+    .line 85
+    new-instance v0, Lcom/android/systemui/statusbar/phone/NotificationIconAreaController$1;
+
+    invoke-direct {v0, p0}, Lcom/android/systemui/statusbar/phone/NotificationIconAreaController$1;-><init>(Lcom/android/systemui/statusbar/phone/NotificationIconAreaController;)V
+
+    iput-object v0, p0, Lcom/android/systemui/statusbar/phone/NotificationIconAreaController;->mSettingsListener:Lcom/android/systemui/statusbar/NotificationListener$NotificationSettingsListener;
+
+    .line 100
     iput-object p2, p0, Lcom/android/systemui/statusbar/phone/NotificationIconAreaController;->mStatusBar:Lcom/android/systemui/statusbar/phone/StatusBar;
 
-    .line 88
+    .line 101
     invoke-static {p1}, Lcom/android/internal/util/ContrastColorUtil;->getInstance(Landroid/content/Context;)Lcom/android/internal/util/ContrastColorUtil;
 
     move-result-object p2
 
     iput-object p2, p0, Lcom/android/systemui/statusbar/phone/NotificationIconAreaController;->mContrastColorUtil:Lcom/android/internal/util/ContrastColorUtil;
 
-    .line 89
+    .line 102
     iput-object p1, p0, Lcom/android/systemui/statusbar/phone/NotificationIconAreaController;->mContext:Landroid/content/Context;
 
-    .line 90
+    .line 103
     const-class p2, Lcom/android/systemui/statusbar/notification/NotificationEntryManager;
 
     invoke-static {p2}, Lcom/android/systemui/Dependency;->get(Ljava/lang/Class;)Ljava/lang/Object;
@@ -104,21 +123,53 @@
 
     iput-object p2, p0, Lcom/android/systemui/statusbar/phone/NotificationIconAreaController;->mEntryManager:Lcom/android/systemui/statusbar/notification/NotificationEntryManager;
 
-    .line 91
+    .line 104
     iput-object p3, p0, Lcom/android/systemui/statusbar/phone/NotificationIconAreaController;->mStatusBarStateController:Lcom/android/systemui/plugins/statusbar/StatusBarStateController;
 
-    .line 92
+    .line 105
     iget-object p2, p0, Lcom/android/systemui/statusbar/phone/NotificationIconAreaController;->mStatusBarStateController:Lcom/android/systemui/plugins/statusbar/StatusBarStateController;
 
     invoke-interface {p2, p0}, Lcom/android/systemui/plugins/statusbar/StatusBarStateController;->addCallback(Lcom/android/systemui/plugins/statusbar/StatusBarStateController$StateListener;)V
 
-    .line 93
+    .line 106
     iput-object p4, p0, Lcom/android/systemui/statusbar/phone/NotificationIconAreaController;->mMediaManager:Lcom/android/systemui/statusbar/NotificationMediaManager;
 
-    .line 95
+    .line 107
+    const-class p2, Lcom/android/systemui/statusbar/NotificationListener;
+
+    invoke-static {p2}, Lcom/android/systemui/Dependency;->get(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object p2
+
+    check-cast p2, Lcom/android/systemui/statusbar/NotificationListener;
+
+    .line 108
+    iget-object p3, p0, Lcom/android/systemui/statusbar/phone/NotificationIconAreaController;->mSettingsListener:Lcom/android/systemui/statusbar/NotificationListener$NotificationSettingsListener;
+
+    invoke-virtual {p2, p3}, Lcom/android/systemui/statusbar/NotificationListener;->addNotificationSettingsListener(Lcom/android/systemui/statusbar/NotificationListener$NotificationSettingsListener;)V
+
+    .line 110
     invoke-virtual {p0, p1}, Lcom/android/systemui/statusbar/phone/NotificationIconAreaController;->initializeNotificationAreaViews(Landroid/content/Context;)V
 
     return-void
+.end method
+
+.method static synthetic access$002(Lcom/android/systemui/statusbar/phone/NotificationIconAreaController;Z)Z
+    .locals 0
+
+    .line 49
+    iput-boolean p1, p0, Lcom/android/systemui/statusbar/phone/NotificationIconAreaController;->mShowLowPriority:Z
+
+    return p1
+.end method
+
+.method static synthetic access$100(Lcom/android/systemui/statusbar/phone/NotificationIconAreaController;)Landroid/view/ViewGroup;
+    .locals 0
+
+    .line 49
+    iget-object p0, p0, Lcom/android/systemui/statusbar/phone/NotificationIconAreaController;->mNotificationScrollLayout:Landroid/view/ViewGroup;
+
+    return-object p0
 .end method
 
 .method private applyNotificationIconsTint()V
@@ -128,7 +179,7 @@
 
     move v1, v0
 
-    .line 449
+    .line 457
     :goto_0
     iget-object v2, p0, Lcom/android/systemui/statusbar/phone/NotificationIconAreaController;->mNotificationIcons:Lcom/android/systemui/statusbar/phone/NotificationIconContainer;
 
@@ -138,7 +189,7 @@
 
     if-ge v1, v2, :cond_1
 
-    .line 450
+    .line 458
     iget-object v2, p0, Lcom/android/systemui/statusbar/phone/NotificationIconAreaController;->mNotificationIcons:Lcom/android/systemui/statusbar/phone/NotificationIconContainer;
 
     invoke-virtual {v2, v1}, Landroid/widget/FrameLayout;->getChildAt(I)Landroid/view/View;
@@ -147,21 +198,21 @@
 
     check-cast v2, Lcom/android/systemui/statusbar/StatusBarIconView;
 
-    .line 451
+    .line 459
     invoke-virtual {v2}, Landroid/widget/ImageView;->getWidth()I
 
     move-result v3
 
     if-eqz v3, :cond_0
 
-    .line 452
+    .line 460
     iget v3, p0, Lcom/android/systemui/statusbar/phone/NotificationIconAreaController;->mIconTint:I
 
     invoke-direct {p0, v2, v3}, Lcom/android/systemui/statusbar/phone/NotificationIconAreaController;->updateTintForIcon(Lcom/android/systemui/statusbar/StatusBarIconView;I)V
 
     goto :goto_1
 
-    .line 454
+    .line 462
     :cond_0
     new-instance v3, Lcom/android/systemui/statusbar/phone/-$$Lambda$NotificationIconAreaController$LHvVP8ZKDxtcx6Sj3gf4ttey2ho;
 
@@ -174,7 +225,7 @@
 
     goto :goto_0
 
-    .line 458
+    .line 466
     :cond_1
     :goto_2
     iget-object v1, p0, Lcom/android/systemui/statusbar/phone/NotificationIconAreaController;->mCenteredIcon:Lcom/android/systemui/statusbar/phone/NotificationIconContainer;
@@ -185,7 +236,7 @@
 
     if-ge v0, v1, :cond_3
 
-    .line 459
+    .line 467
     iget-object v1, p0, Lcom/android/systemui/statusbar/phone/NotificationIconAreaController;->mCenteredIcon:Lcom/android/systemui/statusbar/phone/NotificationIconContainer;
 
     invoke-virtual {v1, v0}, Landroid/widget/FrameLayout;->getChildAt(I)Landroid/view/View;
@@ -194,21 +245,21 @@
 
     check-cast v1, Lcom/android/systemui/statusbar/StatusBarIconView;
 
-    .line 460
+    .line 468
     invoke-virtual {v1}, Landroid/widget/ImageView;->getWidth()I
 
     move-result v2
 
     if-eqz v2, :cond_2
 
-    .line 461
+    .line 469
     iget v2, p0, Lcom/android/systemui/statusbar/phone/NotificationIconAreaController;->mCenteredIconTint:I
 
     invoke-direct {p0, v1, v2}, Lcom/android/systemui/statusbar/phone/NotificationIconAreaController;->updateTintForIcon(Lcom/android/systemui/statusbar/StatusBarIconView;I)V
 
     goto :goto_3
 
-    .line 463
+    .line 471
     :cond_2
     new-instance v2, Lcom/android/systemui/statusbar/phone/-$$Lambda$NotificationIconAreaController$kEHcYKNlJqRNuom7zI__dD3YiUQ;
 
@@ -228,7 +279,7 @@
 .method private generateIconLayoutParams()Landroid/widget/FrameLayout$LayoutParams;
     .locals 3
 
-    .line 142
+    .line 157
     new-instance v0, Landroid/widget/FrameLayout$LayoutParams;
 
     iget v1, p0, Lcom/android/systemui/statusbar/phone/NotificationIconAreaController;->mIconSize:I
@@ -239,7 +290,7 @@
 
     add-int/2addr v1, v2
 
-    .line 143
+    .line 158
     invoke-virtual {p0}, Lcom/android/systemui/statusbar/phone/NotificationIconAreaController;->getHeight()I
 
     move-result p0
@@ -252,7 +303,7 @@
 .method static synthetic lambda$updateCenterIcon$2(Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;)Lcom/android/systemui/statusbar/StatusBarIconView;
     .locals 0
 
-    .line 279
+    .line 287
     iget-object p0, p0, Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;->centeredIcon:Lcom/android/systemui/statusbar/StatusBarIconView;
 
     return-object p0
@@ -261,7 +312,7 @@
 .method static synthetic lambda$updateShelfIcons$0(Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;)Lcom/android/systemui/statusbar/StatusBarIconView;
     .locals 0
 
-    .line 252
+    .line 267
     iget-object p0, p0, Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;->expandedIcon:Lcom/android/systemui/statusbar/StatusBarIconView;
 
     return-object p0
@@ -270,7 +321,7 @@
 .method static synthetic lambda$updateStatusBarIcons$1(Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;)Lcom/android/systemui/statusbar/StatusBarIconView;
     .locals 0
 
-    .line 266
+    .line 277
     iget-object p0, p0, Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;->icon:Lcom/android/systemui/statusbar/StatusBarIconView;
 
     return-object p0
@@ -279,21 +330,21 @@
 .method private reloadDimens(Landroid/content/Context;)V
     .locals 1
 
-    .line 147
+    .line 162
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
 
     const v0, 0x1050211
 
-    .line 148
+    .line 163
     invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
     move-result v0
 
     iput v0, p0, Lcom/android/systemui/statusbar/phone/NotificationIconAreaController;->mIconSize:I
 
-    .line 149
+    .line 164
     sget v0, Lcom/android/systemui/R$dimen;->status_bar_icon_padding:I
 
     invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -308,7 +359,7 @@
 .method private updateAnimations()V
     .locals 5
 
-    .line 302
+    .line 310
     iget-object v0, p0, Lcom/android/systemui/statusbar/phone/NotificationIconAreaController;->mStatusBarStateController:Lcom/android/systemui/plugins/statusbar/StatusBarStateController;
 
     invoke-interface {v0}, Lcom/android/systemui/plugins/statusbar/StatusBarStateController;->getState()I
@@ -328,7 +379,7 @@
     :cond_0
     move v0, v2
 
-    .line 303
+    .line 311
     :goto_0
     iget-object v3, p0, Lcom/android/systemui/statusbar/phone/NotificationIconAreaController;->mCenteredIcon:Lcom/android/systemui/statusbar/phone/NotificationIconContainer;
 
@@ -348,7 +399,7 @@
     :goto_1
     invoke-virtual {v3, v4}, Lcom/android/systemui/statusbar/phone/NotificationIconContainer;->setAnimationsEnabled(Z)V
 
-    .line 304
+    .line 312
     iget-object v3, p0, Lcom/android/systemui/statusbar/phone/NotificationIconAreaController;->mNotificationIcons:Lcom/android/systemui/statusbar/phone/NotificationIconContainer;
 
     iget-boolean p0, p0, Lcom/android/systemui/statusbar/phone/NotificationIconAreaController;->mAnimationsEnabled:Z
@@ -371,7 +422,7 @@
 .method private updateCenterIcon()V
     .locals 9
 
-    .line 279
+    .line 287
     sget-object v1, Lcom/android/systemui/statusbar/phone/-$$Lambda$NotificationIconAreaController$S6CJ2tXrA2ieNVmUpwBa8v9eeEY;->INSTANCE:Lcom/android/systemui/statusbar/phone/-$$Lambda$NotificationIconAreaController$S6CJ2tXrA2ieNVmUpwBa8v9eeEY;
 
     iget-object v2, p0, Lcom/android/systemui/statusbar/phone/NotificationIconAreaController;->mCenteredIcon:Lcom/android/systemui/statusbar/phone/NotificationIconContainer;
@@ -413,19 +464,19 @@
 
     move-object/from16 v10, p2
 
-    .line 320
+    .line 328
     new-instance v11, Ljava/util/ArrayList;
 
     iget-object v0, v9, Lcom/android/systemui/statusbar/phone/NotificationIconAreaController;->mNotificationScrollLayout:Landroid/view/ViewGroup;
 
-    .line 321
+    .line 329
     invoke-virtual {v0}, Landroid/view/ViewGroup;->getChildCount()I
 
     move-result v0
 
     invoke-direct {v11, v0}, Ljava/util/ArrayList;-><init>(I)V
 
-    .line 324
+    .line 332
     iget-object v0, v9, Lcom/android/systemui/statusbar/phone/NotificationIconAreaController;->mNotificationIcons:Lcom/android/systemui/statusbar/phone/NotificationIconContainer;
 
     invoke-virtual {v10, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
@@ -436,7 +487,7 @@
 
     move v14, v13
 
-    .line 328
+    .line 336
     :goto_0
     iget-object v0, v9, Lcom/android/systemui/statusbar/phone/NotificationIconAreaController;->mNotificationScrollLayout:Landroid/view/ViewGroup;
 
@@ -446,19 +497,19 @@
 
     if-ge v14, v0, :cond_2
 
-    .line 329
+    .line 337
     iget-object v0, v9, Lcom/android/systemui/statusbar/phone/NotificationIconAreaController;->mNotificationScrollLayout:Landroid/view/ViewGroup;
 
     invoke-virtual {v0, v14}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
     move-result-object v0
 
-    .line 330
+    .line 338
     instance-of v1, v0, Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;
 
     if-eqz v1, :cond_0
 
-    .line 331
+    .line 339
     check-cast v0, Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;
 
     invoke-virtual {v0}, Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;->getEntry()Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;
@@ -483,7 +534,7 @@
 
     move v8, v12
 
-    .line 333
+    .line 341
     invoke-super/range {v0 .. v8}, Lcom/oneplus/systemui/statusbar/phone/OpNotificationIconAreaController;->shouldShowNotificationIcon(Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;ZZZZZZZ)Z
 
     move-result v0
@@ -492,7 +543,7 @@
 
     move-object/from16 v0, p1
 
-    .line 335
+    .line 343
     invoke-interface {v0, v15}, Ljava/util/function/Function;->apply(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v1
@@ -501,7 +552,7 @@
 
     if-eqz v1, :cond_1
 
-    .line 337
+    .line 345
     invoke-virtual {v11, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     goto :goto_1
@@ -515,20 +566,20 @@
 
     goto :goto_0
 
-    .line 360
+    .line 368
     :cond_2
     new-instance v0, Landroidx/collection/ArrayMap;
 
     invoke-direct {v0}, Landroidx/collection/ArrayMap;-><init>()V
 
-    .line 361
+    .line 369
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
     move v2, v13
 
-    .line 362
+    .line 370
     :goto_2
     invoke-virtual/range {p2 .. p2}, Landroid/widget/FrameLayout;->getChildCount()I
 
@@ -538,19 +589,19 @@
 
     if-ge v2, v3, :cond_a
 
-    .line 363
+    .line 371
     invoke-virtual {v10, v2}, Landroid/widget/FrameLayout;->getChildAt(I)Landroid/view/View;
 
     move-result-object v3
 
-    .line 364
+    .line 372
     instance-of v5, v3, Lcom/android/systemui/statusbar/StatusBarIconView;
 
     if-nez v5, :cond_3
 
     goto :goto_6
 
-    .line 367
+    .line 375
     :cond_3
     invoke-virtual {v11, v3}, Ljava/util/ArrayList;->contains(Ljava/lang/Object;)Z
 
@@ -558,10 +609,10 @@
 
     if-nez v5, :cond_9
 
-    .line 369
+    .line 377
     check-cast v3, Lcom/android/systemui/statusbar/StatusBarIconView;
 
-    .line 370
+    .line 378
     invoke-virtual {v3}, Lcom/android/systemui/statusbar/StatusBarIconView;->getNotification()Landroid/service/notification/StatusBarNotification;
 
     move-result-object v5
@@ -574,7 +625,7 @@
 
     move v7, v6
 
-    .line 371
+    .line 379
     :goto_3
     invoke-virtual {v11}, Ljava/util/ArrayList;->size()I
 
@@ -582,14 +633,14 @@
 
     if-ge v6, v8, :cond_6
 
-    .line 372
+    .line 380
     invoke-virtual {v11, v6}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v8
 
     check-cast v8, Lcom/android/systemui/statusbar/StatusBarIconView;
 
-    .line 373
+    .line 381
     invoke-virtual {v8}, Lcom/android/systemui/statusbar/StatusBarIconView;->getSourceIcon()Landroid/graphics/drawable/Icon;
 
     move-result-object v14
@@ -604,7 +655,7 @@
 
     if-eqz v14, :cond_5
 
-    .line 374
+    .line 382
     invoke-virtual {v8}, Lcom/android/systemui/statusbar/StatusBarIconView;->getNotification()Landroid/service/notification/StatusBarNotification;
 
     move-result-object v8
@@ -640,7 +691,7 @@
     :goto_5
     if-eqz v7, :cond_8
 
-    .line 384
+    .line 392
     invoke-virtual {v0, v5}, Landroidx/collection/SimpleArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v4
@@ -649,15 +700,15 @@
 
     if-nez v4, :cond_7
 
-    .line 386
+    .line 394
     new-instance v4, Ljava/util/ArrayList;
 
     invoke-direct {v4}, Ljava/util/ArrayList;-><init>()V
 
-    .line 387
+    .line 395
     invoke-virtual {v0, v5, v4}, Landroidx/collection/SimpleArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 389
+    .line 397
     :cond_7
     invoke-virtual {v3}, Lcom/android/systemui/statusbar/StatusBarIconView;->getStatusBarIcon()Lcom/android/internal/statusbar/StatusBarIcon;
 
@@ -665,7 +716,7 @@
 
     invoke-virtual {v4, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 391
+    .line 399
     :cond_8
     invoke-virtual {v1, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
@@ -675,13 +726,13 @@
 
     goto :goto_2
 
-    .line 395
+    .line 403
     :cond_a
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
-    .line 396
+    .line 404
     invoke-virtual {v0}, Landroidx/collection/ArrayMap;->keySet()Ljava/util/Set;
 
     move-result-object v3
@@ -704,33 +755,33 @@
 
     check-cast v5, Ljava/lang/String;
 
-    .line 397
+    .line 405
     invoke-virtual {v0, v5}, Landroidx/collection/SimpleArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v6
 
     check-cast v6, Ljava/util/ArrayList;
 
-    .line 398
+    .line 406
     invoke-virtual {v6}, Ljava/util/ArrayList;->size()I
 
     move-result v6
 
     if-eq v6, v4, :cond_b
 
-    .line 399
+    .line 407
     invoke-virtual {v2, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     goto :goto_7
 
-    .line 402
+    .line 410
     :cond_c
     invoke-virtual {v0, v2}, Landroidx/collection/ArrayMap;->removeAll(Ljava/util/Collection;)Z
 
-    .line 403
+    .line 411
     invoke-virtual {v10, v0}, Lcom/android/systemui/statusbar/phone/NotificationIconContainer;->setReplacingIcons(Landroidx/collection/ArrayMap;)V
 
-    .line 405
+    .line 413
     invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
 
     move-result v0
@@ -740,7 +791,7 @@
     :goto_8
     if-ge v2, v0, :cond_d
 
-    .line 407
+    .line 415
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v3
@@ -753,7 +804,7 @@
 
     goto :goto_8
 
-    .line 410
+    .line 418
     :cond_d
     invoke-direct/range {p0 .. p0}, Lcom/android/systemui/statusbar/phone/NotificationIconAreaController;->generateIconLayoutParams()Landroid/widget/FrameLayout$LayoutParams;
 
@@ -761,7 +812,7 @@
 
     move v1, v13
 
-    .line 411
+    .line 419
     :goto_9
     invoke-virtual {v11}, Ljava/util/ArrayList;->size()I
 
@@ -769,17 +820,17 @@
 
     if-ge v1, v2, :cond_10
 
-    .line 412
+    .line 420
     invoke-virtual {v11, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v2
 
     check-cast v2, Lcom/android/systemui/statusbar/StatusBarIconView;
 
-    .line 414
+    .line 422
     invoke-virtual {v10, v2}, Landroid/widget/FrameLayout;->removeTransientView(Landroid/view/View;)V
 
-    .line 415
+    .line 423
     invoke-virtual {v2}, Landroid/widget/ImageView;->getParent()Landroid/view/ViewParent;
 
     move-result-object v3
@@ -788,12 +839,12 @@
 
     if-eqz p5, :cond_e
 
-    .line 417
+    .line 425
     iget-object v3, v9, Lcom/android/systemui/statusbar/phone/NotificationIconAreaController;->mUpdateStatusBarIcons:Ljava/lang/Runnable;
 
     invoke-virtual {v2, v3}, Lcom/android/systemui/statusbar/StatusBarIconView;->setOnDismissListener(Ljava/lang/Runnable;)V
 
-    .line 419
+    .line 427
     :cond_e
     invoke-virtual {v10, v2, v1, v0}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;ILandroid/view/ViewGroup$LayoutParams;)V
 
@@ -802,11 +853,11 @@
 
     goto :goto_9
 
-    .line 423
+    .line 431
     :cond_10
     invoke-virtual {v10, v4}, Lcom/android/systemui/statusbar/phone/NotificationIconContainer;->setChangingViewPositions(Z)V
 
-    .line 425
+    .line 433
     invoke-virtual/range {p2 .. p2}, Landroid/widget/FrameLayout;->getChildCount()I
 
     move-result v0
@@ -816,12 +867,12 @@
     :goto_a
     if-ge v1, v0, :cond_12
 
-    .line 427
+    .line 435
     invoke-virtual {v10, v1}, Landroid/widget/FrameLayout;->getChildAt(I)Landroid/view/View;
 
     move-result-object v2
 
-    .line 428
+    .line 436
     invoke-virtual {v11, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v3
@@ -832,11 +883,11 @@
 
     goto :goto_b
 
-    .line 432
+    .line 440
     :cond_11
     invoke-virtual {v10, v3}, Landroid/widget/FrameLayout;->removeView(Landroid/view/View;)V
 
-    .line 433
+    .line 441
     invoke-virtual {v10, v3, v1}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;I)V
 
     :goto_b
@@ -847,18 +898,18 @@
     :cond_12
     if-eqz v12, :cond_13
 
-    .line 437
+    .line 445
     iget-object v0, v9, Lcom/oneplus/systemui/statusbar/phone/OpNotificationIconAreaController;->mAodNotificationIconCtrl:Lcom/oneplus/aod/OpAodNotificationIconAreaController;
 
     invoke-virtual {v0, v10}, Lcom/oneplus/aod/OpAodNotificationIconAreaController;->updateNotificationIcons(Lcom/android/systemui/statusbar/phone/NotificationIconContainer;)V
 
-    .line 440
+    .line 448
     :cond_13
     invoke-virtual {v10, v13}, Lcom/android/systemui/statusbar/phone/NotificationIconContainer;->setChangingViewPositions(Z)V
 
     const/4 v0, 0x0
 
-    .line 441
+    .line 449
     invoke-virtual {v10, v0}, Lcom/android/systemui/statusbar/phone/NotificationIconContainer;->setReplacingIcons(Landroidx/collection/ArrayMap;)V
 
     return-void
@@ -867,7 +918,7 @@
 .method private updateShelfIcons()V
     .locals 9
 
-    .line 252
+    .line 267
     sget-object v1, Lcom/android/systemui/statusbar/phone/-$$Lambda$NotificationIconAreaController$afpYK1wAP1i0HTFHOa1jb1wzzAQ;->INSTANCE:Lcom/android/systemui/statusbar/phone/-$$Lambda$NotificationIconAreaController$afpYK1wAP1i0HTFHOa1jb1wzzAQ;
 
     iget-object v2, p0, Lcom/android/systemui/statusbar/phone/NotificationIconAreaController;->mShelfIcons:Lcom/android/systemui/statusbar/phone/NotificationIconContainer;
@@ -894,7 +945,7 @@
 .method private updateTintForIcon(Lcom/android/systemui/statusbar/StatusBarIconView;I)V
     .locals 6
 
-    .line 471
+    .line 479
     iget-object v3, p0, Lcom/android/systemui/statusbar/phone/NotificationIconAreaController;->mContext:Landroid/content/Context;
 
     iget-object v4, p0, Lcom/android/systemui/statusbar/phone/NotificationIconAreaController;->mContrastColorUtil:Lcom/android/internal/util/ContrastColorUtil;
@@ -917,7 +968,7 @@
 .method public getCenteredNotificationAreaView()Landroid/view/View;
     .locals 0
 
-    .line 163
+    .line 178
     iget-object p0, p0, Lcom/android/systemui/statusbar/phone/NotificationIconAreaController;->mCenteredIconArea:Landroid/view/View;
 
     return-object p0
@@ -926,7 +977,7 @@
 .method protected getHeight()I
     .locals 0
 
-    .line 200
+    .line 215
     iget-object p0, p0, Lcom/android/systemui/statusbar/phone/NotificationIconAreaController;->mStatusBar:Lcom/android/systemui/statusbar/phone/StatusBar;
 
     invoke-virtual {p0}, Lcom/android/systemui/statusbar/phone/StatusBar;->getStatusBarHeight()I
@@ -939,7 +990,7 @@
 .method public getNotificationInnerAreaView()Landroid/view/View;
     .locals 0
 
-    .line 156
+    .line 171
     iget-object p0, p0, Lcom/android/systemui/statusbar/phone/NotificationIconAreaController;->mNotificationIconArea:Landroid/view/View;
 
     return-object p0
@@ -948,7 +999,7 @@
 .method protected inflateIconArea(Landroid/view/LayoutInflater;)Landroid/view/View;
     .locals 1
 
-    .line 99
+    .line 114
     sget p0, Lcom/android/systemui/R$layout;->notification_icon_area:I
 
     const/4 v0, 0x0
@@ -963,22 +1014,22 @@
 .method protected initializeNotificationAreaViews(Landroid/content/Context;)V
     .locals 2
 
-    .line 106
+    .line 121
     invoke-direct {p0, p1}, Lcom/android/systemui/statusbar/phone/NotificationIconAreaController;->reloadDimens(Landroid/content/Context;)V
 
-    .line 108
+    .line 123
     invoke-static {p1}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
 
     move-result-object p1
 
-    .line 109
+    .line 124
     invoke-virtual {p0, p1}, Lcom/android/systemui/statusbar/phone/NotificationIconAreaController;->inflateIconArea(Landroid/view/LayoutInflater;)Landroid/view/View;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/systemui/statusbar/phone/NotificationIconAreaController;->mNotificationIconArea:Landroid/view/View;
 
-    .line 110
+    .line 125
     iget-object v0, p0, Lcom/android/systemui/statusbar/phone/NotificationIconAreaController;->mNotificationIconArea:Landroid/view/View;
 
     sget v1, Lcom/android/systemui/R$id;->notificationIcons:I
@@ -991,7 +1042,7 @@
 
     iput-object v0, p0, Lcom/android/systemui/statusbar/phone/NotificationIconAreaController;->mNotificationIcons:Lcom/android/systemui/statusbar/phone/NotificationIconContainer;
 
-    .line 112
+    .line 127
     iget-object v0, p0, Lcom/android/systemui/statusbar/phone/NotificationIconAreaController;->mStatusBar:Lcom/android/systemui/statusbar/phone/StatusBar;
 
     invoke-virtual {v0}, Lcom/android/systemui/statusbar/phone/StatusBar;->getNotificationScrollLayout()Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;
@@ -1000,7 +1051,7 @@
 
     iput-object v0, p0, Lcom/android/systemui/statusbar/phone/NotificationIconAreaController;->mNotificationScrollLayout:Landroid/view/ViewGroup;
 
-    .line 114
+    .line 129
     sget v0, Lcom/android/systemui/R$layout;->center_icon_area:I
 
     const/4 v1, 0x0
@@ -1011,7 +1062,7 @@
 
     iput-object p1, p0, Lcom/android/systemui/statusbar/phone/NotificationIconAreaController;->mCenteredIconArea:Landroid/view/View;
 
-    .line 115
+    .line 130
     iget-object p1, p0, Lcom/android/systemui/statusbar/phone/NotificationIconAreaController;->mCenteredIconArea:Landroid/view/View;
 
     sget v0, Lcom/android/systemui/R$id;->centeredIcon:I
@@ -1030,7 +1081,7 @@
 .method public synthetic lambda$applyNotificationIconsTint$3$NotificationIconAreaController(Lcom/android/systemui/statusbar/StatusBarIconView;)V
     .locals 1
 
-    .line 454
+    .line 462
     iget v0, p0, Lcom/android/systemui/statusbar/phone/NotificationIconAreaController;->mIconTint:I
 
     invoke-direct {p0, p1, v0}, Lcom/android/systemui/statusbar/phone/NotificationIconAreaController;->updateTintForIcon(Lcom/android/systemui/statusbar/StatusBarIconView;I)V
@@ -1041,7 +1092,7 @@
 .method public synthetic lambda$applyNotificationIconsTint$4$NotificationIconAreaController(Lcom/android/systemui/statusbar/StatusBarIconView;)V
     .locals 1
 
-    .line 463
+    .line 471
     iget v0, p0, Lcom/android/systemui/statusbar/phone/NotificationIconAreaController;->mCenteredIconTint:I
 
     invoke-direct {p0, p1, v0}, Lcom/android/systemui/statusbar/phone/NotificationIconAreaController;->updateTintForIcon(Lcom/android/systemui/statusbar/StatusBarIconView;I)V
@@ -1054,65 +1105,65 @@
 
     if-nez p1, :cond_0
 
-    .line 175
+    .line 190
     iget-object p2, p0, Lcom/android/systemui/statusbar/phone/NotificationIconAreaController;->mTintArea:Landroid/graphics/Rect;
 
     invoke-virtual {p2}, Landroid/graphics/Rect;->setEmpty()V
 
     goto :goto_0
 
-    .line 177
+    .line 192
     :cond_0
     iget-object p2, p0, Lcom/android/systemui/statusbar/phone/NotificationIconAreaController;->mTintArea:Landroid/graphics/Rect;
 
     invoke-virtual {p2, p1}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
-    .line 180
+    .line 195
     :goto_0
     iget-object p2, p0, Lcom/android/systemui/statusbar/phone/NotificationIconAreaController;->mNotificationIconArea:Landroid/view/View;
 
     if-eqz p2, :cond_1
 
-    .line 181
+    .line 196
     invoke-static {p1, p2}, Lcom/android/systemui/plugins/DarkIconDispatcher;->isInArea(Landroid/graphics/Rect;Landroid/view/View;)Z
 
     move-result p2
 
     if-eqz p2, :cond_2
 
-    .line 182
+    .line 197
     iput p3, p0, Lcom/android/systemui/statusbar/phone/NotificationIconAreaController;->mIconTint:I
 
     goto :goto_1
 
-    .line 185
+    .line 200
     :cond_1
     iput p3, p0, Lcom/android/systemui/statusbar/phone/NotificationIconAreaController;->mIconTint:I
 
-    .line 188
+    .line 203
     :cond_2
     :goto_1
     iget-object p2, p0, Lcom/android/systemui/statusbar/phone/NotificationIconAreaController;->mCenteredIconArea:Landroid/view/View;
 
     if-eqz p2, :cond_3
 
-    .line 189
+    .line 204
     invoke-static {p1, p2}, Lcom/android/systemui/plugins/DarkIconDispatcher;->isInArea(Landroid/graphics/Rect;Landroid/view/View;)Z
 
     move-result p1
 
     if-eqz p1, :cond_4
 
-    .line 190
+    .line 205
     iput p3, p0, Lcom/android/systemui/statusbar/phone/NotificationIconAreaController;->mCenteredIconTint:I
 
     goto :goto_2
 
-    .line 193
+    .line 208
     :cond_3
     iput p3, p0, Lcom/android/systemui/statusbar/phone/NotificationIconAreaController;->mCenteredIconTint:I
 
-    .line 196
+    .line 211
     :cond_4
     :goto_2
     invoke-direct {p0}, Lcom/android/systemui/statusbar/phone/NotificationIconAreaController;->applyNotificationIconsTint()V
@@ -1123,10 +1174,10 @@
 .method public onDensityOrFontScaleChanged(Landroid/content/Context;)V
     .locals 3
 
-    .line 124
+    .line 139
     invoke-direct {p0, p1}, Lcom/android/systemui/statusbar/phone/NotificationIconAreaController;->reloadDimens(Landroid/content/Context;)V
 
-    .line 125
+    .line 140
     invoke-direct {p0}, Lcom/android/systemui/statusbar/phone/NotificationIconAreaController;->generateIconLayoutParams()Landroid/widget/FrameLayout$LayoutParams;
 
     move-result-object p1
@@ -1135,7 +1186,7 @@
 
     move v1, v0
 
-    .line 126
+    .line 141
     :goto_0
     iget-object v2, p0, Lcom/android/systemui/statusbar/phone/NotificationIconAreaController;->mNotificationIcons:Lcom/android/systemui/statusbar/phone/NotificationIconContainer;
 
@@ -1145,14 +1196,14 @@
 
     if-ge v1, v2, :cond_0
 
-    .line 127
+    .line 142
     iget-object v2, p0, Lcom/android/systemui/statusbar/phone/NotificationIconAreaController;->mNotificationIcons:Lcom/android/systemui/statusbar/phone/NotificationIconContainer;
 
     invoke-virtual {v2, v1}, Landroid/widget/FrameLayout;->getChildAt(I)Landroid/view/View;
 
     move-result-object v2
 
-    .line 128
+    .line 143
     invoke-virtual {v2, p1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
     add-int/lit8 v1, v1, 0x1
@@ -1162,7 +1213,7 @@
     :cond_0
     move v1, v0
 
-    .line 130
+    .line 145
     :goto_1
     iget-object v2, p0, Lcom/android/systemui/statusbar/phone/NotificationIconAreaController;->mShelfIcons:Lcom/android/systemui/statusbar/phone/NotificationIconContainer;
 
@@ -1172,21 +1223,21 @@
 
     if-ge v1, v2, :cond_1
 
-    .line 131
+    .line 146
     iget-object v2, p0, Lcom/android/systemui/statusbar/phone/NotificationIconAreaController;->mShelfIcons:Lcom/android/systemui/statusbar/phone/NotificationIconContainer;
 
     invoke-virtual {v2, v1}, Landroid/widget/FrameLayout;->getChildAt(I)Landroid/view/View;
 
     move-result-object v2
 
-    .line 132
+    .line 147
     invoke-virtual {v2, p1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_1
 
-    .line 134
+    .line 149
     :cond_1
     :goto_2
     iget-object v1, p0, Lcom/android/systemui/statusbar/phone/NotificationIconAreaController;->mCenteredIcon:Lcom/android/systemui/statusbar/phone/NotificationIconContainer;
@@ -1197,14 +1248,14 @@
 
     if-ge v0, v1, :cond_2
 
-    .line 135
+    .line 150
     iget-object v1, p0, Lcom/android/systemui/statusbar/phone/NotificationIconAreaController;->mCenteredIcon:Lcom/android/systemui/statusbar/phone/NotificationIconContainer;
 
     invoke-virtual {v1, v0}, Landroid/widget/FrameLayout;->getChildAt(I)Landroid/view/View;
 
     move-result-object v1
 
-    .line 136
+    .line 151
     invoke-virtual {v1, p1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
     add-int/lit8 v0, v0, 0x1
@@ -1218,10 +1269,10 @@
 .method public onDozeAmountChanged(FF)V
     .locals 0
 
-    .line 513
+    .line 521
     iput p1, p0, Lcom/android/systemui/statusbar/phone/NotificationIconAreaController;->mDarkAmount:F
 
-    .line 514
+    .line 522
     iget p1, p0, Lcom/android/systemui/statusbar/phone/NotificationIconAreaController;->mDarkAmount:F
 
     const/high16 p2, 0x3f800000    # 1.0f
@@ -1237,16 +1288,16 @@
     :cond_0
     const/4 p1, 0x0
 
-    .line 515
+    .line 523
     :goto_0
     iget-boolean p2, p0, Lcom/android/systemui/statusbar/phone/NotificationIconAreaController;->mFullyDark:Z
 
     if-eq p2, p1, :cond_1
 
-    .line 516
+    .line 524
     iput-boolean p1, p0, Lcom/android/systemui/statusbar/phone/NotificationIconAreaController;->mFullyDark:Z
 
-    .line 517
+    .line 525
     invoke-direct {p0}, Lcom/android/systemui/statusbar/phone/NotificationIconAreaController;->updateShelfIcons()V
 
     :cond_1
@@ -1256,7 +1307,7 @@
 .method public onStateChanged(I)V
     .locals 0
 
-    .line 298
+    .line 306
     invoke-direct {p0}, Lcom/android/systemui/statusbar/phone/NotificationIconAreaController;->updateAnimations()V
 
     return-void
@@ -1265,10 +1316,10 @@
 .method public setAnimationsEnabled(Z)V
     .locals 0
 
-    .line 292
+    .line 300
     iput-boolean p1, p0, Lcom/android/systemui/statusbar/phone/NotificationIconAreaController;->mAnimationsEnabled:Z
 
-    .line 293
+    .line 301
     invoke-direct {p0}, Lcom/android/systemui/statusbar/phone/NotificationIconAreaController;->updateAnimations()V
 
     return-void
@@ -1277,7 +1328,7 @@
 .method public setIsolatedIconLocation(Landroid/graphics/Rect;Z)V
     .locals 0
 
-    .line 508
+    .line 516
     iget-object p0, p0, Lcom/android/systemui/statusbar/phone/NotificationIconAreaController;->mNotificationIcons:Lcom/android/systemui/statusbar/phone/NotificationIconContainer;
 
     invoke-virtual {p0, p1, p2}, Lcom/android/systemui/statusbar/phone/NotificationIconContainer;->setIsolatedIconLocation(Landroid/graphics/Rect;Z)V
@@ -1288,14 +1339,14 @@
 .method public setupShelf(Lcom/android/systemui/statusbar/NotificationShelf;)V
     .locals 1
 
-    .line 119
+    .line 134
     invoke-virtual {p1}, Lcom/android/systemui/statusbar/NotificationShelf;->getShelfIcons()Lcom/android/systemui/statusbar/phone/NotificationIconContainer;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/systemui/statusbar/phone/NotificationIconAreaController;->mShelfIcons:Lcom/android/systemui/statusbar/phone/NotificationIconContainer;
 
-    .line 120
+    .line 135
     iget-object p0, p0, Lcom/android/systemui/statusbar/phone/NotificationIconAreaController;->mNotificationIcons:Lcom/android/systemui/statusbar/phone/NotificationIconContainer;
 
     invoke-virtual {p1, p0}, Lcom/android/systemui/statusbar/NotificationShelf;->setCollapsedIcons(Lcom/android/systemui/statusbar/phone/NotificationIconContainer;)V
@@ -1306,7 +1357,7 @@
 .method public showIconIsolated(Lcom/android/systemui/statusbar/StatusBarIconView;Z)V
     .locals 0
 
-    .line 504
+    .line 512
     iget-object p0, p0, Lcom/android/systemui/statusbar/phone/NotificationIconAreaController;->mNotificationIcons:Lcom/android/systemui/statusbar/phone/NotificationIconContainer;
 
     invoke-virtual {p0, p1, p2}, Lcom/android/systemui/statusbar/phone/NotificationIconContainer;->showIconIsolated(Lcom/android/systemui/statusbar/StatusBarIconView;Z)V
@@ -1317,16 +1368,16 @@
 .method public updateNotificationIcons()V
     .locals 0
 
-    .line 244
+    .line 259
     invoke-virtual {p0}, Lcom/android/systemui/statusbar/phone/NotificationIconAreaController;->updateStatusBarIcons()V
 
-    .line 245
+    .line 260
     invoke-direct {p0}, Lcom/android/systemui/statusbar/phone/NotificationIconAreaController;->updateShelfIcons()V
 
-    .line 246
+    .line 261
     invoke-direct {p0}, Lcom/android/systemui/statusbar/phone/NotificationIconAreaController;->updateCenterIcon()V
 
-    .line 248
+    .line 263
     invoke-direct {p0}, Lcom/android/systemui/statusbar/phone/NotificationIconAreaController;->applyNotificationIconsTint()V
 
     return-void
@@ -1335,12 +1386,12 @@
 .method public updateStatusBarIcons()V
     .locals 9
 
-    .line 266
+    .line 277
     sget-object v1, Lcom/android/systemui/statusbar/phone/-$$Lambda$NotificationIconAreaController$ujxUr-qwlryo8PHBzga56kRshsA;->INSTANCE:Lcom/android/systemui/statusbar/phone/-$$Lambda$NotificationIconAreaController$ujxUr-qwlryo8PHBzga56kRshsA;
 
     iget-object v2, p0, Lcom/android/systemui/statusbar/phone/NotificationIconAreaController;->mNotificationIcons:Lcom/android/systemui/statusbar/phone/NotificationIconContainer;
 
-    const/4 v4, 0x0
+    iget-boolean v4, p0, Lcom/android/systemui/statusbar/phone/NotificationIconAreaController;->mShowLowPriority:Z
 
     const/4 v3, 0x0
 

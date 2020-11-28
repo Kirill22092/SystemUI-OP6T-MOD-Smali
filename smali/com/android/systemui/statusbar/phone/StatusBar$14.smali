@@ -22,7 +22,7 @@
 .method constructor <init>(Lcom/android/systemui/statusbar/phone/StatusBar;)V
     .locals 0
 
-    .line 4893
+    .line 4898
     iput-object p1, p0, Lcom/android/systemui/statusbar/phone/StatusBar$14;->this$0:Lcom/android/systemui/statusbar/phone/StatusBar;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -35,14 +35,14 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 3
 
-    .line 4896
+    .line 4901
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object p1
 
     const-string p2, "com.android.systemui.statusbar.banner_action_cancel"
 
-    .line 4897
+    .line 4902
     invoke-virtual {p2, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p2
@@ -57,7 +57,7 @@
 
     if-eqz p2, :cond_1
 
-    .line 4898
+    .line 4903
     :cond_0
     iget-object p2, p0, Lcom/android/systemui/statusbar/phone/StatusBar$14;->this$0:Lcom/android/systemui/statusbar/phone/StatusBar;
 
@@ -65,7 +65,7 @@
 
     const-string v1, "notification"
 
-    .line 4899
+    .line 4904
     invoke-virtual {p2, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object p2
@@ -74,10 +74,10 @@
 
     const/4 v1, 0x5
 
-    .line 4900
+    .line 4905
     invoke-virtual {p2, v1}, Landroid/app/NotificationManager;->cancel(I)V
 
-    .line 4903
+    .line 4908
     iget-object p2, p0, Lcom/android/systemui/statusbar/phone/StatusBar$14;->this$0:Lcom/android/systemui/statusbar/phone/StatusBar;
 
     iget-object p2, p2, Lcom/android/systemui/SystemUI;->mContext:Landroid/content/Context;
@@ -92,14 +92,14 @@
 
     invoke-static {p2, v2, v1}, Landroid/provider/Settings$Secure;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
-    .line 4905
+    .line 4910
     invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p1
 
     if-eqz p1, :cond_1
 
-    .line 4906
+    .line 4911
     iget-object p1, p0, Lcom/android/systemui/statusbar/phone/StatusBar$14;->this$0:Lcom/android/systemui/statusbar/phone/StatusBar;
 
     const/4 p2, 0x2
@@ -108,7 +108,7 @@
 
     invoke-virtual {p1, p2, v0}, Lcom/android/systemui/statusbar/phone/StatusBar;->animateCollapsePanels(IZ)V
 
-    .line 4908
+    .line 4913
     iget-object p0, p0, Lcom/android/systemui/statusbar/phone/StatusBar$14;->this$0:Lcom/android/systemui/statusbar/phone/StatusBar;
 
     iget-object p0, p0, Lcom/android/systemui/SystemUI;->mContext:Landroid/content/Context;
@@ -121,12 +121,12 @@
 
     const/high16 p2, 0x10000000
 
-    .line 4909
+    .line 4914
     invoke-virtual {p1, p2}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
     move-result-object p1
 
-    .line 4908
+    .line 4913
     invoke-virtual {p0, p1}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
 
     :cond_1

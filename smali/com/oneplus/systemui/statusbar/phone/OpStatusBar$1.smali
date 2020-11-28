@@ -22,7 +22,7 @@
 .method constructor <init>(Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;Landroid/os/Handler;)V
     .locals 0
 
-    .line 219
+    .line 223
     iput-object p1, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar$1;->this$0:Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;
 
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
@@ -35,7 +35,7 @@
 .method public onChange(Z)V
     .locals 2
 
-    .line 222
+    .line 226
     iget-object p1, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar$1;->this$0:Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;
 
     iget-object p1, p1, Lcom/android/systemui/SystemUI;->mContext:Landroid/content/Context;
@@ -58,7 +58,7 @@
 
     move v0, v1
 
-    .line 224
+    .line 228
     :cond_0
     new-instance p1, Ljava/lang/StringBuilder;
 
@@ -90,7 +90,7 @@
 
     invoke-static {v1, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 225
+    .line 229
     iget-object p1, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar$1;->this$0:Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;
 
     invoke-static {p1}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->access$000(Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;)Z
@@ -99,12 +99,12 @@
 
     if-eq p1, v0, :cond_1
 
-    .line 226
+    .line 230
     iget-object p1, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar$1;->this$0:Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;
 
     invoke-static {p1, v0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->access$002(Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;Z)Z
 
-    .line 227
+    .line 231
     iget-object p1, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar$1;->this$0:Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;
 
     invoke-static {p1}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->access$100(Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;)Lcom/android/systemui/statusbar/phone/NotificationPanelView;
@@ -113,7 +113,7 @@
 
     if-eqz p1, :cond_1
 
-    .line 228
+    .line 232
     iget-object p0, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar$1;->this$0:Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;
 
     invoke-static {p0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->access$100(Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;)Lcom/android/systemui/statusbar/phone/NotificationPanelView;

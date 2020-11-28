@@ -12,7 +12,7 @@
 
 
 # static fields
-.field private static mEnableDialog:Z
+.field private static mEnableDialog:Z = false
 
 
 # instance fields

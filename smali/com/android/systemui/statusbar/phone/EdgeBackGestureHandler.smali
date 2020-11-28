@@ -71,6 +71,8 @@
 
 .field private final mFingerOffset:I
 
+.field private mGameToolBoxRegionHeight:I
+
 .field private mGestureExclusionListener:Landroid/view/ISystemGestureExclusionListener;
 
 .field private final mImeChangedListener:Landroid/view/IPinnedStackListener$Stub;
@@ -144,7 +146,7 @@
 
     const/16 v1, 0xc8
 
-    .line 114
+    .line 120
     invoke-static {v0, v1}, Landroid/os/SystemProperties;->getInt(Ljava/lang/String;I)I
 
     move-result v0
@@ -155,7 +157,7 @@
 
     const-string v1, "persist.gesture_button.side.edge.scale"
 
-    .line 215
+    .line 221
     invoke-static {v1, v0}, Landroid/os/SystemProperties;->getInt(Ljava/lang/String;I)I
 
     move-result v1
@@ -170,7 +172,7 @@
 
     const-string v1, "persist.gesture_button.side.move.scale"
 
-    .line 217
+    .line 223
     invoke-static {v1, v0}, Landroid/os/SystemProperties;->getInt(Ljava/lang/String;I)I
 
     move-result v0
@@ -185,7 +187,7 @@
 
     const/16 v1, 0x82
 
-    .line 219
+    .line 225
     invoke-static {v0, v1}, Landroid/os/SystemProperties;->getInt(Ljava/lang/String;I)I
 
     move-result v0
@@ -200,7 +202,7 @@
 
     const/16 v1, 0x12c
 
-    .line 221
+    .line 227
     invoke-static {v0, v1}, Landroid/os/SystemProperties;->getInt(Ljava/lang/String;I)I
 
     move-result v0
@@ -217,7 +219,7 @@
 
     const/16 v1, 0x3c
 
-    .line 240
+    .line 246
     invoke-static {v0, v1}, Landroid/os/SystemProperties;->getInt(Ljava/lang/String;I)I
 
     move-result v0
@@ -226,26 +228,26 @@
 
     const/4 v0, 0x0
 
-    .line 241
+    .line 247
     sput-boolean v0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->sSideGestureEnabled:Z
 
     const/16 v0, 0x10
 
     new-array v0, v0, [F
 
-    .line 246
+    .line 252
     fill-array-data v0, :array_0
 
     sput-object v0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->EFFECT_DIST:[F
 
-    .line 247
+    .line 253
     sget-object v0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->EFFECT_DIST:[F
 
     sput-object v0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->sEffectParams:[F
 
     const/16 v0, 0x50
 
-    .line 253
+    .line 259
     sput v0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mCameraNotchHeight:I
 
     return-void
@@ -276,38 +278,38 @@
 .method public constructor <init>(Landroid/content/Context;Lcom/android/systemui/recents/OverviewProxyService;)V
     .locals 3
 
-    .line 257
+    .line 268
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 117
+    .line 123
     new-instance v0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler$1;
 
     invoke-direct {v0, p0}, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler$1;-><init>(Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;)V
 
     iput-object v0, p0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mImeChangedListener:Landroid/view/IPinnedStackListener$Stub;
 
-    .line 148
+    .line 154
     new-instance v0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler$2;
 
     invoke-direct {v0, p0}, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler$2;-><init>(Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;)V
 
     iput-object v0, p0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mGestureExclusionListener:Landroid/view/ISystemGestureExclusionListener;
 
-    .line 162
+    .line 168
     new-instance v0, Landroid/graphics/Point;
 
     invoke-direct {v0}, Landroid/graphics/Point;-><init>()V
 
     iput-object v0, p0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mDisplaySize:Landroid/graphics/Point;
 
-    .line 167
+    .line 173
     new-instance v0, Landroid/graphics/Region;
 
     invoke-direct {v0}, Landroid/graphics/Region;-><init>()V
 
     iput-object v0, p0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mExcludeRegion:Landroid/graphics/Region;
 
-    .line 183
+    .line 189
     new-instance v0, Landroid/graphics/PointF;
 
     invoke-direct {v0}, Landroid/graphics/PointF;-><init>()V
@@ -316,23 +318,23 @@
 
     const/4 v0, 0x0
 
-    .line 184
+    .line 190
     iput-boolean v0, p0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mThresholdCrossed:Z
 
-    .line 185
+    .line 191
     iput-boolean v0, p0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mAllowGesture:Z
 
-    .line 188
+    .line 194
     iput v0, p0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mImeHeight:I
 
-    .line 207
+    .line 213
     new-instance v1, Landroid/graphics/Rect;
 
     invoke-direct {v1}, Landroid/graphics/Rect;-><init>()V
 
     iput-object v1, p0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mSamplingRect:Landroid/graphics/Rect;
 
-    .line 222
+    .line 228
     sget v1, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->SIDE_GESTURE_EDGE_SCALE:F
 
     const/high16 v2, 0x44870000    # 1080.0f
@@ -343,7 +345,7 @@
 
     iput v1, p0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mEdgeSwipeStartThreshold:I
 
-    .line 223
+    .line 229
     sget v1, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->SIDE_GESTURE_EDGE_MOVE_SCALE:F
 
     mul-float/2addr v1, v2
@@ -352,7 +354,7 @@
 
     iput v1, p0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mSideGestureKeyAnimThreshold:I
 
-    .line 224
+    .line 230
     sget v1, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->SIDE_GESTURE_EDGE_BACK_SCALE:F
 
     mul-float/2addr v1, v2
@@ -363,54 +365,54 @@
 
     const/4 v1, -0x1
 
-    .line 229
+    .line 235
     iput v1, p0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mScreenHeight:I
 
-    .line 230
+    .line 236
     iput v1, p0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mScreenWidth:I
 
-    .line 234
+    .line 240
     iput-boolean v0, p0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mIsHidden:Z
 
     const/16 v1, 0x40
 
-    .line 244
+    .line 250
     iput v1, p0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mEffectHeight:I
 
     const/16 v1, 0x32
 
-    .line 245
+    .line 251
     iput v1, p0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mSwipeStartThreshold:I
 
-    .line 248
+    .line 254
     iput v0, p0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mEffectStage:I
 
-    .line 254
+    .line 260
     iput-boolean v0, p0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mIsIgnoreCameraNotch:Z
 
-    .line 258
+    .line 269
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    .line 259
+    .line 270
     iput-object p1, p0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mContext:Landroid/content/Context;
 
-    .line 260
+    .line 271
     invoke-virtual {p1}, Landroid/content/Context;->getDisplayId()I
 
     move-result v1
 
     iput v1, p0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mDisplayId:I
 
-    .line 261
+    .line 272
     invoke-virtual {p1}, Landroid/content/Context;->getMainExecutor()Ljava/util/concurrent/Executor;
 
     move-result-object v1
 
     iput-object v1, p0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mMainExecutor:Ljava/util/concurrent/Executor;
 
-    .line 262
+    .line 273
     const-class v1, Landroid/view/WindowManager;
 
     invoke-virtual {p1, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/Class;)Ljava/lang/Object;
@@ -421,10 +423,10 @@
 
     iput-object v1, p0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mWm:Landroid/view/WindowManager;
 
-    .line 263
+    .line 274
     iput-object p2, p0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mOverviewProxyService:Lcom/android/systemui/recents/OverviewProxyService;
 
-    .line 268
+    .line 279
     invoke-static {p1}, Landroid/view/ViewConfiguration;->get(Landroid/content/Context;)Landroid/view/ViewConfiguration;
 
     move-result-object p1
@@ -441,22 +443,22 @@
 
     iput p1, p0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mTouchSlop:F
 
-    .line 269
+    .line 280
     sget p1, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->MAX_LONG_PRESS_TIMEOUT:I
 
-    .line 270
+    .line 281
     invoke-static {}, Landroid/view/ViewConfiguration;->getLongPressTimeout()I
 
     move-result p2
 
-    .line 269
+    .line 280
     invoke-static {p1, p2}, Ljava/lang/Math;->min(II)I
 
     move-result p1
 
     iput p1, p0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mLongPressTimeout:I
 
-    .line 272
+    .line 283
     sget p1, Lcom/android/systemui/R$dimen;->navigation_bar_frame_height:I
 
     invoke-virtual {v0, p1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -465,7 +467,7 @@
 
     iput p1, p0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mNavBarHeight:I
 
-    .line 273
+    .line 284
     sget p1, Lcom/android/systemui/R$dimen;->navigation_edge_arrow_min_y:I
 
     invoke-virtual {v0, p1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -474,7 +476,7 @@
 
     iput p1, p0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mMinArrowPosition:I
 
-    .line 274
+    .line 285
     sget p1, Lcom/android/systemui/R$dimen;->navigation_edge_finger_offset:I
 
     invoke-virtual {v0, p1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -483,10 +485,10 @@
 
     iput p1, p0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mFingerOffset:I
 
-    .line 275
+    .line 286
     invoke-virtual {p0, v0}, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->updateCurrentUserResources(Landroid/content/res/Resources;)V
 
-    .line 277
+    .line 288
     iget-object p1, p0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mContext:Landroid/content/Context;
 
     const-class p2, Lcom/android/systemui/statusbar/phone/StatusBar;
@@ -499,7 +501,7 @@
 
     iput-object p1, p0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mBar:Lcom/android/systemui/statusbar/phone/StatusBar;
 
-    .line 281
+    .line 292
     iget p1, p0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mScreenWidth:I
 
     int-to-float p2, p1
@@ -514,7 +516,7 @@
 
     int-to-float p1, p1
 
-    .line 282
+    .line 293
     sget p2, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->SIDE_GESTURE_EDGE_BACK_SCALE:F
 
     mul-float/2addr p1, p2
@@ -523,7 +525,7 @@
 
     iput p1, p0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mSideGestureKeyDistanceThreshold:I
 
-    .line 283
+    .line 294
     iget-object p1, p0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mWm:Landroid/view/WindowManager;
 
     invoke-interface {p1}, Landroid/view/WindowManager;->getDefaultDisplay()Landroid/view/Display;
@@ -532,7 +534,7 @@
 
     iput-object p1, p0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mDisplay:Landroid/view/Display;
 
-    .line 284
+    .line 295
     new-instance p1, Lcom/oneplus/phone/OpSideGestureConfiguration;
 
     iget-object p2, p0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mDisplay:Landroid/view/Display;
@@ -541,17 +543,17 @@
 
     iput-object p1, p0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mOpSideGestureConfiguration:Lcom/oneplus/phone/OpSideGestureConfiguration;
 
-    .line 285
+    .line 296
     new-instance p1, Landroid/util/DisplayMetrics;
 
     invoke-direct {p1}, Landroid/util/DisplayMetrics;-><init>()V
 
-    .line 286
+    .line 297
     iget-object p2, p0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mDisplay:Landroid/view/Display;
 
     invoke-virtual {p2, p1}, Landroid/view/Display;->getRealMetrics(Landroid/util/DisplayMetrics;)V
 
-    .line 287
+    .line 298
     iget p2, p1, Landroid/util/DisplayMetrics;->widthPixels:I
 
     iget v0, p1, Landroid/util/DisplayMetrics;->heightPixels:I
@@ -562,7 +564,7 @@
 
     iput p2, p0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mScreenHeight:I
 
-    .line 288
+    .line 299
     iget p2, p1, Landroid/util/DisplayMetrics;->widthPixels:I
 
     iget p1, p1, Landroid/util/DisplayMetrics;->heightPixels:I
@@ -573,7 +575,7 @@
 
     iput p1, p0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mScreenWidth:I
 
-    .line 294
+    .line 305
     new-instance p1, Landroid/os/HandlerThread;
 
     const-string p2, "OemGestureBtnAnimThread"
@@ -582,13 +584,13 @@
 
     invoke-direct {p1, p2, v0}, Landroid/os/HandlerThread;-><init>(Ljava/lang/String;I)V
 
-    .line 296
+    .line 307
     invoke-virtual {p1}, Landroid/os/HandlerThread;->start()V
 
-    .line 297
+    .line 308
     new-instance p2, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler$OemGestureButtonHandler;
 
-    .line 298
+    .line 309
     invoke-virtual {p1}, Landroid/os/HandlerThread;->getLooper()Landroid/os/Looper;
 
     move-result-object p1
@@ -597,7 +599,7 @@
 
     iput-object p2, p0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mOemGestureButtonAnimHandler:Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler$OemGestureButtonHandler;
 
-    .line 302
+    .line 313
     iget-object p1, p0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mContext:Landroid/content/Context;
 
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -612,24 +614,98 @@
 
     sput p1, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mCameraNotchHeight:I
 
-    .line 305
+    .line 317
+    iget-object p1, p0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mContext:Landroid/content/Context;
+
+    invoke-virtual {p1}, Landroid/content/Context;->getDisplay()Landroid/view/Display;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_2
+
+    .line 319
+    iget-object p1, p0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mDisplay:Landroid/view/Display;
+
+    invoke-virtual {p1}, Landroid/view/Display;->getRotation()I
+
+    move-result p1
+
+    if-eqz p1, :cond_1
+
+    const/4 p2, 0x2
+
+    if-ne p1, p2, :cond_0
+
+    goto :goto_0
+
+    .line 324
+    :cond_0
+    iget-object p1, p0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mContext:Landroid/content/Context;
+
+    invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object p1
+
+    sget p2, Lcom/android/systemui/R$dimen;->op_game_mode_toolbox_region_width_land:I
+
+    invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+
+    move-result p1
+
+    iput p1, p0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mGameToolBoxRegionHeight:I
+
+    goto :goto_1
+
+    .line 321
+    :cond_1
+    :goto_0
+    iget-object p1, p0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mContext:Landroid/content/Context;
+
+    invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object p1
+
+    sget p2, Lcom/android/systemui/R$dimen;->op_game_mode_toolbox_region_width_port:I
+
+    invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+
+    move-result p1
+
+    iput p1, p0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mGameToolBoxRegionHeight:I
+
+    goto :goto_1
+
+    :cond_2
+    const/high16 p1, 0x42400000    # 48.0f
+
+    .line 328
+    iget-object p2, p0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mContext:Landroid/content/Context;
+
+    invoke-static {p1, p2}, Lcom/android/systemui/assist/ui/DisplayUtils;->convertDpToPx(FLandroid/content/Context;)I
+
+    move-result p1
+
+    iput p1, p0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mGameToolBoxRegionHeight:I
+
+    .line 332
+    :goto_1
     sget-boolean p1, Landroid/view/ViewRootImplInjector;->IS_SUPPORT_CAMERA_NOTCH:Z
 
-    if-eqz p1, :cond_0
+    if-eqz p1, :cond_3
 
     const/4 p1, 0x1
 
-    .line 307
+    .line 334
     iput-boolean p1, p0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mIsIgnoreCameraNotch:Z
 
-    :cond_0
+    :cond_3
     return-void
 .end method
 
 .method static synthetic access$002(Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;I)I
     .locals 0
 
-    .line 103
+    .line 109
     iput p1, p0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mImeHeight:I
 
     return p1
@@ -638,7 +714,7 @@
 .method static synthetic access$100(Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;)I
     .locals 0
 
-    .line 103
+    .line 109
     iget p0, p0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mDisplayId:I
 
     return p0
@@ -647,7 +723,7 @@
 .method static synthetic access$1000()[F
     .locals 1
 
-    .line 103
+    .line 109
     sget-object v0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->sEffectParams:[F
 
     return-object v0
@@ -656,7 +732,7 @@
 .method static synthetic access$1100(Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;)Landroid/graphics/PointF;
     .locals 0
 
-    .line 103
+    .line 109
     iget-object p0, p0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mDownPoint:Landroid/graphics/PointF;
 
     return-object p0
@@ -665,7 +741,7 @@
 .method static synthetic access$1200(Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;)I
     .locals 0
 
-    .line 103
+    .line 109
     iget p0, p0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mScreenWidth:I
 
     return p0
@@ -674,7 +750,7 @@
 .method static synthetic access$1300(Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;Landroid/view/InputEvent;)V
     .locals 0
 
-    .line 103
+    .line 109
     invoke-direct {p0, p1}, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->onInputEvent(Landroid/view/InputEvent;)V
 
     return-void
@@ -683,7 +759,7 @@
 .method static synthetic access$200(Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;)Ljava/util/concurrent/Executor;
     .locals 0
 
-    .line 103
+    .line 109
     iget-object p0, p0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mMainExecutor:Ljava/util/concurrent/Executor;
 
     return-object p0
@@ -692,7 +768,7 @@
 .method static synthetic access$300(Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;)Landroid/graphics/Region;
     .locals 0
 
-    .line 103
+    .line 109
     iget-object p0, p0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mExcludeRegion:Landroid/graphics/Region;
 
     return-object p0
@@ -701,7 +777,7 @@
 .method static synthetic access$400(Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;)Lcom/oneplus/phone/OpSideGestureNavView;
     .locals 0
 
-    .line 103
+    .line 109
     iget-object p0, p0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mEdgePanel:Lcom/oneplus/phone/OpSideGestureNavView;
 
     return-object p0
@@ -710,7 +786,7 @@
 .method static synthetic access$500(Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;)Landroid/graphics/Rect;
     .locals 0
 
-    .line 103
+    .line 109
     iget-object p0, p0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mSamplingRect:Landroid/graphics/Rect;
 
     return-object p0
@@ -719,7 +795,7 @@
 .method static synthetic access$600(Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;II)V
     .locals 0
 
-    .line 103
+    .line 109
     invoke-direct {p0, p1, p2}, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->sendEvent(II)V
 
     return-void
@@ -728,7 +804,7 @@
 .method static synthetic access$700(Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;)Z
     .locals 0
 
-    .line 103
+    .line 109
     invoke-direct {p0}, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->isPortrait()Z
 
     move-result p0
@@ -739,7 +815,7 @@
 .method static synthetic access$800(Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;)V
     .locals 0
 
-    .line 103
+    .line 109
     invoke-direct {p0}, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->updateGestureButtonRegion()V
 
     return-void
@@ -748,7 +824,7 @@
 .method static synthetic access$900(Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;)I
     .locals 0
 
-    .line 103
+    .line 109
     iget p0, p0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mEffectStage:I
 
     return p0
@@ -757,7 +833,7 @@
 .method static synthetic access$902(Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;I)I
     .locals 0
 
-    .line 103
+    .line 109
     iput p1, p0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mEffectStage:I
 
     return p1
@@ -766,7 +842,7 @@
 .method static synthetic access$908(Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;)I
     .locals 2
 
-    .line 103
+    .line 109
     iget v0, p0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mEffectStage:I
 
     add-int/lit8 v1, v0, 0x1
@@ -781,25 +857,25 @@
 
     const/4 v0, 0x0
 
-    .line 758
+    .line 796
     iput-boolean v0, p0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mAllowGesture:Z
 
-    .line 759
+    .line 797
     invoke-static {p1}, Landroid/view/MotionEvent;->obtain(Landroid/view/MotionEvent;)Landroid/view/MotionEvent;
 
     move-result-object p1
 
     const/4 v0, 0x3
 
-    .line 760
+    .line 798
     invoke-virtual {p1, v0}, Landroid/view/MotionEvent;->setAction(I)V
 
-    .line 761
+    .line 799
     iget-object p0, p0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mEdgePanel:Lcom/oneplus/phone/OpSideGestureNavView;
 
     invoke-virtual {p0, p1}, Lcom/oneplus/phone/OpSideGestureNavView;->handleTouch(Landroid/view/MotionEvent;)V
 
-    .line 762
+    .line 800
     invoke-virtual {p1}, Landroid/view/MotionEvent;->recycle()V
 
     return-void
@@ -808,33 +884,90 @@
 .method private disposeInputChannel()V
     .locals 2
 
-    .line 356
+    .line 383
     iget-object v0, p0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mInputEventReceiver:Landroid/view/InputEventReceiver;
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_0
 
-    .line 357
+    .line 384
     invoke-virtual {v0}, Landroid/view/InputEventReceiver;->dispose()V
 
-    .line 358
+    .line 385
     iput-object v1, p0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mInputEventReceiver:Landroid/view/InputEventReceiver;
 
-    .line 360
+    .line 387
     :cond_0
     iget-object v0, p0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mInputMonitor:Landroid/view/InputMonitor;
 
     if-eqz v0, :cond_1
 
-    .line 361
+    .line 388
     invoke-virtual {v0}, Landroid/view/InputMonitor;->dispose()V
 
-    .line 362
+    .line 389
     iput-object v1, p0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mInputMonitor:Landroid/view/InputMonitor;
 
     :cond_1
     return-void
+.end method
+
+.method private gameToolboxEnable()Z
+    .locals 4
+
+    .line 1165
+    iget-object v0, p0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mContext:Landroid/content/Context;
+
+    .line 1166
+    invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object v0
+
+    const/4 v1, -0x2
+
+    const-string v2, "game_mode_status"
+
+    .line 1165
+    invoke-static {v0, v2, v1}, Landroid/provider/Settings$System;->getStringForUser(Landroid/content/ContentResolver;Ljava/lang/String;I)Ljava/lang/String;
+
+    move-result-object v0
+
+    .line 1167
+    iget-object p0, p0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mContext:Landroid/content/Context;
+
+    .line 1168
+    invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object p0
+
+    const/4 v2, 0x1
+
+    const-string v3, "game_toolbox_enable"
+
+    .line 1167
+    invoke-static {p0, v3, v2, v1}, Landroid/provider/Settings$System;->getIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)I
+
+    move-result p0
+
+    const-string v1, "1"
+
+    .line 1169
+    invoke-static {v0, v1}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    if-ne p0, v2, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v2, 0x0
+
+    :goto_0
+    return v2
 .end method
 
 .method private getScreenHeight(I)I
@@ -859,20 +992,20 @@
 
     goto :goto_0
 
-    .line 1086
+    .line 1124
     :cond_1
     iget p0, p0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mScreenHeight:I
 
     return p0
 
-    .line 1084
+    .line 1122
     :cond_2
     :goto_0
     iget p0, p0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mScreenWidth:I
 
     return p0
 
-    .line 1082
+    .line 1120
     :cond_3
     :goto_1
     iget p0, p0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mScreenHeight:I
@@ -880,10 +1013,35 @@
     return p0
 .end method
 
+.method private isGameToolBoxRegion(I)Z
+    .locals 1
+
+    .line 719
+    invoke-direct {p0}, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->gameToolboxEnable()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iget p0, p0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mGameToolBoxRegionHeight:I
+
+    if-ge p1, p0, :cond_0
+
+    const/4 p0, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p0, 0x0
+
+    :goto_0
+    return p0
+.end method
+
 .method private isPortrait()Z
     .locals 1
 
-    .line 615
+    .line 642
     iget p0, p0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mRotation:I
 
     if-eqz p0, :cond_1
@@ -910,7 +1068,7 @@
 .method private isWithinTouchRegion(II)Z
     .locals 8
 
-    .line 702
+    .line 735
     sget-boolean v0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->sSideGestureEnabled:Z
 
     const/4 v1, 0x1
@@ -919,7 +1077,7 @@
 
     if-nez v0, :cond_8
 
-    .line 703
+    .line 736
     invoke-direct {p0}, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->isPortrait()Z
 
     move-result v0
@@ -928,7 +1086,7 @@
 
     if-eqz v0, :cond_2
 
-    .line 704
+    .line 737
     iget v0, p0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mScreenHeight:I
 
     iget v4, p0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mSwipeStartThreshold:I
@@ -939,7 +1097,7 @@
 
     return v2
 
-    .line 707
+    .line 740
     :cond_0
     iget p0, p0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mScreenWidth:I
 
@@ -956,7 +1114,7 @@
     :cond_1
     return v1
 
-    .line 711
+    .line 744
     :cond_2
     iget v0, p0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mRotation:I
 
@@ -982,7 +1140,7 @@
     :cond_4
     return v2
 
-    .line 715
+    .line 748
     :cond_5
     iget p0, p0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mScreenWidth:I
 
@@ -1005,7 +1163,7 @@
     :goto_0
     return v1
 
-    .line 728
+    .line 761
     :cond_8
     iget-object v0, p0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mDisplaySize:Landroid/graphics/Point;
 
@@ -1015,7 +1173,7 @@
 
     sub-int/2addr v0, v3
 
-    if-gt p2, v0, :cond_c
+    if-gt p2, v0, :cond_d
 
     invoke-direct {p0, p2}, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->isYInTouchRegion(I)Z
 
@@ -1025,7 +1183,7 @@
 
     goto :goto_1
 
-    .line 740
+    .line 773
     :cond_9
     iget v0, p0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mRotation:I
 
@@ -1035,7 +1193,7 @@
 
     if-le p1, v0, :cond_a
 
-    .line 742
+    .line 775
     iget-object v3, p0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mDisplaySize:Landroid/graphics/Point;
 
     iget v3, v3, Landroid/graphics/Point;->x:I
@@ -1046,17 +1204,27 @@
 
     return v2
 
-    .line 748
+    .line 782
     :cond_a
+    invoke-direct {p0, p2}, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->isGameToolBoxRegion(I)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_b
+
+    return v2
+
+    .line 786
+    :cond_b
     iget-object v0, p0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mExcludeRegion:Landroid/graphics/Region;
 
     invoke-virtual {v0, p1, p2}, Landroid/graphics/Region;->contains(II)Z
 
     move-result p1
 
-    if-eqz p1, :cond_b
+    if-eqz p1, :cond_c
 
-    .line 750
+    .line 788
     iget-object v2, p0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mOverviewProxyService:Lcom/android/systemui/recents/OverviewProxyService;
 
     const/4 v3, 0x0
@@ -1073,12 +1241,12 @@
 
     invoke-virtual/range {v2 .. v7}, Lcom/android/systemui/recents/OverviewProxyService;->notifyBackAction(ZIIZZ)V
 
-    :cond_b
+    :cond_c
     xor-int/lit8 p0, p1, 0x1
 
     return p0
 
-    :cond_c
+    :cond_d
     :goto_1
     return v2
 .end method
@@ -1088,7 +1256,7 @@
 
     int-to-float p1, p1
 
-    .line 693
+    .line 726
     iget v0, p0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mRotation:I
 
     invoke-direct {p0, v0}, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->getScreenHeight(I)I
@@ -1119,12 +1287,12 @@
 .method private onInputEvent(Landroid/view/InputEvent;)V
     .locals 1
 
-    .line 685
+    .line 712
     instance-of v0, p1, Landroid/view/MotionEvent;
 
     if-eqz v0, :cond_0
 
-    .line 686
+    .line 713
     check-cast p1, Landroid/view/MotionEvent;
 
     invoke-direct {p0, p1}, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->onMotionEvent(Landroid/view/MotionEvent;)V
@@ -1140,17 +1308,17 @@
 
     move-object/from16 v1, p1
 
-    .line 768
+    .line 806
     invoke-virtual/range {p1 .. p1}, Landroid/view/MotionEvent;->getRawX()F
 
     move-result v2
 
-    .line 769
+    .line 807
     invoke-virtual/range {p1 .. p1}, Landroid/view/MotionEvent;->getRawY()F
 
     move-result v3
 
-    .line 774
+    .line 812
     invoke-virtual/range {p1 .. p1}, Landroid/view/MotionEvent;->getActionMasked()I
 
     move-result v4
@@ -1163,14 +1331,14 @@
 
     if-nez v4, :cond_6
 
-    .line 778
+    .line 816
     iget-object v2, v0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mOverviewProxyService:Lcom/android/systemui/recents/OverviewProxyService;
 
     invoke-virtual {v2}, Lcom/android/systemui/recents/OverviewProxyService;->getSystemUiStateFlags()I
 
     move-result v2
 
-    .line 779
+    .line 817
     invoke-virtual/range {p1 .. p1}, Landroid/view/MotionEvent;->getX()F
 
     move-result v3
@@ -1197,7 +1365,7 @@
     :goto_0
     iput-boolean v3, v0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mIsOnLeftEdge:Z
 
-    .line 787
+    .line 825
     invoke-static {}, Lcom/oneplus/plugin/OpLsState;->getInstance()Lcom/oneplus/plugin/OpLsState;
 
     move-result-object v3
@@ -1212,7 +1380,7 @@
 
     move-result v3
 
-    .line 788
+    .line 826
     invoke-static {v2}, Lcom/android/systemui/shared/system/QuickStepContract;->isBackGestureDisabled(I)Z
 
     move-result v4
@@ -1221,7 +1389,7 @@
 
     if-eqz v3, :cond_2
 
-    .line 789
+    .line 827
     :cond_1
     invoke-virtual/range {p1 .. p1}, Landroid/view/MotionEvent;->getX()F
 
@@ -1251,12 +1419,12 @@
     :goto_1
     iput-boolean v4, v0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mAllowGesture:Z
 
-    .line 791
+    .line 829
     sget-boolean v4, Lcom/oneplus/util/OpUtils;->DEBUG_ONEPLUS:Z
 
     if-eqz v4, :cond_3
 
-    .line 792
+    .line 830
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -1285,23 +1453,23 @@
 
     invoke-static {v5, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 796
+    .line 834
     :cond_3
     iget-boolean v2, v0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mAllowGesture:Z
 
     if-eqz v2, :cond_1a
 
-    .line 797
+    .line 835
     sget-boolean v2, Landroid/os/Build;->DEBUG_ONEPLUS:Z
 
     if-eqz v2, :cond_4
 
     const-string v2, "AllowGesture down"
 
-    .line 798
+    .line 836
     invoke-static {v5, v2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 809
+    .line 847
     :cond_4
     iget-object v2, v0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mEdgePanelLp:Landroid/view/WindowManager$LayoutParams;
 
@@ -1316,23 +1484,23 @@
     :cond_5
     const/16 v3, 0x55
 
-    .line 811
+    .line 849
     :goto_2
     iput v3, v2, Landroid/view/WindowManager$LayoutParams;->gravity:I
 
-    .line 812
+    .line 850
     iget-object v2, v0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mEdgePanel:Lcom/oneplus/phone/OpSideGestureNavView;
 
     iget-boolean v3, v0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mIsOnLeftEdge:Z
 
     invoke-virtual {v2, v3}, Lcom/oneplus/phone/OpSideGestureNavView;->setIsLeftPanel(Z)V
 
-    .line 813
+    .line 851
     iget-object v2, v0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mEdgePanel:Lcom/oneplus/phone/OpSideGestureNavView;
 
     invoke-virtual {v2, v1}, Lcom/oneplus/phone/OpSideGestureNavView;->handleTouch(Landroid/view/MotionEvent;)V
 
-    .line 816
+    .line 854
     iget-object v2, v0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mWm:Landroid/view/WindowManager;
 
     iget-object v3, v0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mEdgePanel:Lcom/oneplus/phone/OpSideGestureNavView;
@@ -1341,14 +1509,14 @@
 
     invoke-interface {v2, v3, v4}, Landroid/view/WindowManager;->updateViewLayout(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 817
+    .line 855
     iget-object v2, v0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mRegionSamplingHelper:Lcom/android/systemui/statusbar/phone/RegionSamplingHelper;
 
     iget-object v3, v0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mSamplingRect:Landroid/graphics/Rect;
 
     invoke-virtual {v2, v3}, Lcom/android/systemui/statusbar/phone/RegionSamplingHelper;->start(Landroid/graphics/Rect;)V
 
-    .line 819
+    .line 857
     iget-object v2, v0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mDownPoint:Landroid/graphics/PointF;
 
     invoke-virtual/range {p1 .. p1}, Landroid/view/MotionEvent;->getX()F
@@ -1361,18 +1529,18 @@
 
     invoke-virtual {v2, v3, v1}, Landroid/graphics/PointF;->set(FF)V
 
-    .line 820
+    .line 858
     iput-boolean v6, v0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mThresholdCrossed:Z
 
     goto/16 :goto_b
 
-    .line 822
+    .line 860
     :cond_6
     iget-boolean v8, v0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mAllowGesture:Z
 
     if-eqz v8, :cond_1a
 
-    .line 823
+    .line 861
     iget-boolean v8, v0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mThresholdCrossed:Z
 
     const/4 v9, 0x5
@@ -1383,7 +1551,7 @@
 
     if-ne v4, v9, :cond_7
 
-    .line 826
+    .line 864
     invoke-direct/range {p0 .. p1}, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->cancelGesture(Landroid/view/MotionEvent;)V
 
     return-void
@@ -1391,7 +1559,7 @@
     :cond_7
     if-ne v4, v10, :cond_e
 
-    .line 829
+    .line 867
     invoke-virtual/range {p1 .. p1}, Landroid/view/MotionEvent;->getEventTime()J
 
     move-result-wide v11
@@ -1410,12 +1578,12 @@
 
     if-lez v8, :cond_8
 
-    .line 830
+    .line 868
     invoke-direct/range {p0 .. p1}, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->cancelGesture(Landroid/view/MotionEvent;)V
 
     return-void
 
-    .line 833
+    .line 871
     :cond_8
     invoke-virtual/range {p1 .. p1}, Landroid/view/MotionEvent;->getX()F
 
@@ -1431,7 +1599,7 @@
 
     move-result v8
 
-    .line 834
+    .line 872
     invoke-virtual/range {p1 .. p1}, Landroid/view/MotionEvent;->getY()F
 
     move-result v11
@@ -1446,19 +1614,19 @@
 
     move-result v11
 
-    .line 839
+    .line 877
     sget-boolean v12, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->sSideGestureEnabled:Z
 
     if-nez v12, :cond_c
 
-    .line 841
+    .line 879
     invoke-direct/range {p0 .. p0}, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->isPortrait()Z
 
     move-result v2
 
     if-eqz v2, :cond_9
 
-    .line 842
+    .line 880
     sget v2, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->GESTURE_KEY_DISTANCE_THRESHOLD:I
 
     int-to-float v2, v2
@@ -1469,7 +1637,7 @@
 
     goto :goto_3
 
-    .line 846
+    .line 884
     :cond_9
     sget v2, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->GESTURE_KEY_DISTANCE_THRESHOLD:I
 
@@ -1487,21 +1655,21 @@
 
     const-string v2, "onMotionEvent sendBackKey"
 
-    .line 852
+    .line 890
     invoke-static {v5, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 853
+    .line 891
     iget-object v2, v0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mOemGestureButtonAnimHandler:Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler$OemGestureButtonHandler;
 
     invoke-virtual {v2, v7}, Landroid/os/Handler;->sendEmptyMessage(I)Z
 
-    .line 855
+    .line 893
     invoke-direct/range {p0 .. p1}, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->cancelGesture(Landroid/view/MotionEvent;)V
 
     :cond_b
     return-void
 
-    .line 874
+    .line 912
     :cond_c
     iget v12, v0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mSideGestureKeyAnimThreshold:I
 
@@ -1511,15 +1679,15 @@
 
     if-lez v8, :cond_d
 
-    .line 877
+    .line 915
     iput-boolean v7, v0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mThresholdCrossed:Z
 
-    .line 879
+    .line 917
     iget-object v5, v0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mInputMonitor:Landroid/view/InputMonitor;
 
     invoke-virtual {v5}, Landroid/view/InputMonitor;->pilferPointers()V
 
-    .line 881
+    .line 919
     iget-object v5, v0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mEdgePanel:Lcom/oneplus/phone/OpSideGestureNavView;
 
     invoke-virtual {v5}, Lcom/oneplus/phone/OpSideGestureNavView;->onDownEvent()V
@@ -1529,7 +1697,7 @@
     :cond_d
     int-to-float v8, v12
 
-    .line 884
+    .line 922
     sget v12, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->SIDE_GESTURE_EDGE_HORIZONTAL_SCALE:F
 
     mul-float/2addr v8, v12
@@ -1538,7 +1706,7 @@
 
     if-lez v8, :cond_e
 
-    .line 885
+    .line 923
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -1555,19 +1723,19 @@
 
     invoke-static {v5, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 886
+    .line 924
     invoke-direct/range {p0 .. p1}, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->cancelGesture(Landroid/view/MotionEvent;)V
 
     return-void
 
-    .line 895
+    .line 933
     :cond_e
     :goto_4
     iget-object v5, v0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mEdgePanel:Lcom/oneplus/phone/OpSideGestureNavView;
 
     invoke-virtual {v5, v1}, Lcom/oneplus/phone/OpSideGestureNavView;->handleTouch(Landroid/view/MotionEvent;)V
 
-    .line 898
+    .line 936
     invoke-virtual/range {p1 .. p1}, Landroid/view/MotionEvent;->getY()F
 
     move-result v5
@@ -1578,14 +1746,14 @@
 
     move-result v5
 
-    .line 900
+    .line 938
     iget-object v8, v0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mDisplay:Landroid/view/Display;
 
     invoke-virtual {v8}, Landroid/view/Display;->getRotation()I
 
     move-result v8
 
-    .line 902
+    .line 940
     invoke-virtual/range {p1 .. p1}, Landroid/view/MotionEvent;->getX()F
 
     move-result v11
@@ -1600,7 +1768,7 @@
 
     move-result v18
 
-    .line 904
+    .line 942
     iget v11, v0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mSideGestureKeyDistanceThreshold:I
 
     int-to-float v11, v11
@@ -1632,7 +1800,7 @@
     :cond_10
     move v13, v11
 
-    .line 910
+    .line 948
     :goto_6
     iget-object v10, v0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mEdgePanel:Lcom/oneplus/phone/OpSideGestureNavView;
 
@@ -1642,7 +1810,7 @@
 
     invoke-direct {v12, v2, v3}, Landroid/graphics/PointF;-><init>(FF)V
 
-    .line 911
+    .line 949
     iget-boolean v11, v0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mIsOnLeftEdge:Z
 
     xor-int/lit8 v16, v11, 0x1
@@ -1667,7 +1835,7 @@
 
     invoke-direct/range {v11 .. v17}, Lcom/oneplus/phone/GesturePointContainer;-><init>(Landroid/graphics/PointF;IIIII)V
 
-    .line 910
+    .line 948
     invoke-virtual {v10, v9}, Lcom/oneplus/phone/OpSideGestureNavView;->onUpdateGestureView(Lcom/oneplus/phone/GesturePointContainer;)V
 
     if-ne v4, v7, :cond_11
@@ -1682,7 +1850,7 @@
     :goto_7
     if-eqz v6, :cond_12
 
-    .line 914
+    .line 952
     iget v9, v0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mSideGestureKeyDistanceThreshold:I
 
     int-to-float v9, v9
@@ -1705,7 +1873,7 @@
 
     if-eqz v6, :cond_13
 
-    .line 917
+    .line 955
     iget-object v1, v0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mEdgePanel:Lcom/oneplus/phone/OpSideGestureNavView;
 
     new-instance v10, Lcom/oneplus/phone/GesturePointContainer;
@@ -1716,7 +1884,7 @@
 
     const/4 v13, 0x2
 
-    .line 918
+    .line 956
     iget-boolean v2, v0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mIsOnLeftEdge:Z
 
     xor-int/lit8 v14, v2, 0x1
@@ -1735,7 +1903,7 @@
 
     invoke-direct/range {v11 .. v17}, Lcom/oneplus/phone/GesturePointContainer;-><init>(Landroid/graphics/PointF;IIIII)V
 
-    .line 917
+    .line 955
     invoke-virtual {v1, v10}, Lcom/oneplus/phone/OpSideGestureNavView;->onGestureFinished(Lcom/oneplus/phone/GesturePointContainer;)V
 
     goto :goto_9
@@ -1747,7 +1915,7 @@
 
     if-ne v4, v10, :cond_15
 
-    .line 921
+    .line 959
     :cond_14
     iget-object v10, v0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mEdgePanel:Lcom/oneplus/phone/OpSideGestureNavView;
 
@@ -1759,7 +1927,7 @@
 
     const/4 v13, 0x2
 
-    .line 922
+    .line 960
     iget-boolean v2, v0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mIsOnLeftEdge:Z
 
     xor-int/lit8 v14, v2, 0x1
@@ -1780,15 +1948,15 @@
 
     invoke-direct/range {v11 .. v17}, Lcom/oneplus/phone/GesturePointContainer;-><init>(Landroid/graphics/PointF;IIIII)V
 
-    .line 921
+    .line 959
     invoke-virtual {v10, v9}, Lcom/oneplus/phone/OpSideGestureNavView;->onGestureFinished(Lcom/oneplus/phone/GesturePointContainer;)V
 
-    .line 923
+    .line 961
     iget-object v2, v0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mEdgePanel:Lcom/oneplus/phone/OpSideGestureNavView;
 
     invoke-virtual {v2}, Lcom/oneplus/phone/OpSideGestureNavView;->onUpEvent()V
 
-    .line 924
+    .line 962
     invoke-direct/range {p0 .. p1}, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->cancelGesture(Landroid/view/MotionEvent;)V
 
     :cond_15
@@ -1797,7 +1965,7 @@
 
     if-eqz v5, :cond_17
 
-    .line 935
+    .line 973
     iget-object v1, v0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mEdgePanel:Lcom/oneplus/phone/OpSideGestureNavView;
 
     invoke-virtual {v1}, Lcom/oneplus/phone/OpSideGestureNavView;->shouldTriggerBack()Z
@@ -1810,13 +1978,13 @@
 
     const/4 v2, 0x0
 
-    .line 938
+    .line 976
     invoke-direct {v0, v2, v1}, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->sendEvent(II)V
 
-    .line 939
+    .line 977
     invoke-direct {v0, v7, v1}, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->sendEvent(II)V
 
-    .line 941
+    .line 979
     :cond_16
     iget-object v8, v0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mOverviewProxyService:Lcom/android/systemui/recents/OverviewProxyService;
 
@@ -1847,18 +2015,18 @@
 
     goto :goto_a
 
-    .line 947
+    .line 985
     :cond_18
     invoke-direct/range {p0 .. p0}, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->updateSamplingRect()V
 
-    .line 948
+    .line 986
     iget-object v0, v0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mRegionSamplingHelper:Lcom/android/systemui/statusbar/phone/RegionSamplingHelper;
 
     invoke-virtual {v0}, Lcom/android/systemui/statusbar/phone/RegionSamplingHelper;->updateSamplingRect()V
 
     goto :goto_b
 
-    .line 945
+    .line 983
     :cond_19
     :goto_a
     iget-object v0, v0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mRegionSamplingHelper:Lcom/android/systemui/statusbar/phone/RegionSamplingHelper;
@@ -1873,12 +2041,12 @@
 .method private sendEvent(II)V
     .locals 14
 
-    .line 1021
+    .line 1059
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v3
 
-    .line 1022
+    .line 1060
     new-instance v13, Landroid/view/KeyEvent;
 
     const/4 v7, 0x0
@@ -1903,7 +2071,7 @@
 
     invoke-direct/range {v0 .. v12}, Landroid/view/KeyEvent;-><init>(JJIIIIIIII)V
 
-    .line 1028
+    .line 1066
     const-class v0, Lcom/android/systemui/bubbles/BubbleController;
 
     invoke-static {v0}, Lcom/android/systemui/Dependency;->get(Ljava/lang/Class;)Ljava/lang/Object;
@@ -1914,7 +2082,7 @@
 
     move-object v1, p0
 
-    .line 1029
+    .line 1067
     iget-object v1, v1, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0, v1}, Lcom/android/systemui/bubbles/BubbleController;->getExpandedDisplayId(Landroid/content/Context;)I
@@ -1931,10 +2099,10 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 1031
+    .line 1069
     invoke-virtual {v13, v0}, Landroid/view/KeyEvent;->setDisplayId(I)V
 
-    .line 1033
+    .line 1071
     :cond_0
     invoke-static {}, Landroid/hardware/input/InputManager;->getInstance()Landroid/hardware/input/InputManager;
 
@@ -1950,7 +2118,7 @@
 .method private updateDisplaySize()V
     .locals 3
 
-    .line 989
+    .line 1027
     iget-object v0, p0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mContext:Landroid/content/Context;
 
     const-class v1, Landroid/hardware/display/DisplayManager;
@@ -1963,7 +2131,7 @@
 
     iget v1, p0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mDisplayId:I
 
-    .line 990
+    .line 1028
     invoke-virtual {v0, v1}, Landroid/hardware/display/DisplayManager;->getDisplay(I)Landroid/view/Display;
 
     move-result-object v0
@@ -1974,12 +2142,12 @@
 
     const-string v0, "It\'s not update display size, because display is null or display already removed."
 
-    .line 991
+    .line 1029
     invoke-static {p0, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 
-    .line 996
+    .line 1034
     :cond_0
     iget-object v0, p0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mContext:Landroid/content/Context;
 
@@ -1993,22 +2161,22 @@
 
     iget v1, p0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mDisplayId:I
 
-    .line 997
+    .line 1035
     invoke-virtual {v0, v1}, Landroid/hardware/display/DisplayManager;->getDisplay(I)Landroid/view/Display;
 
     move-result-object v0
 
     iget-object v1, p0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mDisplaySize:Landroid/graphics/Point;
 
-    .line 998
+    .line 1036
     invoke-virtual {v0, v1}, Landroid/view/Display;->getRealSize(Landroid/graphics/Point;)V
 
-    .line 1000
+    .line 1038
     new-instance v0, Landroid/util/DisplayMetrics;
 
     invoke-direct {v0}, Landroid/util/DisplayMetrics;-><init>()V
 
-    .line 1001
+    .line 1039
     iget-object v1, p0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mWm:Landroid/view/WindowManager;
 
     invoke-interface {v1}, Landroid/view/WindowManager;->getDefaultDisplay()Landroid/view/Display;
@@ -2017,12 +2185,12 @@
 
     iput-object v1, p0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mDisplay:Landroid/view/Display;
 
-    .line 1002
+    .line 1040
     iget-object v1, p0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mDisplay:Landroid/view/Display;
 
     invoke-virtual {v1, v0}, Landroid/view/Display;->getRealMetrics(Landroid/util/DisplayMetrics;)V
 
-    .line 1003
+    .line 1041
     iget v1, v0, Landroid/util/DisplayMetrics;->widthPixels:I
 
     iget v2, v0, Landroid/util/DisplayMetrics;->heightPixels:I
@@ -2033,7 +2201,7 @@
 
     iput v1, p0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mScreenHeight:I
 
-    .line 1004
+    .line 1042
     iget v1, v0, Landroid/util/DisplayMetrics;->widthPixels:I
 
     iget v0, v0, Landroid/util/DisplayMetrics;->heightPixels:I
@@ -2044,7 +2212,7 @@
 
     iput v0, p0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mScreenWidth:I
 
-    .line 1006
+    .line 1044
     iget v0, p0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mScreenWidth:I
 
     int-to-float v1, v0
@@ -2059,7 +2227,7 @@
 
     int-to-float v1, v0
 
-    .line 1007
+    .line 1045
     sget v2, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->SIDE_GESTURE_EDGE_MOVE_SCALE:F
 
     mul-float/2addr v1, v2
@@ -2070,7 +2238,7 @@
 
     int-to-float v0, v0
 
-    .line 1008
+    .line 1046
     sget v1, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->SIDE_GESTURE_EDGE_BACK_SCALE:F
 
     mul-float/2addr v0, v1
@@ -2079,7 +2247,7 @@
 
     iput v0, p0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mSideGestureKeyDistanceThreshold:I
 
-    .line 1009
+    .line 1047
     new-instance v0, Lcom/oneplus/phone/OpSideGestureConfiguration;
 
     iget-object v1, p0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mDisplay:Landroid/view/Display;
@@ -2088,7 +2256,7 @@
 
     iput-object v0, p0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mOpSideGestureConfiguration:Lcom/oneplus/phone/OpSideGestureConfiguration;
 
-    .line 1015
+    .line 1053
     iget-object p0, p0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mOemGestureButtonAnimHandler:Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler$OemGestureButtonHandler;
 
     const/4 v0, 0x2
@@ -2101,17 +2269,17 @@
 .method private updateGestureButtonRegion()V
     .locals 2
 
-    .line 511
+    .line 538
     iget-boolean v0, p0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mIsEnabled:Z
 
     if-eqz v0, :cond_1
 
-    .line 512
+    .line 539
     iget-object v0, p0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mEdgeEffectView:Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler$EdgeEffectView;
 
     if-nez v0, :cond_0
 
-    .line 514
+    .line 541
     new-instance v0, Landroid/view/WindowManager$LayoutParams;
 
     const/16 v1, 0x7eb
@@ -2120,7 +2288,7 @@
 
     iput-object v0, p0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mRegionWindowParams:Landroid/view/WindowManager$LayoutParams;
 
-    .line 516
+    .line 543
     iget-object v0, p0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mRegionWindowParams:Landroid/view/WindowManager$LayoutParams;
 
     iget v1, v0, Landroid/view/WindowManager$LayoutParams;->flags:I
@@ -2129,7 +2297,7 @@
 
     iput v1, v0, Landroid/view/WindowManager$LayoutParams;->flags:I
 
-    .line 519
+    .line 546
     iget v1, v0, Landroid/view/WindowManager$LayoutParams;->privateFlags:I
 
     or-int/lit8 v1, v1, 0x10
@@ -2138,15 +2306,15 @@
 
     const/4 v1, 0x1
 
-    .line 521
+    .line 548
     iput v1, v0, Landroid/view/WindowManager$LayoutParams;->layoutInDisplayCutoutMode:I
 
     const-string v1, "GestureButtonRegion"
 
-    .line 523
+    .line 550
     invoke-virtual {v0, v1}, Landroid/view/WindowManager$LayoutParams;->setTitle(Ljava/lang/CharSequence;)V
 
-    .line 524
+    .line 551
     iget-object v0, p0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mRegionWindowParams:Landroid/view/WindowManager$LayoutParams;
 
     const/4 v1, -0x3
@@ -2155,13 +2323,13 @@
 
     const v1, 0x1030004
 
-    .line 525
+    .line 552
     iput v1, v0, Landroid/view/WindowManager$LayoutParams;->windowAnimations:I
 
-    .line 526
+    .line 553
     invoke-direct {p0}, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->updateWindowParams()V
 
-    .line 527
+    .line 554
     new-instance v0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler$EdgeEffectView;
 
     iget-object v1, p0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mContext:Landroid/content/Context;
@@ -2170,14 +2338,14 @@
 
     iput-object v0, p0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mEdgeEffectView:Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler$EdgeEffectView;
 
-    .line 528
+    .line 555
     iget-object v0, p0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mEdgeEffectView:Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler$EdgeEffectView;
 
     iget-object v1, p0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mRegionWindowParams:Landroid/view/WindowManager$LayoutParams;
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 529
+    .line 556
     iget-object v0, p0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mWm:Landroid/view/WindowManager;
 
     iget-object v1, p0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mEdgeEffectView:Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler$EdgeEffectView;
@@ -2188,11 +2356,11 @@
 
     goto :goto_0
 
-    .line 531
+    .line 558
     :cond_0
     invoke-direct {p0}, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->updateWindowParams()V
 
-    .line 532
+    .line 559
     iget-object v0, p0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mWm:Landroid/view/WindowManager;
 
     iget-object v1, p0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mEdgeEffectView:Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler$EdgeEffectView;
@@ -2203,20 +2371,20 @@
 
     goto :goto_0
 
-    .line 535
+    .line 562
     :cond_1
     iget-object v0, p0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mEdgeEffectView:Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler$EdgeEffectView;
 
     if-eqz v0, :cond_3
 
-    .line 536
+    .line 563
     invoke-virtual {v0}, Landroid/widget/ImageView;->getParent()Landroid/view/ViewParent;
 
     move-result-object v0
 
     if-eqz v0, :cond_2
 
-    .line 537
+    .line 564
     iget-object v0, p0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mWm:Landroid/view/WindowManager;
 
     iget-object v1, p0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mEdgeEffectView:Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler$EdgeEffectView;
@@ -2226,14 +2394,14 @@
     :cond_2
     const/4 v0, 0x0
 
-    .line 539
+    .line 566
     iput-object v0, p0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mEdgeEffectView:Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler$EdgeEffectView;
 
     const-string p0, "EdgeBackGestureHandler"
 
     const-string v0, "updateGestureButtonRegion: not enabled"
 
-    .line 540
+    .line 567
     invoke-static {p0, v0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_3
@@ -2244,7 +2412,7 @@
 .method private updateIsEnabled()V
     .locals 10
 
-    .line 373
+    .line 400
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2289,7 +2457,7 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 375
+    .line 402
     iget-boolean v0, p0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mIsAttached:Z
 
     const/4 v2, 0x0
@@ -2312,7 +2480,7 @@
     :cond_1
     move v0, v2
 
-    .line 379
+    .line 406
     :goto_0
     iget-boolean v3, p0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mIsEnabled:Z
 
@@ -2320,43 +2488,43 @@
 
     return-void
 
-    .line 383
+    .line 410
     :cond_2
     iput-boolean v0, p0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mIsEnabled:Z
 
-    .line 384
+    .line 411
     invoke-direct {p0}, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->disposeInputChannel()V
 
-    .line 386
+    .line 413
     iget-object v0, p0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mEdgePanel:Lcom/oneplus/phone/OpSideGestureNavView;
 
     if-eqz v0, :cond_3
 
-    .line 387
+    .line 414
     iget-object v3, p0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mWm:Landroid/view/WindowManager;
 
     invoke-interface {v3, v0}, Landroid/view/WindowManager;->removeView(Landroid/view/View;)V
 
     const/4 v0, 0x0
 
-    .line 388
+    .line 415
     iput-object v0, p0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mEdgePanel:Lcom/oneplus/phone/OpSideGestureNavView;
 
-    .line 389
+    .line 416
     iget-object v3, p0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mRegionSamplingHelper:Lcom/android/systemui/statusbar/phone/RegionSamplingHelper;
 
     invoke-virtual {v3}, Lcom/android/systemui/statusbar/phone/RegionSamplingHelper;->stop()V
 
-    .line 390
+    .line 417
     iput-object v0, p0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mRegionSamplingHelper:Lcom/android/systemui/statusbar/phone/RegionSamplingHelper;
 
-    .line 393
+    .line 420
     :cond_3
     iget-boolean v0, p0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mIsEnabled:Z
 
     if-nez v0, :cond_5
 
-    .line 394
+    .line 421
     invoke-static {}, Lcom/android/systemui/shared/system/WindowManagerWrapper;->getInstance()Lcom/android/systemui/shared/system/WindowManagerWrapper;
 
     move-result-object v0
@@ -2365,7 +2533,7 @@
 
     invoke-virtual {v0, v2}, Lcom/android/systemui/shared/system/WindowManagerWrapper;->removePinnedStackListener(Landroid/view/IPinnedStackListener;)V
 
-    .line 395
+    .line 422
     iget-object v0, p0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mContext:Landroid/content/Context;
 
     const-class v2, Landroid/hardware/display/DisplayManager;
@@ -2378,7 +2546,7 @@
 
     invoke-virtual {v0, p0}, Landroid/hardware/display/DisplayManager;->unregisterDisplayListener(Landroid/hardware/display/DisplayManager$DisplayListener;)V
 
-    .line 404
+    .line 431
     :try_start_0
     iget-object v0, p0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mContext:Landroid/content/Context;
 
@@ -2392,14 +2560,14 @@
 
     iget v2, p0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mDisplayId:I
 
-    .line 405
+    .line 432
     invoke-virtual {v0, v2}, Landroid/hardware/display/DisplayManager;->getDisplay(I)Landroid/view/Display;
 
     move-result-object v0
 
     if-eqz v0, :cond_4
 
-    .line 406
+    .line 433
     invoke-static {}, Landroid/view/WindowManagerGlobal;->getWindowManagerService()Landroid/view/IWindowManager;
 
     move-result-object v0
@@ -2408,7 +2576,7 @@
 
     iget v3, p0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mDisplayId:I
 
-    .line 407
+    .line 434
     invoke-interface {v0, v2, v3}, Landroid/view/IWindowManager;->unregisterSystemGestureExclusionListener(Landroid/view/ISystemGestureExclusionListener;I)V
 
     goto :goto_1
@@ -2416,7 +2584,7 @@
     :cond_4
     const-string v0, "It is not unregister system gesture exclusion listener, because display is null or display already removed."
 
-    .line 410
+    .line 437
     invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
@@ -2428,10 +2596,10 @@
 
     const-string v2, "Failed to unregister window manager callbacks"
 
-    .line 416
+    .line 443
     invoke-static {v1, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 421
+    .line 448
     :goto_1
     iget-object p0, p0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mOemGestureButtonAnimHandler:Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler$OemGestureButtonHandler;
 
@@ -2441,11 +2609,11 @@
 
     goto/16 :goto_3
 
-    .line 425
+    .line 452
     :cond_5
     invoke-direct {p0}, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->updateDisplaySize()V
 
-    .line 426
+    .line 453
     iget-object v0, p0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mContext:Landroid/content/Context;
 
     const-class v3, Landroid/hardware/display/DisplayManager;
@@ -2458,15 +2626,15 @@
 
     iget-object v3, p0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mContext:Landroid/content/Context;
 
-    .line 427
+    .line 454
     invoke-virtual {v3}, Landroid/content/Context;->getMainThreadHandler()Landroid/os/Handler;
 
     move-result-object v3
 
-    .line 426
+    .line 453
     invoke-virtual {v0, p0, v3}, Landroid/hardware/display/DisplayManager;->registerDisplayListener(Landroid/hardware/display/DisplayManager$DisplayListener;Landroid/os/Handler;)V
 
-    .line 437
+    .line 464
     :try_start_1
     iget-object v0, p0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mContext:Landroid/content/Context;
 
@@ -2480,14 +2648,14 @@
 
     iget v3, p0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mDisplayId:I
 
-    .line 438
+    .line 465
     invoke-virtual {v0, v3}, Landroid/hardware/display/DisplayManager;->getDisplay(I)Landroid/view/Display;
 
     move-result-object v0
 
     if-eqz v0, :cond_6
 
-    .line 439
+    .line 466
     invoke-static {}, Lcom/android/systemui/shared/system/WindowManagerWrapper;->getInstance()Lcom/android/systemui/shared/system/WindowManagerWrapper;
 
     move-result-object v0
@@ -2496,7 +2664,7 @@
 
     invoke-virtual {v0, v3}, Lcom/android/systemui/shared/system/WindowManagerWrapper;->addPinnedStackListener(Landroid/view/IPinnedStackListener;)V
 
-    .line 440
+    .line 467
     invoke-static {}, Landroid/view/WindowManagerGlobal;->getWindowManagerService()Landroid/view/IWindowManager;
 
     move-result-object v0
@@ -2505,7 +2673,7 @@
 
     iget v4, p0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mDisplayId:I
 
-    .line 441
+    .line 468
     invoke-interface {v0, v3, v4}, Landroid/view/IWindowManager;->registerSystemGestureExclusionListener(Landroid/view/ISystemGestureExclusionListener;I)V
 
     goto :goto_2
@@ -2513,7 +2681,7 @@
     :cond_6
     const-string v0, "It is not register system gesture exclusion listener, because display is null or display already removed."
 
-    .line 444
+    .line 471
     invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_1
     .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_1
@@ -2525,10 +2693,10 @@
 
     const-string v3, "Failed to register window manager callbacks"
 
-    .line 448
+    .line 475
     invoke-static {v1, v3, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 452
+    .line 479
     :goto_2
     invoke-static {}, Landroid/hardware/input/InputManager;->getInstance()Landroid/hardware/input/InputManager;
 
@@ -2544,12 +2712,12 @@
 
     iput-object v0, p0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mInputMonitor:Landroid/view/InputMonitor;
 
-    .line 454
+    .line 481
     new-instance v0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler$SysUiInputEventReceiver;
 
     iget-object v3, p0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mInputMonitor:Landroid/view/InputMonitor;
 
-    .line 455
+    .line 482
     invoke-virtual {v3}, Landroid/view/InputMonitor;->getInputChannel()Landroid/view/InputChannel;
 
     move-result-object v3
@@ -2562,7 +2730,7 @@
 
     iput-object v0, p0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mInputEventReceiver:Landroid/view/InputEventReceiver;
 
-    .line 475
+    .line 502
     new-instance v0, Lcom/oneplus/phone/OpSideGestureNavView;
 
     iget-object v3, p0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mContext:Landroid/content/Context;
@@ -2571,15 +2739,15 @@
 
     iput-object v0, p0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mEdgePanel:Lcom/oneplus/phone/OpSideGestureNavView;
 
-    .line 476
+    .line 503
     new-instance v0, Landroid/view/WindowManager$LayoutParams;
 
-    .line 477
+    .line 504
     invoke-static {}, Lcom/oneplus/phone/OpSideGestureConfiguration;->getWindowWidth()I
 
     move-result v5
 
-    .line 478
+    .line 505
     invoke-static {v2}, Lcom/oneplus/phone/OpSideGestureConfiguration;->getWindowHeight(I)I
 
     move-result v6
@@ -2596,7 +2764,7 @@
 
     iput-object v0, p0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mEdgePanelLp:Landroid/view/WindowManager$LayoutParams;
 
-    .line 487
+    .line 514
     iget-object v0, p0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mEdgePanelLp:Landroid/view/WindowManager$LayoutParams;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -2615,7 +2783,7 @@
 
     invoke-virtual {v0, v1}, Landroid/view/WindowManager$LayoutParams;->setTitle(Ljava/lang/CharSequence;)V
 
-    .line 488
+    .line 515
     iget-object v0, p0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mEdgePanelLp:Landroid/view/WindowManager$LayoutParams;
 
     iget-object v1, p0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mContext:Landroid/content/Context;
@@ -2628,17 +2796,17 @@
 
     iput-object v1, v0, Landroid/view/WindowManager$LayoutParams;->accessibilityTitle:Ljava/lang/CharSequence;
 
-    .line 489
+    .line 516
     iget-object v0, p0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mEdgePanelLp:Landroid/view/WindowManager$LayoutParams;
 
     iput v2, v0, Landroid/view/WindowManager$LayoutParams;->windowAnimations:I
 
-    .line 490
+    .line 517
     iget-object v1, p0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mEdgePanel:Lcom/oneplus/phone/OpSideGestureNavView;
 
     invoke-virtual {v1, v0}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 491
+    .line 518
     iget-object v0, p0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mWm:Landroid/view/WindowManager;
 
     iget-object v1, p0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mEdgePanel:Lcom/oneplus/phone/OpSideGestureNavView;
@@ -2647,7 +2815,7 @@
 
     invoke-interface {v0, v1, v2}, Landroid/view/WindowManager;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 492
+    .line 519
     new-instance v0, Lcom/android/systemui/statusbar/phone/RegionSamplingHelper;
 
     iget-object v1, p0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mEdgePanel:Lcom/oneplus/phone/OpSideGestureNavView;
@@ -2667,12 +2835,12 @@
 .method private updateSamplingRect()V
     .locals 5
 
-    .line 962
+    .line 1000
     iget-object v0, p0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mEdgePanelLp:Landroid/view/WindowManager$LayoutParams;
 
     iget v1, v0, Landroid/view/WindowManager$LayoutParams;->y:I
 
-    .line 963
+    .line 1001
     iget-boolean v2, p0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mIsOnLeftEdge:Z
 
     if-eqz v2, :cond_0
@@ -2694,7 +2862,7 @@
 
     sub-int v0, v2, v0
 
-    .line 964
+    .line 1002
     :goto_0
     iget-object v2, p0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mEdgePanelLp:Landroid/view/WindowManager$LayoutParams;
 
@@ -2702,19 +2870,19 @@
 
     add-int/2addr v2, v0
 
-    .line 965
+    .line 1003
     iget-object v3, p0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mEdgePanelLp:Landroid/view/WindowManager$LayoutParams;
 
     iget v3, v3, Landroid/view/WindowManager$LayoutParams;->height:I
 
     add-int/2addr v3, v1
 
-    .line 966
+    .line 1004
     iget-object v4, p0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mSamplingRect:Landroid/graphics/Rect;
 
     invoke-virtual {v4, v0, v1, v2, v3}, Landroid/graphics/Rect;->set(IIII)V
 
-    .line 967
+    .line 1005
     iget-object v0, p0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mEdgePanel:Lcom/oneplus/phone/OpSideGestureNavView;
 
     iget-object p0, p0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mSamplingRect:Landroid/graphics/Rect;
@@ -2727,14 +2895,14 @@
 .method private updateWindowParams()V
     .locals 4
 
-    .line 594
+    .line 621
     iget-object v0, p0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mRegionWindowParams:Landroid/view/WindowManager$LayoutParams;
 
     if-nez v0, :cond_0
 
     return-void
 
-    .line 595
+    .line 622
     :cond_0
     invoke-direct {p0}, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->isPortrait()Z
 
@@ -2744,24 +2912,24 @@
 
     if-eqz v0, :cond_1
 
-    .line 596
+    .line 623
     iget-object v0, p0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mRegionWindowParams:Landroid/view/WindowManager$LayoutParams;
 
     const/16 v2, 0x50
 
     iput v2, v0, Landroid/view/WindowManager$LayoutParams;->gravity:I
 
-    .line 597
+    .line 624
     iput v1, v0, Landroid/view/WindowManager$LayoutParams;->width:I
 
-    .line 598
+    .line 625
     iget v2, p0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mEffectHeight:I
 
     iput v2, v0, Landroid/view/WindowManager$LayoutParams;->height:I
 
     goto :goto_1
 
-    .line 601
+    .line 628
     :cond_1
     iget-object v0, p0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mRegionWindowParams:Landroid/view/WindowManager$LayoutParams;
 
@@ -2778,39 +2946,39 @@
     :cond_2
     const/4 v2, 0x3
 
-    .line 602
+    .line 629
     :goto_0
     iput v2, v0, Landroid/view/WindowManager$LayoutParams;->gravity:I
 
-    .line 603
+    .line 630
     iget-object v0, p0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mRegionWindowParams:Landroid/view/WindowManager$LayoutParams;
 
     iget v2, p0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mEffectHeight:I
 
     iput v2, v0, Landroid/view/WindowManager$LayoutParams;->width:I
 
-    .line 604
+    .line 631
     iput v1, v0, Landroid/view/WindowManager$LayoutParams;->height:I
 
-    .line 607
+    .line 634
     :goto_1
     sget-boolean v0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->sSideGestureEnabled:Z
 
     if-eqz v0, :cond_4
 
-    .line 608
+    .line 635
     iget-object v0, p0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mRegionWindowParams:Landroid/view/WindowManager$LayoutParams;
 
     iput v1, v0, Landroid/view/WindowManager$LayoutParams;->width:I
 
-    .line 609
+    .line 636
     invoke-direct {p0}, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->isPortrait()Z
 
     move-result v1
 
     if-eqz v1, :cond_3
 
-    .line 610
+    .line 637
     iget p0, p0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mScreenHeight:I
 
     goto :goto_2
@@ -2838,15 +3006,15 @@
 .method adjuestEdgeThreshold(III)I
     .locals 2
 
-    .line 1092
+    .line 1130
     iget p2, p0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mEdgeSwipeStartThreshold:I
 
-    .line 1093
+    .line 1131
     sget-boolean v0, Landroid/view/ViewRootImplInjector;->IS_SUPPORT_CAMERA_NOTCH:Z
 
     if-eqz v0, :cond_4
 
-    .line 1094
+    .line 1132
     iget v0, p0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mScreenHeight:I
 
     div-int/lit8 v0, v0, 0x2
@@ -2862,7 +3030,7 @@
     :cond_0
     const/4 p1, 0x0
 
-    .line 1095
+    .line 1133
     :goto_0
     new-instance v0, Landroid/graphics/Region;
 
@@ -2879,13 +3047,13 @@
 
     if-nez p1, :cond_3
 
-    .line 1099
+    .line 1137
     :cond_2
     iget-boolean p1, p0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mIsIgnoreCameraNotch:Z
 
     if-eqz p1, :cond_4
 
-    .line 1100
+    .line 1138
     sget p1, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mCameraNotchHeight:I
 
     iget p0, p0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mEdgeSwipeStartThreshold:I
@@ -2894,7 +3062,7 @@
 
     goto :goto_1
 
-    .line 1118
+    .line 1156
     :cond_3
     iget p0, p0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mScreenWidth:I
 
@@ -2916,10 +3084,10 @@
 
     const-string v0, "EdgeBackGestureHandler:"
 
-    .line 1042
+    .line 1080
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1043
+    .line 1081
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2938,7 +3106,7 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1044
+    .line 1082
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2957,7 +3125,7 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1045
+    .line 1083
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2976,7 +3144,7 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1046
+    .line 1084
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2995,7 +3163,7 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1047
+    .line 1085
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -3014,7 +3182,7 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1048
+    .line 1086
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -3039,12 +3207,12 @@
 .method public onConfigurationChanged(I)V
     .locals 3
 
-    .line 1064
+    .line 1102
     iget-boolean v0, p0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mIsEnabled:Z
 
     if-eqz v0, :cond_1
 
-    .line 1065
+    .line 1103
     sget-boolean v0, Landroid/os/Build;->DEBUG_ONEPLUS:Z
 
     if-eqz v0, :cond_0
@@ -3067,14 +3235,14 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1066
+    .line 1104
     :cond_0
     iput p1, p0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mRotation:I
 
-    .line 1068
+    .line 1106
     invoke-direct {p0}, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->updateDisplaySize()V
 
-    .line 1070
+    .line 1108
     iget-object v0, p0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mEdgePanel:Lcom/oneplus/phone/OpSideGestureNavView;
 
     invoke-virtual {v0}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
@@ -3083,28 +3251,28 @@
 
     check-cast v0, Landroid/view/WindowManager$LayoutParams;
 
-    .line 1071
+    .line 1109
     invoke-static {p1}, Lcom/oneplus/phone/OpSideGestureConfiguration;->getWindowHeight(I)I
 
     move-result v1
 
     iput v1, v0, Landroid/view/WindowManager$LayoutParams;->height:I
 
-    .line 1072
+    .line 1110
     invoke-static {}, Lcom/oneplus/phone/OpSideGestureConfiguration;->getWindowWidth()I
 
     move-result v1
 
     iput v1, v0, Landroid/view/WindowManager$LayoutParams;->width:I
 
-    .line 1073
+    .line 1111
     iget-object v1, p0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mWm:Landroid/view/WindowManager;
 
     iget-object v2, p0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mEdgePanel:Lcom/oneplus/phone/OpSideGestureNavView;
 
     invoke-interface {v1, v2, v0}, Landroid/view/WindowManager;->updateViewLayout(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 1074
+    .line 1112
     iget-object p0, p0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mEdgePanel:Lcom/oneplus/phone/OpSideGestureNavView;
 
     invoke-virtual {p0, p1}, Lcom/oneplus/phone/OpSideGestureNavView;->onConfigChanged(I)V
@@ -3122,15 +3290,15 @@
 .method public onDisplayChanged(I)V
     .locals 1
 
-    .line 978
+    .line 1016
     iget v0, p0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mDisplayId:I
 
     if-ne p1, v0, :cond_0
 
-    .line 979
+    .line 1017
     invoke-direct {p0}, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->updateDisplaySize()V
 
-    .line 981
+    .line 1019
     iget-object p1, p0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mDisplay:Landroid/view/Display;
 
     invoke-virtual {p1}, Landroid/view/Display;->getRotation()I
@@ -3156,15 +3324,15 @@
 
     const-string v1, "onNavBarAttached"
 
-    .line 330
+    .line 357
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 v0, 0x1
 
-    .line 333
+    .line 360
     iput-boolean v0, p0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mIsAttached:Z
 
-    .line 334
+    .line 361
     invoke-direct {p0}, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->updateIsEnabled()V
 
     return-void
@@ -3177,15 +3345,15 @@
 
     const-string v1, "onNavBarDetached"
 
-    .line 342
+    .line 369
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 v0, 0x0
 
-    .line 345
+    .line 372
     iput-boolean v0, p0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mIsAttached:Z
 
-    .line 346
+    .line 373
     invoke-direct {p0}, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->updateIsEnabled()V
 
     return-void
@@ -3194,17 +3362,17 @@
 .method public onNavigationModeChanged(ILandroid/content/Context;)V
     .locals 0
 
-    .line 350
+    .line 377
     invoke-static {p1}, Lcom/android/systemui/shared/system/QuickStepContract;->isGesturalMode(I)Z
 
     move-result p1
 
     iput-boolean p1, p0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mIsGesturalModeEnabled:Z
 
-    .line 351
+    .line 378
     invoke-direct {p0}, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->updateIsEnabled()V
 
-    .line 352
+    .line 379
     invoke-virtual {p2}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
@@ -3217,10 +3385,10 @@
 .method public setInsets(II)V
     .locals 0
 
-    .line 1037
+    .line 1075
     iput p1, p0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mLeftInset:I
 
-    .line 1038
+    .line 1076
     iput p2, p0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mRightInset:I
 
     return-void
@@ -3231,7 +3399,7 @@
 
     const v0, 0x1050099
 
-    .line 317
+    .line 344
     invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
     move-result p1

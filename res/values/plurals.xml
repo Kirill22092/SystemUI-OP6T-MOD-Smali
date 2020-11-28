@@ -83,9 +83,4 @@
         <item quantity="other">%1$d devices connected</item>
         <item quantity="one">%1$d device connected</item>
     </plurals>
-    <plurals name="text_clock_header">
-        <item quantity="other">@string/text_clock_header_multiple</item>
-        <item quantity="one">@string/text_clock_header_one</item>
-        <item quantity="few">@string/text_clock_header_few</item>
-    </plurals>
 </resources>

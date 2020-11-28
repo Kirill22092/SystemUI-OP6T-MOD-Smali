@@ -168,16 +168,4 @@
     <integer name="wireless_charging_scale_dots_duration">83</integer>
     <integer name="zen_mode_alarm_warning_threshold">5</integer>
     <integer name="zen_mode_max_conditions">5</integer>
-    <integer name="fod_cust02_anim_end_frame">69</integer>
-    <integer name="fod_cust02_anim_start_frame">0</integer>
-    <integer name="fod_cust03_anim_end_frame">33</integer>
-    <integer name="fod_cust03_anim_start_frame">0</integer>
-    <integer name="fod_cust04_anim_end_frame">37</integer>
-    <integer name="fod_cust04_anim_start_frame">0</integer>
-    <integer name="fod_cust05_anim_end_frame">45</integer>
-    <integer name="fod_cust05_anim_start_frame">0</integer>
-    <integer name="fod_cust06_anim_end_frame">37</integer>
-    <integer name="fod_cust06_anim_start_frame">0</integer>
-    <integer name="fod_cust07_anim_end_frame">45</integer>
-    <integer name="fod_cust07_anim_start_frame">0</integer>
 </resources>

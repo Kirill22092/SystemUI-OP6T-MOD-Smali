@@ -22,7 +22,7 @@
 .method constructor <init>(Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;Landroid/content/Context;Landroid/os/Handler;Ljava/lang/String;Z)V
     .locals 0
 
-    .line 346
+    .line 350
     iput-object p1, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar$5;->this$0:Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;
 
     invoke-direct {p0, p2, p3, p4, p5}, Lcom/oneplus/util/SystemSetting;-><init>(Landroid/content/Context;Landroid/os/Handler;Ljava/lang/String;Z)V
@@ -35,7 +35,7 @@
 .method protected handleValueChanged(IZ)V
     .locals 0
 
-    .line 349
+    .line 353
     iget-object p1, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar$5;->this$0:Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;
 
     invoke-static {p1}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->access$700(Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;)Landroid/os/Handler;

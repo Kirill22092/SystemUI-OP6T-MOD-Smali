@@ -22,7 +22,7 @@
 .method constructor <init>(Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;)V
     .locals 0
 
-    .line 117
+    .line 123
     iput-object p1, p0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler$1;->this$0:Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;
 
     invoke-direct {p0}, Landroid/view/IPinnedStackListener$Stub;-><init>()V
@@ -41,7 +41,7 @@
 .method public onImeVisibilityChanged(ZI)V
     .locals 0
 
-    .line 125
+    .line 131
     iget-object p0, p0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler$1;->this$0:Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;
 
     if-eqz p1, :cond_0

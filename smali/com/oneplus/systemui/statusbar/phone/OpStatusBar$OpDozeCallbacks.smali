@@ -18,7 +18,7 @@
 .method public fireFingerprintPoke()V
     .locals 1
 
-    .line 1070
+    .line 1074
     invoke-interface {p0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar$OpDozeCallbacks;->getCallbacks()Ljava/util/ArrayList;
 
     move-result-object p0
@@ -40,7 +40,7 @@
 
     check-cast v0, Lcom/android/systemui/doze/DozeHost$Callback;
 
-    .line 1071
+    .line 1075
     invoke-interface {v0}, Lcom/android/systemui/doze/DozeHost$Callback;->onFingerprintPoke()V
 
     goto :goto_0
@@ -52,7 +52,7 @@
 .method public fireSingleTap()V
     .locals 1
 
-    .line 1064
+    .line 1068
     invoke-interface {p0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar$OpDozeCallbacks;->getCallbacks()Ljava/util/ArrayList;
 
     move-result-object p0
@@ -74,7 +74,7 @@
 
     check-cast v0, Lcom/android/systemui/doze/DozeHost$Callback;
 
-    .line 1065
+    .line 1069
     invoke-interface {v0}, Lcom/android/systemui/doze/DozeHost$Callback;->onSingleTap()V
 
     goto :goto_0
@@ -86,7 +86,7 @@
 .method public fireThreeKeyChanged(I)V
     .locals 1
 
-    .line 1058
+    .line 1062
     invoke-interface {p0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar$OpDozeCallbacks;->getCallbacks()Ljava/util/ArrayList;
 
     move-result-object p0
@@ -108,7 +108,7 @@
 
     check-cast v0, Lcom/android/systemui/doze/DozeHost$Callback;
 
-    .line 1059
+    .line 1063
     invoke-interface {v0, p1}, Lcom/android/systemui/doze/DozeHost$Callback;->onThreeKeyChanged(I)V
 
     goto :goto_0

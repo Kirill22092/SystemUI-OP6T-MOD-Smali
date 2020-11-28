@@ -640,6 +640,7 @@ If you resume, charges may apply for data usage."</string>
     <string name="drag_to_rearrange_tiles">Hold and drag to rearrange tiles</string>
     <string name="drag_to_remove_disabled">You need at least %1$d tiles</string>
     <string name="drag_to_remove_tiles">Drag here to remove</string>
+    <string name="earphone_support_battery_info">"L: %1$s  R: %2$s"</string>
     <string name="edit_mode_hint">Drag tiles to rearrange. Tap to show or hide.</string>
     <string name="ellipsis">…</string>
     <string name="empty_shade_text">No notifications</string>
@@ -696,7 +697,7 @@ If you resume, charges may apply for data usage."</string>
     <string name="force_rtl_layout_all_locales">Force RTL layout direction</string>
     <string name="force_rtl_layout_all_locales_summary">Force screen layout direction to RTL for all locales</string>
     <string name="forced_resizable_secondary_display">App may not work on a secondary display.</string>
-    <string name="global_action_emergency">@android:string/global_actions_airplane_mode_on_status</string>
+    <string name="global_action_emergency">@android:string/global_action_emergency</string>
     <string name="global_action_screenshot">Screenshot</string>
     <string name="go_to_web">Go to browser</string>
     <string name="got_it">Got it</string>
@@ -1717,7 +1718,7 @@ be monitored"</string>
     <string name="switch_bar_off">Off</string>
     <string name="switch_bar_on">On</string>
     <string name="system_ui_aod_date_pattern">eeeMMMd</string>
-    <string name="system_ui_date_pattern">@android:string/time_picker_minute_label</string>
+    <string name="system_ui_date_pattern">@android:string/system_ui_date_pattern</string>
     <string name="system_ui_tuner">System UI Tuner</string>
     <string name="tag_status_bar">statusBar</string>
     <string name="tap_to_sign_up">Tap to sign up</string>
