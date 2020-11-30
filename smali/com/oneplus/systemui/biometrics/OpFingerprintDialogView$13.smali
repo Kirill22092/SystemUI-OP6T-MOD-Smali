@@ -27,7 +27,7 @@
     .param p1, "this$0"    # Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;
 
     .prologue
-    .line 106
+    .line 99
     iput-object p1, p0, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView$13;->this$0:Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -51,23 +51,23 @@
 
     const/4 v8, 0x0
 
-    .line 110
+    .line 103
     const-string v3, "sys.fingerprint_anim_type"
 
     invoke-static {v3, v8}, Lcom/android/wubydax/GearUtils;->getDbIntForKey(Ljava/lang/String;I)I
 
     move-result v3
 
-    if-ne v3, v10, :cond_bf
+    if-ne v3, v10, :cond_d7
 
-    .line 111
+    .line 104
     iget-object v3, p0, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView$13;->this$0:Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;
 
-    const/16 v4, 0x2a
+    const/16 v4, 0x2b
 
     invoke-static {v3, v4}, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;->access$6002(Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;I)I
 
-    .line 112
+    .line 105
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -110,7 +110,7 @@
 
     move-result-object v2
 
-    .line 117
+    .line 110
     .local v2, "sb":Ljava/lang/String;
     :goto_43
     iget-object v3, p0, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView$13;->this$0:Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;
@@ -129,7 +129,7 @@
 
     move-result-object v0
 
-    .line 118
+    .line 111
     .local v0, "decodeResource":Landroid/graphics/Bitmap;
     new-instance v1, Landroid/graphics/drawable/BitmapDrawable;
 
@@ -141,7 +141,7 @@
 
     invoke-direct {v1, v3, v0}, Landroid/graphics/drawable/BitmapDrawable;-><init>(Landroid/content/res/Resources;Landroid/graphics/Bitmap;)V
 
-    .line 119
+    .line 112
     .local v1, "drawableIcon":Landroid/graphics/drawable/Drawable;
     iget-object v3, p0, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView$13;->this$0:Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;
 
@@ -151,7 +151,7 @@
 
     invoke-virtual {v3, v0}, Lcom/oneplus/systemui/biometrics/OpCircleImageView;->setImageBitmap(Landroid/graphics/Bitmap;)V
 
-    .line 120
+    .line 113
     iget-object v3, p0, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView$13;->this$0:Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;
 
     invoke-static {v3}, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;->access$6400(Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;)Lcom/oneplus/systemui/biometrics/OpCircleImageView;
@@ -160,16 +160,41 @@
 
     invoke-virtual {v3, v1}, Lcom/oneplus/systemui/biometrics/OpCircleImageView;->setBackground(Landroid/graphics/drawable/Drawable;)V
 
-    .line 121
+    .line 114
     const-string v3, "sys.aod.fcolor_normal_unlock"
 
     invoke-static {v3, v8}, Lcom/android/wubydax/GearUtils;->getDbIntForKey(Ljava/lang/String;I)I
 
     move-result v3
 
-    if-ne v3, v10, :cond_f3
+    if-ne v3, v10, :cond_10b
 
-    .line 122
+    iget-object v3, p0, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView$13;->this$0:Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;
+
+    .line 115
+    invoke-static {v3}, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;->access$6300(Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;)Lcom/oneplus/systemui/biometrics/OpCircleImageView;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Lcom/oneplus/systemui/biometrics/OpCircleImageView;->getDrawable()Landroid/graphics/drawable/Drawable;
+
+    move-result-object v3
+
+    if-eqz v3, :cond_10b
+
+    iget-object v3, p0, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView$13;->this$0:Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;
+
+    invoke-static {v3}, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;->access$6400(Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;)Lcom/oneplus/systemui/biometrics/OpCircleImageView;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Lcom/oneplus/systemui/biometrics/OpCircleImageView;->getBackground()Landroid/graphics/drawable/Drawable;
+
+    move-result-object v3
+
+    if-eqz v3, :cond_10b
+
+    .line 116
     iget-object v3, p0, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView$13;->this$0:Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;
 
     invoke-static {v3}, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;->access$6300(Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;)Lcom/oneplus/systemui/biometrics/OpCircleImageView;
@@ -186,7 +211,7 @@
 
     invoke-virtual {v3, v4, v5}, Lcom/oneplus/systemui/biometrics/OpCircleImageView;->setColorFilter(ILandroid/graphics/PorterDuff$Mode;)V
 
-    .line 123
+    .line 117
     iget-object v3, p0, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView$13;->this$0:Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;
 
     invoke-static {v3}, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;->access$6400(Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;)Lcom/oneplus/systemui/biometrics/OpCircleImageView;
@@ -203,8 +228,8 @@
 
     invoke-virtual {v3, v4, v5}, Lcom/oneplus/systemui/biometrics/OpCircleImageView;->setColorFilter(ILandroid/graphics/PorterDuff$Mode;)V
 
-    .line 128
-    :goto_9a
+    .line 122
+    :goto_b2
     iget-object v3, p0, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView$13;->this$0:Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;
 
     invoke-static {v3}, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;->access$6100(Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;)I
@@ -217,9 +242,9 @@
 
     move-result v4
 
-    if-ge v3, v4, :cond_106
+    if-ge v3, v4, :cond_11e
 
-    .line 129
+    .line 123
     iget-object v3, p0, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView$13;->this$0:Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;
 
     invoke-static {v3}, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;->access$6600(Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;)Landroid/os/Handler;
@@ -236,27 +261,27 @@
 
     invoke-virtual {v3, v4, v6, v7}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    .line 137
-    :goto_b9
+    .line 131
+    :goto_d1
     iget-object v3, p0, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView$13;->this$0:Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;
 
     invoke-static {v3}, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;->access$6108(Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;)I
 
-    .line 138
+    .line 132
     return-void
 
-    .line 114
+    .line 107
     .end local v0    # "decodeResource":Landroid/graphics/Bitmap;
     .end local v1    # "drawableIcon":Landroid/graphics/drawable/Drawable;
     .end local v2    # "sb":Ljava/lang/String;
-    :cond_bf
+    :cond_d7
     iget-object v3, p0, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView$13;->this$0:Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;
 
-    const/16 v4, 0x1b
+    const/16 v4, 0x1c
 
     invoke-static {v3, v4}, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;->access$6002(Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;I)I
 
-    .line 115
+    .line 108
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -302,10 +327,10 @@
     .restart local v2    # "sb":Ljava/lang/String;
     goto/16 :goto_43
 
-    .line 125
+    .line 119
     .restart local v0    # "decodeResource":Landroid/graphics/Bitmap;
     .restart local v1    # "drawableIcon":Landroid/graphics/drawable/Drawable;
-    :cond_f3
+    :cond_10b
     iget-object v3, p0, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView$13;->this$0:Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;
 
     invoke-static {v3}, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;->access$6300(Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;)Lcom/oneplus/systemui/biometrics/OpCircleImageView;
@@ -313,6 +338,46 @@
     move-result-object v3
 
     invoke-virtual {v3, v9}, Lcom/oneplus/systemui/biometrics/OpCircleImageView;->setColorFilter(Landroid/graphics/ColorFilter;)V
+
+    .line 120
+    iget-object v3, p0, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView$13;->this$0:Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;
+
+    invoke-static {v3}, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;->access$6400(Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;)Lcom/oneplus/systemui/biometrics/OpCircleImageView;
+
+    move-result-object v3
+
+    invoke-virtual {v3, v9}, Lcom/oneplus/systemui/biometrics/OpCircleImageView;->setColorFilter(Landroid/graphics/ColorFilter;)V
+
+    goto :goto_b2
+
+    .line 124
+    :cond_11e
+    const-string v3, "sys.fingerprint_anim_type"
+
+    invoke-static {v3, v8}, Lcom/android/wubydax/GearUtils;->getDbIntForKey(Ljava/lang/String;I)I
+
+    move-result v3
+
+    if-ne v3, v10, :cond_14d
+
+    .line 125
+    iget-object v3, p0, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView$13;->this$0:Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;
+
+    invoke-static {v3}, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;->access$6300(Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;)Lcom/oneplus/systemui/biometrics/OpCircleImageView;
+
+    move-result-object v3
+
+    iget-object v4, p0, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView$13;->this$0:Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;
+
+    invoke-static {v4}, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;->access$6200(Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;)Landroid/content/res/Resources;
+
+    move-result-object v4
+
+    invoke-static {v4, v11, v9}, Landroidx/core/content/res/ResourcesCompat;->getDrawable(Landroid/content/res/Resources;ILandroid/content/res/Resources$Theme;)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v4
+
+    invoke-virtual {v3, v4}, Lcom/oneplus/systemui/biometrics/OpCircleImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
     .line 126
     iget-object v3, p0, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView$13;->this$0:Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;
@@ -321,46 +386,6 @@
 
     move-result-object v3
 
-    invoke-virtual {v3, v9}, Lcom/oneplus/systemui/biometrics/OpCircleImageView;->setColorFilter(Landroid/graphics/ColorFilter;)V
-
-    goto :goto_9a
-
-    .line 130
-    :cond_106
-    const-string v3, "sys.fingerprint_anim_type"
-
-    invoke-static {v3, v8}, Lcom/android/wubydax/GearUtils;->getDbIntForKey(Ljava/lang/String;I)I
-
-    move-result v3
-
-    if-ne v3, v10, :cond_135
-
-    .line 131
-    iget-object v3, p0, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView$13;->this$0:Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;
-
-    invoke-static {v3}, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;->access$6300(Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;)Lcom/oneplus/systemui/biometrics/OpCircleImageView;
-
-    move-result-object v3
-
-    iget-object v4, p0, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView$13;->this$0:Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;
-
-    invoke-static {v4}, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;->access$6200(Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;)Landroid/content/res/Resources;
-
-    move-result-object v4
-
-    invoke-static {v4, v11, v9}, Landroidx/core/content/res/ResourcesCompat;->getDrawable(Landroid/content/res/Resources;ILandroid/content/res/Resources$Theme;)Landroid/graphics/drawable/Drawable;
-
-    move-result-object v4
-
-    invoke-virtual {v3, v4}, Lcom/oneplus/systemui/biometrics/OpCircleImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
-
-    .line 132
-    iget-object v3, p0, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView$13;->this$0:Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;
-
-    invoke-static {v3}, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;->access$6400(Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;)Lcom/oneplus/systemui/biometrics/OpCircleImageView;
-
-    move-result-object v3
-
     iget-object v4, p0, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView$13;->this$0:Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;
 
     invoke-static {v4}, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;->access$6200(Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;)Landroid/content/res/Resources;
@@ -373,10 +398,10 @@
 
     invoke-virtual {v3, v4}, Lcom/oneplus/systemui/biometrics/OpCircleImageView;->setBackground(Landroid/graphics/drawable/Drawable;)V
 
-    goto :goto_b9
+    goto :goto_d1
 
-    .line 134
-    :cond_135
+    .line 128
+    :cond_14d
     iget-object v3, p0, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView$13;->this$0:Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;
 
     invoke-static {v3}, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;->access$6300(Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;)Lcom/oneplus/systemui/biometrics/OpCircleImageView;
@@ -395,7 +420,7 @@
 
     invoke-virtual {v3, v4}, Lcom/oneplus/systemui/biometrics/OpCircleImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 135
+    .line 129
     iget-object v3, p0, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView$13;->this$0:Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;
 
     invoke-static {v3}, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;->access$6400(Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;)Lcom/oneplus/systemui/biometrics/OpCircleImageView;
@@ -414,5 +439,5 @@
 
     invoke-virtual {v3, v4}, Lcom/oneplus/systemui/biometrics/OpCircleImageView;->setBackground(Landroid/graphics/drawable/Drawable;)V
 
-    goto/16 :goto_b9
+    goto/16 :goto_d1
 .end method
