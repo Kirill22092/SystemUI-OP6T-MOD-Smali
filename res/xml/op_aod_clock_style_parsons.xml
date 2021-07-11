@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AodClockStyle
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:systemui="http://schemas.android.com/apk/res-auto">
+    <controller>com.oneplus.aod.controller.OpBuildInClockController</controller>
+    <burnInSettings systemui:handleClass="com.oneplus.aod.utils.burnin.OpParsonsBurnInController" systemui:minLeft="@dimen/op_aod_parsons_clock_burnin_gap" systemui:minRight="@dimen/op_aod_parsons_clock_burnin_gap" systemui:movingDistance="@dimen/aod_moving_distance_default" />
+    <com.oneplus.aod.views.parsons.OpParsonsClock android:layout_gravity="center_horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/op_aod_parsons_clock_burnin_gap" android:layout_marginRight="@dimen/op_aod_parsons_clock_burnin_gap" systemui:barDistanceBottom="@dimen/op_aod_parsons_bar_distance_bottom" systemui:barDistanceTop="@dimen/op_aod_parsons_bar_distance_top" systemui:barStartTime="06:00" systemui:barWidth="@dimen/op_aod_parsons_barWidth" systemui:border="@dimen/op_aod_parsons_border" systemui:clockMarginBottom1="@dimen/op_aod_parsons_clock_bar_margin_bottom1" systemui:clockMarginBottom2="@dimen/op_aod_parsons_clock_bar_margin_bottom2" systemui:clockMarginBottom3="@dimen/op_aod_parsons_clock_bar_margin_bottom3" systemui:clockMarginTop1="@dimen/op_aod_parsons_clock_top1" systemui:clockMarginTop2="@dimen/op_aod_parsons_clock_top2" systemui:colors="@array/op_aod_screenlockbar_colors" systemui:dateTimePaddingBottom="@dimen/op_aod_parsons_date_time_padding_bottom" systemui:dateTimePaddingTop="@dimen/op_aod_parsons_date_time_padding_top" systemui:gap="@dimen/op_aod_parsons_gap" systemui:marginLeftType="fixed2" systemui:marginRightType="fixed2" systemui:positions="@array/op_aod_screenlockbar_positions" systemui:unlockMarginBottom="@dimen/op_aod_parsons_unlocks_margin_bottom" />
+    <systemInfoSettings>
+        <systemInfoContainer android:layout_marginLeft="@dimen/op_aod_parsons_clock_burnin_gap" android:layout_marginRight="@dimen/op_aod_parsons_clock_burnin_gap" android:layout_centerHorizontal="true" systemui:marginEndType="fixed2" systemui:marginStartType="fixed2" />
+        <dateInfo systemui:show="false" />
+        <sliceInfo systemui:show="false" />
+        <batteryInfo android:layout_gravity="center_horizontal" />
+        <notificationInfo android:layout_gravity="center_horizontal" android:layout_marginTop="@dimen/aod_clock_systeminfo_vertical_margin" systemui:marginTopType="fixed2" />
+        <ownerInfo systemui:show="false" />
+    </systemInfoSettings>
+</AodClockStyle>

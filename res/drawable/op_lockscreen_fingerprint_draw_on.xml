@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector android:name="lockscreen_fingerprint_draw_on" android:height="24.0dip" android:width="24.0dip" android:viewportWidth="24.0" android:viewportHeight="24.0"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:name="ridge_0" android:translateX="4.484009" android:translateY="6.992562">
+        <path android:name="ridge_0_path" android:pathData="M1.54966146,13.7097154 C0.577737267,12.4438736 0,10.8595438 0,9.14027617 L0,2.99931599 C0,1.67712891 0.133536089,0.816341979 0.400608267,0.416955185" android:strokeColor="?wallpaperTextColor" android:strokeWidth="1.5" android:trimPathStart="1.0" android:strokeLineCap="round" android:strokeAlpha="0.5" android:fillType="evenOdd" />
+    </group>
+    <group android:name="ridge_1" android:translateX="6.484009" android:translateY="1.992562">
+        <path android:name="ridge_1_path" android:pathData="M0.0884691726,2.92723564 C1.63831414,0.975745213 3.44748811,0 5.51599109,0 C9.64836284,0 12.998312,3.36228294 12.998312,7.50986913 C12.998312,8.89798308 12.998312,9.93906854 12.998312,10.6331255" android:strokeColor="?wallpaperTextColor" android:strokeWidth="1.5" android:trimPathEnd="0.0" android:strokeLineCap="round" android:strokeAlpha="0.5" android:fillType="evenOdd" />
+    </group>
+    <group android:name="ridge_2" android:translateX="10.484009" android:translateY="7.992562">
+        <path android:name="ridge_2_path" android:pathData="M0.0398835192,1.94260284 C0.0426668584,0.65822453 0.534752002,0.016035376 1.51613895,0.016035376 C2.4975259,0.016035376 2.98821937,0.65822453 2.98821937,1.94260284 L2.98821937,7.0245875 C3.27112118,9.0060419 4.27285265,9.99676911 5.99341378,9.99676911 C7.71397491,9.99676911 8.71560766,9.05201583 8.99831203,7.16250928" android:strokeColor="?wallpaperTextColor" android:strokeWidth="1.5" android:trimPathEnd="0.0" android:strokeLineCap="round" android:strokeAlpha="0.5" android:fillType="evenOdd" />
+    </group>
+    <group android:name="ridge_3" android:translateX="15.484009" android:translateY="7.992562">
+        <path android:name="ridge_3_path" android:pathData="M1.02961911,7.0245875 C0.711768966,6.26604558 0.688928476,5.08970942 0.688928476,2.8149476 L0.688928476,0.220589853" android:strokeColor="?wallpaperTextColor" android:strokeWidth="1.5" android:trimPathStart="1.0" android:strokeLineCap="round" android:strokeAlpha="0.5" android:fillType="evenOdd" />
+    </group>
+    <group android:name="ridge_4" android:translateX="7.484009" android:translateY="4.992562">
+        <path android:name="ridge_4_path" android:pathData="M0.00686697734,9.04018403 C0.00686697734,8.03900652 0.00686697734,6.53724025 0.00686697734,4.53488523 C0.00686697734,2.0364731 2.03223019,0.0111098842 4.53064232,0.0111098842 C5.50236036,0.0111098842 6.30960351,0.331898462 6.95237179,0.973475618" android:strokeColor="?wallpaperTextColor" android:strokeWidth="1.5" android:trimPathStart="1.0" android:strokeLineCap="round" android:strokeAlpha="0.5" android:fillType="evenOdd" />
+    </group>
+    <group android:name="ridge_5" android:translateX="10.484009" android:translateY="12.992562">
+        <path android:name="ridge_5_path" android:pathData="M2.98821937,7.01665128 C1.22352313,6.39686946 -0.0697612781,4.90339116 0.0472309311,2.60179611 L0.0472309311,0.00743836007" android:strokeColor="?wallpaperTextColor" android:strokeWidth="1.5" android:trimPathStart="1.0" android:strokeLineCap="round" android:strokeAlpha="0.5" android:fillType="evenOdd" />
+    </group>
+    <group android:name="ridge_6" android:translateX="7.484009" android:translateY="15.992562">
+        <path android:name="ridge_6_path" android:pathData="M3.04723093,6.00731321 C1.75151782,5.01080727 0.125112545,3.15694389 0.00686697734,0.913329042" android:strokeColor="?wallpaperTextColor" android:strokeWidth="1.5" android:trimPathStart="1.0" android:strokeLineCap="round" android:strokeAlpha="0.5" android:fillType="evenOdd" />
+    </group>
+</vector>

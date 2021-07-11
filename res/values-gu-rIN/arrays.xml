@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="zzz_op_quick_pay_switch_strings">
+        <item>QR કોડ</item>
+        <item>સ્કેન કરી રહ્યું છે</item>
+        <item>QR કોડ</item>
+        <item>સ્કેન કરી રહ્યું છે</item>
+        <item>પેટીએમ</item>
+    </string-array>
+</resources>

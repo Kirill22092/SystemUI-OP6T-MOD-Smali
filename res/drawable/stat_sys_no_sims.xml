@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<inset android:insetLeft="0.77dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <vector android:height="16.5dip" android:width="16.5dip" android:viewportWidth="24.0" android:viewportHeight="24.0"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+        <path android:fillColor="@color/light_mode_icon_color_dual_tone_background" android:pathData="M3.3456,4.2689L21.0699,21.9961L19.7971,23.2689L18.5225,21.9953C18.4984,21.9984 18.4738,22 18.4489,22L5.6489,22C5.3175,22 5.0489,21.7189 5.0489,21.3721L5.0489,9.6512C5.0489,9.4846 5.1121,9.3249 5.2246,9.2072L5.4748,8.944L2.0728,5.5417L3.3456,4.2689ZM18.4489,4C18.7802,4 19.0489,4.2811 19.0489,4.6279L19.0489,17.441L7.9569,6.347L10.0246,4.1839C10.1371,4.0662 10.2897,4 10.4489,4L18.4489,4Z" android:strokeColor="#00000000" android:strokeWidth="1.0" android:fillType="nonZero" />
+    </vector>
+</inset>

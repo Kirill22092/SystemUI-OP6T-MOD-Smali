@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.oneplus.battery.OpNewWarpChargingView android:gravity="center_horizontal" android:layout_gravity="center_horizontal" android:orientation="vertical" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:layout_gravity="center_horizontal" android:id="@id/wallpaper_view" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <View android:id="@id/scrim_view" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <View android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+        <RelativeLayout android:id="@id/info_view_container" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <ImageView android:layout_gravity="center" android:id="@id/background_view" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+            <RelativeLayout android:id="@id/info_view" android:layout_width="fill_parent" android:layout_height="@dimen/op_warp_charging_wireless_anim_info_view_height" android:layout_centerInParent="true">
+                <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/battery_level_container" android:layout_width="fill_parent" android:layout_height="@dimen/op_warp_charging_wireless_anim_info_battery_level_container_height" android:layout_alignParentTop="true" android:layout_centerHorizontal="true">
+                    <TextView android:textSize="@dimen/op_warp_charging_wireless_anim_info_battery_level_text_size" android:textStyle="bold" android:textColor="#ffffffff" android:gravity="center" android:id="@id/battery_level" android:paddingLeft="@dimen/op_warp_charging_wireless_anim_info_battery_level_text_padding_left" android:layout_width="wrap_content" android:layout_height="@dimen/op_warp_charging_wireless_anim_info_battery_level_height" android:includeFontPadding="false" android:shadowColor="#4c000000" android:shadowDx="1.0" android:shadowDy="1.0" android:shadowRadius="10.0" android:fontFamily="oneplus_font" />
+                </LinearLayout>
+                <ImageView android:id="@id/warp_view" android:layout_width="@dimen/op_warp_charging_wireless_text_image_width" android:layout_height="@dimen/op_warp_charging_wireless_text_image_height" android:src="@drawable/warp_070" android:scaleType="fitXY" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" />
+            </RelativeLayout>
+        </RelativeLayout>
+        <View android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="2.2" />
+    </LinearLayout>
+</com.oneplus.battery.OpNewWarpChargingView>

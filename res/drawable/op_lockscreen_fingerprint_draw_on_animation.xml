@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-vector android:drawable="@drawable/op_lockscreen_fingerprint_draw_on"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <target android:name="ridge_6_path" android:animation="@anim/op_lockscreen_fingerprint_draw_on_ridge_6_path_animation" />
+    <target android:name="ridge_5_path" android:animation="@anim/op_lockscreen_fingerprint_draw_on_ridge_5_path_animation" />
+    <target android:name="ridge_4_path" android:animation="@anim/op_lockscreen_fingerprint_draw_on_ridge_4_path_animation" />
+    <target android:name="ridge_3_path" android:animation="@anim/op_lockscreen_fingerprint_draw_on_ridge_3_path_animation" />
+    <target android:name="ridge_2_path" android:animation="@anim/op_lockscreen_fingerprint_draw_on_ridge_2_path_animation" />
+    <target android:name="ridge_1_path" android:animation="@anim/op_lockscreen_fingerprint_draw_on_ridge_1_path_animation" />
+    <target android:name="ridge_0_path" android:animation="@anim/op_lockscreen_fingerprint_draw_on_ridge_0_path_animation" />
+</animated-vector>

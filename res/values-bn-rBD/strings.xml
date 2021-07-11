@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="about_action_bar_title">সম্পর্কে</string>
+    <string name="about_app_version_text">সংস্করণ %s</string>
+    <string name="about_privacy_policy">গোপনীয়তা নীতি</string>
+    <string name="about_release_note_title">লগ হালনাগাদ করুনঃ</string>
+    <string name="about_terms_service">পরিষেবার শর্তাবলী</string>
+    <string name="accessibility_fingerprint_dialog_help_area">সাহায্য বার্তা এলাকা</string>
+    <string name="accessibility_hide">লুকান</string>
+    <string name="accessibility_phone_four_bars">ফোনের চারটি বার।</string>
+    <string name="accessibility_quick_settings_data_switch_changed_1">SIM 1 এ ডেটা কার্ড পাল্টান।</string>
+    <string name="accessibility_quick_settings_data_switch_changed_2">SIM 2 এ ডেটা কার্ড পাল্টান।</string>
+    <string name="accessibility_quick_settings_nfc_changed_off">NFC বন্ধ করা হয়েছে।</string>
+    <string name="accessibility_quick_settings_nfc_changed_on">NFC চালু করা হয়েছে।</string>
+    <string name="accessibility_quick_settings_nfc_off">NFC বন্ধ।</string>
+    <string name="accessibility_quick_settings_nfc_on">NFC চালু।</string>
+    <string name="accessibility_quick_settings_night_mode_changed_off">রাত্রি মোড বন্ধ আছে।</string>
+    <string name="accessibility_quick_settings_night_mode_changed_on">রাত্রি মোড চালু আছে।</string>
+    <string name="accessibility_quick_settings_power_saving_changed_off">ব্যাটারি সেভার মোড বন্ধ আছে।</string>
+    <string name="accessibility_quick_settings_power_saving_changed_on">ব্যাটারি সেভার মোড চালু আছে।</string>
+    <string name="accessibility_work_life_balance_mode">Work Life Balance</string>
+    <string name="accessibility_work_life_balance_mode_off">ওয়ার্ক লাইফ ব্যালেন্স মোড বন্ধ আছে।</string>
+    <string name="accessibility_work_life_balance_mode_on">ওয়ার্ক লাইফ ব্যালেন্স মোড চালু আছে।</string>
+    <string name="activity_not_available">অ্যাপ উপলব্ধ নয়</string>
+    <string name="aiplane_warning_msg">বিমান মোড চালু করা হয়েছে৷ আপনি Wi-Fi ব্যবহার না করলে ইন্টারনেট, ইমেল, Wi-Fi কলিং বা একটি ডেটা সংযোগ প্রয়োজন এমন কোনো অ্যাপ ব্যবহার করতে পারবেন না</string>
+    <string name="airplane_mode_enable_dialog_message">"বিমান মোড চালু হলে, আপনি Wi-Fi ব্যবহার না করলে ইন্টারনেট, ইমেল বা একটি ডেটা সংযোগ প্রয়োজন এমন কোনো অ্যাপ ব্যবহার করতে পারবেন না৷
+
+বিমান মোড চালু করবেন?"</string>
+    <string name="airplane_mode_enable_dialog_message_wifi_volte">"বিমান মোড চালু হলে, আপনি Wi-Fi ব্যবহার না করলে ইন্টারনেট, ইমেল, Wi-Fi কলিং বা একটি ডেটা সংযোগ প্রয়োজন এমন কোনো অ্যাপ ব্যবহার করতে পারবেন না৷
+
+বিমান মোড চালু করবেন?"</string>
+    <string name="alert_button_cancel">বাতিল করুন</string>
+    <string name="alert_button_settings">সেটিংস</string>
+    <string name="alert_message_assisted_dialing">SIM কার্ডের থেকে আপনার উল্লেখ করা দেশটি শনাক্ত করা যায়নি৷ অনুগ্রহ করে ম্যানুয়ালি উল্লেখ করা দেশটি নির্বাচন করুন৷</string>
+    <string name="alert_title_assisted_dialing">সহায়ক ডায়ালিং</string>
+    <string name="allow_notification">বিজ্ঞপ্তির অনুমতি দিন</string>
+    <string name="battery_low_warning">%s বাকি আছে, ব্যবহার বাড়াতে ব্যাটারি সেভার চালু করুন</string>
+    <string name="battery_usage_extanded">আপনার ব্যবহারের উপরে ভিত্তি করে ব্যাটারি সেভার আপনার ব্যবহার প্রায় %s বাড়াতে পারে</string>
+    <string name="battery_usage_remaining_time">%s বাকি আছে</string>
+    <string name="clear_process_done">সব পরিষ্কার!</string>
+    <string name="clear_process_warning_checkbox">বুঝেছি, আর দেখাবেন না</string>
+    <string name="clear_process_warning_message">এটি সমস্ত ব্যাকগ্রাউন্ড প্রক্রিয়া সাফ করে দেবে যা অনভিপ্রেত ফলাফল দিতে পারে। কিছু অ্যাপ কাজ করা থামাতে পারে এবং আবার শুরু করতে হতে পারে। অবিরত করবেন?</string>
+    <string name="clear_process_warning_title">সতর্কবার্তা</string>
+    <string name="continue_call">অবিরত রাখুন</string>
+    <string name="data_connection_4_5g">4.5G</string>
+    <string name="delete">মুছে ফেলুন</string>
+    <string name="denoise_notification">কম অগ্রাধিকারের বিজ্ঞপ্তি</string>
+    <string name="dialog_mhs_error">অনুগ্রহ করে যাচাই করার জন্য অপেক্ষা করুন..</string>
+    <string name="disable_tether_notification_message">বিস্তারিত জানার জন্য আপনার অ্যাডমিনের সাথে যোগাযোগ করুন</string>
+    <string name="disable_tether_notification_title">টিথারিং অক্ষম রয়েছে</string>
+    <string name="drag_to_add_tiles">টাইল যোগ করতে টেনে আনুন</string>
+    <string name="earphone_support_battery_info">L: %1$s R:%2$s</string>
+    <string name="earphone_support_battery_info_left">L: %1$s</string>
+    <string name="earphone_support_battery_info_right">R: %1$s</string>
+    <string name="edit_mode_hint">পুনরায় সাজাতে টাইলগুলি টেনে আনুন। দেখাতে বা লুকাতে আলতো চাপুন।</string>
+    <string name="end_call">শেষ</string>
+    <string name="face_unlock_camera_error">ফেস আনলক করা গেল না, অন্য অ্যাপ ক্যামেরা ব্যবহার করছে</string>
+    <string name="face_unlock_fail">অসফল, আবার চেষ্টা করতে এখানে ট্যাপ করুন</string>
+    <string name="face_unlock_light_view_notify">মুখ চিনে নিতে সাহায্য করতে স্ক্রিনে আলো জ্বলছে।</string>
+    <string name="face_unlock_no_face">কোনো মুখ শনাক্ত করা হয়নি। আবার চেষ্টা করতে এখানে ট্যাপ করুন।</string>
+    <string name="face_unlock_no_permission">ফেস আনলক ক্যামেরার অনুমতি পাচ্ছে না, অন্য ভাবে আনলক করার চেষ্টা করুন</string>
+    <string name="face_unlock_notify_password">ফেস আনলক ব্যবহার করুন বা আপনার পাসওয়ার্ড দিন</string>
+    <string name="face_unlock_notify_pattern">ফেস আনলক ব্যবহার করুন বা আপনার প্যাটার্ন দিন</string>
+    <string name="face_unlock_retry_other">ফেস আনলক ব্যর্থ হয়েছে, অন্য ভাবে আনলক করার চেষ্টা করুন</string>
+    <string name="face_unlock_tap_to_retry">আবার চেষ্টা করতে আবার ট্যাপ করুন</string>
+    <string name="face_unlock_timeout">অনেক বেশি ব্যর্থ প্রচেষ্টা। কিছুক্ষণ পর আবার চেষ্টা করুন</string>
+    <string name="fingerprint_not_found">আবার চেষ্টা করুন</string>
+    <string name="hotspot_apm_message">বিমান মোড সক্ষম থাকলে মোবাইল নেটওয়ার্কগুলি সংযোগ করা যাবে না। বিমান মোড অক্ষম করে আবার চেষ্টা করুন।</string>
+    <string name="hotspot_operator_dialog_nosim_msg">মোবাইল হটস্পট এবং অন্যান্য টেদারিং অপশন ব্যবহার করতে একটি SIM কার্ড লাগান</string>
+    <string name="hotspot_operator_dialog_nosim_title">কোনও SIM কার্ড নেই</string>
+    <string name="hotspot_operator_dialog_othererror_msg">আপনি Wifi টেদারিং এ সাবস্ক্রাইব করেননি</string>
+    <string name="hotspot_operator_dialog_othererror_title">Wifi টেদারিং ত্রুটি</string>
+    <string name="hotspot_tip_message">"মোবাইল হটস্পট অন্য ওয়াই-ফাই সক্ষমিত ডিভাইসের সাথে আপনার মোবাইল ডেটা শেয়ার করে। আপনার মোবাইল হটস্পটে সংযোগ করতে: \u0009 
+ 1: অন্য ডিভাইসে ওয়াই-ফাই চালু করুন।
+ 2: উপলভ্য Wi-Fi নেটওয়ার্কের তালিকার মধ্যে %1$s নির্বাচন করুন। 
+ 3: কোনও পাসওয়ার্ডের প্রয়োজন হলে, ব্যাটারি সেভ করতে %2$s এণ্টার করুন, মোবাইল হটস্পট ব্যবহারের সময়ে আপনার ফোন প্লাগ ইন রাখুন। "</string>
+    <string name="interruption_level_game">গেম</string>
+    <string name="interruption_level_movie">মুভি</string>
+    <string name="interruption_level_music">সঙ্গীত</string>
+    <string name="keyguard_fingerprint_unlock">আনলক করতে আঙ্গুলের ছাপ ব্যবহার করুন</string>
+    <string name="keyguard_indication_charging_time_fast">(%s পূর্ণ হওয়া পর্যন্ত)</string>
+    <string name="keyguard_plugged_in_charging_warp">%s • Warp চার্জিং</string>
+    <string name="keyguard_plugged_in_wireless_warp">%s • Warp ওয়্যারলেস চার্জিং</string>
+    <string name="kg_at_least_four_points">অন্তত 4 বিন্দু অন্তর্ভুক্ত করতে আঁকুন</string>
+    <string name="kg_failed_attempts_almost_at_wipe_vzw_title">সতর্কতা</string>
+    <string name="kg_failed_attempts_almost_at_wipe_vzw_warning_first">"আপনি যদি পরবর্তী পাঁচটি প্রচেষ্টায় সঠিক পাসওয়ার্ড না লেখেন, তবে আপনার ফোন স্বয়ংক্রিয়ভাবে ফ্যাক্টরি সেটিংসে রিসেট হয়ে যাবে এবং ফোনের সমস্ত তথ্য মুছে যাবে৷
+
+যদি আপনার ফোন রিসেট হয়ে যায়, এটিকে আবার ব্যবহার করার জন্য এই ফোনের সাথে সংশ্লিষ্ট Google অ্যাকাউন্টের তথ্য (ইমেল ঠিকানা এবং পাসওয়ার্ড) আপনাকে লিখতে হবে৷"</string>
+    <string name="kg_failed_attempts_almost_at_wipe_vzw_warning_last">"আপনি যদি এই সময়ে সঠিক পাসওয়ার্ড না লেখেন, তবে আপনার ফোন স্বয়ংক্রিয়ভাবে ফ্যাক্টরি সেটিংসে রিসেট হয়ে যাবে এবং ফোনের সমস্ত তথ্য মুছে যাবে৷
+
+যদি আপনার ফোন রিসেট হয়ে যায়, এটিকে আবার ব্যবহার করার জন্য এই ফোনের সাথে সংশ্লিষ্ট Google অ্যাকাউন্টের তথ্য (ইমেল ঠিকানা এবং পাসওয়ার্ড) আপনাকে লিখতে হবে৷"</string>
+    <string name="kg_first_unlock_instructions">আপনার ফোন রিস্টার্ট করা হয়েছে এবং আপনার পাসওয়ার্ড/প্যাটার্ন দিয়ে আনলক করতে হবে। অনুগ্রহ করে সকল বৈশিষ্ট্য এবং ডেটার জন্য আনলক করুন।</string>
+    <string name="kg_remaining_attempts">আর এতবার চেষ্টা করতে পারবেন: %d</string>
+    <string name="kg_slot_name">স্লট %d</string>
+    <string name="kg_wrong_pattern_warning">আপনার এখনও 2টি সুযোগ আছে</string>
+    <string name="kg_wrong_pattern_warning_one">আপনার এখনও 1টি সুযোগ আছে</string>
+    <string name="kg_wrong_pin_warning">আপনার এখনও 2টি সুযোগ আছে</string>
+    <string name="kg_wrong_pin_warning_one">আপনার এখনও 1টি সুযোগ আছে</string>
+    <string name="loading_text">লোড হচ্ছে...</string>
+    <string name="long_press_power_navigation_assist_content">"ভয়েস সহযোগীর জন্য \"
+ পাওয়ার বাটন \"চেপে ধরে রাখুন"</string>
+    <string name="long_press_power_navigation_power_content">পাওয়ার অফ করার জন্য \"পাওয়ার বোতাম\" এবং \"ভলিউম আপ বোতাম\"টিকে একসাথে টিপুন</string>
+    <string name="long_press_power_navigation_setting_button">সেটিংস পরিবর্তন করুন</string>
+    <string name="maxxaudio_disable">অক্ষম করুন</string>
+    <string name="maxxaudio_enable">সক্ষম করুন</string>
+    <string name="mhs_app">My Verizon খুলুন</string>
+    <string name="mhs_call_back_error">ডাটা সংযোগ পাওয়া যায় নি।</string>
+    <string name="mobile263">OnePlus রোমিং</string>
+    <string name="mobile_data_off_alert">"আপনি Wi-Fi ব্যবহার না করা পর্যন্ত, আপনি ইন্টারনেট, ইমেল বা একটি ডেটা সংযোগ প্রয়োজন এমন অ্যাপগুলি ব্যবহার করতে পারবেন না৷
+
+মোবাইল ডেটা সংযোগ বন্ধ করবেন?"</string>
+    <string name="mobile_data_off_alert_support_volte_no_wfc">"মোবাইল ডেটা বন্ধ থাকার সময় আপনার ফোনের ভিডিও কলিং ফাংশন কাজ করবে না৷ এছাড়া, আপনি Wi-Fi ব্যবহার না করা পর্যন্ত ইন্টারনেট, ইমেল বা একটি ডেটা সংযোগ প্রয়োজন এমন অ্যাপগুলি ব্যবহার করতে পারবেন না৷
+
+মোবাইল ডেটা সংযোগ বন্ধ করবেন?"</string>
+    <string name="mobile_data_off_alert_video_call">আপনি মোবাইল ডাটা বন্ধ করেছিলেন। আপনি কি বর্তমান ভিডিও কল অবিরত রাখতে চান নাকি শেষ করতে চান?</string>
+    <string name="mobile_hotspot">মোবাইল হটস্পট</string>
+    <string name="mobile_hotspot_airplane_off_error">হটস্পট চালু করতে, অনুগ্রহ করে এয়ারপ্লেন মোড বন্ধ করুন</string>
+    <string name="mobile_hotspot_authoration_error">"মোবাইল হটস্পট ব্যবহার করতে, আপনার মোবাইল হটস্পট পরিষেবাতে সাবস্ক্রাইব করার প্রয়োজন হবে। 
+
+ মোবাইল হটস্পট সাবস্ক্রাইব করতে My Verizon পরিদর্শন করুন অথবা কাস্টমার কেয়ারের (800) 922–0204 এই নম্বরে কল করুন।"</string>
+    <string name="mobile_hotspot_data_off_error">হটস্পট চালু করতে, অনুগ্রহ করে মোবাইল ডাটা চালু করুন</string>
+    <string name="nav_bar_guide_positive">বুঝেছি</string>
+    <string name="nav_bar_guide_title">নেভিগেশন বার দেখানোর জন্য নীচে থেকে উপরে সোয়াইপ করুন। নেভিগেশন আড়াল করাকে বন্ধ করতে চাইলে, অনুগ্রহ করে এখানে ট্যাপ করুন।</string>
+    <string name="non_op_earphone_notification_content">OnePlus আপনার হেডসেটের জন্য কিছু নতুন বৈশিষ্ট্য নিয়ে এসেছে। তাদের ব্যবহার করে দেখুন বিজ্ঞপ্তিতে ক্লিক করুন।</string>
+    <string name="non_op_earphone_notification_title">পরামর্শ</string>
+    <string name="notification_channel_tethering_status">হটস্পট &amp; টিথারিং স্থিতি</string>
+    <string name="notification_content_disable_button">এটি বন্ধ করতে স্পর্শ করুন</string>
+    <string name="notification_content_disable_button_in_nav">যখন HW বোতাম লক রয়েছে তখন নেভিগেশন দণ্ড অক্ষম থাকে</string>
+    <string name="notification_title_disable_button">HW বোতাম লক রয়েছে</string>
+    <string name="ok">ঠিক আছে</string>
+    <string name="oneplus_laboratory_added_toast">Congrats! OnePlus ল্যাবরেটরি সেটিংসে যুক্ত করা হয়েছে</string>
+    <string name="oneplus_not_show">এটা পুনরায় দেখাবেন না</string>
+    <string name="oneplus_screen_features_not_available_toast">চালু করা হলে, স্ক্রীন ক্যালিব্রেশনের মতো বৈশিষ্ট্যগুলি উপলব্ধ হবে না</string>
+    <string name="oneplus_threekey_navigation_disturb_changed">"'বিরক্ত করবেন না' পরিবর্তিত হয়েছে!"</string>
+    <string name="oneplus_threekey_navigation_next">পরবর্তী</string>
+    <string name="oneplus_threekey_navigation_silence">পুরোপুরি লাইসেন্স</string>
+    <string name="oneplus_threekey_navigation_slider_has_changed">অ্যালার্ট স্লাইডার পরিবর্তিত হয়েছে!</string>
+    <string name="oneplus_threekey_navigation_sound">সকল শব্দ অনুমোদিত</string>
+    <string name="oneplus_threekey_navigation_turned_on_here">উপরের টগল দিয়ে এটি চালু করা যাবে</string>
+    <string name="oneplus_threekey_navigation_vibration">শুধু কম্পন</string>
+    <string name="op_aod_parsons_unlock_one"><annotation id="unlockNum">^1</annotation> আনব্লক করুন</string>
+    <string name="op_aod_parsons_unlock_other"><annotation id="unlockNum">^1</annotation>আনব্লকগুলি</string>
+    <string name="op_battery_saver_description">"ব্যাটারির আয়ু বাড়াতে, ব্যাটারি সেভারঃ 
+
+• ব্যাকগ্রাউন্ড ক্রিয়াকলাপ, কিছু ভিজুয়্যাল প্রতিক্রিয়া, এবং অন্য বৈশিষ্ট্যগুলি যেমন “Hey Google” বন্ধ করে দেয় অথবা বাধা দেয়"</string>
+    <string name="op_battery_saver_description_no_ga">"ব্যাটারির আয়ু বাড়াতে, ব্যাটারি সেভারঃ
+
+•ব্যাকগ্রাউন্ড ক্রিয়াকলাপ, কিছু ভিজুয়্যাল প্রতিক্রিয়া বন্ধ করে দেয় অথবা বাধা দেয়"</string>
+    <string name="op_earphone_connect">জোড়া বাঁধা হচ্ছে...</string>
+    <string name="op_earphone_connected_fail">জোড়া বাঁধা গেল না। আপনি হেডসেট এবং ব্লুটুথ স্ট্যাটাস পরীক্ষা করতে পারেন।</string>
+    <string name="op_earphone_connected_success">জোড়া বাঁধা হয়েছে। আরও সেট করতে আলতো চাপুন।</string>
+    <string name="op_earphone_device">জোড়া বাঁধতে আলতো চাপুন</string>
+    <string name="op_earphone_title">OnePlus Bullets Wireless</string>
+    <string name="op_emergency_indicator_hint_text">জরুরি পরিষেবাগুলির জন্য নিচে সোয়াইপ করুন</string>
+    <string name="op_keyguard_indication_charging_time">%2$s • চার্জিং (প্রায় %1$s অবশিষ্ট)</string>
+    <string name="op_keyguard_indication_charging_time_fast">&lt;xliff:g id = শতাংশ>%2$s&lt;/xliff:g>• দ্রুত চার্জ করা হচ্ছে (প্রায় &lt;xliff: g id = চার্জিং_টাইম শেষ উদাহরণ = 4 ঘন্টা 2 মিনিট>%1$s&lt;/xliff:g> অবশিষ্ট)</string>
+    <string name="op_keyguard_indication_charging_time_slowly">%2$s • ধীরে ধীরে চার্জ করা হচ্ছে (প্রায় %1$s অবশিষ্ট)</string>
+    <string name="op_keyguard_indication_charging_time_wireless">%2$s • ওয়্যারলেসে চার্জ করা হচ্ছে (প্রায় %1$sবাকি)</string>
+    <string name="op_keyguard_indication_face_unlocked">ফেস আনলক দ্বারা আনলক রাখা হয়েছে</string>
+    <string name="op_keyguard_indication_trust_unlocked">স্মার্ট লক দ্বারা আনলক রাখা হয়েছে</string>
+    <string name="op_keyguard_plugged_in_charging_time_warp">&lt;xliff:g id=শতাংশ>%2$s&lt;/xliff:g> • Warp চার্জিং (&lt;xliff: g id এর চেয়ে কম=চার্জিং_টাইম_শেষ উদাহরণ = 4 ঘন্টা 2 মিনিট>%1$s&lt;/xliff:g> অবশিষ্ট)</string>
+    <string name="op_keyguard_plugged_in_charging_time_wireless_warp">&lt;xliff:g id=শতাংশ>%2$s&lt;/xliff:g> • Warp ওয়ারলেস চার্জিং (&lt;xliff:g id এর চেয়ে কম=চার্জিং_টাইম_শেষ উদাহরণ = 4 ঘন্টা 2 মিনিট>%1$s&lt;/xliff:g> অবশিষ্ট)</string>
+    <string name="op_kg_prompt_reason_face_timeout_bouncer_password">আনলক করতে পাসওয়ার্ড বা আঙুল ব্যবহার করুন</string>
+    <string name="op_kg_prompt_reason_face_timeout_bouncer_pattern">আনলক করতে প্যাটার্ন বা আঙুল ব্যবহার করুন</string>
+    <string name="op_kg_prompt_reason_face_timeout_bouncer_pin">আনলক করতে PIN বা আঙুল ব্যবহার করুন</string>
+    <string name="op_kg_prompt_reason_face_timeout_password">অতিরিক্ত সুরক্ষার জন্য, ফেস আনলক চালু করতে পাসওয়ার্ডের প্রয়োজন</string>
+    <string name="op_kg_prompt_reason_face_timeout_pattern">অতিরিক্ত সুরক্ষার জন্য, ফেস আনলক চালু করতে প্যাটার্নের প্রয়োজন</string>
+    <string name="op_kg_prompt_reason_face_timeout_pin">অতিরিক্ত সুরক্ষার জন্য, ফেস আনলক চালু করতে PIN এর প্রয়োজন</string>
+    <string name="op_kg_prompt_reason_face_timeout_swipe">আনলক করতে সোয়াইপ আপ করুন বা আঙুলটি ব্যবহার করুন</string>
+    <string name="op_kg_prompt_reason_timeout_password">পাসওয়ার্ড ব্যবহার করতে পাওয়ার বোতাম টিপুন</string>
+    <string name="op_kg_prompt_reason_timeout_pattern">প্যাটার্ন ব্যবহার করতে পাওয়ার বোতাম টিপুন</string>
+    <string name="op_kg_prompt_reason_timeout_pin">PIN ব্যবহার করতে পাওয়ার বোতাম টিপুন</string>
+    <string name="op_kg_prompt_reason_timeout_swipe">অতিরিক্ত সুরক্ষার জন্য, আনলক করতে সোয়াইপ করুন</string>
+    <string name="op_notification_alert_title">গুরুত্বপূর্ণ</string>
+    <string name="op_notification_channel_summary_low">কম গুরুত্বপূর্ণ বিজ্ঞপ্তিগুলি কোনও শব্দ বা কম্পন ছাড়া।</string>
+    <string name="op_notification_section_header_gentle">অন্যান্য বিজ্ঞপ্তি</string>
+    <string name="op_notification_silence_title">অন্যান্য</string>
+    <string name="op_protect_charging">"  সুরক্ষিত চার্জিং"</string>
+    <string name="op_qs_dark_mode_tile_label">অন্ধকার মোড</string>
+    <string name="op_qs_data_usage_used">%1$s: %2$s %3$s ব্যবহৃত হয়েছে</string>
+    <string name="op_quick_settings_night_display_label">দৃষ্টি স্বস্তি</string>
+    <string name="op_quick_settings_night_display_summary_off">নাইট মোড বন্ধ, চালু করতে আলতো চাপুন</string>
+    <string name="op_quick_settings_night_display_summary_on">নাইট মোড চালু, বন্ধ করতে আলতো চাপুন</string>
+    <string name="op_read_mode2_dialog_black">মনো প্রতিক্রিয়া</string>
+    <string name="op_read_mode2_dialog_color">ক্রোমাটিক প্রতিক্রিয়া</string>
+    <string name="op_read_mode2_dialog_title">প্রতিক্রিয়া নির্বাচন করুন</string>
+    <string name="op_reverse_charge_notification_btn">বন্ধ করুন</string>
+    <string name="op_reverse_charge_notification_discharging">সংযুক্ত ডিভাইসটি চার্জ করা হচ্ছে</string>
+    <string name="op_reverse_charge_notification_subtitle">অন্য Qi-সক্রিয় ডিভাইসগুলি ওয়্যারলেসভাবে চার্জ করতে</string>
+    <string name="op_reverse_charge_notification_title">রিভার্স চার্জ</string>
+    <string name="op_reverse_charge_tile_label">রিভার্স চার্জ</string>
+    <string name="op_reverse_charge_toast_charging">চার্জ সনাক্ত করা হয়েছে, রিভার্স চার্জ বন্ধ করা হয়েছে</string>
+    <string name="op_reverse_charge_toast_low_battery">ব্যাটারি কম, রিভার্স চার্জ বন্ধ</string>
+    <string name="op_reverse_charge_toast_over_heat">ওভারহিটিং সনাক্ত হয়েছে, রিভার্স চার্জ বন্ধ করা হয়েছে</string>
+    <string name="output_chooser_empty_hint">কোনো সংযুক্ত ডিভাইস নেই</string>
+    <string name="overheat_dialog_orange_button">এখন নির্বাহ করুন</string>
+    <string name="overheat_dialog_orange_message">"তাপমাত্রা কমাতে নিম্নোক্ত কার্যকলাপগুলি করা হবে
+1.উজ্জ্বলতা কমানো
+2.হটস্পট বন্ধ করা
+3.ফ্ল্যাশলাইট বন্ধ করা"</string>
+    <string name="overheat_dialog_purple_button">এখন পাওয়ার অফ করুন</string>
+    <string name="overheat_dialog_purple_message">5 সেকেন্ড পরে ফোনটির পাওয়ার অফ করা হবে</string>
+    <string name="overheat_dialog_red_message">তাপমাত্রা কমাতে সকল অ্যাপ্লিকেশন প্রক্রিয়া সাফ করা হবে</string>
+    <string name="overheat_dialog_title">আপনার ফোন খুব গরম হয়ে গেছে</string>
+    <string name="overheat_notification_alert">আপনার ফোন খুব গরম হয়ে গেছে এবং তাপমাত্রা কমাতে বেশি ব্যাটারী খরচকারী ফাংশনগুলি বন্ধ করা হয়েছে</string>
+    <string name="overheat_notification_resume">ফোন স্বাভাবিক তাপমাত্রায় ফিরে এসেছে এবং ফোনটি এখন স্বাভাবিকভাবে ব্যবহার করা যাবে</string>
+    <string name="overheat_notification_title_resume">ফোনকে স্বাভাবিক তাপমাত্রায় ফিরিয়ে আনা হয়েছে</string>
+    <string name="overheat_toast_content">আপনার ফোন খুব গরম হয়ে গেছে এবং তাপমাত্রা কমাতে বেশি ব্যাটারী খরচকারী ফাংশনগুলি বন্ধ করা হয়েছে</string>
+    <string name="permission_btn_text_denied">প্রস্থান করুন</string>
+    <string name="permission_btn_text_grant">ঠিক আছে</string>
+    <string name="permission_dialog_title">অনুমতির বিবৃতি</string>
+    <string name="prevent_view_title">পকেট মোড চালু রয়েছে।</string>
+    <string name="prevent_view_title_cancel">আপনার ফোন সক্রিয় করতে:</string>
+    <string name="prevent_view_top_tag_cancel">আপনার ফোনের নীল এলাকা ঢাকবেন না, এবং লেগে থাকা ময়লা বা ধুলো পরিষ্কার করুন।</string>
+    <string name="prevent_view_top_tag_cancel2">পকেট মোড জোর করে বন্ধ করতে স্ক্রীনের বৃত্তগুলিকে অনুসরণ করে তাদের উপর আলতো চাপুন।</string>
+    <string name="prevent_view_top_tag_numbuer1">"1. "</string>
+    <string name="prevent_view_top_tag_numbuer2">"2. "</string>
+    <string name="privacy_alert_application_name">গোপনীয়তা সতর্কতা</string>
+    <string name="privacy_alert_content_text">পরিবর্তন করতে আলতো চাপুন</string>
+    <string name="privacy_alert_content_title">%1$s আপনার %2$s ব্যবহার করছে</string>
+    <string name="privacy_type_camera">ক্যামেরা</string>
+    <string name="privacy_type_microphone">মাইক্রোফোন</string>
+    <string name="qr_bubble_hint">ম্যাসেজগুলো পড়তে এবং উত্তর দিতে বুদবুদটিতে চাপ দিন।</string>
+    <string name="qr_portrait_hint">পোর্ট্রেটে কুইক রিপ্লাই বন্ধ আছে</string>
+    <string name="qr_portrait_turn_on">চালু করুন</string>
+    <string name="qs_edit">সম্পাদনা করুন</string>
+    <string name="qs_panel_life_mode">জীবন</string>
+    <string name="qs_panel_none">কোনোটিই নয়</string>
+    <string name="qs_panel_set_up">সেট আপ করুন</string>
+    <string name="qs_panel_work_mode">কাজ</string>
+    <string name="quick_launch_exit">প্রস্থান করুন</string>
+    <string name="quick_launch_exit_hint">প্রস্থান করতে স্ক্রীনে আঙুল দিয়ে বন্ধ করুন</string>
+    <string name="quick_reply">উত্তর দিন</string>
+    <string name="quick_settings_buttons_label">লক বোতাম</string>
+    <string name="quick_settings_data_switch_label">ডেটা কার্ড পাল্টান</string>
+    <string name="quick_settings_data_switch_toast_0">বর্তমানে কোনো SIM কার্ড প্রবেশ করানো নেই</string>
+    <string name="quick_settings_data_switch_toast_1">বর্তমানে একটি SIM কার্ড প্রবেশ করানো আছে</string>
+    <string name="quick_settings_default_data_card">ডিফল্ট ডেটা কার্ড</string>
+    <string name="quick_settings_footer_audio_headset">হেডসেট</string>
+    <string name="quick_settings_footer_audio_output">অডিও আউটপুট</string>
+    <string name="quick_settings_footer_audio_speaker">ফোন স্পীকার</string>
+    <string name="quick_settings_game_mode_demo">গেমিং মোড চালু থাকাকালীন %s আপনি এটি নিয়ন্ত্রণ কেন্দ্রে অথবা বিজ্ঞপ্তিতে ট্যাপ করে বন্ধ করতে পারেন।</string>
+    <string name="quick_settings_game_mode_demo_all">বিজ্ঞপ্তিগুলি অবরুদ্ধ হবে এবং ক্যাপাসিটিভ বোতামগুলি লক হবে</string>
+    <string name="quick_settings_game_mode_demo_button">ক্যাপাসিটিভ বোতাম লক হবে</string>
+    <string name="quick_settings_game_mode_demo_notification">বিজ্ঞপ্তিগুলি অবরুদ্ধ করা হবে</string>
+    <string name="quick_settings_game_mode_label">গেমিং মোড</string>
+    <string name="quick_settings_game_mode_summary_off">গেমিং মোড বন্ধ, চালু করতে আলতো চাপুন</string>
+    <string name="quick_settings_game_mode_summary_on">গেমিং মোড চালু, বন্ধ করতে আলতো চাপুন</string>
+    <string name="quick_settings_hotspot_no_password">উন্মুক্ত নেটওয়ার্ক</string>
+    <string name="quick_settings_hotspot_password">পাসওয়ার্ড</string>
+    <string name="quick_settings_hotspot_secure_lock">পাসওয়ার্ড দেখাতে ডিভাইস আনলক করুন</string>
+    <string name="quick_settings_hotspot_ssid">SSID</string>
+    <string name="quick_settings_night_mode_label">রাত্রি মোড</string>
+    <string name="quick_settings_op_car_mode_dnd_label">বিরক্ত করবেন না</string>
+    <string name="quick_settings_op_car_mode_dnd_summary_off">কার মোড DND বন্ধ আছে, চালু করতে আলতো চাপুন</string>
+    <string name="quick_settings_op_car_mode_dnd_summary_on">কার মোড DND চালু আছে, বন্ধ করতে আলতো চাপুন</string>
+    <string name="quick_settings_power_saving_label">ব্যাটারি সেভার</string>
+    <string name="quick_settings_read_mode_label">পঠন মোড</string>
+    <string name="quick_settings_read_mode_summary_off">পঠন মোড বন্ধ, চালু করতে আলতো চাপুন</string>
+    <string name="quick_settings_read_mode_summary_on">পঠন মোড চালু, বন্ধ করতে আলতো চাপুন</string>
+    <string name="quick_settings_switch_user_storage_insufficient">সঞ্চয়স্থান পূর্ণ হয়েছে, ব্যবহারকারী পাল্টানো যাবে না</string>
+    <string name="recents_deep_clean_button_text">গভীর স্ক্যান</string>
+    <string name="recents_deep_clean_description">ব্যাকগ্রাউন্ড প্রক্রিয়া সাফ করে দেয় যা অনভিপ্রেত ফলাফল দিতে পারে। কিছু অ্যাপ কাজ করা থামাতে পারে এবং আপনি সেগুলি আবার শুরু না করা পর্যন্ত হয়তো বিজ্ঞপ্তি পাবেন না।</string>
+    <string name="recents_deep_clean_dialog_checkbox_text">পুনরায় প্রদর্শন করবেন না</string>
+    <string name="recents_deep_clean_dialog_message">ডিপ স্ক্যান সমস্ত ব্যাকগ্রাউন্ড প্রক্রিয়া সাফ করে দেবে যা অনভিপ্রেত ফলাফল দিতে পারে। কিছু অ্যাপ কাজ করা থামাতে পারে এবং আবার শুরু না করা পর্যন্ত বিজ্ঞপ্তি পাবেন না। অনুগ্রহ করে নিশ্চিত করুন।</string>
+    <string name="recents_deep_clean_dialog_title">সতর্কবার্তা</string>
+    <string name="recents_deep_clean_message">সমস্ত আপ্লিকেশন বন্ধ করুন</string>
+    <string name="recents_deep_clean_option">গভীর পরিষ্কার</string>
+    <string name="recents_empty_no_apps_open">কোনও অ্যাপ খোলা নেই</string>
+    <string name="recents_empty_recently_closed">সাম্প্রতিক বন্ধ করা অ্যাপগুলি</string>
+    <string name="recents_normal_clean_description">ব্যাকগ্রাউন্ড প্রক্রিয়া পরিষ্কার না করেই কার্য তালিকা ও ক্যাশ পরিষ্কার করুন।</string>
+    <string name="recents_normal_clean_option">স্বাভাবিক পরিষ্কার</string>
+    <string name="recents_option_note">আপনি সেটিংস -> উন্নত এ পরিবর্তন করতে পারেন।</string>
+    <string name="recents_option_title">কোন পদ্ধতিতে আপনি পছন্দ করবেন</string>
+    <string name="remove_oneplus_laboratory_from_settings_prompt">সেটিংস থেকে OnePlus ল্যাবরেটরি অপসারণ করে এর সমস্ত বৈশিষ্ট্য ব্যবহার করা বন্ধ করবেন?\"</string>
+    <string name="screenshot_delete_confirmation">স্ক্রিনশট মুছে ফেলা হয়েছে</string>
+    <string name="sd_card_unmount_action">আনমাউন্ট করুন</string>
+    <string name="select_day">মাস এবং দিন বেছে নিন</string>
+    <string name="select_hours">ঘণ্টা বেছে নিন</string>
+    <string name="select_minutes">মিনিট বেছে নিন</string>
+    <string name="select_year">বছর বেছে নিন</string>
+    <string name="sim_status_uss_network_roam">রোমিং</string>
+    <string name="tethered_notification_hybrid_sharing_mobile">মোবাইল ডেটা শেয়ার করার জন্য, সেটিংসে ঢুকতে ক্লিক করুন</string>
+    <string name="tethered_notification_hybrid_sharing_none">শেয়ার করার জন্য কোনও নেটওয়ার্ক উপলব্ধ নেই, সেটিংসে ঢুকতে ক্লিক করুন</string>
+    <string name="tethered_notification_hybrid_sharing_wifi">ওয়াই-ফাই শেয়ার করছি, সেটিংস এ প্রবেশ করতে ক্লিক করুন</string>
+    <string name="tethered_notification_message">সেটআপ করতে ট্যাপ করুন।</string>
+    <string name="tethered_notification_multi_device_message">%1$sটি ডিভাইস সংযুক্ত</string>
+    <string name="tethered_notification_multi_tether_title">টেথারিং এবং মোবাইল হটস্পট সক্রিয় আছে</string>
+    <string name="tethered_notification_no_device_message">কোনো সংযুক্ত ডিভাইস নেই</string>
+    <string name="tethered_notification_one_device_message">%1$sটি ডিভাইস সংযুক্ত</string>
+    <string name="tethered_notification_sharing_mobile_multi">মোবাইল ডেটা শেয়ার করার জন্য, %1$s ডিভাইস সংযুক্ত হয়েছে</string>
+    <string name="tethered_notification_sharing_mobile_no">মোবাইল ডেটা শেয়ার করছি, কোনও ডিভাইস সংযুক্ত নেই</string>
+    <string name="tethered_notification_sharing_mobile_single">মোবাইল ডেটা শেয়ার করছি, %1$s ডিভাইস সংযুক্ত রয়েছে</string>
+    <string name="tethered_notification_sharing_none_multi">শেয়ার করার জন্য কোনও নেটওয়ার্ক উপলব্ধ নেই, %1$s ডিভাইস সংযুক্ত হয়েছে</string>
+    <string name="tethered_notification_sharing_none_no">শেয়ার করার জন্য কোনও নেটওয়ার্ক উপলব্ধ নেই, কোনও ডিভাইস সংযুক্ত নেই</string>
+    <string name="tethered_notification_sharing_none_single">শেয়ার করার জন্য কোনও নেটওয়ার্ক উপলব্ধ নেই, %1$sটি ডিভাইস সংযুক্ত হয়েছে</string>
+    <string name="tethered_notification_sharing_wifi_multi">ওয়াই-ফাই শেয়ার করছি, %1$s ডিভাইস সংযুক্ত রয়েছে</string>
+    <string name="tethered_notification_sharing_wifi_no">ওয়াই-ফাই শেয়ার করছি, কোনও ডিভাইস সংযুক্ত নেই</string>
+    <string name="tethered_notification_sharing_wifi_single">ওয়াই-ফাই শেয়ার করছি, %1$s ডিভাইস সংযুক্ত রয়েছে</string>
+    <string name="tethered_notification_title">টেথারিং অথবা মোবাইল হটস্পট সক্রিয় আছে</string>
+    <string name="threekey_volume_guide_dialog_mutering_msg">ডিভাইসটি নীরব করার জন্য, কম্পন অথবা নীরব মোড করতে Alert Slider সেট করুন।</string>
+    <string name="threekey_volume_guide_dialog_mutering_title">রিং ভলিউম নীরব করুন</string>
+    <string name="threekey_volume_guide_dialog_ok">ঠিক আছে</string>
+    <string name="threekey_volume_guide_dialog_ring_msg">রিং হওয়া সক্ষম করতে, রিং মোডে পরিবর্তন করতে Alert Slider টি ব্যবহার করুন এবং আপনার পছন্দ অনুযায়ী রিংয়ের ভলিউম সেট করুন।</string>
+    <string name="threekey_volume_guide_dialog_ring_title">রিং মোড</string>
+    <string name="threekey_volume_guide_dialog_silent_msg">Alert Slider টি বর্তমানে নীরব মোডে রয়েছে; ইনকামিং কল আসলে ডিভাইসটিতে রিং বা কম্পন হবেনা। রিং দ্বারা অবগত হতে অনুগ্রহ করে রিং মোডে যান।</string>
+    <string name="threekey_volume_guide_dialog_silent_title">নীরব মোড</string>
+    <string name="threekey_volume_guide_dialog_vibrate_msg">Alert Slider টি বর্তমানে কম্পন মোডে রয়েছে; ইনকামিং কল আসলে ডিভাইসটিতে রিং হবেনা। আপনাকে শুধুমাত্র কম্পন দ্বারা অবগত করা হবে। রিং দ্বারা অবগত হওয়ার জন্য অনুগ্রহ করে রিং এ সুইচ করুন।</string>
+    <string name="threekey_volume_guide_dialog_vibrate_title">কম্পন মোড</string>
+    <string name="time_picker_header_text">সময় সেট করুন</string>
+    <string name="time_picker_hour_label">ঘণ্টা</string>
+    <string name="time_picker_input_error">সঠিক সময় লিখুন</string>
+    <string name="time_picker_minute_label">মিনিট</string>
+    <string name="time_picker_prompt_label">সময় উল্লেখ করুন</string>
+    <string name="usb_storage_badremoval_notification_message" />
+    <string name="usb_storage_badremoval_notification_title">USB সঞ্চয়স্থান অপসারণ করা হয়েছে</string>
+    <string name="usb_storage_checking_notification_title">USB সঞ্চয়স্থান প্রস্তুত হচ্ছে</string>
+    <string name="volume_footer_no_disturb">বিরক্ত করবেন না</string>
+    <string name="volume_footer_ring">রিং</string>
+    <string name="volume_footer_slient">নিঃশব্দ করুন</string>
+    <string name="volume_footer_vibrate">নীরব (কম্পন)</string>
+    <string name="volume_vibrate">কম্পন</string>
+    <string name="wlb_break_mode_active">সক্রিয়</string>
+    <string name="wlb_break_mode_active_text">%1$s মোড · %2$s</string>
+    <string name="wlb_break_mode_on_break">বিরতিতে আছি</string>
+    <string name="wlb_break_mode_resume">পুনরায় চালু করুন</string>
+    <string name="wlb_break_mode_take_break">একটু বিরতি নিন</string>
+    <string name="wlb_qs_detail_break_mode">ব্রেক মোড</string>
+    <string name="wlb_qs_detail_break_mode_desc">30 মিনিট পরে স্বয়ংক্রিয়ভাবে পূর্ববর্তী মোডে আবার শুরু হয়</string>
+    <string name="wlb_qs_detail_life_mode">লাইফ মোড</string>
+    <string name="wlb_qs_detail_more_setting">আরও সেটিংস</string>
+    <string name="wlb_qs_detail_work_mode">কাজ মোড</string>
+    <string name="work_life_balance_mode">Work Life Balance</string>
+    <string name="zen_important_interruptions">অগ্রাধিকারের বিজ্ঞপ্তি</string>
+    <string name="zen_interruption_level_all">সমস্ত বিজ্ঞপ্তি</string>
+    <string name="zen_no_interruptions">নিঃশব্দ করুন</string>
+    <string name="zzz_op_global_action_bootloader">বুটলোডার</string>
+    <string name="zzz_op_global_action_recovery">পুনরুদ্ধার</string>
+    <string name="zzz_op_quick_pay_no_install_message">ক্যুইক পে ব্যবহার করতে অনুগ্রহ করে পেমেন্ট অ্যাপগুলি ইনস্টল করুন</string>
+</resources>

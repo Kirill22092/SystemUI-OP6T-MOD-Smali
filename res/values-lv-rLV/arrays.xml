@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="zzz_op_quick_pay_switch_strings">
+        <item>QR kods</item>
+        <item>Skenēšana</item>
+        <item>QR kods</item>
+        <item>Skenēšana</item>
+        <item>Paytm</item>
+    </string-array>
+</resources>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AodClockStyle
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:systemui="http://schemas.android.com/apk/res-auto">
+    <controller>com.oneplus.aod.controller.OpBuildInClockController</controller>
+    <burnInSettings systemui:handleClass="com.oneplus.aod.utils.burnin.OpBurnInVerticalController" systemui:minBottomRatio="@dimen/aod_clock_min_bottom_ratio_default" systemui:minTopRatio="@dimen/aod_clock_min_top_ratio_default" systemui:movingDistance="@dimen/aod_moving_distance_default" />
+    <com.oneplus.aod.views.OpTextClock android:textSize="@dimen/aod_clock_default_font_size" android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/aod_clock_default_margin_top" android:fontFamily="@font/robotobold" android:format12Hour="hh\nmm" android:format24Hour="HH\nmm" />
+    <systemInfoSettings>
+        <dateInfo android:textSize="@dimen/aod_date_view_font_size" android:layout_gravity="center_horizontal" android:layout_marginTop="@dimen/aod_date_view_default_marginTop" android:fontFamily="@font/robotoregular" systemui:followSystemFont="false" />
+        <sliceInfo android:layout_gravity="center_horizontal" android:layout_marginTop="@dimen/op_control_margin_space7" android:layout_marginStart="@dimen/aod_slice_view_horizontal_margin" android:layout_marginEnd="@dimen/aod_slice_view_horizontal_margin" />
+        <batteryInfo android:layout_gravity="center_horizontal" android:layout_marginTop="@dimen/op_control_margin_space7" />
+        <notificationInfo android:layout_gravity="center_horizontal" android:layout_marginTop="@dimen/aod_clock_systeminfo_vertical_margin" />
+        <ownerInfo android:layout_gravity="center_horizontal" android:layout_marginTop="@dimen/aod_clock_systeminfo_vertical_margin" />
+    </systemInfoSettings>
+</AodClockStyle>

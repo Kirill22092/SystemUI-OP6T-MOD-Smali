@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="abc_action_bar_default_height_material">48.0dip</dimen>
+    <dimen name="abc_text_size_subtitle_material_toolbar">12.0dip</dimen>
+    <dimen name="abc_text_size_title_material_toolbar">14.0dip</dimen>
+    <dimen name="battery_detail_graph_space_bottom">9.0dip</dimen>
+    <dimen name="battery_detail_graph_space_top">9.0dip</dimen>
+    <dimen name="biometric_dialog_button_negative_max_width">140.0dip</dimen>
+    <dimen name="biometric_dialog_button_positive_max_width">116.0dip</dimen>
+    <dimen name="brightness_mirror_height">29.0dip</dimen>
+    <dimen name="bubble_padding_top">4.0dip</dimen>
+    <dimen name="controls_activity_view_top_offset">25.0dip</dimen>
+    <dimen name="docked_divider_handle_height">16.0dip</dimen>
+    <dimen name="docked_divider_handle_width">2.0dip</dimen>
+    <dimen name="global_actions_power_dialog_item_bottom_margin">35.0dip</dimen>
+    <dimen name="global_actions_power_dialog_item_height">130.0dip</dimen>
+    <dimen name="mr_controller_volume_group_list_item_height">61.0dip</dimen>
+    <dimen name="mr_controller_volume_group_list_item_icon_size">18.0dip</dimen>
+    <dimen name="mr_controller_volume_group_list_max_height">132.0dip</dimen>
+    <dimen name="mtrl_alert_dialog_background_inset_bottom">24.0dip</dimen>
+    <dimen name="mtrl_alert_dialog_background_inset_top">24.0dip</dimen>
+    <dimen name="mtrl_calendar_days_of_week_height">20.0dip</dimen>
+    <dimen name="mtrl_calendar_header_content_padding">4.0dip</dimen>
+    <dimen name="mtrl_calendar_header_height_fullscreen">96.0dip</dimen>
+    <dimen name="mtrl_calendar_header_toggle_margin_bottom">0.0dip</dimen>
+    <dimen name="mtrl_calendar_header_toggle_margin_top">0.0dip</dimen>
+    <dimen name="mtrl_calendar_landscape_header_width">104.0dip</dimen>
+    <dimen name="mtrl_calendar_selection_baseline_to_top_fullscreen">68.0dip</dimen>
+    <dimen name="mtrl_calendar_selection_text_baseline_to_bottom_fullscreen">28.0dip</dimen>
+    <dimen name="mtrl_calendar_selection_text_baseline_to_top">64.0dip</dimen>
+    <dimen name="mtrl_calendar_text_input_padding_top">32.0dip</dimen>
+    <dimen name="mtrl_calendar_title_baseline_to_top">24.0dip</dimen>
+    <dimen name="mtrl_calendar_title_baseline_to_top_fullscreen">32.0dip</dimen>
+    <item type="dimen" name="navigation_bar_size">@android:dimen/navigation_bar_width</item>
+    <dimen name="notification_panel_width">490.0dip</dimen>
+    <item type="dimen" name="op_controls_detail_dialog_side_margin">@dimen/navigation_bar_size</item>
+    <item type="dimen" name="op_quick_qs_tile_margin_top">@dimen/op_control_margin_space3</item>
+    <dimen name="qs_detail_margin_top">0.0dip</dimen>
+    <dimen name="qs_paged_tile_layout_padding_bottom">0.0dip</dimen>
+    <dimen name="qs_panel_padding_top">0.0dip</dimen>
+    <dimen name="qs_tile_margin_top">0.0dip</dimen>
+    <dimen name="qs_tile_margin_vertical">0.0dip</dimen>
+    <dimen name="quick_qs_total_height">200.0dip</dimen>
+    <dimen name="volume_tool_tip_right_margin">136.0dip</dimen>
+    <dimen name="volume_tool_tip_top_margin">12.0dip</dimen>
+</resources>
