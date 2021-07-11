@@ -3130,10 +3130,11 @@
 .end method
 
 .method public static isMCLVersion()Z
-    .locals 1
+    .registers 1
 
-    .line 826
-    sget-boolean v0, Lcom/oneplus/util/OpUtils;->sIsMCLCustomType:Z
+    .prologue
+    .line 9
+    const/4 v0, 0x1
 
     return v0
 .end method

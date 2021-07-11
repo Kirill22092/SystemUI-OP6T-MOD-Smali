@@ -21,4377 +21,1172 @@
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 25
+    .registers 2
 
-    const/16 v0, 0x64
+    .prologue
+    const/16 v1, 0x64
 
-    new-array v0, v0, [I
+    .line 19
+    new-array v0, v1, [I
 
-    .line 14
-    sget v1, Lcom/android/systemui/R$drawable;->fod_default_00:I
-
-    const/4 v2, 0x0
-
-    aput v1, v0, v2
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_default_01:I
-
-    const/4 v3, 0x1
-
-    aput v1, v0, v3
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_default_02:I
-
-    const/4 v4, 0x2
-
-    aput v1, v0, v4
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_default_03:I
-
-    const/4 v5, 0x3
-
-    aput v1, v0, v5
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_default_04:I
-
-    const/4 v6, 0x4
-
-    aput v1, v0, v6
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_default_05:I
-
-    const/4 v7, 0x5
-
-    aput v1, v0, v7
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_default_06:I
-
-    const/4 v8, 0x6
-
-    aput v1, v0, v8
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_default_07:I
-
-    const/4 v9, 0x7
-
-    aput v1, v0, v9
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_default_08:I
-
-    const/16 v10, 0x8
-
-    aput v1, v0, v10
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_default_09:I
-
-    const/16 v11, 0x9
-
-    aput v1, v0, v11
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_default_10:I
-
-    const/16 v12, 0xa
-
-    aput v1, v0, v12
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_default_11:I
-
-    const/16 v13, 0xb
-
-    aput v1, v0, v13
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_default_12:I
-
-    const/16 v14, 0xc
-
-    aput v1, v0, v14
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_default_13:I
-
-    const/16 v15, 0xd
-
-    aput v1, v0, v15
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_default_14:I
-
-    const/16 v16, 0xe
-
-    aput v1, v0, v16
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_default_15:I
-
-    const/16 v17, 0xf
-
-    aput v1, v0, v17
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_default_16:I
-
-    const/16 v18, 0x10
-
-    aput v1, v0, v18
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_default_17:I
-
-    const/16 v19, 0x11
-
-    aput v1, v0, v19
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_default_18:I
-
-    const/16 v20, 0x12
-
-    aput v1, v0, v20
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_default_19:I
-
-    const/16 v21, 0x13
-
-    aput v1, v0, v21
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_default_20:I
-
-    const/16 v22, 0x14
-
-    aput v1, v0, v22
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_default_21:I
-
-    const/16 v23, 0x15
-
-    aput v1, v0, v23
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_default_22:I
-
-    const/16 v24, 0x16
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_default_23:I
-
-    const/16 v24, 0x17
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_default_24:I
-
-    const/16 v24, 0x18
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_default_25:I
-
-    const/16 v24, 0x19
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_default_26:I
-
-    const/16 v24, 0x1a
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_default_27:I
-
-    const/16 v24, 0x1b
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_default_28:I
-
-    const/16 v24, 0x1c
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_default_29:I
-
-    const/16 v24, 0x1d
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_default_30:I
-
-    const/16 v24, 0x1e
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_default_31:I
-
-    const/16 v24, 0x1f
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_default_32:I
-
-    const/16 v24, 0x20
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_default_33:I
-
-    const/16 v24, 0x21
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_default_34:I
-
-    const/16 v24, 0x22
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_default_35:I
-
-    const/16 v24, 0x23
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_default_36:I
-
-    const/16 v24, 0x24
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_default_37:I
-
-    const/16 v24, 0x25
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_default_38:I
-
-    const/16 v24, 0x26
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_default_39:I
-
-    const/16 v24, 0x27
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_default_40:I
-
-    const/16 v24, 0x28
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_default_41:I
-
-    const/16 v24, 0x29
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_default_42:I
-
-    const/16 v24, 0x2a
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_default_43:I
-
-    const/16 v24, 0x2b
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_default_44:I
-
-    const/16 v24, 0x2c
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_default_45:I
-
-    const/16 v24, 0x2d
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_default_46:I
-
-    const/16 v24, 0x2e
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_default_47:I
-
-    const/16 v24, 0x2f
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_default_48:I
-
-    const/16 v24, 0x30
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_default_49:I
-
-    const/16 v24, 0x31
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_default_50:I
-
-    const/16 v24, 0x32
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_default_51:I
-
-    const/16 v24, 0x33
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_default_52:I
-
-    const/16 v24, 0x34
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_default_53:I
-
-    const/16 v24, 0x35
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_default_54:I
-
-    const/16 v24, 0x36
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_default_55:I
-
-    const/16 v24, 0x37
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_default_56:I
-
-    const/16 v24, 0x38
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_default_57:I
-
-    const/16 v24, 0x39
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_default_58:I
-
-    const/16 v24, 0x3a
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_default_59:I
-
-    const/16 v24, 0x3b
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_default_60:I
-
-    const/16 v24, 0x3c
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_default_61:I
-
-    const/16 v24, 0x3d
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_default_62:I
-
-    const/16 v24, 0x3e
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_default_63:I
-
-    const/16 v24, 0x3f
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_default_64:I
-
-    const/16 v24, 0x40
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_default_65:I
-
-    const/16 v24, 0x41
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_default_66:I
-
-    const/16 v24, 0x42
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_default_67:I
-
-    const/16 v24, 0x43
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_default_68:I
-
-    const/16 v24, 0x44
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_default_69:I
-
-    const/16 v24, 0x45
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_default_70:I
-
-    const/16 v24, 0x46
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_default_71:I
-
-    const/16 v24, 0x47
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_default_72:I
-
-    const/16 v24, 0x48
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_default_73:I
-
-    const/16 v24, 0x49
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_default_74:I
-
-    const/16 v24, 0x4a
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_default_75:I
-
-    const/16 v24, 0x4b
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_default_76:I
-
-    const/16 v24, 0x4c
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_default_77:I
-
-    const/16 v24, 0x4d
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_default_78:I
-
-    const/16 v24, 0x4e
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_default_79:I
-
-    const/16 v24, 0x4f
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_default_80:I
-
-    const/16 v24, 0x50
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_default_81:I
-
-    const/16 v24, 0x51
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_default_82:I
-
-    const/16 v24, 0x52
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_default_83:I
-
-    const/16 v24, 0x53
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_default_84:I
-
-    const/16 v24, 0x54
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_default_85:I
-
-    const/16 v24, 0x55
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_default_86:I
-
-    const/16 v24, 0x56
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_default_87:I
-
-    const/16 v24, 0x57
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_default_88:I
-
-    const/16 v24, 0x58
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_default_89:I
-
-    const/16 v24, 0x59
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_default_90:I
-
-    const/16 v24, 0x5a
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_default_91:I
-
-    const/16 v24, 0x5b
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_default_92:I
-
-    const/16 v24, 0x5c
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_default_93:I
-
-    const/16 v24, 0x5d
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_default_94:I
-
-    const/16 v24, 0x5e
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_default_95:I
-
-    const/16 v24, 0x5f
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_default_96:I
-
-    const/16 v24, 0x60
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_default_97:I
-
-    const/16 v24, 0x61
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_default_98:I
-
-    const/16 v24, 0x62
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_default_99:I
-
-    const/16 v24, 0x63
-
-    aput v1, v0, v24
+    fill-array-data v0, :array_36
 
     sput-object v0, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_ANIMATION_DEFAULT:[I
 
-    const/16 v0, 0x64
+    .line 54
+    new-array v0, v1, [I
 
-    new-array v0, v0, [I
-
-    .line 37
-    sget v1, Lcom/android/systemui/R$drawable;->fod02_00:I
-
-    aput v1, v0, v2
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod02_01:I
-
-    aput v1, v0, v3
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod02_02:I
-
-    aput v1, v0, v4
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod02_03:I
-
-    aput v1, v0, v5
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod02_04:I
-
-    aput v1, v0, v6
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod02_05:I
-
-    aput v1, v0, v7
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod02_06:I
-
-    aput v1, v0, v8
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod02_07:I
-
-    aput v1, v0, v9
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod02_08:I
-
-    aput v1, v0, v10
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod02_09:I
-
-    aput v1, v0, v11
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod02_10:I
-
-    aput v1, v0, v12
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod02_11:I
-
-    aput v1, v0, v13
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod02_12:I
-
-    aput v1, v0, v14
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod02_13:I
-
-    aput v1, v0, v15
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod02_14:I
-
-    aput v1, v0, v16
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod02_15:I
-
-    aput v1, v0, v17
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod02_16:I
-
-    aput v1, v0, v18
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod02_17:I
-
-    aput v1, v0, v19
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod02_18:I
-
-    aput v1, v0, v20
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod02_19:I
-
-    aput v1, v0, v21
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod02_20:I
-
-    aput v1, v0, v22
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod02_21:I
-
-    aput v1, v0, v23
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod02_22:I
-
-    const/16 v24, 0x16
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod02_23:I
-
-    const/16 v24, 0x17
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod02_24:I
-
-    const/16 v24, 0x18
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod02_25:I
-
-    const/16 v24, 0x19
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod02_26:I
-
-    const/16 v24, 0x1a
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod02_27:I
-
-    const/16 v24, 0x1b
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod02_28:I
-
-    const/16 v24, 0x1c
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod02_29:I
-
-    const/16 v24, 0x1d
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod02_30:I
-
-    const/16 v24, 0x1e
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod02_31:I
-
-    const/16 v24, 0x1f
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod02_32:I
-
-    const/16 v24, 0x20
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod02_33:I
-
-    const/16 v24, 0x21
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod02_34:I
-
-    const/16 v24, 0x22
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod02_35:I
-
-    const/16 v24, 0x23
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod02_36:I
-
-    const/16 v24, 0x24
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod02_37:I
-
-    const/16 v24, 0x25
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod02_38:I
-
-    const/16 v24, 0x26
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod02_39:I
-
-    const/16 v24, 0x27
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod02_40:I
-
-    const/16 v24, 0x28
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod02_41:I
-
-    const/16 v24, 0x29
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod02_42:I
-
-    const/16 v24, 0x2a
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod02_43:I
-
-    const/16 v24, 0x2b
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod02_44:I
-
-    const/16 v24, 0x2c
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod02_45:I
-
-    const/16 v24, 0x2d
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod02_46:I
-
-    const/16 v24, 0x2e
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod02_47:I
-
-    const/16 v24, 0x2f
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod02_48:I
-
-    const/16 v24, 0x30
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod02_49:I
-
-    const/16 v24, 0x31
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod02_50:I
-
-    const/16 v24, 0x32
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod02_51:I
-
-    const/16 v24, 0x33
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod02_52:I
-
-    const/16 v24, 0x34
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod02_53:I
-
-    const/16 v24, 0x35
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod02_54:I
-
-    const/16 v24, 0x36
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod02_55:I
-
-    const/16 v24, 0x37
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod02_56:I
-
-    const/16 v24, 0x38
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod02_57:I
-
-    const/16 v24, 0x39
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod02_58:I
-
-    const/16 v24, 0x3a
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod02_59:I
-
-    const/16 v24, 0x3b
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod02_60:I
-
-    const/16 v24, 0x3c
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod02_61:I
-
-    const/16 v24, 0x3d
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod02_62:I
-
-    const/16 v24, 0x3e
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod02_63:I
-
-    const/16 v24, 0x3f
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod02_64:I
-
-    const/16 v24, 0x40
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod02_65:I
-
-    const/16 v24, 0x41
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod02_66:I
-
-    const/16 v24, 0x42
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod02_67:I
-
-    const/16 v24, 0x43
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod02_68:I
-
-    const/16 v24, 0x44
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod02_69:I
-
-    const/16 v24, 0x45
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod02_70:I
-
-    const/16 v24, 0x46
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod02_71:I
-
-    const/16 v24, 0x47
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod02_72:I
-
-    const/16 v24, 0x48
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod02_73:I
-
-    const/16 v24, 0x49
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod02_74:I
-
-    const/16 v24, 0x4a
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod02_75:I
-
-    const/16 v24, 0x4b
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod02_76:I
-
-    const/16 v24, 0x4c
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod02_77:I
-
-    const/16 v24, 0x4d
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod02_78:I
-
-    const/16 v24, 0x4e
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod02_79:I
-
-    const/16 v24, 0x4f
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod02_80:I
-
-    const/16 v24, 0x50
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod02_81:I
-
-    const/16 v24, 0x51
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod02_82:I
-
-    const/16 v24, 0x52
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod02_83:I
-
-    const/16 v24, 0x53
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod02_84:I
-
-    const/16 v24, 0x54
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod02_85:I
-
-    const/16 v24, 0x55
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod02_86:I
-
-    const/16 v24, 0x56
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod02_87:I
-
-    const/16 v24, 0x57
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod02_88:I
-
-    const/16 v24, 0x58
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod02_89:I
-
-    const/16 v24, 0x59
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod02_90:I
-
-    const/16 v24, 0x5a
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod02_91:I
-
-    const/16 v24, 0x5b
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod02_92:I
-
-    const/16 v24, 0x5c
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod02_93:I
-
-    const/16 v24, 0x5d
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod02_94:I
-
-    const/16 v24, 0x5e
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod02_95:I
-
-    const/16 v24, 0x5f
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod02_96:I
-
-    const/16 v24, 0x60
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod02_97:I
-
-    const/16 v24, 0x61
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod02_98:I
-
-    const/16 v24, 0x62
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod02_99:I
-
-    const/16 v24, 0x63
-
-    aput v1, v0, v24
+    fill-array-data v0, :array_102
 
     sput-object v0, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_ANIMATION_02:[I
 
-    const/16 v0, 0x64
+    .line 80
+    new-array v0, v1, [I
 
-    new-array v0, v0, [I
-
-    .line 60
-    sget v1, Lcom/android/systemui/R$drawable;->fod03_00:I
-
-    aput v1, v0, v2
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod03_01:I
-
-    aput v1, v0, v3
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod03_02:I
-
-    aput v1, v0, v4
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod03_03:I
-
-    aput v1, v0, v5
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod03_04:I
-
-    aput v1, v0, v6
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod03_05:I
-
-    aput v1, v0, v7
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod03_06:I
-
-    aput v1, v0, v8
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod03_07:I
-
-    aput v1, v0, v9
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod03_08:I
-
-    aput v1, v0, v10
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod03_09:I
-
-    aput v1, v0, v11
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod03_10:I
-
-    aput v1, v0, v12
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod03_11:I
-
-    aput v1, v0, v13
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod03_12:I
-
-    aput v1, v0, v14
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod03_13:I
-
-    aput v1, v0, v15
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod03_14:I
-
-    aput v1, v0, v16
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod03_15:I
-
-    aput v1, v0, v17
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod03_16:I
-
-    aput v1, v0, v18
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod03_17:I
-
-    aput v1, v0, v19
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod03_18:I
-
-    aput v1, v0, v20
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod03_19:I
-
-    aput v1, v0, v21
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod03_20:I
-
-    aput v1, v0, v22
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod03_21:I
-
-    aput v1, v0, v23
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod03_22:I
-
-    const/16 v24, 0x16
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod03_23:I
-
-    const/16 v24, 0x17
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod03_24:I
-
-    const/16 v24, 0x18
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod03_25:I
-
-    const/16 v24, 0x19
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod03_26:I
-
-    const/16 v24, 0x1a
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod03_27:I
-
-    const/16 v24, 0x1b
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod03_28:I
-
-    const/16 v24, 0x1c
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod03_29:I
-
-    const/16 v24, 0x1d
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod03_30:I
-
-    const/16 v24, 0x1e
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod03_31:I
-
-    const/16 v24, 0x1f
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod03_32:I
-
-    const/16 v24, 0x20
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod03_33:I
-
-    const/16 v24, 0x21
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod03_34:I
-
-    const/16 v24, 0x22
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod03_35:I
-
-    const/16 v24, 0x23
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod03_36:I
-
-    const/16 v24, 0x24
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod03_37:I
-
-    const/16 v24, 0x25
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod03_38:I
-
-    const/16 v24, 0x26
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod03_39:I
-
-    const/16 v24, 0x27
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod03_40:I
-
-    const/16 v24, 0x28
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod03_41:I
-
-    const/16 v24, 0x29
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod03_42:I
-
-    const/16 v24, 0x2a
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod03_43:I
-
-    const/16 v24, 0x2b
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod03_44:I
-
-    const/16 v24, 0x2c
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod03_45:I
-
-    const/16 v24, 0x2d
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod03_46:I
-
-    const/16 v24, 0x2e
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod03_47:I
-
-    const/16 v24, 0x2f
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod03_48:I
-
-    const/16 v24, 0x30
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod03_49:I
-
-    const/16 v24, 0x31
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod03_50:I
-
-    const/16 v24, 0x32
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod03_51:I
-
-    const/16 v24, 0x33
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod03_52:I
-
-    const/16 v24, 0x34
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod03_53:I
-
-    const/16 v24, 0x35
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod03_54:I
-
-    const/16 v24, 0x36
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod03_55:I
-
-    const/16 v24, 0x37
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod03_56:I
-
-    const/16 v24, 0x38
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod03_57:I
-
-    const/16 v24, 0x39
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod03_58:I
-
-    const/16 v24, 0x3a
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod03_59:I
-
-    const/16 v24, 0x3b
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod03_60:I
-
-    const/16 v24, 0x3c
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod03_61:I
-
-    const/16 v24, 0x3d
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod03_62:I
-
-    const/16 v24, 0x3e
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod03_63:I
-
-    const/16 v24, 0x3f
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod03_64:I
-
-    const/16 v24, 0x40
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod03_65:I
-
-    const/16 v24, 0x41
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod03_66:I
-
-    const/16 v24, 0x42
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod03_67:I
-
-    const/16 v24, 0x43
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod03_68:I
-
-    const/16 v24, 0x44
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod03_69:I
-
-    const/16 v24, 0x45
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod03_70:I
-
-    const/16 v24, 0x46
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod03_71:I
-
-    const/16 v24, 0x47
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod03_72:I
-
-    const/16 v24, 0x48
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod03_73:I
-
-    const/16 v24, 0x49
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod03_74:I
-
-    const/16 v24, 0x4a
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod03_75:I
-
-    const/16 v24, 0x4b
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod03_76:I
-
-    const/16 v24, 0x4c
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod03_77:I
-
-    const/16 v24, 0x4d
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod03_78:I
-
-    const/16 v24, 0x4e
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod03_79:I
-
-    const/16 v24, 0x4f
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod03_80:I
-
-    const/16 v24, 0x50
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod03_81:I
-
-    const/16 v24, 0x51
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod03_82:I
-
-    const/16 v24, 0x52
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod03_83:I
-
-    const/16 v24, 0x53
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod03_84:I
-
-    const/16 v24, 0x54
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod03_85:I
-
-    const/16 v24, 0x55
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod03_86:I
-
-    const/16 v24, 0x56
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod03_87:I
-
-    const/16 v24, 0x57
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod03_88:I
-
-    const/16 v24, 0x58
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod03_89:I
-
-    const/16 v24, 0x59
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod03_90:I
-
-    const/16 v24, 0x5a
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod03_91:I
-
-    const/16 v24, 0x5b
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod03_92:I
-
-    const/16 v24, 0x5c
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod03_93:I
-
-    const/16 v24, 0x5d
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod03_94:I
-
-    const/16 v24, 0x5e
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod03_95:I
-
-    const/16 v24, 0x5f
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod03_96:I
-
-    const/16 v24, 0x60
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod03_97:I
-
-    const/16 v24, 0x61
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod03_98:I
-
-    const/16 v24, 0x62
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod03_99:I
-
-    const/16 v24, 0x63
-
-    aput v1, v0, v24
+    fill-array-data v0, :array_1ce
 
     sput-object v0, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_ANIMATION_03:[I
 
-    const/16 v0, 0x64
+    .line 106
+    new-array v0, v1, [I
 
-    new-array v0, v0, [I
-
-    .line 83
-    sget v1, Lcom/android/systemui/R$drawable;->fod04_00:I
-
-    aput v1, v0, v2
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod04_01:I
-
-    aput v1, v0, v3
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod04_02:I
-
-    aput v1, v0, v4
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod04_03:I
-
-    aput v1, v0, v5
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod04_04:I
-
-    aput v1, v0, v6
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod04_05:I
-
-    aput v1, v0, v7
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod04_06:I
-
-    aput v1, v0, v8
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod04_07:I
-
-    aput v1, v0, v9
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod04_08:I
-
-    aput v1, v0, v10
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod04_09:I
-
-    aput v1, v0, v11
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod04_10:I
-
-    aput v1, v0, v12
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod04_11:I
-
-    aput v1, v0, v13
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod04_12:I
-
-    aput v1, v0, v14
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod04_13:I
-
-    aput v1, v0, v15
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod04_14:I
-
-    aput v1, v0, v16
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod04_15:I
-
-    aput v1, v0, v17
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod04_16:I
-
-    aput v1, v0, v18
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod04_17:I
-
-    aput v1, v0, v19
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod04_18:I
-
-    aput v1, v0, v20
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod04_19:I
-
-    aput v1, v0, v21
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod04_20:I
-
-    aput v1, v0, v22
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod04_21:I
-
-    aput v1, v0, v23
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod04_22:I
-
-    const/16 v24, 0x16
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod04_23:I
-
-    const/16 v24, 0x17
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod04_24:I
-
-    const/16 v24, 0x18
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod04_25:I
-
-    const/16 v24, 0x19
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod04_26:I
-
-    const/16 v24, 0x1a
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod04_27:I
-
-    const/16 v24, 0x1b
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod04_28:I
-
-    const/16 v24, 0x1c
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod04_29:I
-
-    const/16 v24, 0x1d
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod04_30:I
-
-    const/16 v24, 0x1e
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod04_31:I
-
-    const/16 v24, 0x1f
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod04_32:I
-
-    const/16 v24, 0x20
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod04_33:I
-
-    const/16 v24, 0x21
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod04_34:I
-
-    const/16 v24, 0x22
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod04_35:I
-
-    const/16 v24, 0x23
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod04_36:I
-
-    const/16 v24, 0x24
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod04_37:I
-
-    const/16 v24, 0x25
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod04_38:I
-
-    const/16 v24, 0x26
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod04_39:I
-
-    const/16 v24, 0x27
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod04_40:I
-
-    const/16 v24, 0x28
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod04_41:I
-
-    const/16 v24, 0x29
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod04_42:I
-
-    const/16 v24, 0x2a
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod04_43:I
-
-    const/16 v24, 0x2b
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod04_44:I
-
-    const/16 v24, 0x2c
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod04_45:I
-
-    const/16 v24, 0x2d
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod04_46:I
-
-    const/16 v24, 0x2e
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod04_47:I
-
-    const/16 v24, 0x2f
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod04_48:I
-
-    const/16 v24, 0x30
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod04_49:I
-
-    const/16 v24, 0x31
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod04_50:I
-
-    const/16 v24, 0x32
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod04_51:I
-
-    const/16 v24, 0x33
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod04_52:I
-
-    const/16 v24, 0x34
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod04_53:I
-
-    const/16 v24, 0x35
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod04_54:I
-
-    const/16 v24, 0x36
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod04_55:I
-
-    const/16 v24, 0x37
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod04_56:I
-
-    const/16 v24, 0x38
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod04_57:I
-
-    const/16 v24, 0x39
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod04_58:I
-
-    const/16 v24, 0x3a
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod04_59:I
-
-    const/16 v24, 0x3b
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod04_60:I
-
-    const/16 v24, 0x3c
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod04_61:I
-
-    const/16 v24, 0x3d
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod04_62:I
-
-    const/16 v24, 0x3e
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod04_63:I
-
-    const/16 v24, 0x3f
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod04_64:I
-
-    const/16 v24, 0x40
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod04_65:I
-
-    const/16 v24, 0x41
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod04_66:I
-
-    const/16 v24, 0x42
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod04_67:I
-
-    const/16 v24, 0x43
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod04_68:I
-
-    const/16 v24, 0x44
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod04_69:I
-
-    const/16 v24, 0x45
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod04_70:I
-
-    const/16 v24, 0x46
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod04_71:I
-
-    const/16 v24, 0x47
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod04_72:I
-
-    const/16 v24, 0x48
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod04_73:I
-
-    const/16 v24, 0x49
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod04_74:I
-
-    const/16 v24, 0x4a
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod04_75:I
-
-    const/16 v24, 0x4b
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod04_76:I
-
-    const/16 v24, 0x4c
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod04_77:I
-
-    const/16 v24, 0x4d
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod04_78:I
-
-    const/16 v24, 0x4e
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod04_79:I
-
-    const/16 v24, 0x4f
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod04_80:I
-
-    const/16 v24, 0x50
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod04_81:I
-
-    const/16 v24, 0x51
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod04_82:I
-
-    const/16 v24, 0x52
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod04_83:I
-
-    const/16 v24, 0x53
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod04_84:I
-
-    const/16 v24, 0x54
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod04_85:I
-
-    const/16 v24, 0x55
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod04_86:I
-
-    const/16 v24, 0x56
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod04_87:I
-
-    const/16 v24, 0x57
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod04_88:I
-
-    const/16 v24, 0x58
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod04_89:I
-
-    const/16 v24, 0x59
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod04_90:I
-
-    const/16 v24, 0x5a
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod04_91:I
-
-    const/16 v24, 0x5b
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod04_92:I
-
-    const/16 v24, 0x5c
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod04_93:I
-
-    const/16 v24, 0x5d
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod04_94:I
-
-    const/16 v24, 0x5e
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod04_95:I
-
-    const/16 v24, 0x5f
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod04_96:I
-
-    const/16 v24, 0x60
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod04_97:I
-
-    const/16 v24, 0x61
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod04_98:I
-
-    const/16 v24, 0x62
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod04_99:I
-
-    const/16 v24, 0x63
-
-    aput v1, v0, v24
+    fill-array-data v0, :array_29a
 
     sput-object v0, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_ANIMATION_04:[I
 
+    .line 141
     const/16 v0, 0x3c
 
     new-array v0, v0, [I
 
-    .line 106
-    sget v1, Lcom/android/systemui/R$drawable;->fod_mc_00:I
-
-    aput v1, v0, v2
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_mc_01:I
-
-    aput v1, v0, v3
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_mc_02:I
-
-    aput v1, v0, v4
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_mc_03:I
-
-    aput v1, v0, v5
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_mc_04:I
-
-    aput v1, v0, v6
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_mc_05:I
-
-    aput v1, v0, v7
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_mc_06:I
-
-    aput v1, v0, v8
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_mc_07:I
-
-    aput v1, v0, v9
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_mc_08:I
-
-    aput v1, v0, v10
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_mc_09:I
-
-    aput v1, v0, v11
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_mc_10:I
-
-    aput v1, v0, v12
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_mc_11:I
-
-    aput v1, v0, v13
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_mc_12:I
-
-    aput v1, v0, v14
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_mc_13:I
-
-    aput v1, v0, v15
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_mc_14:I
-
-    aput v1, v0, v16
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_mc_15:I
-
-    aput v1, v0, v17
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_mc_16:I
-
-    aput v1, v0, v18
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_mc_17:I
-
-    aput v1, v0, v19
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_mc_18:I
-
-    aput v1, v0, v20
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_mc_19:I
-
-    aput v1, v0, v21
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_mc_20:I
-
-    aput v1, v0, v22
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_mc_21:I
-
-    aput v1, v0, v23
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_mc_22:I
-
-    const/16 v24, 0x16
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_mc_23:I
-
-    const/16 v24, 0x17
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_mc_24:I
-
-    const/16 v24, 0x18
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_mc_25:I
-
-    const/16 v24, 0x19
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_mc_26:I
-
-    const/16 v24, 0x1a
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_mc_27:I
-
-    const/16 v24, 0x1b
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_mc_28:I
-
-    const/16 v24, 0x1c
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_mc_29:I
-
-    const/16 v24, 0x1d
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_mc_30:I
-
-    const/16 v24, 0x1e
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_mc_31:I
-
-    const/16 v24, 0x1f
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_mc_32:I
-
-    const/16 v24, 0x20
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_mc_33:I
-
-    const/16 v24, 0x21
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_mc_34:I
-
-    const/16 v24, 0x22
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_mc_35:I
-
-    const/16 v24, 0x23
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_mc_36:I
-
-    const/16 v24, 0x24
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_mc_37:I
-
-    const/16 v24, 0x25
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_mc_38:I
-
-    const/16 v24, 0x26
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_mc_39:I
-
-    const/16 v24, 0x27
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_mc_40:I
-
-    const/16 v24, 0x28
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_mc_41:I
-
-    const/16 v24, 0x29
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_mc_42:I
-
-    const/16 v24, 0x2a
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_mc_43:I
-
-    const/16 v24, 0x2b
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_mc_44:I
-
-    const/16 v24, 0x2c
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_mc_45:I
-
-    const/16 v24, 0x2d
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_mc_46:I
-
-    const/16 v24, 0x2e
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_mc_47:I
-
-    const/16 v24, 0x2f
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_mc_48:I
-
-    const/16 v24, 0x30
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_mc_49:I
-
-    const/16 v24, 0x31
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_mc_50:I
-
-    const/16 v24, 0x32
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_mc_51:I
-
-    const/16 v24, 0x33
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_mc_52:I
-
-    const/16 v24, 0x34
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_mc_53:I
-
-    const/16 v24, 0x35
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_mc_54:I
-
-    const/16 v24, 0x36
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_mc_55:I
-
-    const/16 v24, 0x37
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_mc_56:I
-
-    const/16 v24, 0x38
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_mc_57:I
-
-    const/16 v24, 0x39
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_mc_58:I
-
-    const/16 v24, 0x3a
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_mc_59:I
-
-    const/16 v24, 0x3b
-
-    aput v1, v0, v24
+    fill-array-data v0, :array_366
 
     sput-object v0, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_ANIMATION_MCL:[I
 
-    const/16 v0, 0x64
+    .line 162
+    new-array v0, v1, [I
 
-    new-array v0, v0, [I
-
-    .line 121
-    sget v1, Lcom/android/systemui/R$drawable;->fod_default_f_00:I
-
-    aput v1, v0, v2
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_default_f_01:I
-
-    aput v1, v0, v3
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_default_f_02:I
-
-    aput v1, v0, v4
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_default_f_03:I
-
-    aput v1, v0, v5
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_default_f_04:I
-
-    aput v1, v0, v6
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_default_f_05:I
-
-    aput v1, v0, v7
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_default_f_06:I
-
-    aput v1, v0, v8
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_default_f_07:I
-
-    aput v1, v0, v9
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_default_f_08:I
-
-    aput v1, v0, v10
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_default_f_09:I
-
-    aput v1, v0, v11
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_default_f_10:I
-
-    aput v1, v0, v12
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_default_f_11:I
-
-    aput v1, v0, v13
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_default_f_12:I
-
-    aput v1, v0, v14
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_default_f_13:I
-
-    aput v1, v0, v15
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_default_f_14:I
-
-    aput v1, v0, v16
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_default_f_15:I
-
-    aput v1, v0, v17
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_default_f_16:I
-
-    aput v1, v0, v18
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_default_f_17:I
-
-    aput v1, v0, v19
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_default_f_18:I
-
-    aput v1, v0, v20
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_default_f_19:I
-
-    aput v1, v0, v21
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_default_f_20:I
-
-    aput v1, v0, v22
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_default_f_21:I
-
-    aput v1, v0, v23
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_default_f_22:I
-
-    const/16 v24, 0x16
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_default_f_23:I
-
-    const/16 v24, 0x17
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_default_f_24:I
-
-    const/16 v24, 0x18
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_default_f_25:I
-
-    const/16 v24, 0x19
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_default_f_26:I
-
-    const/16 v24, 0x1a
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_default_f_27:I
-
-    const/16 v24, 0x1b
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_default_f_28:I
-
-    const/16 v24, 0x1c
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_default_f_29:I
-
-    const/16 v24, 0x1d
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_default_f_30:I
-
-    const/16 v24, 0x1e
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_default_f_31:I
-
-    const/16 v24, 0x1f
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_default_f_32:I
-
-    const/16 v24, 0x20
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_default_f_33:I
-
-    const/16 v24, 0x21
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_default_f_34:I
-
-    const/16 v24, 0x22
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_default_f_35:I
-
-    const/16 v24, 0x23
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_default_f_36:I
-
-    const/16 v24, 0x24
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_default_f_37:I
-
-    const/16 v24, 0x25
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_default_f_38:I
-
-    const/16 v24, 0x26
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_default_f_39:I
-
-    const/16 v24, 0x27
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_default_f_40:I
-
-    const/16 v24, 0x28
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_default_f_41:I
-
-    const/16 v24, 0x29
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_default_f_42:I
-
-    const/16 v24, 0x2a
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_default_f_43:I
-
-    const/16 v24, 0x2b
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_default_f_44:I
-
-    const/16 v24, 0x2c
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_default_f_45:I
-
-    const/16 v24, 0x2d
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_default_f_46:I
-
-    const/16 v24, 0x2e
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_default_f_47:I
-
-    const/16 v24, 0x2f
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_default_f_48:I
-
-    const/16 v24, 0x30
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_default_f_49:I
-
-    const/16 v24, 0x31
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_default_f_50:I
-
-    const/16 v24, 0x32
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_default_f_51:I
-
-    const/16 v24, 0x33
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_default_f_52:I
-
-    const/16 v24, 0x34
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_default_f_53:I
-
-    const/16 v24, 0x35
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_default_f_54:I
-
-    const/16 v24, 0x36
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_default_f_55:I
-
-    const/16 v24, 0x37
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_default_f_56:I
-
-    const/16 v24, 0x38
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_default_f_57:I
-
-    const/16 v24, 0x39
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_default_f_58:I
-
-    const/16 v24, 0x3a
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_default_f_59:I
-
-    const/16 v24, 0x3b
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_default_f_60:I
-
-    const/16 v24, 0x3c
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_default_f_61:I
-
-    const/16 v24, 0x3d
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_default_f_62:I
-
-    const/16 v24, 0x3e
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_default_f_63:I
-
-    const/16 v24, 0x3f
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_default_f_64:I
-
-    const/16 v24, 0x40
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_default_f_65:I
-
-    const/16 v24, 0x41
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_default_f_66:I
-
-    const/16 v24, 0x42
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_default_f_67:I
-
-    const/16 v24, 0x43
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_default_f_68:I
-
-    const/16 v24, 0x44
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_default_f_69:I
-
-    const/16 v24, 0x45
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_default_f_70:I
-
-    const/16 v24, 0x46
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_default_f_71:I
-
-    const/16 v24, 0x47
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_default_f_72:I
-
-    const/16 v24, 0x48
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_default_f_73:I
-
-    const/16 v24, 0x49
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_default_f_74:I
-
-    const/16 v24, 0x4a
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_default_f_75:I
-
-    const/16 v24, 0x4b
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_default_f_76:I
-
-    const/16 v24, 0x4c
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_default_f_77:I
-
-    const/16 v24, 0x4d
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_default_f_78:I
-
-    const/16 v24, 0x4e
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_default_f_79:I
-
-    const/16 v24, 0x4f
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_default_f_80:I
-
-    const/16 v24, 0x50
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_default_f_81:I
-
-    const/16 v24, 0x51
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_default_f_82:I
-
-    const/16 v24, 0x52
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_default_f_83:I
-
-    const/16 v24, 0x53
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_default_f_84:I
-
-    const/16 v24, 0x54
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_default_f_85:I
-
-    const/16 v24, 0x55
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_default_f_86:I
-
-    const/16 v24, 0x56
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_default_f_87:I
-
-    const/16 v24, 0x57
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_default_f_88:I
-
-    const/16 v24, 0x58
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_default_f_89:I
-
-    const/16 v24, 0x59
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_default_f_90:I
-
-    const/16 v24, 0x5a
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_default_f_91:I
-
-    const/16 v24, 0x5b
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_default_f_92:I
-
-    const/16 v24, 0x5c
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_default_f_93:I
-
-    const/16 v24, 0x5d
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_default_f_94:I
-
-    const/16 v24, 0x5e
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_default_f_95:I
-
-    const/16 v24, 0x5f
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_default_f_96:I
-
-    const/16 v24, 0x60
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_default_f_97:I
-
-    const/16 v24, 0x61
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_default_f_98:I
-
-    const/16 v24, 0x62
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_default_f_99:I
-
-    const/16 v24, 0x63
-
-    aput v1, v0, v24
+    fill-array-data v0, :array_3e2
 
     sput-object v0, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->UP_ANIMATION_DEFAULT:[I
 
-    const/16 v0, 0x64
+    .line 212
+    new-array v0, v1, [I
 
-    new-array v0, v0, [I
-
-    .line 144
-    sget v1, Lcom/android/systemui/R$drawable;->fod_cust01_anim_00:I
-
-    aput v1, v0, v2
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_cust01_anim_01:I
-
-    aput v1, v0, v3
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_cust01_anim_02:I
-
-    aput v1, v0, v4
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_cust01_anim_03:I
-
-    aput v1, v0, v5
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_cust01_anim_04:I
-
-    aput v1, v0, v6
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_cust01_anim_05:I
-
-    aput v1, v0, v7
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_cust01_anim_06:I
-
-    aput v1, v0, v8
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_cust01_anim_07:I
-
-    aput v1, v0, v9
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_cust01_anim_08:I
-
-    aput v1, v0, v10
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_cust01_anim_09:I
-
-    aput v1, v0, v11
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_cust01_anim_10:I
-
-    aput v1, v0, v12
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_cust01_anim_11:I
-
-    aput v1, v0, v13
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_cust01_anim_12:I
-
-    aput v1, v0, v14
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_cust01_anim_13:I
-
-    aput v1, v0, v15
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_cust01_anim_14:I
-
-    aput v1, v0, v16
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_cust01_anim_15:I
-
-    aput v1, v0, v17
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_cust01_anim_16:I
-
-    aput v1, v0, v18
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_cust01_anim_17:I
-
-    aput v1, v0, v19
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_cust01_anim_18:I
-
-    aput v1, v0, v20
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_cust01_anim_19:I
-
-    aput v1, v0, v21
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_cust01_anim_20:I
-
-    aput v1, v0, v22
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_cust01_anim_21:I
-
-    aput v1, v0, v23
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_cust01_anim_22:I
-
-    const/16 v2, 0x16
-
-    aput v1, v0, v2
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_cust01_anim_23:I
-
-    const/16 v2, 0x17
-
-    aput v1, v0, v2
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_cust01_anim_24:I
-
-    const/16 v2, 0x18
-
-    aput v1, v0, v2
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_cust01_anim_25:I
-
-    const/16 v2, 0x19
-
-    aput v1, v0, v2
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_cust01_anim_26:I
-
-    const/16 v2, 0x1a
-
-    aput v1, v0, v2
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_cust01_anim_27:I
-
-    const/16 v2, 0x1b
-
-    aput v1, v0, v2
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_cust01_anim_28:I
-
-    const/16 v2, 0x1c
-
-    aput v1, v0, v2
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_cust01_anim_29:I
-
-    const/16 v2, 0x1d
-
-    aput v1, v0, v2
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_cust01_anim_30:I
-
-    const/16 v2, 0x1e
-
-    aput v1, v0, v2
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_cust01_anim_31:I
-
-    const/16 v2, 0x1f
-
-    aput v1, v0, v2
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_cust01_anim_32:I
-
-    const/16 v2, 0x20
-
-    aput v1, v0, v2
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_cust01_anim_33:I
-
-    const/16 v2, 0x21
-
-    aput v1, v0, v2
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_cust01_anim_34:I
-
-    const/16 v2, 0x22
-
-    aput v1, v0, v2
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_cust01_anim_35:I
-
-    const/16 v2, 0x23
-
-    aput v1, v0, v2
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_cust01_anim_36:I
-
-    const/16 v2, 0x24
-
-    aput v1, v0, v2
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_cust01_anim_37:I
-
-    const/16 v2, 0x25
-
-    aput v1, v0, v2
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_cust01_anim_38:I
-
-    const/16 v2, 0x26
-
-    aput v1, v0, v2
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_cust01_anim_39:I
-
-    const/16 v2, 0x27
-
-    aput v1, v0, v2
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_cust01_anim_40:I
-
-    const/16 v2, 0x28
-
-    aput v1, v0, v2
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_cust01_anim_41:I
-
-    const/16 v2, 0x29
-
-    aput v1, v0, v2
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_cust01_anim_42:I
-
-    const/16 v2, 0x2a
-
-    aput v1, v0, v2
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_cust01_anim_43:I
-
-    const/16 v2, 0x2b
-
-    aput v1, v0, v2
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_cust01_anim_44:I
-
-    const/16 v2, 0x2c
-
-    aput v1, v0, v2
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_cust01_anim_45:I
-
-    const/16 v2, 0x2d
-
-    aput v1, v0, v2
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_cust01_anim_46:I
-
-    const/16 v2, 0x2e
-
-    aput v1, v0, v2
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_cust01_anim_47:I
-
-    const/16 v2, 0x2f
-
-    aput v1, v0, v2
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_cust01_anim_48:I
-
-    const/16 v2, 0x30
-
-    aput v1, v0, v2
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_cust01_anim_49:I
-
-    const/16 v2, 0x31
-
-    aput v1, v0, v2
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_cust01_anim_50:I
-
-    const/16 v2, 0x32
-
-    aput v1, v0, v2
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_cust01_anim_51:I
-
-    const/16 v2, 0x33
-
-    aput v1, v0, v2
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_cust01_anim_52:I
-
-    const/16 v2, 0x34
-
-    aput v1, v0, v2
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_cust01_anim_53:I
-
-    const/16 v2, 0x35
-
-    aput v1, v0, v2
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_cust01_anim_54:I
-
-    const/16 v2, 0x36
-
-    aput v1, v0, v2
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_cust01_anim_55:I
-
-    const/16 v2, 0x37
-
-    aput v1, v0, v2
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_cust01_anim_56:I
-
-    const/16 v2, 0x38
-
-    aput v1, v0, v2
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_cust01_anim_57:I
-
-    const/16 v2, 0x39
-
-    aput v1, v0, v2
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_cust01_anim_58:I
-
-    const/16 v2, 0x3a
-
-    aput v1, v0, v2
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_cust01_anim_59:I
-
-    const/16 v2, 0x3b
-
-    aput v1, v0, v2
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_cust01_anim_60:I
-
-    const/16 v2, 0x3c
-
-    aput v1, v0, v2
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_cust01_anim_61:I
-
-    const/16 v2, 0x3d
-
-    aput v1, v0, v2
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_cust01_anim_62:I
-
-    const/16 v2, 0x3e
-
-    aput v1, v0, v2
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_cust01_anim_63:I
-
-    const/16 v2, 0x3f
-
-    aput v1, v0, v2
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_cust01_anim_64:I
-
-    const/16 v2, 0x40
-
-    aput v1, v0, v2
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_cust01_anim_65:I
-
-    const/16 v2, 0x41
-
-    aput v1, v0, v2
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_cust01_anim_66:I
-
-    const/16 v2, 0x42
-
-    aput v1, v0, v2
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_cust01_anim_67:I
-
-    const/16 v2, 0x43
-
-    aput v1, v0, v2
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_cust01_anim_68:I
-
-    const/16 v2, 0x44
-
-    aput v1, v0, v2
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_cust01_anim_69:I
-
-    const/16 v2, 0x45
-
-    aput v1, v0, v2
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_cust01_anim_70:I
-
-    const/16 v2, 0x46
-
-    aput v1, v0, v2
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_cust01_anim_71:I
-
-    const/16 v2, 0x47
-
-    aput v1, v0, v2
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_cust01_anim_72:I
-
-    const/16 v2, 0x48
-
-    aput v1, v0, v2
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_cust01_anim_73:I
-
-    const/16 v2, 0x49
-
-    aput v1, v0, v2
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_cust01_anim_74:I
-
-    const/16 v2, 0x4a
-
-    aput v1, v0, v2
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_cust01_anim_75:I
-
-    const/16 v2, 0x4b
-
-    aput v1, v0, v2
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_cust01_anim_76:I
-
-    const/16 v2, 0x4c
-
-    aput v1, v0, v2
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_cust01_anim_77:I
-
-    const/16 v2, 0x4d
-
-    aput v1, v0, v2
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_cust01_anim_78:I
-
-    const/16 v2, 0x4e
-
-    aput v1, v0, v2
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_cust01_anim_79:I
-
-    const/16 v2, 0x4f
-
-    aput v1, v0, v2
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_cust01_anim_80:I
-
-    const/16 v2, 0x50
-
-    aput v1, v0, v2
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_cust01_anim_81:I
-
-    const/16 v2, 0x51
-
-    aput v1, v0, v2
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_cust01_anim_82:I
-
-    const/16 v2, 0x52
-
-    aput v1, v0, v2
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_cust01_anim_83:I
-
-    const/16 v2, 0x53
-
-    aput v1, v0, v2
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_cust01_anim_84:I
-
-    const/16 v2, 0x54
-
-    aput v1, v0, v2
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_cust01_anim_85:I
-
-    const/16 v2, 0x55
-
-    aput v1, v0, v2
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_cust01_anim_86:I
-
-    const/16 v2, 0x56
-
-    aput v1, v0, v2
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_cust01_anim_87:I
-
-    const/16 v2, 0x57
-
-    aput v1, v0, v2
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_cust01_anim_88:I
-
-    const/16 v2, 0x58
-
-    aput v1, v0, v2
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_cust01_anim_89:I
-
-    const/16 v2, 0x59
-
-    aput v1, v0, v2
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_cust01_anim_90:I
-
-    const/16 v2, 0x5a
-
-    aput v1, v0, v2
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_cust01_anim_91:I
-
-    const/16 v2, 0x5b
-
-    aput v1, v0, v2
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_cust01_anim_92:I
-
-    const/16 v2, 0x5c
-
-    aput v1, v0, v2
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_cust01_anim_93:I
-
-    const/16 v2, 0x5d
-
-    aput v1, v0, v2
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_cust01_anim_94:I
-
-    const/16 v2, 0x5e
-
-    aput v1, v0, v2
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_cust01_anim_95:I
-
-    const/16 v2, 0x5f
-
-    aput v1, v0, v2
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_cust01_anim_96:I
-
-    const/16 v2, 0x60
-
-    aput v1, v0, v2
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_cust01_anim_97:I
-
-    const/16 v2, 0x61
-
-    aput v1, v0, v2
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_cust01_anim_98:I
-
-    const/16 v2, 0x62
-
-    aput v1, v0, v2
-
-    sget v1, Lcom/android/systemui/R$drawable;->fod_cust01_anim_99:I
-
-    const/16 v2, 0x63
-
-    aput v1, v0, v2
+    fill-array-data v0, :array_4ae
 
     sput-object v0, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_CUST01_ANIMATION:[I
+
+    .line 263
+    return-void
+
+    .line 19
+    :array_36
+    .array-data 4
+        0x7f080794
+        0x7f080795
+        0x7f080796
+        0x7f080797
+        0x7f080798
+        0x7f080799
+        0x7f08079a
+        0x7f08079b
+        0x7f08079c
+        0x7f08079d
+        0x7f08079e
+        0x7f08079f
+        0x7f0807a0
+        0x7f0807a1
+        0x7f0807a2
+        0x7f0807a3
+        0x7f0807a4
+        0x7f0807a5
+        0x7f0807a6
+        0x7f0807a7
+        0x7f0807a8
+        0x7f0807a9
+        0x7f0807aa
+        0x7f0807ab
+        0x7f0807ac
+        0x7f0807ad
+        0x7f0807ae
+        0x7f0807af
+        0x7f0807b0
+        0x7f0807b1
+        0x7f0807b2
+        0x7f0807b3
+        0x7f0807b4
+        0x7f0807b5
+        0x7f0807b6
+        0x7f0807b7
+        0x7f0807b8
+        0x7f0807b9
+        0x7f0807ba
+        0x7f0807bb
+        0x7f0807bc
+        0x7f0807bd
+        0x7f0807be
+        0x7f0807bf
+        0x7f0807c0
+        0x7f0807c1
+        0x7f0807c2
+        0x7f0807c3
+        0x7f0807c4
+        0x7f0807c5
+        0x7f0807c6
+        0x7f0807c7
+        0x7f0807c8
+        0x7f0807c9
+        0x7f0807ca
+        0x7f0807cb
+        0x7f0807cc
+        0x7f0807cd
+        0x7f0807ce
+        0x7f0807cf
+        0x7f0807d0
+        0x7f0807d1
+        0x7f0807d2
+        0x7f0807d3
+        0x7f0807d4
+        0x7f0807d5
+        0x7f0807d6
+        0x7f0807d7
+        0x7f0807d8
+        0x7f0807d9
+        0x7f0807da
+        0x7f0807db
+        0x7f0807dc
+        0x7f0807dd
+        0x7f0807de
+        0x7f0807df
+        0x7f0807e0
+        0x7f0807e1
+        0x7f0807e2
+        0x7f0807e3
+        0x7f0807e4
+        0x7f0807e5
+        0x7f0807e6
+        0x7f0807e7
+        0x7f0807e8
+        0x7f0807e9
+        0x7f0807ea
+        0x7f0807eb
+        0x7f0807ec
+        0x7f0807ed
+        0x7f0807ee
+        0x7f0807ef
+        0x7f0807f0
+        0x7f0807f1
+        0x7f0807f2
+        0x7f0807f3
+        0x7f0807f4
+        0x7f0807f5
+        0x7f0807f6
+        0x7f0807f7
+    .end array-data
+
+    .line 54
+    :array_102
+    .array-data 4
+        0x7f080604
+        0x7f080605
+        0x7f080606
+        0x7f080607
+        0x7f080608
+        0x7f080609
+        0x7f08060a
+        0x7f08060b
+        0x7f08060c
+        0x7f08060d
+        0x7f08060e
+        0x7f08060f
+        0x7f080610
+        0x7f080611
+        0x7f080612
+        0x7f080613
+        0x7f080614
+        0x7f080615
+        0x7f080616
+        0x7f080617
+        0x7f080618
+        0x7f080619
+        0x7f08061a
+        0x7f08061b
+        0x7f08061c
+        0x7f08061d
+        0x7f08061e
+        0x7f08061f
+        0x7f080620
+        0x7f080621
+        0x7f080622
+        0x7f080623
+        0x7f080624
+        0x7f080625
+        0x7f080626
+        0x7f080627
+        0x7f080628
+        0x7f080629
+        0x7f08062a
+        0x7f08062b
+        0x7f08062c
+        0x7f08062d
+        0x7f08062e
+        0x7f08062f
+        0x7f080630
+        0x7f080631
+        0x7f080632
+        0x7f080633
+        0x7f080634
+        0x7f080635
+        0x7f080636
+        0x7f080637
+        0x7f080638
+        0x7f080639
+        0x7f08063a
+        0x7f08063b
+        0x7f08063c
+        0x7f08063d
+        0x7f08063e
+        0x7f08063f
+        0x7f080640
+        0x7f080641
+        0x7f080642
+        0x7f080643
+        0x7f080644
+        0x7f080645
+        0x7f080646
+        0x7f080647
+        0x7f080648
+        0x7f080649
+        0x7f08064a
+        0x7f08064b
+        0x7f08064c
+        0x7f08064d
+        0x7f08064e
+        0x7f08064f
+        0x7f080650
+        0x7f080651
+        0x7f080652
+        0x7f080653
+        0x7f080654
+        0x7f080655
+        0x7f080656
+        0x7f080657
+        0x7f080658
+        0x7f080659
+        0x7f08065a
+        0x7f08065b
+        0x7f08065c
+        0x7f08065d
+        0x7f08065e
+        0x7f08065f
+        0x7f080660
+        0x7f080661
+        0x7f080662
+        0x7f080663
+        0x7f080664
+        0x7f080665
+        0x7f080666
+        0x7f080667
+    .end array-data
+
+    .line 80
+    :array_1ce
+    .array-data 4
+        0x7f080668
+        0x7f080669
+        0x7f08066a
+        0x7f08066b
+        0x7f08066c
+        0x7f08066d
+        0x7f08066e
+        0x7f08066f
+        0x7f080670
+        0x7f080671
+        0x7f080672
+        0x7f080673
+        0x7f080674
+        0x7f080675
+        0x7f080676
+        0x7f080677
+        0x7f080678
+        0x7f080679
+        0x7f08067a
+        0x7f08067b
+        0x7f08067c
+        0x7f08067d
+        0x7f08067e
+        0x7f08067f
+        0x7f080680
+        0x7f080681
+        0x7f080682
+        0x7f080683
+        0x7f080684
+        0x7f080685
+        0x7f080686
+        0x7f080687
+        0x7f080688
+        0x7f080689
+        0x7f08068a
+        0x7f08068b
+        0x7f08068c
+        0x7f08068d
+        0x7f08068e
+        0x7f08068f
+        0x7f080690
+        0x7f080691
+        0x7f080692
+        0x7f080693
+        0x7f080694
+        0x7f080695
+        0x7f080696
+        0x7f080697
+        0x7f080698
+        0x7f080699
+        0x7f08069a
+        0x7f08069b
+        0x7f08069c
+        0x7f08069d
+        0x7f08069e
+        0x7f08069f
+        0x7f0806a0
+        0x7f0806a1
+        0x7f0806a2
+        0x7f0806a3
+        0x7f0806a4
+        0x7f0806a5
+        0x7f0806a6
+        0x7f0806a7
+        0x7f0806a8
+        0x7f0806a9
+        0x7f0806aa
+        0x7f0806ab
+        0x7f0806ac
+        0x7f0806ad
+        0x7f0806ae
+        0x7f0806af
+        0x7f0806b0
+        0x7f0806b1
+        0x7f0806b2
+        0x7f0806b3
+        0x7f0806b4
+        0x7f0806b5
+        0x7f0806b6
+        0x7f0806b7
+        0x7f0806b8
+        0x7f0806b9
+        0x7f0806ba
+        0x7f0806bb
+        0x7f0806bc
+        0x7f0806bd
+        0x7f0806be
+        0x7f0806bf
+        0x7f0806c0
+        0x7f0806c1
+        0x7f0806c2
+        0x7f0806c3
+        0x7f0806c4
+        0x7f0806c5
+        0x7f0806c6
+        0x7f0806c7
+        0x7f0806c8
+        0x7f0806c9
+        0x7f0806ca
+        0x7f0806cb
+    .end array-data
+
+    .line 106
+    :array_29a
+    .array-data 4
+        0x7f0806cc
+        0x7f0806cd
+        0x7f0806ce
+        0x7f0806cf
+        0x7f0806d0
+        0x7f0806d1
+        0x7f0806d2
+        0x7f0806d3
+        0x7f0806d4
+        0x7f0806d5
+        0x7f0806d6
+        0x7f0806d7
+        0x7f0806d8
+        0x7f0806d9
+        0x7f0806da
+        0x7f0806db
+        0x7f0806dc
+        0x7f0806dd
+        0x7f0806de
+        0x7f0806df
+        0x7f0806e0
+        0x7f0806e1
+        0x7f0806e2
+        0x7f0806e3
+        0x7f0806e4
+        0x7f0806e5
+        0x7f0806e6
+        0x7f0806e7
+        0x7f0806e8
+        0x7f0806e9
+        0x7f0806ea
+        0x7f0806eb
+        0x7f0806ec
+        0x7f0806ed
+        0x7f0806ee
+        0x7f0806ef
+        0x7f0806f0
+        0x7f0806f1
+        0x7f0806f2
+        0x7f0806f3
+        0x7f0806f4
+        0x7f0806f5
+        0x7f0806f6
+        0x7f0806f7
+        0x7f0806f8
+        0x7f0806f9
+        0x7f0806fa
+        0x7f0806fb
+        0x7f0806fc
+        0x7f0806fd
+        0x7f0806fe
+        0x7f0806ff
+        0x7f080700
+        0x7f080701
+        0x7f080702
+        0x7f080703
+        0x7f080704
+        0x7f080705
+        0x7f080706
+        0x7f080707
+        0x7f080708
+        0x7f080709
+        0x7f08070a
+        0x7f08070b
+        0x7f08070c
+        0x7f08070d
+        0x7f08070e
+        0x7f08070f
+        0x7f080710
+        0x7f080711
+        0x7f080712
+        0x7f080713
+        0x7f080714
+        0x7f080715
+        0x7f080716
+        0x7f080717
+        0x7f080718
+        0x7f080719
+        0x7f08071a
+        0x7f08071b
+        0x7f08071c
+        0x7f08071d
+        0x7f08071e
+        0x7f08071f
+        0x7f080720
+        0x7f080721
+        0x7f080722
+        0x7f080723
+        0x7f080724
+        0x7f080725
+        0x7f080726
+        0x7f080727
+        0x7f080728
+        0x7f080729
+        0x7f08072a
+        0x7f08072b
+        0x7f08072c
+        0x7f08072d
+        0x7f08072e
+        0x7f08072f
+    .end array-data
+
+    .line 141
+    :array_366
+    .array-data 4
+        0x7f08085f
+        0x7f080860
+        0x7f080861
+        0x7f080862
+        0x7f080863
+        0x7f080864
+        0x7f080865
+        0x7f080866
+        0x7f080867
+        0x7f080868
+        0x7f080869
+        0x7f08086a
+        0x7f08086b
+        0x7f08086c
+        0x7f08086d
+        0x7f08086e
+        0x7f08086f
+        0x7f080870
+        0x7f080871
+        0x7f080872
+        0x7f080873
+        0x7f080874
+        0x7f080875
+        0x7f080876
+        0x7f080877
+        0x7f080878
+        0x7f080879
+        0x7f08087a
+        0x7f08087b
+        0x7f08087c
+        0x7f08087d
+        0x7f08087e
+        0x7f08087f
+        0x7f080880
+        0x7f080881
+        0x7f080882
+        0x7f080883
+        0x7f080884
+        0x7f080885
+        0x7f080886
+        0x7f080887
+        0x7f080888
+        0x7f080889
+        0x7f08088a
+        0x7f08088b
+        0x7f08088c
+        0x7f08088d
+        0x7f08088e
+        0x7f08088f
+        0x7f080890
+        0x7f080891
+        0x7f080892
+        0x7f080893
+        0x7f080894
+        0x7f080895
+        0x7f080896
+        0x7f080897
+        0x7f080898
+        0x7f080899
+        0x7f08089a
+    .end array-data
+
+    .line 162
+    :array_3e2
+    .array-data 4
+        0x7f0807f8
+        0x7f0807f9
+        0x7f0807fa
+        0x7f0807fb
+        0x7f0807fc
+        0x7f0807fd
+        0x7f0807fe
+        0x7f0807ff
+        0x7f080800
+        0x7f080801
+        0x7f080802
+        0x7f080803
+        0x7f080804
+        0x7f080805
+        0x7f080806
+        0x7f080807
+        0x7f080808
+        0x7f080809
+        0x7f08080a
+        0x7f08080b
+        0x7f08080c
+        0x7f08080d
+        0x7f08080e
+        0x7f08080f
+        0x7f080810
+        0x7f080811
+        0x7f080812
+        0x7f080813
+        0x7f080814
+        0x7f080815
+        0x7f080816
+        0x7f080817
+        0x7f080818
+        0x7f080819
+        0x7f08081a
+        0x7f08081b
+        0x7f08081c
+        0x7f08081d
+        0x7f08081e
+        0x7f08081f
+        0x7f080820
+        0x7f080821
+        0x7f080822
+        0x7f080823
+        0x7f080824
+        0x7f080825
+        0x7f080826
+        0x7f080827
+        0x7f080828
+        0x7f080829
+        0x7f08082a
+        0x7f08082b
+        0x7f08082c
+        0x7f08082d
+        0x7f08082e
+        0x7f08082f
+        0x7f080830
+        0x7f080831
+        0x7f080832
+        0x7f080833
+        0x7f080834
+        0x7f080835
+        0x7f080836
+        0x7f080837
+        0x7f080838
+        0x7f080839
+        0x7f08083a
+        0x7f08083b
+        0x7f08083c
+        0x7f08083d
+        0x7f08083e
+        0x7f08083f
+        0x7f080840
+        0x7f080841
+        0x7f080842
+        0x7f080843
+        0x7f080844
+        0x7f080845
+        0x7f080846
+        0x7f080847
+        0x7f080848
+        0x7f080849
+        0x7f08084a
+        0x7f08084b
+        0x7f08084c
+        0x7f08084d
+        0x7f08084e
+        0x7f08084f
+        0x7f080850
+        0x7f080851
+        0x7f080852
+        0x7f080853
+        0x7f080854
+        0x7f080855
+        0x7f080856
+        0x7f080857
+        0x7f080858
+        0x7f080859
+        0x7f08085a
+        0x7f08085b
+    .end array-data
+
+    .line 212
+    :array_4ae
+    .array-data 4
+        0x7f080730
+        0x7f080731
+        0x7f080732
+        0x7f080733
+        0x7f080734
+        0x7f080735
+        0x7f080736
+        0x7f080737
+        0x7f080738
+        0x7f080739
+        0x7f08073a
+        0x7f08073b
+        0x7f08073c
+        0x7f08073d
+        0x7f08073e
+        0x7f08073f
+        0x7f080740
+        0x7f080741
+        0x7f080742
+        0x7f080743
+        0x7f080744
+        0x7f080745
+        0x7f080746
+        0x7f080747
+        0x7f080748
+        0x7f080749
+        0x7f08074a
+        0x7f08074b
+        0x7f08074c
+        0x7f08074d
+        0x7f08074e
+        0x7f08074f
+        0x7f080750
+        0x7f080751
+        0x7f080752
+        0x7f080753
+        0x7f080754
+        0x7f080755
+        0x7f080756
+        0x7f080757
+        0x7f080758
+        0x7f080759
+        0x7f08075a
+        0x7f08075b
+        0x7f08075c
+        0x7f08075d
+        0x7f08075e
+        0x7f08075f
+        0x7f080760
+        0x7f080761
+        0x7f080762
+        0x7f080763
+        0x7f080764
+        0x7f080765
+        0x7f080766
+        0x7f080767
+        0x7f080768
+        0x7f080769
+        0x7f08076a
+        0x7f08076b
+        0x7f08076c
+        0x7f08076d
+        0x7f08076e
+        0x7f08076f
+        0x7f080770
+        0x7f080771
+        0x7f080772
+        0x7f080773
+        0x7f080774
+        0x7f080775
+        0x7f080776
+        0x7f080777
+        0x7f080778
+        0x7f080779
+        0x7f08077a
+        0x7f08077b
+        0x7f08077c
+        0x7f08077d
+        0x7f08077e
+        0x7f08077f
+        0x7f080780
+        0x7f080781
+        0x7f080782
+        0x7f080783
+        0x7f080784
+        0x7f080785
+        0x7f080786
+        0x7f080787
+        0x7f080788
+        0x7f080789
+        0x7f08078a
+        0x7f08078b
+        0x7f08078c
+        0x7f08078d
+        0x7f08078e
+        0x7f08078f
+        0x7f080790
+        0x7f080791
+        0x7f080792
+        0x7f080793
+    .end array-data
+.end method
+
+.method public constructor <init>()V
+    .registers 1
+
+    .prologue
+    .line 6
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 .method public static getDownAnimationRes(Landroid/content/Context;I)[I
-    .locals 2
+    .registers 3
+    .param p0, "context"    # Landroid/content/Context;
+    .param p1, "n"    # I
 
-    .line 168
-    sget-object p0, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_ANIMATION_MCL:[I
+    .prologue
+    .line 266
+    const/4 v0, 0x1
 
-    sget-object v0, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_ANIMATION_DEFAULT:[I
+    if-ne p1, v0, :cond_6
 
-    if-nez p1, :cond_0
+    .line 267
+    sget-object v0, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_ANIMATION_02:[I
 
+    .line 285
+    :goto_5
     return-object v0
 
-    :cond_0
+    .line 269
+    :cond_6
+    const/4 v0, 0x2
+
+    if-ne p1, v0, :cond_c
+
+    .line 270
+    sget-object v0, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_ANIMATION_03:[I
+
+    goto :goto_5
+
+    .line 272
+    :cond_c
+    const/4 v0, 0x3
+
+    if-eq p1, v0, :cond_13
+
+    const/16 v0, 0xa
+
+    if-ne p1, v0, :cond_16
+
+    .line 273
+    :cond_13
+    sget-object v0, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_ANIMATION_MCL:[I
+
+    goto :goto_5
+
+    .line 275
+    :cond_16
+    const/4 v0, 0x4
+
+    if-ne p1, v0, :cond_1c
+
+    .line 276
+    sget-object v0, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_ANIMATION_04:[I
+
+    goto :goto_5
+
+    .line 278
+    :cond_1c
+    const/16 v0, 0x9
+
+    if-ne p1, v0, :cond_22
+
+    .line 279
+    const/4 v0, 0x0
+
+    goto :goto_5
+
+    .line 281
+    :cond_22
+    const/16 v0, 0xb
+
+    if-ne p1, v0, :cond_29
+
+    .line 282
+    sget-object v0, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_CUST01_ANIMATION:[I
+
+    goto :goto_5
+
+    .line 285
+    :cond_29
+    sget-object v0, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_ANIMATION_DEFAULT:[I
+
+    goto :goto_5
+.end method
+
+.method public static getDownEndFrameIndex(Landroid/content/Context;I)I
+    .registers 4
+    .param p0, "context"    # Landroid/content/Context;
+    .param p1, "n"    # I
+
+    .prologue
+    const/16 v0, 0x2c
+
+    .line 289
     const/4 v1, 0x1
 
-    if-ne p1, v1, :cond_1
+    if-ne p1, v1, :cond_6
 
-    .line 171
-    sget-object p0, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_ANIMATION_02:[I
+    .line 304
+    :cond_5
+    :goto_5
+    return v0
 
-    return-object p0
-
-    :cond_1
+    .line 292
+    :cond_6
     const/4 v1, 0x2
 
-    if-ne p1, v1, :cond_2
+    if-ne p1, v1, :cond_c
 
-    .line 173
-    sget-object p0, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_ANIMATION_03:[I
+    .line 293
+    const/16 v0, 0x19
 
-    return-object p0
+    goto :goto_5
 
-    :cond_2
+    .line 295
+    :cond_c
     const/4 v1, 0x3
 
-    if-ne p1, v1, :cond_3
+    if-eq p1, v1, :cond_13
 
-    return-object p0
+    const/16 v1, 0xa
 
-    :cond_3
+    if-ne p1, v1, :cond_16
+
+    .line 296
+    :cond_13
+    const/16 v0, 0x3b
+
+    goto :goto_5
+
+    .line 298
+    :cond_16
     const/4 v1, 0x4
 
-    if-ne p1, v1, :cond_4
+    if-ne p1, v1, :cond_1c
 
-    .line 177
-    sget-object p0, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_ANIMATION_04:[I
+    .line 299
+    const/16 v0, 0x2d
 
-    return-object p0
+    goto :goto_5
 
-    :cond_4
+    .line 301
+    :cond_1c
     const/16 v1, 0x9
 
     if-ne p1, v1, :cond_5
 
-    const/4 p0, 0x0
+    .line 302
+    const/4 v0, -0x1
 
-    return-object p0
-
-    :cond_5
-    const/16 v1, 0xa
-
-    if-ne p1, v1, :cond_6
-
-    return-object p0
-
-    :cond_6
-    const/16 p0, 0xb
-
-    if-ne p1, p0, :cond_7
-
-    .line 183
-    sget-object p0, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_CUST01_ANIMATION:[I
-
-    return-object p0
-
-    :cond_7
-    return-object v0
-.end method
-
-.method public static getDownEndFrameIndex(Landroid/content/Context;I)I
-    .locals 1
-
-    if-nez p1, :cond_0
-
-    .line 220
-    invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object p0
-
-    sget p1, Lcom/android/systemui/R$integer;->fod_default_down_anim_end_frame:I
-
-    invoke-virtual {p0, p1}, Landroid/content/res/Resources;->getInteger(I)I
-
-    move-result p0
-
-    return p0
-
-    :cond_0
-    const/4 v0, 0x1
-
-    if-ne p1, v0, :cond_1
-
-    .line 222
-    invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object p0
-
-    sget p1, Lcom/android/systemui/R$integer;->fod_02_anim_end_frame:I
-
-    invoke-virtual {p0, p1}, Landroid/content/res/Resources;->getInteger(I)I
-
-    move-result p0
-
-    return p0
-
-    :cond_1
-    const/4 v0, 0x2
-
-    if-ne p1, v0, :cond_2
-
-    .line 224
-    invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object p0
-
-    sget p1, Lcom/android/systemui/R$integer;->fod_03_anim_end_frame:I
-
-    invoke-virtual {p0, p1}, Landroid/content/res/Resources;->getInteger(I)I
-
-    move-result p0
-
-    return p0
-
-    :cond_2
-    const/4 v0, 0x3
-
-    if-ne p1, v0, :cond_3
-
-    .line 226
-    invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object p0
-
-    sget p1, Lcom/android/systemui/R$integer;->fod_mcl_anim_end_frame:I
-
-    invoke-virtual {p0, p1}, Landroid/content/res/Resources;->getInteger(I)I
-
-    move-result p0
-
-    return p0
-
-    :cond_3
-    const/4 v0, 0x4
-
-    if-ne p1, v0, :cond_4
-
-    .line 228
-    invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object p0
-
-    sget p1, Lcom/android/systemui/R$integer;->fod_04_anim_end_frame:I
-
-    invoke-virtual {p0, p1}, Landroid/content/res/Resources;->getInteger(I)I
-
-    move-result p0
-
-    return p0
-
-    :cond_4
-    const/16 v0, 0x9
-
-    if-ne p1, v0, :cond_5
-
-    const/4 p0, -0x1
-
-    return p0
-
-    :cond_5
-    const/16 v0, 0xa
-
-    if-ne p1, v0, :cond_6
-
-    .line 232
-    invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object p0
-
-    sget p1, Lcom/android/systemui/R$integer;->fod_mcl_anim_end_frame:I
-
-    invoke-virtual {p0, p1}, Landroid/content/res/Resources;->getInteger(I)I
-
-    move-result p0
-
-    return p0
-
-    :cond_6
-    const/16 v0, 0xb
-
-    if-ne p1, v0, :cond_7
-
-    .line 234
-    invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object p0
-
-    sget p1, Lcom/android/systemui/R$integer;->fod_cust01_anim_end_frame:I
-
-    invoke-virtual {p0, p1}, Landroid/content/res/Resources;->getInteger(I)I
-
-    move-result p0
-
-    return p0
-
-    .line 236
-    :cond_7
-    invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object p0
-
-    sget p1, Lcom/android/systemui/R$integer;->fod_default_down_anim_end_frame:I
-
-    invoke-virtual {p0, p1}, Landroid/content/res/Resources;->getInteger(I)I
-
-    move-result p0
-
-    return p0
+    goto :goto_5
 .end method
 
 .method public static getDownPlayFrameNum(Landroid/content/Context;I)I
-    .locals 5
+    .registers 6
+    .param p0, "context"    # Landroid/content/Context;
+    .param p1, "n"    # I
 
-    .line 241
-    sget-object v0, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_ANIMATION_MCL:[I
+    .prologue
+    const/4 v2, 0x0
 
-    sget-object v1, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_ANIMATION_DEFAULT:[I
-
+    .line 308
     invoke-static {p0, p1}, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->getDownStartFrameIndex(Landroid/content/Context;I)I
 
-    move-result v2
+    move-result v1
 
-    .line 242
+    .line 309
+    .local v1, "downStartFrameIndex":I
     invoke-static {p0, p1}, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->getDownEndFrameIndex(Landroid/content/Context;I)I
 
-    move-result p0
+    move-result v0
 
-    const/4 v3, 0x0
+    .line 310
+    .local v0, "downEndFrameIndex":I
+    if-ltz v1, :cond_f
 
-    const/4 v4, 0x1
+    if-ltz v0, :cond_f
 
-    if-ltz v2, :cond_2
+    if-le v1, v0, :cond_3f
 
-    if-ltz p0, :cond_2
+    .line 312
+    :cond_f
+    const/4 v3, 0x1
 
-    if-le v2, p0, :cond_0
+    if-ne p1, v3, :cond_16
 
-    goto :goto_0
+    .line 313
+    sget-object v2, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_ANIMATION_02:[I
 
-    :cond_0
-    if-ne v2, p0, :cond_1
+    array-length v2, v2
 
-    return v3
+    .line 334
+    :cond_15
+    :goto_15
+    return v2
 
-    :cond_1
-    sub-int/2addr p0, v2
+    .line 315
+    :cond_16
+    const/4 v3, 0x2
 
-    add-int/2addr p0, v4
+    if-ne p1, v3, :cond_1d
 
-    return p0
+    .line 316
+    sget-object v2, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_ANIMATION_03:[I
 
-    :cond_2
-    :goto_0
-    if-nez p1, :cond_3
+    array-length v2, v2
 
-    .line 247
-    array-length p0, v1
+    goto :goto_15
 
-    return p0
+    .line 318
+    :cond_1d
+    const/4 v3, 0x3
 
-    :cond_3
-    if-ne p1, v4, :cond_4
+    if-eq p1, v3, :cond_24
 
-    .line 249
-    sget-object p0, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_ANIMATION_02:[I
+    const/16 v3, 0xa
 
-    array-length p0, p0
+    if-ne p1, v3, :cond_28
 
-    return p0
+    .line 319
+    :cond_24
+    sget-object v2, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_ANIMATION_MCL:[I
 
-    :cond_4
-    const/4 p0, 0x2
+    array-length v2, v2
 
-    if-ne p1, p0, :cond_5
+    goto :goto_15
 
-    .line 251
-    sget-object p0, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_ANIMATION_03:[I
+    .line 321
+    :cond_28
+    const/4 v3, 0x4
 
-    array-length p0, p0
+    if-ne p1, v3, :cond_2f
 
-    return p0
+    .line 322
+    sget-object v2, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_ANIMATION_04:[I
 
-    :cond_5
-    const/4 p0, 0x3
+    array-length v2, v2
 
-    if-ne p1, p0, :cond_6
+    goto :goto_15
 
-    .line 253
-    array-length p0, v0
+    .line 324
+    :cond_2f
+    const/16 v3, 0x9
 
-    return p0
+    if-eq p1, v3, :cond_15
 
-    :cond_6
-    const/4 p0, 0x4
+    .line 327
+    const/16 v2, 0xb
 
-    if-ne p1, p0, :cond_7
+    if-ne p1, v2, :cond_3b
 
-    .line 255
-    sget-object p0, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_ANIMATION_04:[I
+    .line 328
+    sget-object v2, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_CUST01_ANIMATION:[I
 
-    array-length p0, p0
+    array-length v2, v2
 
-    return p0
+    goto :goto_15
 
-    :cond_7
-    const/16 p0, 0x9
+    .line 330
+    :cond_3b
+    sget-object v2, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_ANIMATION_DEFAULT:[I
 
-    if-ne p1, p0, :cond_8
+    array-length v2, v2
 
-    return v3
+    goto :goto_15
 
-    :cond_8
-    const/16 p0, 0xa
+    .line 331
+    :cond_3f
+    if-eq v1, v0, :cond_15
 
-    if-ne p1, p0, :cond_9
+    .line 334
+    sub-int v2, v0, v1
 
-    .line 259
-    array-length p0, v0
+    add-int/lit8 v2, v2, 0x1
 
-    return p0
-
-    :cond_9
-    const/16 p0, 0xb
-
-    if-ne p1, p0, :cond_a
-
-    .line 261
-    sget-object p0, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_CUST01_ANIMATION:[I
-
-    array-length p0, p0
-
-    return p0
-
-    .line 263
-    :cond_a
-    array-length p0, v1
-
-    return p0
+    goto :goto_15
 .end method
 
 .method public static getDownStartFrameIndex(Landroid/content/Context;I)I
-    .locals 1
+    .registers 3
+    .param p0, "context"    # Landroid/content/Context;
+    .param p1, "n"    # I
 
-    if-nez p1, :cond_0
-
-    .line 198
-    invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object p0
-
-    sget p1, Lcom/android/systemui/R$integer;->fod_default_down_anim_start_frame:I
-
-    invoke-virtual {p0, p1}, Landroid/content/res/Resources;->getInteger(I)I
-
-    move-result p0
-
-    return p0
-
-    :cond_0
-    const/4 v0, 0x1
-
-    if-ne p1, v0, :cond_1
-
-    .line 200
-    invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object p0
-
-    sget p1, Lcom/android/systemui/R$integer;->fod_02_anim_start_frame:I
-
-    invoke-virtual {p0, p1}, Landroid/content/res/Resources;->getInteger(I)I
-
-    move-result p0
-
-    return p0
-
-    :cond_1
-    const/4 v0, 0x2
-
-    if-ne p1, v0, :cond_2
-
-    .line 202
-    invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object p0
-
-    sget p1, Lcom/android/systemui/R$integer;->fod_03_anim_start_frame:I
-
-    invoke-virtual {p0, p1}, Landroid/content/res/Resources;->getInteger(I)I
-
-    move-result p0
-
-    return p0
-
-    :cond_2
-    const/4 v0, 0x3
-
-    if-ne p1, v0, :cond_3
-
-    .line 204
-    invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object p0
-
-    sget p1, Lcom/android/systemui/R$integer;->fod_mcl_anim_start_frame:I
-
-    invoke-virtual {p0, p1}, Landroid/content/res/Resources;->getInteger(I)I
-
-    move-result p0
-
-    return p0
-
-    :cond_3
-    const/4 v0, 0x4
-
-    if-ne p1, v0, :cond_4
-
-    .line 206
-    invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object p0
-
-    sget p1, Lcom/android/systemui/R$integer;->fod_04_anim_start_frame:I
-
-    invoke-virtual {p0, p1}, Landroid/content/res/Resources;->getInteger(I)I
-
-    move-result p0
-
-    return p0
-
-    :cond_4
+    .prologue
+    .line 339
     const/16 v0, 0x9
-
-    if-ne p1, v0, :cond_5
-
-    const/4 p0, -0x1
-
-    return p0
-
-    :cond_5
-    const/16 v0, 0xa
 
     if-ne p1, v0, :cond_6
 
-    .line 210
-    invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+    .line 340
+    const/4 v0, -0x1
 
-    move-result-object p0
-
-    sget p1, Lcom/android/systemui/R$integer;->fod_mcl_anim_start_frame:I
-
-    invoke-virtual {p0, p1}, Landroid/content/res/Resources;->getInteger(I)I
-
-    move-result p0
-
-    return p0
+    .line 342
+    :goto_5
+    return v0
 
     :cond_6
-    const/16 v0, 0xb
+    const/4 v0, 0x0
 
-    if-ne p1, v0, :cond_7
-
-    .line 212
-    invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object p0
-
-    sget p1, Lcom/android/systemui/R$integer;->fod_cust01_anim_start_frame:I
-
-    invoke-virtual {p0, p1}, Landroid/content/res/Resources;->getInteger(I)I
-
-    move-result p0
-
-    return p0
-
-    .line 214
-    :cond_7
-    invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object p0
-
-    sget p1, Lcom/android/systemui/R$integer;->fod_default_down_anim_start_frame:I
-
-    invoke-virtual {p0, p1}, Landroid/content/res/Resources;->getInteger(I)I
-
-    move-result p0
-
-    return p0
+    goto :goto_5
 .end method
 
 .method public static getUpAnimationRes(I)[I
-    .locals 0
+    .registers 2
+    .param p0, "n"    # I
 
-    if-nez p0, :cond_0
+    .prologue
+    .line 346
+    if-nez p0, :cond_5
 
-    .line 190
-    sget-object p0, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->UP_ANIMATION_DEFAULT:[I
+    .line 347
+    sget-object v0, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->UP_ANIMATION_DEFAULT:[I
 
-    return-object p0
+    .line 349
+    :goto_4
+    return-object v0
 
-    :cond_0
-    const/4 p0, 0x0
+    :cond_5
+    const/4 v0, 0x0
 
-    new-array p0, p0, [I
+    new-array v0, v0, [I
 
-    return-object p0
+    goto :goto_4
 .end method
 
 .method public static getUpEndFrameIndex(Landroid/content/Context;I)I
-    .locals 0
+    .registers 3
+    .param p0, "context"    # Landroid/content/Context;
+    .param p1, "n"    # I
 
-    if-nez p1, :cond_0
+    .prologue
+    .line 368
+    const/4 v0, 0x0
 
-    .line 281
-    invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object p0
-
-    sget p1, Lcom/android/systemui/R$integer;->fod_default_up_anim_end_frame:I
-
-    invoke-virtual {p0, p1}, Landroid/content/res/Resources;->getInteger(I)I
-
-    move-result p0
-
-    return p0
-
-    :cond_0
-    const/4 p0, 0x0
-
-    return p0
+    return v0
 .end method
 
 .method public static getUpPlayFrameNum(Landroid/content/Context;I)I
-    .locals 2
+    .registers 5
+    .param p0, "context"    # Landroid/content/Context;
+    .param p1, "upEndFrameIndex"    # I
 
-    const/4 v0, 0x0
+    .prologue
+    const/4 v2, 0x0
 
-    if-nez p1, :cond_3
+    .line 353
+    if-eqz p1, :cond_4
 
-    .line 288
+    .line 364
+    :cond_3
+    :goto_3
+    return v2
+
+    .line 356
+    :cond_4
     invoke-static {p0, p1}, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->getUpStartFrameIndex(Landroid/content/Context;I)I
 
     move-result v1
 
-    .line 289
+    .line 357
+    .local v1, "upStartFrameIndex":I
     invoke-static {p0, p1}, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->getUpEndFrameIndex(Landroid/content/Context;I)I
 
-    move-result p0
+    move-result v0
 
-    if-ltz v1, :cond_2
+    .line 358
+    .local v0, "upEndFrameIndex2":I
+    if-ltz v1, :cond_12
 
-    if-ltz p0, :cond_2
+    if-ltz v0, :cond_12
 
-    if-le v1, p0, :cond_0
+    if-le v1, v0, :cond_16
 
-    goto :goto_0
+    .line 359
+    :cond_12
+    sget-object v2, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->UP_ANIMATION_DEFAULT:[I
 
-    :cond_0
-    if-ne v1, p0, :cond_1
+    array-length v2, v2
 
-    return v0
+    goto :goto_3
 
-    :cond_1
-    sub-int/2addr p0, v1
+    .line 361
+    :cond_16
+    if-eq v1, v0, :cond_3
 
-    add-int/lit8 p0, p0, 0x1
+    .line 362
+    sub-int v2, v0, v1
 
-    return p0
+    add-int/lit8 v2, v2, 0x1
 
-    .line 292
-    :cond_2
-    :goto_0
-    sget-object p0, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->UP_ANIMATION_DEFAULT:[I
-
-    array-length p0, p0
-
-    return p0
-
-    :cond_3
-    return v0
+    goto :goto_3
 .end method
 
 .method public static getUpStartFrameIndex(Landroid/content/Context;I)I
-    .locals 0
+    .registers 3
+    .param p0, "context"    # Landroid/content/Context;
+    .param p1, "n"    # I
 
-    if-nez p1, :cond_0
+    .prologue
+    .line 372
+    const/4 v0, 0x0
 
-    .line 274
-    invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object p0
-
-    sget p1, Lcom/android/systemui/R$integer;->fod_default_up_anim_start_frame:I
-
-    invoke-virtual {p0, p1}, Landroid/content/res/Resources;->getInteger(I)I
-
-    move-result p0
-
-    return p0
-
-    :cond_0
-    const/4 p0, 0x0
-
-    return p0
+    return v0
 .end method
