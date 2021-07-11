@@ -1,0 +1,954 @@
+.class public Lcom/android/systemui/qs/tiles/UiModeNightTile;
+.super Lcom/android/systemui/qs/tileimpl/QSTileImpl;
+.source "UiModeNightTile.java"
+
+# interfaces
+.implements Lcom/android/systemui/statusbar/policy/ConfigurationController$ConfigurationListener;
+.implements Lcom/android/systemui/statusbar/policy/BatteryController$BatteryStateChangeCallback;
+
+
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lcom/android/systemui/qs/tileimpl/QSTileImpl<",
+        "Lcom/android/systemui/plugins/qs/QSTile$BooleanState;",
+        ">;",
+        "Lcom/android/systemui/statusbar/policy/ConfigurationController$ConfigurationListener;",
+        "Lcom/android/systemui/statusbar/policy/BatteryController$BatteryStateChangeCallback;"
+    }
+.end annotation
+
+
+# static fields
+.field private static final DEBUG:Z
+
+.field public static formatter:Ljava/time/format/DateTimeFormatter;
+
+
+# instance fields
+.field private final mBatteryController:Lcom/android/systemui/statusbar/policy/BatteryController;
+
+.field private final mIcon:Lcom/android/systemui/plugins/qs/QSTile$Icon;
+
+.field private mLastClickMillis:J
+
+.field private final mLocationController:Lcom/android/systemui/statusbar/policy/LocationController;
+
+.field private mSpecialThemeSetting:Lcom/oneplus/util/SystemSetting;
+
+.field private mStatusBarManager:Landroid/app/StatusBarManager;
+
+.field private final mUiModeManager:Landroid/app/UiModeManager;
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 1
+
+    const-string v0, "hh:mm a"
+
+    .line 59
+    invoke-static {v0}, Ljava/time/format/DateTimeFormatter;->ofPattern(Ljava/lang/String;)Ljava/time/format/DateTimeFormatter;
+
+    move-result-object v0
+
+    sput-object v0, Lcom/android/systemui/qs/tiles/UiModeNightTile;->formatter:Ljava/time/format/DateTimeFormatter;
+
+    .line 61
+    sget-boolean v0, Landroid/os/Build;->DEBUG_ONEPLUS:Z
+
+    sput-boolean v0, Lcom/android/systemui/qs/tiles/UiModeNightTile;->DEBUG:Z
+
+    return-void
+.end method
+
+.method public constructor <init>(Lcom/android/systemui/qs/QSHost;Lcom/android/systemui/statusbar/policy/ConfigurationController;Lcom/android/systemui/statusbar/policy/BatteryController;Lcom/android/systemui/statusbar/policy/LocationController;)V
+    .locals 6
+
+    .line 88
+    invoke-direct {p0, p1}, Lcom/android/systemui/qs/tileimpl/QSTileImpl;-><init>(Lcom/android/systemui/qs/QSHost;)V
+
+    .line 68
+    sget p1, Lcom/android/systemui/R$drawable;->op_qs_dark_mode:I
+
+    invoke-static {p1}, Lcom/android/systemui/qs/tileimpl/QSTileImpl$ResourceIcon;->get(I)Lcom/android/systemui/plugins/qs/QSTile$Icon;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lcom/android/systemui/qs/tiles/UiModeNightTile;->mIcon:Lcom/android/systemui/plugins/qs/QSTile$Icon;
+
+    const-wide/16 v0, 0x0
+
+    .line 76
+    iput-wide v0, p0, Lcom/android/systemui/qs/tiles/UiModeNightTile;->mLastClickMillis:J
+
+    .line 89
+    iput-object p3, p0, Lcom/android/systemui/qs/tiles/UiModeNightTile;->mBatteryController:Lcom/android/systemui/statusbar/policy/BatteryController;
+
+    .line 90
+    iget-object p1, p0, Lcom/android/systemui/qs/tileimpl/QSTileImpl;->mContext:Landroid/content/Context;
+
+    const-class v0, Landroid/app/UiModeManager;
+
+    invoke-virtual {p1, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Landroid/app/UiModeManager;
+
+    iput-object p1, p0, Lcom/android/systemui/qs/tiles/UiModeNightTile;->mUiModeManager:Landroid/app/UiModeManager;
+
+    .line 91
+    iput-object p4, p0, Lcom/android/systemui/qs/tiles/UiModeNightTile;->mLocationController:Lcom/android/systemui/statusbar/policy/LocationController;
+
+    .line 92
+    invoke-virtual {p0}, Lcom/android/systemui/qs/tileimpl/QSTileImpl;->getLifecycle()Landroidx/lifecycle/Lifecycle;
+
+    move-result-object p1
+
+    invoke-interface {p2, p1, p0}, Lcom/android/systemui/statusbar/policy/CallbackController;->observe(Landroidx/lifecycle/Lifecycle;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 93
+    invoke-virtual {p0}, Lcom/android/systemui/qs/tileimpl/QSTileImpl;->getLifecycle()Landroidx/lifecycle/Lifecycle;
+
+    move-result-object p1
+
+    invoke-interface {p3, p1, p0}, Lcom/android/systemui/statusbar/policy/CallbackController;->observe(Landroidx/lifecycle/Lifecycle;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 95
+    iget-object p1, p0, Lcom/android/systemui/qs/tileimpl/QSTileImpl;->mContext:Landroid/content/Context;
+
+    const-string/jumbo p2, "statusbar"
+
+    invoke-virtual {p1, p2}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Landroid/app/StatusBarManager;
+
+    iput-object p1, p0, Lcom/android/systemui/qs/tiles/UiModeNightTile;->mStatusBarManager:Landroid/app/StatusBarManager;
+
+    .line 98
+    new-instance p1, Lcom/android/systemui/qs/tiles/UiModeNightTile$1;
+
+    iget-object v2, p0, Lcom/android/systemui/qs/tileimpl/QSTileImpl;->mContext:Landroid/content/Context;
+
+    const/4 v3, 0x0
+
+    const-string v4, "oem_special_theme"
+
+    const/4 v5, 0x1
+
+    move-object v0, p1
+
+    move-object v1, p0
+
+    invoke-direct/range {v0 .. v5}, Lcom/android/systemui/qs/tiles/UiModeNightTile$1;-><init>(Lcom/android/systemui/qs/tiles/UiModeNightTile;Landroid/content/Context;Landroid/os/Handler;Ljava/lang/String;Z)V
+
+    iput-object p1, p0, Lcom/android/systemui/qs/tiles/UiModeNightTile;->mSpecialThemeSetting:Lcom/oneplus/util/SystemSetting;
+
+    return-void
+.end method
+
+.method static synthetic access$000(Lcom/android/systemui/qs/tiles/UiModeNightTile;)Ljava/lang/String;
+    .locals 0
+
+    .line 56
+    iget-object p0, p0, Lcom/android/systemui/qs/tileimpl/QSTileImpl;->TAG:Ljava/lang/String;
+
+    return-object p0
+.end method
+
+.method private applyOneplusTheme(I)V
+    .locals 2
+
+    .line 298
+    invoke-static {p1}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "persist.sys.theme.status"
+
+    invoke-static {v1, v0}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 300
+    iget-object p0, p0, Lcom/android/systemui/qs/tileimpl/QSTileImpl;->mContext:Landroid/content/Context;
+
+    invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object p0
+
+    const-string v0, "oem_black_mode"
+
+    invoke-static {p0, v0, p1}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
+
+    return-void
+.end method
+
+.method private getLastLightThemeColor()I
+    .locals 2
+
+    .line 293
+    iget-object p0, p0, Lcom/android/systemui/qs/tileimpl/QSTileImpl;->mContext:Landroid/content/Context;
+
+    invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object p0
+
+    const-string v0, "oem_black_mode_last_light"
+
+    const/4 v1, 0x0
+
+    invoke-static {p0, v0, v1}, Landroid/provider/Settings$System;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
+
+    move-result p0
+
+    return p0
+.end method
+
+.method private synthetic lambda$handleClick$0(Z)V
+    .locals 0
+
+    .line 159
+    invoke-direct {p0, p1}, Lcom/android/systemui/qs/tiles/UiModeNightTile;->toggleDarkMode(Z)V
+
+    .line 160
+    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object p1
+
+    invoke-virtual {p0, p1}, Lcom/android/systemui/qs/tileimpl/QSTileImpl;->refreshState(Ljava/lang/Object;)V
+
+    return-void
+.end method
+
+.method private savePreviousOneplusLightTheme()V
+    .locals 2
+
+    .line 286
+    iget-object v0, p0, Lcom/android/systemui/qs/tileimpl/QSTileImpl;->mContext:Landroid/content/Context;
+
+    invoke-static {v0}, Lcom/oneplus/util/OpUtils;->getThemeColor(Landroid/content/Context;)I
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    const/4 v1, 0x2
+
+    if-ne v0, v1, :cond_1
+
+    .line 288
+    :cond_0
+    iget-object p0, p0, Lcom/android/systemui/qs/tileimpl/QSTileImpl;->mContext:Landroid/content/Context;
+
+    invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object p0
+
+    const-string v1, "oem_black_mode_last_light"
+
+    invoke-static {p0, v1, v0}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
+
+    :cond_1
+    return-void
+.end method
+
+.method private toggleDarkMode(Z)V
+    .locals 4
+
+    .line 262
+    sget-boolean v0, Lcom/android/systemui/qs/tiles/UiModeNightTile;->DEBUG:Z
+
+    const-string/jumbo v1, "toggleDarkMode("
+
+    if-eqz v0, :cond_0
+
+    .line 263
+    iget-object v0, p0, Lcom/android/systemui/qs/tileimpl/QSTileImpl;->TAG:Ljava/lang/String;
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v3, "), 1"
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v0, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 265
+    :cond_0
+    invoke-direct {p0, p1}, Lcom/android/systemui/qs/tiles/UiModeNightTile;->updateOneplusTheme(Z)V
+
+    .line 266
+    sget-boolean v0, Lcom/android/systemui/qs/tiles/UiModeNightTile;->DEBUG:Z
+
+    if-eqz v0, :cond_1
+
+    .line 267
+    iget-object v0, p0, Lcom/android/systemui/qs/tileimpl/QSTileImpl;->TAG:Ljava/lang/String;
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v3, "), 2"
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v0, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 269
+    :cond_1
+    iget-object v0, p0, Lcom/android/systemui/qs/tiles/UiModeNightTile;->mUiModeManager:Landroid/app/UiModeManager;
+
+    invoke-virtual {v0, p1}, Landroid/app/UiModeManager;->setNightModeActivated(Z)Z
+
+    .line 270
+    sget-boolean v0, Lcom/android/systemui/qs/tiles/UiModeNightTile;->DEBUG:Z
+
+    if-eqz v0, :cond_2
+
+    .line 271
+    iget-object p0, p0, Lcom/android/systemui/qs/tileimpl/QSTileImpl;->TAG:Ljava/lang/String;
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string p1, "), 3"
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-static {p0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_2
+    return-void
+.end method
+
+.method private updateOneplusTheme(Z)V
+    .locals 0
+
+    if-eqz p1, :cond_0
+
+    .line 277
+    invoke-direct {p0}, Lcom/android/systemui/qs/tiles/UiModeNightTile;->savePreviousOneplusLightTheme()V
+
+    const/4 p1, 0x1
+
+    .line 278
+    invoke-direct {p0, p1}, Lcom/android/systemui/qs/tiles/UiModeNightTile;->applyOneplusTheme(I)V
+
+    goto :goto_0
+
+    .line 280
+    :cond_0
+    invoke-direct {p0}, Lcom/android/systemui/qs/tiles/UiModeNightTile;->getLastLightThemeColor()I
+
+    move-result p1
+
+    .line 281
+    invoke-direct {p0, p1}, Lcom/android/systemui/qs/tiles/UiModeNightTile;->applyOneplusTheme(I)V
+
+    :goto_0
+    return-void
+.end method
+
+
+# virtual methods
+.method public getLongClickIntent()Landroid/content/Intent;
+    .locals 1
+
+    .line 232
+    new-instance p0, Landroid/content/Intent;
+
+    const-string v0, "android.settings.DARK_THEME_SETTINGS"
+
+    invoke-direct {p0, v0}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
+
+    return-object p0
+.end method
+
+.method public getMetricsCategory()I
+    .locals 0
+
+    const/16 p0, 0x6aa
+
+    return p0
+.end method
+
+.method public getTileLabel()Ljava/lang/CharSequence;
+    .locals 0
+
+    .line 246
+    invoke-virtual {p0}, Lcom/android/systemui/qs/tileimpl/QSTileImpl;->getState()Lcom/android/systemui/plugins/qs/QSTile$State;
+
+    move-result-object p0
+
+    check-cast p0, Lcom/android/systemui/plugins/qs/QSTile$BooleanState;
+
+    iget-object p0, p0, Lcom/android/systemui/plugins/qs/QSTile$State;->label:Ljava/lang/CharSequence;
+
+    return-object p0
+.end method
+
+.method protected handleClick()V
+    .locals 10
+
+    .line 129
+    invoke-virtual {p0}, Lcom/android/systemui/qs/tileimpl/QSTileImpl;->getState()Lcom/android/systemui/plugins/qs/QSTile$State;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/android/systemui/plugins/qs/QSTile$BooleanState;
+
+    iget v0, v0, Lcom/android/systemui/plugins/qs/QSTile$State;->state:I
+
+    if-nez v0, :cond_0
+
+    return-void
+
+    .line 132
+    :cond_0
+    iget-object v0, p0, Lcom/android/systemui/qs/tileimpl/QSTileImpl;->mState:Lcom/android/systemui/plugins/qs/QSTile$State;
+
+    check-cast v0, Lcom/android/systemui/plugins/qs/QSTile$BooleanState;
+
+    iget-boolean v0, v0, Lcom/android/systemui/plugins/qs/QSTile$BooleanState;->value:Z
+
+    const/4 v1, 0x1
+
+    xor-int/2addr v0, v1
+
+    .line 138
+    invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
+
+    move-result-wide v2
+
+    .line 139
+    iget-wide v4, p0, Lcom/android/systemui/qs/tiles/UiModeNightTile;->mLastClickMillis:J
+
+    sub-long v4, v2, v4
+
+    const-wide/16 v6, 0x3e8
+
+    cmp-long v4, v4, v6
+
+    if-gez v4, :cond_1
+
+    .line 140
+    iget-object p0, p0, Lcom/android/systemui/qs/tileimpl/QSTileImpl;->TAG:Ljava/lang/String;
+
+    const-string v0, "rapid click detected, ignore."
+
+    invoke-static {p0, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    return-void
+
+    :cond_1
+    const-wide/16 v4, 0x0
+
+    .line 147
+    iget-object v8, p0, Lcom/android/systemui/qs/tileimpl/QSTileImpl;->mContext:Landroid/content/Context;
+
+    invoke-static {v8}, Lcom/oneplus/util/OpUtils;->isTargetProduct(Landroid/content/Context;)Z
+
+    move-result v8
+
+    if-nez v8, :cond_3
+
+    invoke-static {}, Lcom/oneplus/util/OpUtils;->isBillie2Product()Z
+
+    move-result v8
+
+    if-nez v8, :cond_3
+
+    invoke-static {}, Lcom/oneplus/util/OpUtils;->isBillie8Product()Z
+
+    move-result v8
+
+    if-nez v8, :cond_3
+
+    invoke-static {}, Lcom/oneplus/util/OpUtils;->isFajitaProduct()Z
+
+    move-result v8
+
+    if-eqz v8, :cond_2
+
+    goto :goto_0
+
+    :cond_2
+    move-wide v6, v4
+
+    goto :goto_1
+
+    .line 150
+    :cond_3
+    :goto_0
+    iget-object v4, p0, Lcom/android/systemui/qs/tiles/UiModeNightTile;->mStatusBarManager:Landroid/app/StatusBarManager;
+
+    invoke-virtual {v4}, Landroid/app/StatusBarManager;->collapsePanels()V
+
+    .line 151
+    new-instance v4, Landroid/content/Intent;
+
+    invoke-direct {v4}, Landroid/content/Intent;-><init>()V
+
+    .line 152
+    new-instance v5, Landroid/content/ComponentName;
+
+    const-string v8, "com.android.settings"
+
+    const-string v9, "com.oneplus.settings.OPThemeService"
+
+    invoke-direct {v5, v8, v9}, Landroid/content/ComponentName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-virtual {v4, v5}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
+
+    const-string v5, "isDarkChange"
+
+    .line 153
+    invoke-virtual {v4, v5, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
+
+    .line 154
+    iget-object v1, p0, Lcom/android/systemui/qs/tileimpl/QSTileImpl;->mContext:Landroid/content/Context;
+
+    invoke-virtual {v1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v4}, Landroid/content/Context;->startService(Landroid/content/Intent;)Landroid/content/ComponentName;
+
+    .line 157
+    :goto_1
+    iput-wide v2, p0, Lcom/android/systemui/qs/tiles/UiModeNightTile;->mLastClickMillis:J
+
+    .line 158
+    iget-object v1, p0, Lcom/android/systemui/qs/tileimpl/QSTileImpl;->mHandler:Lcom/android/systemui/qs/tileimpl/QSTileImpl$H;
+
+    new-instance v2, Lcom/android/systemui/qs/tiles/-$$Lambda$UiModeNightTile$I_e7LDdl69wSZsmxfdEzJT96L8I;
+
+    invoke-direct {v2, p0, v0}, Lcom/android/systemui/qs/tiles/-$$Lambda$UiModeNightTile$I_e7LDdl69wSZsmxfdEzJT96L8I;-><init>(Lcom/android/systemui/qs/tiles/UiModeNightTile;Z)V
+
+    invoke-virtual {v1, v2, v6, v7}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
+
+    return-void
+.end method
+
+.method protected handleSetListening(Z)V
+    .locals 1
+
+    .line 307
+    invoke-super {p0, p1}, Lcom/android/systemui/qs/tileimpl/QSTileImpl;->handleSetListening(Z)V
+
+    .line 308
+    iget-object v0, p0, Lcom/android/systemui/qs/tiles/UiModeNightTile;->mSpecialThemeSetting:Lcom/oneplus/util/SystemSetting;
+
+    invoke-virtual {v0, p1}, Lcom/oneplus/util/SystemSetting;->setListening(Z)V
+
+    if-eqz p1, :cond_0
+
+    .line 310
+    invoke-virtual {p0}, Lcom/android/systemui/qs/tileimpl/QSTileImpl;->refreshState()V
+
+    :cond_0
+    return-void
+.end method
+
+.method protected handleUpdateState(Lcom/android/systemui/plugins/qs/QSTile$BooleanState;Ljava/lang/Object;)V
+    .locals 8
+
+    .line 168
+    iget-object p2, p0, Lcom/android/systemui/qs/tiles/UiModeNightTile;->mUiModeManager:Landroid/app/UiModeManager;
+
+    invoke-virtual {p2}, Landroid/app/UiModeManager;->getNightMode()I
+
+    move-result p2
+
+    .line 169
+    iget-object v0, p0, Lcom/android/systemui/qs/tiles/UiModeNightTile;->mBatteryController:Lcom/android/systemui/statusbar/policy/BatteryController;
+
+    invoke-interface {v0}, Lcom/android/systemui/statusbar/policy/BatteryController;->isPowerSave()Z
+
+    .line 170
+    iget-object v0, p0, Lcom/android/systemui/qs/tileimpl/QSTileImpl;->mContext:Landroid/content/Context;
+
+    invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
+
+    move-result-object v0
+
+    iget v0, v0, Landroid/content/res/Configuration;->uiMode:I
+
+    and-int/lit8 v0, v0, 0x30
+
+    const/4 v1, 0x1
+
+    const/4 v2, 0x0
+
+    const/16 v3, 0x20
+
+    if-ne v0, v3, :cond_0
+
+    move v0, v1
+
+    goto :goto_0
+
+    :cond_0
+    move v0, v2
+
+    :goto_0
+    const/4 v3, 0x3
+
+    if-nez p2, :cond_2
+
+    .line 180
+    iget-object v4, p0, Lcom/android/systemui/qs/tiles/UiModeNightTile;->mLocationController:Lcom/android/systemui/statusbar/policy/LocationController;
+
+    .line 181
+    invoke-interface {v4}, Lcom/android/systemui/statusbar/policy/LocationController;->isLocationEnabled()Z
+
+    move-result v4
+
+    if-eqz v4, :cond_2
+
+    .line 182
+    iget-object p2, p0, Lcom/android/systemui/qs/tileimpl/QSTileImpl;->mContext:Landroid/content/Context;
+
+    invoke-virtual {p2}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object p2
+
+    if-eqz v0, :cond_1
+
+    .line 183
+    sget v4, Lcom/android/systemui/R$string;->quick_settings_dark_mode_secondary_label_until_sunrise:I
+
+    goto :goto_1
+
+    .line 184
+    :cond_1
+    sget v4, Lcom/android/systemui/R$string;->quick_settings_dark_mode_secondary_label_on_at_sunset:I
+
+    .line 182
+    :goto_1
+    invoke-virtual {p2, v4}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+
+    move-result-object p2
+
+    iput-object p2, p1, Lcom/android/systemui/plugins/qs/QSTile$State;->secondaryLabel:Ljava/lang/CharSequence;
+
+    goto :goto_5
+
+    :cond_2
+    if-ne p2, v3, :cond_6
+
+    .line 186
+    iget-object p2, p0, Lcom/android/systemui/qs/tileimpl/QSTileImpl;->mContext:Landroid/content/Context;
+
+    invoke-static {p2}, Landroid/text/format/DateFormat;->is24HourFormat(Landroid/content/Context;)Z
+
+    move-result p2
+
+    if-eqz v0, :cond_3
+
+    .line 189
+    iget-object v4, p0, Lcom/android/systemui/qs/tiles/UiModeNightTile;->mUiModeManager:Landroid/app/UiModeManager;
+
+    invoke-virtual {v4}, Landroid/app/UiModeManager;->getCustomNightModeEnd()Ljava/time/LocalTime;
+
+    move-result-object v4
+
+    goto :goto_2
+
+    .line 191
+    :cond_3
+    iget-object v4, p0, Lcom/android/systemui/qs/tiles/UiModeNightTile;->mUiModeManager:Landroid/app/UiModeManager;
+
+    invoke-virtual {v4}, Landroid/app/UiModeManager;->getCustomNightModeStart()Ljava/time/LocalTime;
+
+    move-result-object v4
+
+    .line 193
+    :goto_2
+    iget-object v5, p0, Lcom/android/systemui/qs/tileimpl/QSTileImpl;->mContext:Landroid/content/Context;
+
+    invoke-virtual {v5}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v5
+
+    if-eqz v0, :cond_4
+
+    .line 194
+    sget v6, Lcom/android/systemui/R$string;->quick_settings_dark_mode_secondary_label_until:I
+
+    goto :goto_3
+
+    .line 195
+    :cond_4
+    sget v6, Lcom/android/systemui/R$string;->quick_settings_dark_mode_secondary_label_on_at:I
+
+    :goto_3
+    new-array v7, v1, [Ljava/lang/Object;
+
+    if-eqz p2, :cond_5
+
+    .line 196
+    invoke-virtual {v4}, Ljava/time/LocalTime;->toString()Ljava/lang/String;
+
+    move-result-object p2
+
+    goto :goto_4
+
+    :cond_5
+    sget-object p2, Lcom/android/systemui/qs/tiles/UiModeNightTile;->formatter:Ljava/time/format/DateTimeFormatter;
+
+    invoke-virtual {p2, v4}, Ljava/time/format/DateTimeFormatter;->format(Ljava/time/temporal/TemporalAccessor;)Ljava/lang/String;
+
+    move-result-object p2
+
+    :goto_4
+    aput-object p2, v7, v2
+
+    .line 193
+    invoke-virtual {v5, v6, v7}, Landroid/content/res/Resources;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object p2
+
+    iput-object p2, p1, Lcom/android/systemui/plugins/qs/QSTile$State;->secondaryLabel:Ljava/lang/CharSequence;
+
+    goto :goto_5
+
+    :cond_6
+    const/4 p2, 0x0
+
+    .line 198
+    iput-object p2, p1, Lcom/android/systemui/plugins/qs/QSTile$State;->secondaryLabel:Ljava/lang/CharSequence;
+
+    .line 201
+    :goto_5
+    iput-boolean v0, p1, Lcom/android/systemui/plugins/qs/QSTile$BooleanState;->value:Z
+
+    .line 206
+    iget-object p2, p0, Lcom/android/systemui/qs/tileimpl/QSTileImpl;->mContext:Landroid/content/Context;
+
+    sget v0, Lcom/android/systemui/R$string;->op_qs_dark_mode_tile_label:I
+
+    invoke-virtual {p2, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+
+    move-result-object p2
+
+    iput-object p2, p1, Lcom/android/systemui/plugins/qs/QSTile$State;->label:Ljava/lang/CharSequence;
+
+    .line 208
+    iget-object p0, p0, Lcom/android/systemui/qs/tiles/UiModeNightTile;->mIcon:Lcom/android/systemui/plugins/qs/QSTile$Icon;
+
+    iput-object p0, p1, Lcom/android/systemui/plugins/qs/QSTile$State;->icon:Lcom/android/systemui/plugins/qs/QSTile$Icon;
+
+    .line 209
+    iget-object p0, p1, Lcom/android/systemui/plugins/qs/QSTile$State;->secondaryLabel:Ljava/lang/CharSequence;
+
+    invoke-static {p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result p0
+
+    const/4 p2, 0x2
+
+    if-eqz p0, :cond_7
+
+    .line 210
+    iget-object p0, p1, Lcom/android/systemui/plugins/qs/QSTile$State;->label:Ljava/lang/CharSequence;
+
+    goto :goto_6
+
+    :cond_7
+    new-array p0, v3, [Ljava/lang/CharSequence;
+
+    .line 211
+    iget-object v0, p1, Lcom/android/systemui/plugins/qs/QSTile$State;->label:Ljava/lang/CharSequence;
+
+    aput-object v0, p0, v2
+
+    const-string v0, ", "
+
+    aput-object v0, p0, v1
+
+    iget-object v0, p1, Lcom/android/systemui/plugins/qs/QSTile$State;->secondaryLabel:Ljava/lang/CharSequence;
+
+    aput-object v0, p0, p2
+
+    invoke-static {p0}, Landroid/text/TextUtils;->concat([Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
+
+    move-result-object p0
+
+    :goto_6
+    iput-object p0, p1, Lcom/android/systemui/plugins/qs/QSTile$State;->contentDescription:Ljava/lang/CharSequence;
+
+    .line 215
+    invoke-static {}, Lcom/oneplus/util/OpUtils;->isREDVersion()Z
+
+    move-result p0
+
+    if-eqz p0, :cond_8
+
+    .line 216
+    iput v2, p1, Lcom/android/systemui/plugins/qs/QSTile$State;->state:I
+
+    goto :goto_7
+
+    .line 219
+    :cond_8
+    iget-boolean p0, p1, Lcom/android/systemui/plugins/qs/QSTile$BooleanState;->value:Z
+
+    if-eqz p0, :cond_9
+
+    move v1, p2
+
+    :cond_9
+    iput v1, p1, Lcom/android/systemui/plugins/qs/QSTile$State;->state:I
+
+    .line 221
+    :goto_7
+    iput-boolean v2, p1, Lcom/android/systemui/plugins/qs/QSTile$State;->showRippleEffect:Z
+
+    .line 222
+    const-class p0, Landroid/widget/Switch;
+
+    invoke-virtual {p0}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object p0
+
+    iput-object p0, p1, Lcom/android/systemui/plugins/qs/QSTile$State;->expandedAccessibilityClassName:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method protected bridge synthetic handleUpdateState(Lcom/android/systemui/plugins/qs/QSTile$State;Ljava/lang/Object;)V
+    .locals 0
+
+    .line 56
+    check-cast p1, Lcom/android/systemui/plugins/qs/QSTile$BooleanState;
+
+    invoke-virtual {p0, p1, p2}, Lcom/android/systemui/qs/tiles/UiModeNightTile;->handleUpdateState(Lcom/android/systemui/plugins/qs/QSTile$BooleanState;Ljava/lang/Object;)V
+
+    return-void
+.end method
+
+.method public isAvailable()Z
+    .locals 3
+
+    .line 252
+    invoke-static {}, Landroid/app/ActivityManager;->getCurrentUser()I
+
+    move-result v0
+
+    .line 253
+    sget-boolean v1, Lcom/android/systemui/qs/tiles/UiModeNightTile;->DEBUG:Z
+
+    if-eqz v1, :cond_0
+
+    .line 254
+    iget-object p0, p0, Lcom/android/systemui/qs/tileimpl/QSTileImpl;->TAG:Ljava/lang/String;
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "isAvailable: uid="
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {p0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_0
+    if-nez v0, :cond_1
+
+    const/4 p0, 0x1
+
+    goto :goto_0
+
+    :cond_1
+    const/4 p0, 0x0
+
+    :goto_0
+    return p0
+.end method
+
+.method public synthetic lambda$handleClick$0$UiModeNightTile(Z)V
+    .locals 0
+
+    invoke-direct {p0, p1}, Lcom/android/systemui/qs/tiles/UiModeNightTile;->lambda$handleClick$0(Z)V
+
+    return-void
+.end method
+
+.method public newTileState()Lcom/android/systemui/plugins/qs/QSTile$BooleanState;
+    .locals 0
+
+    .line 124
+    new-instance p0, Lcom/android/systemui/plugins/qs/QSTile$BooleanState;
+
+    invoke-direct {p0}, Lcom/android/systemui/plugins/qs/QSTile$BooleanState;-><init>()V
+
+    return-object p0
+.end method
+
+.method public bridge synthetic newTileState()Lcom/android/systemui/plugins/qs/QSTile$State;
+    .locals 0
+
+    .line 56
+    invoke-virtual {p0}, Lcom/android/systemui/qs/tiles/UiModeNightTile;->newTileState()Lcom/android/systemui/plugins/qs/QSTile$BooleanState;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public onPowerSaveChanged(Z)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public onUiModeChanged()V
+    .locals 0
+
+    .line 110
+    invoke-virtual {p0}, Lcom/android/systemui/qs/tileimpl/QSTileImpl;->refreshState()V
+
+    return-void
+.end method
