@@ -9,6 +9,8 @@
 # static fields
 .field private static final DEBUG:Z
 
+.field private static mGearContext:Landroid/content/Context;
+
 
 # instance fields
 .field private mBootCompleteCache:Lcom/android/systemui/BootCompleteCacheImpl;
@@ -134,6 +136,14 @@
     check-cast p0, [Ljava/lang/String;
 
     return-object p0
+.end method
+
+.method public static getContext()Landroid/content/Context;
+    .locals 1
+
+    sget-object v0, Lcom/android/systemui/SystemUIApplication;->mGearContext:Landroid/content/Context;
+
+    return-object v0
 .end method
 
 .method private startServicesIfNeeded(Ljava/lang/String;[Ljava/lang/String;)V
@@ -561,6 +571,8 @@
     const-string v0, "SystemUIService"
 
     const-string v1, "SystemUIApplication created."
+	
+	sput-object p0, Lcom/android/systemui/SystemUIApplication;->mGearContext:Landroid/content/Context;
 
     .line 81
     invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
