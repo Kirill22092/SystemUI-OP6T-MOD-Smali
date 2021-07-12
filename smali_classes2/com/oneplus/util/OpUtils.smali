@@ -3384,54 +3384,37 @@
 .end method
 
 .method public static isREDVersion()Z
-    .locals 3
+    .registers 3
 
-    .line 835
-    invoke-static {}, Lcom/oneplus/util/ThemeColorUtils;->getCurrentTheme()I
+    .prologue
+    const/4 v0, 0x1
 
-    move-result v0
+    const/4 v1, 0x0
 
-    const/4 v1, 0x1
+    .line 1079
+    const-string v2, "oem_special_theme"
 
-    const/4 v2, 0x0
+    invoke-static {v2, v1}, Lcom/android/wubydax/GearUtils;->getDbIntForKey(Ljava/lang/String;I)I
 
-    if-eq v0, v1, :cond_0
+    move-result v2
 
-    return v2
+    if-ne v2, v0, :cond_13
 
-    .line 839
-    :cond_0
-    invoke-static {}, Lcom/oneplus/util/ThemeColorUtils;->isSpecialTheme()Z
+    const-string v2, "oem_special_theme_MCL"
 
-    move-result v0
+    invoke-static {v2, v1}, Lcom/android/wubydax/GearUtils;->getDbIntForKey(Ljava/lang/String;I)I
 
-    if-nez v0, :cond_1
+    move-result v2
 
-    return v2
+    if-nez v2, :cond_13
 
-    .line 844
-    :cond_1
-    sget-boolean v0, Lcom/oneplus/util/OpUtils;->sIsREDCustomType:Z
+    :goto_12
+    return v0
 
-    if-nez v0, :cond_3
+    :cond_13
+    move v0, v1
 
-    const-string v0, "persist.test.red"
-
-    .line 846
-    invoke-static {v0, v2}, Landroid/os/SystemProperties;->getBoolean(Ljava/lang/String;Z)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    move v1, v2
-
-    :cond_3
-    :goto_0
-    return v1
+    goto :goto_12
 .end method
 
 .method public static isReallyHasOneSim()Z
@@ -3711,98 +3694,21 @@
 .end method
 
 .method private static isSupportChargingAnimationV1()Z
-    .locals 3
+    .registers 1
 
-    const/4 v0, 0x1
-
-    new-array v0, v0, [I
-
-    const/4 v1, 0x0
-
-    const/16 v2, 0x110
-
-    aput v2, v0, v1
-
-    .line 792
-    invoke-static {v0}, Landroid/util/OpFeatures;->isSupport([I)Z
-
-    move-result v0
-
-    .line 793
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v2, "isSupportChargingAnimationV1:"
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    const-string v2, "OpUtils"
-
-    invoke-static {v2, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+    .prologue
+    .line 9
+    const/4 v0, 0x0
 
     return v0
 .end method
 
 .method private static isSupportChargingAnimationV2()Z
-    .locals 4
+    .registers 1
 
+    .prologue
+    .line 9
     const/4 v0, 0x1
-
-    new-array v1, v0, [I
-
-    const/16 v2, 0x131
-
-    const/4 v3, 0x0
-
-    aput v2, v1, v3
-
-    .line 798
-    invoke-static {v1}, Landroid/util/OpFeatures;->isSupport([I)Z
-
-    move-result v1
-
-    if-nez v1, :cond_1
-
-    const-string v1, "persist.test.chargingv2"
-
-    invoke-static {v1, v3}, Landroid/os/SystemProperties;->getBoolean(Ljava/lang/String;Z)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    move v0, v3
-
-    .line 799
-    :cond_1
-    :goto_0
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v2, "isSupportChargingAnimationV2:"
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    const-string v2, "OpUtils"
-
-    invoke-static {v2, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     return v0
 .end method
