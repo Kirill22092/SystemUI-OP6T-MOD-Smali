@@ -328,94 +328,116 @@
 .end method
 
 .method public getPulseVisibleDuration(I)I
-    .locals 1
+    .registers 5
+    .param p1, "n"    # I
 
-    .line 154
+    .prologue
+    const/4 v2, 0x3
+
+    .line 418
     invoke-static {}, Lcom/oneplus/aod/OpAodUtils;->isAlwaysOnEnabled()Z
 
-    move-result v0
+    move-result v1
 
-    if-eqz v0, :cond_0
+    if-eqz v1, :cond_b
 
-    const p0, 0x7fffffff
+    .line 419
+    const v0, 0x7fffffff
 
-    return p0
+    .line 436
+    .local v0, "b":I
+    :goto_a
+    return v0
 
-    :cond_0
-    const/16 v0, 0xa
+    .line 421
+    .end local v0    # "b":I
+    :cond_b
+    const/16 v1, 0xa
 
-    if-ne p1, v0, :cond_1
+    if-ne p1, v1, :cond_18
 
-    .line 159
-    sget p1, Lcom/android/systemui/R$integer;->op_doze_three_key_pulse_duration_visible:I
+    .line 422
+    const-string v1, "op_doze_three_key_pulse_duration_visible"
 
-    const-string v0, "op.doze.three.key.pusle.duration.visible"
+    invoke-static {v1, v2}, Lcom/android/wubydax/GearUtils;->getDbIntForKey(Ljava/lang/String;I)I
 
-    invoke-direct {p0, v0, p1}, Lcom/android/systemui/statusbar/phone/DozeParameters;->getInt(Ljava/lang/String;I)I
+    move-result v1
 
-    move-result p0
+    mul-int/lit16 v0, v1, 0x3e8
 
-    return p0
+    .restart local v0    # "b":I
+    goto :goto_a
 
-    :cond_1
-    const/4 v0, 0x3
+    .line 424
+    .end local v0    # "b":I
+    :cond_18
+    if-ne p1, v2, :cond_23
 
-    if-ne p1, v0, :cond_2
+    .line 425
+    const-string v1, "op_doze_pick_up_pulse_duration_visible"
 
-    .line 161
-    sget p1, Lcom/android/systemui/R$integer;->op_doze_pick_up_pulse_duration_visible:I
+    invoke-static {v1, v2}, Lcom/android/wubydax/GearUtils;->getDbIntForKey(Ljava/lang/String;I)I
 
-    const-string v0, "op.doze.pick.up.pusle.duration.visible"
+    move-result v1
 
-    invoke-direct {p0, v0, p1}, Lcom/android/systemui/statusbar/phone/DozeParameters;->getInt(Ljava/lang/String;I)I
+    mul-int/lit16 v0, v1, 0x3e8
 
-    move-result p0
+    .restart local v0    # "b":I
+    goto :goto_a
 
-    return p0
+    .line 427
+    .end local v0    # "b":I
+    :cond_23
+    const/16 v1, 0xc
 
-    :cond_2
-    const/16 v0, 0xc
+    if-ne p1, v1, :cond_30
 
-    if-ne p1, v0, :cond_3
+    .line 428
+    const-string v1, "op_doze_single_tap_pulse_duration_visible"
 
-    .line 163
-    sget p1, Lcom/android/systemui/R$integer;->op_doze_single_tap_pulse_duration_visible:I
+    invoke-static {v1, v2}, Lcom/android/wubydax/GearUtils;->getDbIntForKey(Ljava/lang/String;I)I
 
-    const-string v0, "op.doze.single.tap.pusle.duration.visible"
+    move-result v1
 
-    invoke-direct {p0, v0, p1}, Lcom/android/systemui/statusbar/phone/DozeParameters;->getInt(Ljava/lang/String;I)I
+    mul-int/lit16 v0, v1, 0x3e8
 
-    move-result p0
+    .restart local v0    # "b":I
+    goto :goto_a
 
-    return p0
+    .line 430
+    .end local v0    # "b":I
+    :cond_30
+    const/16 v1, 0xd
 
-    :cond_3
-    const/16 v0, 0xd
+    if-ne p1, v1, :cond_3d
 
-    if-ne p1, v0, :cond_4
+    .line 431
+    const-string v1, "op_doze_fingerprint_poke_pulse_duration_visible"
 
-    .line 165
-    sget p1, Lcom/android/systemui/R$integer;->op_doze_fingerprint_poke_pulse_duration_visible:I
+    invoke-static {v1, v2}, Lcom/android/wubydax/GearUtils;->getDbIntForKey(Ljava/lang/String;I)I
 
-    const-string v0, "op.doze.fingerprint.poke.pusle.duration.visible"
+    move-result v1
 
-    invoke-direct {p0, v0, p1}, Lcom/android/systemui/statusbar/phone/DozeParameters;->getInt(Ljava/lang/String;I)I
+    mul-int/lit16 v0, v1, 0x3e8
 
-    move-result p0
+    .restart local v0    # "b":I
+    goto :goto_a
 
-    return p0
+    .line 434
+    .end local v0    # "b":I
+    :cond_3d
+    const-string v1, "op_doze_pulse_duration_visible"
 
-    .line 167
-    :cond_4
-    sget p1, Lcom/android/systemui/R$integer;->op_doze_pulse_duration_visible:I
+    const/16 v2, 0x1388
 
-    const-string v0, "doze.pulse.duration.visible"
+    invoke-static {v1, v2}, Lcom/android/wubydax/GearUtils;->getDbIntForKey(Ljava/lang/String;I)I
 
-    invoke-direct {p0, v0, p1}, Lcom/android/systemui/statusbar/phone/DozeParameters;->getInt(Ljava/lang/String;I)I
+    move-result v1
 
-    move-result p0
+    mul-int/lit16 v0, v1, 0x3e8
 
-    return p0
+    .restart local v0    # "b":I
+    goto :goto_a
 .end method
 
 .method public getScreenBrightnessDoze()F
