@@ -25,7 +25,7 @@
     .param p2, "arg0"    # Landroid/os/Looper;
 
     .prologue
-    .line 454
+    .line 352
     iput-object p1, p0, Lcom/oneplus/aod/OpAodLightEffectContainer$6;->this$0:Lcom/oneplus/aod/OpAodLightEffectContainer;
 
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
@@ -42,32 +42,32 @@
     .prologue
     const/16 v3, 0x100
 
-    .line 456
+    .line 354
     invoke-super {p0, p1}, Landroid/os/Handler;->handleMessage(Landroid/os/Message;)V
 
-    .line 457
+    .line 355
     iget v0, p1, Landroid/os/Message;->what:I
 
-    .line 458
+    .line 356
     .local v0, "what":I
     if-eq v0, v3, :cond_13
 
-    .line 459
+    .line 357
     const/16 v1, 0x110
 
     if-ne v0, v1, :cond_12
 
-    .line 460
+    .line 358
     iget-object v1, p0, Lcom/oneplus/aod/OpAodLightEffectContainer$6;->this$0:Lcom/oneplus/aod/OpAodLightEffectContainer;
 
     invoke-static {v1}, Lcom/oneplus/aod/OpAodLightEffectContainer;->access$800(Lcom/oneplus/aod/OpAodLightEffectContainer;)V
 
-    .line 467
+    .line 365
     :cond_12
     :goto_12
     return-void
 
-    .line 463
+    .line 361
     :cond_13
     iget-object v1, p0, Lcom/oneplus/aod/OpAodLightEffectContainer$6;->this$0:Lcom/oneplus/aod/OpAodLightEffectContainer;
 
@@ -87,7 +87,7 @@
 
     if-eqz v1, :cond_12
 
-    .line 464
+    .line 362
     iget-object v1, p0, Lcom/oneplus/aod/OpAodLightEffectContainer$6;->this$0:Lcom/oneplus/aod/OpAodLightEffectContainer;
 
     invoke-static {v1}, Lcom/oneplus/aod/OpAodLightEffectContainer;->access$1000(Lcom/oneplus/aod/OpAodLightEffectContainer;)Landroid/os/Handler;
@@ -96,7 +96,7 @@
 
     invoke-virtual {v1, v3}, Landroid/os/Handler;->sendEmptyMessage(I)Z
 
-    .line 465
+    .line 363
     iget-object v1, p0, Lcom/oneplus/aod/OpAodLightEffectContainer$6;->this$0:Lcom/oneplus/aod/OpAodLightEffectContainer;
 
     invoke-static {v1}, Lcom/oneplus/aod/OpAodLightEffectContainer;->access$1100(Lcom/oneplus/aod/OpAodLightEffectContainer;)V
