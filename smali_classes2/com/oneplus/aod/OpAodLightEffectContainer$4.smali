@@ -1,14 +1,11 @@
 .class Lcom/oneplus/aod/OpAodLightEffectContainer$4;
-.super Ljava/lang/Object;
+.super Landroid/os/Handler;
 .source "OpAodLightEffectContainer.java"
-
-# interfaces
-.implements Ljava/lang/Runnable;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/oneplus/aod/OpAodLightEffectContainer;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
+    value = Lcom/oneplus/aod/OpAodLightEffectContainer;->startHandlerThread()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,311 +19,87 @@
 
 
 # direct methods
-.method constructor <init>(Lcom/oneplus/aod/OpAodLightEffectContainer;)V
-    .registers 2
+.method constructor <init>(Lcom/oneplus/aod/OpAodLightEffectContainer;Landroid/os/Looper;)V
+    .registers 3
     .param p1, "this$0"    # Lcom/oneplus/aod/OpAodLightEffectContainer;
+    .param p2, "arg0"    # Landroid/os/Looper;
 
     .prologue
-    .line 168
+    .line 286
     iput-object p1, p0, Lcom/oneplus/aod/OpAodLightEffectContainer$4;->this$0:Lcom/oneplus/aod/OpAodLightEffectContainer;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public run()V
-    .registers 5
+.method public handleMessage(Landroid/os/Message;)V
+    .registers 6
+    .param p1, "message"    # Landroid/os/Message;
 
     .prologue
-    .line 172
-    :try_start_0
-    iget-object v0, p0, Lcom/oneplus/aod/OpAodLightEffectContainer$4;->this$0:Lcom/oneplus/aod/OpAodLightEffectContainer;
+    const/16 v3, 0x100
 
-    invoke-static {v0}, Lcom/oneplus/aod/OpAodLightEffectContainer;->access$000(Lcom/oneplus/aod/OpAodLightEffectContainer;)I
+    .line 288
+    invoke-super {p0, p1}, Landroid/os/Handler;->handleMessage(Landroid/os/Message;)V
 
-    move-result v0
+    .line 289
+    iget v0, p1, Landroid/os/Message;->what:I
 
-    if-ltz v0, :cond_60
+    .line 290
+    .local v0, "what":I
+    if-eq v0, v3, :cond_13
 
-    iget-object v0, p0, Lcom/oneplus/aod/OpAodLightEffectContainer$4;->this$0:Lcom/oneplus/aod/OpAodLightEffectContainer;
+    .line 291
+    const/16 v1, 0x110
 
-    invoke-static {v0}, Lcom/oneplus/aod/OpAodLightEffectContainer;->access$100(Lcom/oneplus/aod/OpAodLightEffectContainer;)[Landroid/graphics/Bitmap;
+    if-ne v0, v1, :cond_12
 
-    move-result-object v0
-
-    if-eqz v0, :cond_60
-
-    iget-object v0, p0, Lcom/oneplus/aod/OpAodLightEffectContainer$4;->this$0:Lcom/oneplus/aod/OpAodLightEffectContainer;
-
-    invoke-static {v0}, Lcom/oneplus/aod/OpAodLightEffectContainer;->access$000(Lcom/oneplus/aod/OpAodLightEffectContainer;)I
-
-    move-result v0
-
+    .line 292
     iget-object v1, p0, Lcom/oneplus/aod/OpAodLightEffectContainer$4;->this$0:Lcom/oneplus/aod/OpAodLightEffectContainer;
 
-    invoke-static {v1}, Lcom/oneplus/aod/OpAodLightEffectContainer;->access$100(Lcom/oneplus/aod/OpAodLightEffectContainer;)[Landroid/graphics/Bitmap;
+    invoke-static {v1}, Lcom/oneplus/aod/OpAodLightEffectContainer;->access$1100(Lcom/oneplus/aod/OpAodLightEffectContainer;)V
 
-    move-result-object v1
-
-    array-length v1, v1
-
-    if-ge v0, v1, :cond_60
-
-    .line 173
-    iget-object v0, p0, Lcom/oneplus/aod/OpAodLightEffectContainer$4;->this$0:Lcom/oneplus/aod/OpAodLightEffectContainer;
-
-    invoke-static {v0}, Lcom/oneplus/aod/OpAodLightEffectContainer;->access$100(Lcom/oneplus/aod/OpAodLightEffectContainer;)[Landroid/graphics/Bitmap;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lcom/oneplus/aod/OpAodLightEffectContainer$4;->this$0:Lcom/oneplus/aod/OpAodLightEffectContainer;
-
-    invoke-static {v1}, Lcom/oneplus/aod/OpAodLightEffectContainer;->access$000(Lcom/oneplus/aod/OpAodLightEffectContainer;)I
-
-    move-result v1
-
-    aget-object v0, v0, v1
-
-    if-eqz v0, :cond_49
-
-    iget-object v0, p0, Lcom/oneplus/aod/OpAodLightEffectContainer$4;->this$0:Lcom/oneplus/aod/OpAodLightEffectContainer;
-
-    invoke-static {v0}, Lcom/oneplus/aod/OpAodLightEffectContainer;->access$100(Lcom/oneplus/aod/OpAodLightEffectContainer;)[Landroid/graphics/Bitmap;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lcom/oneplus/aod/OpAodLightEffectContainer$4;->this$0:Lcom/oneplus/aod/OpAodLightEffectContainer;
-
-    invoke-static {v1}, Lcom/oneplus/aod/OpAodLightEffectContainer;->access$000(Lcom/oneplus/aod/OpAodLightEffectContainer;)I
-
-    move-result v1
-
-    aget-object v0, v0, v1
-
-    invoke-virtual {v0}, Landroid/graphics/Bitmap;->isRecycled()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_49
-
-    .line 174
-    iget-object v0, p0, Lcom/oneplus/aod/OpAodLightEffectContainer$4;->this$0:Lcom/oneplus/aod/OpAodLightEffectContainer;
-
-    invoke-static {v0}, Lcom/oneplus/aod/OpAodLightEffectContainer;->access$008(Lcom/oneplus/aod/OpAodLightEffectContainer;)I
-
-    .line 198
-    :goto_48
+    .line 299
+    :cond_12
+    :goto_12
     return-void
 
-    .line 177
-    :cond_49
-    iget-object v0, p0, Lcom/oneplus/aod/OpAodLightEffectContainer$4;->this$0:Lcom/oneplus/aod/OpAodLightEffectContainer;
-
-    invoke-static {v0}, Lcom/oneplus/aod/OpAodLightEffectContainer;->access$200(Lcom/oneplus/aod/OpAodLightEffectContainer;)Landroid/widget/ImageView;
-
-    move-result-object v0
-
+    .line 295
+    :cond_13
     iget-object v1, p0, Lcom/oneplus/aod/OpAodLightEffectContainer$4;->this$0:Lcom/oneplus/aod/OpAodLightEffectContainer;
 
-    invoke-static {v1}, Lcom/oneplus/aod/OpAodLightEffectContainer;->access$100(Lcom/oneplus/aod/OpAodLightEffectContainer;)[Landroid/graphics/Bitmap;
-
-    move-result-object v1
-
-    iget-object v2, p0, Lcom/oneplus/aod/OpAodLightEffectContainer$4;->this$0:Lcom/oneplus/aod/OpAodLightEffectContainer;
-
-    invoke-static {v2}, Lcom/oneplus/aod/OpAodLightEffectContainer;->access$000(Lcom/oneplus/aod/OpAodLightEffectContainer;)I
-
-    move-result v2
-
-    aget-object v1, v1, v2
-
-    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageBitmap(Landroid/graphics/Bitmap;)V
-
-    .line 179
-    :cond_60
-    iget-object v0, p0, Lcom/oneplus/aod/OpAodLightEffectContainer$4;->this$0:Lcom/oneplus/aod/OpAodLightEffectContainer;
-
-    invoke-static {v0}, Lcom/oneplus/aod/OpAodLightEffectContainer;->access$000(Lcom/oneplus/aod/OpAodLightEffectContainer;)I
-
-    move-result v0
-
-    if-ltz v0, :cond_c7
-
-    iget-object v0, p0, Lcom/oneplus/aod/OpAodLightEffectContainer$4;->this$0:Lcom/oneplus/aod/OpAodLightEffectContainer;
-
-    invoke-static {v0}, Lcom/oneplus/aod/OpAodLightEffectContainer;->access$300(Lcom/oneplus/aod/OpAodLightEffectContainer;)[Landroid/graphics/Bitmap;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_c7
-
-    iget-object v0, p0, Lcom/oneplus/aod/OpAodLightEffectContainer$4;->this$0:Lcom/oneplus/aod/OpAodLightEffectContainer;
-
-    invoke-static {v0}, Lcom/oneplus/aod/OpAodLightEffectContainer;->access$000(Lcom/oneplus/aod/OpAodLightEffectContainer;)I
-
-    move-result v0
-
-    iget-object v1, p0, Lcom/oneplus/aod/OpAodLightEffectContainer$4;->this$0:Lcom/oneplus/aod/OpAodLightEffectContainer;
-
-    invoke-static {v1}, Lcom/oneplus/aod/OpAodLightEffectContainer;->access$300(Lcom/oneplus/aod/OpAodLightEffectContainer;)[Landroid/graphics/Bitmap;
-
-    move-result-object v1
-
-    array-length v1, v1
-
-    if-ge v0, v1, :cond_c7
-
-    .line 180
-    iget-object v0, p0, Lcom/oneplus/aod/OpAodLightEffectContainer$4;->this$0:Lcom/oneplus/aod/OpAodLightEffectContainer;
-
-    invoke-static {v0}, Lcom/oneplus/aod/OpAodLightEffectContainer;->access$300(Lcom/oneplus/aod/OpAodLightEffectContainer;)[Landroid/graphics/Bitmap;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lcom/oneplus/aod/OpAodLightEffectContainer$4;->this$0:Lcom/oneplus/aod/OpAodLightEffectContainer;
-
-    invoke-static {v1}, Lcom/oneplus/aod/OpAodLightEffectContainer;->access$000(Lcom/oneplus/aod/OpAodLightEffectContainer;)I
+    invoke-static {v1}, Lcom/oneplus/aod/OpAodLightEffectContainer;->access$1200(Lcom/oneplus/aod/OpAodLightEffectContainer;)I
 
     move-result v1
 
-    aget-object v0, v0, v1
+    const/16 v2, 0x64
 
-    if-eqz v0, :cond_b0
-
-    iget-object v0, p0, Lcom/oneplus/aod/OpAodLightEffectContainer$4;->this$0:Lcom/oneplus/aod/OpAodLightEffectContainer;
-
-    invoke-static {v0}, Lcom/oneplus/aod/OpAodLightEffectContainer;->access$300(Lcom/oneplus/aod/OpAodLightEffectContainer;)[Landroid/graphics/Bitmap;
-
-    move-result-object v0
+    if-ge v1, v2, :cond_12
 
     iget-object v1, p0, Lcom/oneplus/aod/OpAodLightEffectContainer$4;->this$0:Lcom/oneplus/aod/OpAodLightEffectContainer;
 
-    invoke-static {v1}, Lcom/oneplus/aod/OpAodLightEffectContainer;->access$000(Lcom/oneplus/aod/OpAodLightEffectContainer;)I
+    invoke-static {v1}, Lcom/oneplus/aod/OpAodLightEffectContainer;->access$1300(Lcom/oneplus/aod/OpAodLightEffectContainer;)Landroid/os/Handler;
 
-    move-result v1
+    move-result-object v1
 
-    aget-object v0, v0, v1
+    if-eqz v1, :cond_12
 
-    invoke-virtual {v0}, Landroid/graphics/Bitmap;->isRecycled()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_b0
-
-    .line 181
-    iget-object v0, p0, Lcom/oneplus/aod/OpAodLightEffectContainer$4;->this$0:Lcom/oneplus/aod/OpAodLightEffectContainer;
-
-    invoke-static {v0}, Lcom/oneplus/aod/OpAodLightEffectContainer;->access$008(Lcom/oneplus/aod/OpAodLightEffectContainer;)I
-    :try_end_a8
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_a8} :catch_a9
-
-    goto :goto_48
-
-    .line 194
-    :catch_a9
-    move-exception v0
-
-    .line 197
-    :goto_aa
-    iget-object v0, p0, Lcom/oneplus/aod/OpAodLightEffectContainer$4;->this$0:Lcom/oneplus/aod/OpAodLightEffectContainer;
-
-    invoke-static {v0}, Lcom/oneplus/aod/OpAodLightEffectContainer;->access$008(Lcom/oneplus/aod/OpAodLightEffectContainer;)I
-
-    goto :goto_48
-
-    .line 184
-    :cond_b0
-    :try_start_b0
-    iget-object v0, p0, Lcom/oneplus/aod/OpAodLightEffectContainer$4;->this$0:Lcom/oneplus/aod/OpAodLightEffectContainer;
-
-    invoke-static {v0}, Lcom/oneplus/aod/OpAodLightEffectContainer;->access$400(Lcom/oneplus/aod/OpAodLightEffectContainer;)Landroid/widget/ImageView;
-
-    move-result-object v0
-
+    .line 296
     iget-object v1, p0, Lcom/oneplus/aod/OpAodLightEffectContainer$4;->this$0:Lcom/oneplus/aod/OpAodLightEffectContainer;
 
-    invoke-static {v1}, Lcom/oneplus/aod/OpAodLightEffectContainer;->access$300(Lcom/oneplus/aod/OpAodLightEffectContainer;)[Landroid/graphics/Bitmap;
+    invoke-static {v1}, Lcom/oneplus/aod/OpAodLightEffectContainer;->access$1300(Lcom/oneplus/aod/OpAodLightEffectContainer;)Landroid/os/Handler;
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/oneplus/aod/OpAodLightEffectContainer$4;->this$0:Lcom/oneplus/aod/OpAodLightEffectContainer;
+    invoke-virtual {v1, v3}, Landroid/os/Handler;->sendEmptyMessage(I)Z
 
-    invoke-static {v2}, Lcom/oneplus/aod/OpAodLightEffectContainer;->access$000(Lcom/oneplus/aod/OpAodLightEffectContainer;)I
-
-    move-result v2
-
-    aget-object v1, v1, v2
-
-    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageBitmap(Landroid/graphics/Bitmap;)V
-
-    .line 186
-    :cond_c7
-    iget-object v0, p0, Lcom/oneplus/aod/OpAodLightEffectContainer$4;->this$0:Lcom/oneplus/aod/OpAodLightEffectContainer;
-
-    invoke-static {v0}, Lcom/oneplus/aod/OpAodLightEffectContainer;->access$000(Lcom/oneplus/aod/OpAodLightEffectContainer;)I
-
-    move-result v0
-
-    const/16 v1, 0x64
-
-    if-ge v0, v1, :cond_e8
-
-    .line 187
-    iget-object v0, p0, Lcom/oneplus/aod/OpAodLightEffectContainer$4;->this$0:Lcom/oneplus/aod/OpAodLightEffectContainer;
-
-    invoke-static {v0}, Lcom/oneplus/aod/OpAodLightEffectContainer;->access$700(Lcom/oneplus/aod/OpAodLightEffectContainer;)Landroid/os/Handler;
-
-    move-result-object v0
-
+    .line 297
     iget-object v1, p0, Lcom/oneplus/aod/OpAodLightEffectContainer$4;->this$0:Lcom/oneplus/aod/OpAodLightEffectContainer;
 
-    invoke-static {v1}, Lcom/oneplus/aod/OpAodLightEffectContainer;->access$500(Lcom/oneplus/aod/OpAodLightEffectContainer;)Ljava/lang/Runnable;
+    invoke-static {v1}, Lcom/oneplus/aod/OpAodLightEffectContainer;->access$1400(Lcom/oneplus/aod/OpAodLightEffectContainer;)V
 
-    move-result-object v1
-
-    iget-object v2, p0, Lcom/oneplus/aod/OpAodLightEffectContainer$4;->this$0:Lcom/oneplus/aod/OpAodLightEffectContainer;
-
-    invoke-static {v2}, Lcom/oneplus/aod/OpAodLightEffectContainer;->access$600(Lcom/oneplus/aod/OpAodLightEffectContainer;)I
-
-    move-result v2
-
-    int-to-long v2, v2
-
-    invoke-virtual {v0, v1, v2, v3}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
-
-    goto :goto_aa
-
-    .line 190
-    :cond_e8
-    iget-object v0, p0, Lcom/oneplus/aod/OpAodLightEffectContainer$4;->this$0:Lcom/oneplus/aod/OpAodLightEffectContainer;
-
-    invoke-static {v0}, Lcom/oneplus/aod/OpAodLightEffectContainer;->access$200(Lcom/oneplus/aod/OpAodLightEffectContainer;)Landroid/widget/ImageView;
-
-    move-result-object v1
-
-    const/4 v0, 0x0
-
-    check-cast v0, Landroid/graphics/Bitmap;
-
-    invoke-virtual {v1, v0}, Landroid/widget/ImageView;->setImageBitmap(Landroid/graphics/Bitmap;)V
-
-    .line 191
-    iget-object v0, p0, Lcom/oneplus/aod/OpAodLightEffectContainer$4;->this$0:Lcom/oneplus/aod/OpAodLightEffectContainer;
-
-    invoke-static {v0}, Lcom/oneplus/aod/OpAodLightEffectContainer;->access$400(Lcom/oneplus/aod/OpAodLightEffectContainer;)Landroid/widget/ImageView;
-
-    move-result-object v1
-
-    const/4 v0, 0x0
-
-    check-cast v0, Landroid/graphics/Bitmap;
-
-    invoke-virtual {v1, v0}, Landroid/widget/ImageView;->setImageBitmap(Landroid/graphics/Bitmap;)V
-    :try_end_100
-    .catch Ljava/lang/Exception; {:try_start_b0 .. :try_end_100} :catch_a9
-
-    goto :goto_aa
+    goto :goto_12
 .end method

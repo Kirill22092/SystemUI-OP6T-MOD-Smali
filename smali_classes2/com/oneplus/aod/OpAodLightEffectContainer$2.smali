@@ -27,7 +27,7 @@
     .param p1, "this$0"    # Lcom/oneplus/aod/OpAodLightEffectContainer;
 
     .prologue
-    .line 124
+    .line 174
     iput-object p1, p0, Lcom/oneplus/aod/OpAodLightEffectContainer$2;->this$0:Lcom/oneplus/aod/OpAodLightEffectContainer;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -44,7 +44,7 @@
     .prologue
     const v3, 0x3e99999a    # 0.3f
 
-    .line 126
+    .line 176
     invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
 
     move-result-object v2
@@ -55,35 +55,35 @@
 
     move-result v1
 
-    .line 127
+    .line 177
     .local v1, "floatValue":F
     iget-object v2, p0, Lcom/oneplus/aod/OpAodLightEffectContainer$2;->this$0:Lcom/oneplus/aod/OpAodLightEffectContainer;
 
     invoke-virtual {v2, v1}, Lcom/oneplus/aod/OpAodLightEffectContainer;->setScaleY(F)V
 
-    .line 128
+    .line 178
     const/high16 v0, 0x3f800000    # 1.0f
 
-    .line 129
+    .line 179
     .local v0, "alpha":F
     cmpg-float v2, v1, v3
 
     if-gtz v2, :cond_20
 
-    .line 130
+    .line 180
     div-float v0, v1, v3
 
-    .line 135
+    .line 185
     :cond_1a
     :goto_1a
     iget-object v2, p0, Lcom/oneplus/aod/OpAodLightEffectContainer$2;->this$0:Lcom/oneplus/aod/OpAodLightEffectContainer;
 
     invoke-virtual {v2, v0}, Lcom/oneplus/aod/OpAodLightEffectContainer;->setAlpha(F)V
 
-    .line 136
+    .line 186
     return-void
 
-    .line 132
+    .line 182
     :cond_20
     const/high16 v2, 0x3f800000    # 1.0f
 
@@ -91,7 +91,7 @@
 
     if-ltz v2, :cond_1a
 
-    .line 133
+    .line 183
     const/high16 v2, 0x40000000    # 2.0f
 
     sub-float v0, v2, v1
