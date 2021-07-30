@@ -2838,6 +2838,14 @@
     invoke-interface {v0}, Ljava/util/Set;->clear()V
 
     :cond_9
+	const-string v6, "tweak_disable_album_art"
+
+	invoke-static {v6, v1}, Lcom/android/wubydax/GearUtils;->getDbIntForKey(Ljava/lang/String;I)I
+
+	move-result v6
+
+	if-eqz v6, :cond_a
+	
     if-eqz v4, :cond_a
 
     .line 635
