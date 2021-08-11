@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="volume_dialog_tap_target_size">36.0dip</dimen>
+    <dimen name="volume_dialog_row_width">252.0dip</dimen>
+</resources>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AodClockStyle
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:systemui="http://schemas.android.com/apk/res-auto">
+    <controller>com.oneplus.aod.controller.OpBuildInClockController</controller>
+    <burnInSettings systemui:handleClass="com.oneplus.aod.utils.burnin.OpBurnInVerticalController" systemui:minBottomRatio="@dimen/aod_clock_min_bottom_ratio_default" systemui:minTopRatio="@dimen/aod_clock_min_top_ratio_default" systemui:movingDistance="@dimen/aod_moving_distance_default" />
+    <com.oneplus.aod.views.OpTypoGraphicClock android:textSize="@dimen/aod_clock_typographic_font_size" android:layout_gravity="start" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/aod_clock_typographic_margin_top" android:fontFamily="@font/neuehaasgrotdispround25xthin" android:textAlignment="viewStart" android:layout_marginStart="@dimen/aod_clock_typographic_margin_start_end" systemui:colors="@array/op_aod_typographic_clock_colors" systemui:lineHeights="@array/op_aod_typographic_clock_lineHeights" systemui:textClockStringTemplate="@string/textclock_template" systemui:textFont2="@font/neuehaasgrotdispround35thin" />
+    <systemInfoSettings>
+        <dateInfo android:layout_gravity="start" android:layout_marginTop="@dimen/aod_clock_typographic_date_margin_top" android:fontFamily="@font/neuehaasgrotdispround35thin" android:layout_marginStart="@dimen/aod_clock_typographic_margin_start_end" systemui:dateFormat="EEEE, MMM d" systemui:followSystemFont="false" systemui:locale="en" />
+        <sliceInfo android:layout_gravity="start" android:layout_marginTop="@dimen/op_control_margin_space7" android:layout_marginStart="@dimen/aod_clock_typographic_margin_start_end" android:layout_marginEnd="@dimen/aod_slice_view_horizontal_margin" />
+        <batteryInfo android:layout_gravity="start" android:layout_marginTop="@dimen/op_control_margin_space7" android:layout_marginStart="@dimen/aod_clock_typographic_margin_start_end" />
+        <notificationInfo android:layout_gravity="start" android:layout_marginTop="@dimen/oneplus_contorl_layout_margin_bottom2" android:layout_marginStart="@dimen/aod_clock_typographic_margin_start_end" />
+        <ownerInfo android:layout_gravity="start" android:layout_marginTop="@dimen/oneplus_contorl_layout_margin_bottom2" android:layout_marginStart="@dimen/aod_clock_typographic_margin_start_end" />
+    </systemInfoSettings>
+</AodClockStyle>

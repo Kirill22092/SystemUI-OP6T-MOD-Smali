@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="#d6000000" android:clickable="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layoutDirection="ltr"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <FrameLayout android:id="@id/animation_view_container" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true">
+            <com.airbnb.lottie.LottieAnimationView android:id="@id/animation_view_pow" android:layout_width="wrap_content" android:layout_height="fill_parent" app:lottie_loop="true" />
+            <com.airbnb.lottie.LottieAnimationView android:id="@id/animation_view_assist" android:layout_width="wrap_content" android:layout_height="fill_parent" app:lottie_loop="true" />
+        </FrameLayout>
+        <TextView android:textColor="@color/oneplus_contorl_text_color_primary_dark" android:gravity="center_horizontal" android:id="@id/content" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="37.0dip" android:layout_marginTop="56.0dip" android:layout_marginRight="37.0dip" android:text="@string/long_press_power_navigation_power_content" android:layout_below="@id/animation_view_container" style="@style/oneplus_contorl_text_style_subheading" />
+    </RelativeLayout>
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <android.widget.Button android:textColor="@color/op_control_text_color_primary_dark" android:ellipsize="marquee" android:layout_gravity="bottom|center|left" android:id="@id/left_button" android:focusable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/oneplus_contorl_layout_margin_left3" android:layout_marginBottom="28.0dip" android:maxWidth="600.0px" android:text="@string/long_press_power_navigation_setting_button" android:singleLine="true" android:backgroundTint="@color/op_control_card_color_border_dark" style="@style/OnePlus.Widget.AppCompat.Button.Outline" />
+        <android.widget.Button android:textColor="@color/op_control_text_color_primary_light" android:layout_gravity="bottom|center|right" android:id="@id/right_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/oneplus_contorl_layout_margin_right3" android:layout_marginBottom="28.0dip" android:minWidth="100.0dip" android:text="@string/oneplus_threekey_navigation_next" android:singleLine="true" android:backgroundTint="@color/op_control_icon_color_active_dark" style="@style/OnePlus.Widget.AppCompat.Button" />
+    </FrameLayout>
+</LinearLayout>

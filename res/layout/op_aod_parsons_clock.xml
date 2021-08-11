@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:systemui="http://schemas.android.com/apk/res-auto">
+    <com.oneplus.aod.views.parsons.OpParsonsUnlockLabel android:textColor="@color/op_control_text_color_primary_dark" android:id="@id/unlocks" android:paddingBottom="@dimen/op_parsons_underlineHeight" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerHorizontal="true" systemui:underlineHeight="@dimen/op_parsons_underlineHeight" systemui:unlockPadding="@dimen/op_control_margin_space1" style="@style/op_parsons_unlock_msg2" />
+    <com.oneplus.aod.views.parsons.OpParsonsBar android:id="@id/bar" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/unlocks" android:layout_centerHorizontal="true" />
+    <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/timeContainer" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerHorizontal="true">
+        <TextView android:textColor="@color/op_control_accent_color_amber_light" android:id="@id/time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textDirection="ltr" style="@style/op_parsons_clock_title" />
+        <TextView android:textColor="@color/op_control_text_color_primary_dark" android:id="@id/date" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/op_parsons_clock_subtitle" />
+    </LinearLayout>
+</RelativeLayout>

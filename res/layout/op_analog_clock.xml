@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:layout_gravity="center" android:id="@id/analog_background" android:layout_width="fill_parent" android:layout_height="fill_parent" android:adjustViewBounds="true" />
+    <View android:id="@id/analog_hour" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <View android:id="@id/analog_min" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <View android:id="@id/analog_sec" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <View android:id="@id/analog_dot" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <View android:id="@id/analog_outer" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</FrameLayout>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@id/background">
+        <shape>
+            <solid android:color="@color/op_control_bg_color_popup_dark" />
+            <corners android:radius="?android:dialogCornerRadius" />
+            <stroke android:width="1.0dip" android:color="#21ffffff" />
+        </shape>
+    </item>
+    <item android:id="@id/clip_layer">
+        <clip android:drawable="@drawable/control_layer" android:clipOrientation="horizontal" />
+    </item>
+</layer-list>

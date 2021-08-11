@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AodClockStyle
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:systemui="http://schemas.android.com/apk/res-auto">
+    <controller>com.oneplus.aod.controller.OpBuildInClockController</controller>
+    <burnInSettings systemui:handleClass="com.oneplus.aod.utils.burnin.OpBurnInVerticalController" systemui:minBottomRatio="@dimen/aod_clock_min_bottom_ratio_default" systemui:minTopRatio="@dimen/aod_clock_min_top_ratio_default" systemui:movingDistance="@dimen/aod_moving_distance_default" />
+    <com.oneplus.aod.views.OpOneColorStyleClock android:textSize="@dimen/oneplus_widget_big_font_size" android:textColor="@color/clock_ten_digit_white" android:layout_gravity="center_horizontal" android:paddingBottom="@dimen/title_clock_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/aod_clock_digital2_margin_top" android:singleLine="true" android:textDirection="ltr" android:textAlignment="center" android:format12Hour="@string/keyguard_widget_12_hours_format" android:format24Hour="@string/keyguard_widget_24_hours_format" android:elegantTextHeight="false" android:letterSpacing="0.02" systemui:mclTextSize="@dimen/oneplus_widget_big_font_size_mcl" systemui:sizeType="scale" systemui:specialColor="@color/clock_ten_digit_red" style="@style/op_widget_big" systemui.mclFontStyle="regular" />
+    <systemInfoSettings>
+        <dateInfo android:textSize="@dimen/op_owner_info_font_size" android:layout_gravity="center_horizontal" android:fontFamily="@font/oneplus_font_text_45lt" systemui:dateFormat="keyguardStyle" systemui:followSystemFont="false" systemui:sizeType="scale" />
+        <sliceInfo android:layout_gravity="center_horizontal" android:layout_marginTop="@dimen/op_control_margin_space7" android:layout_marginStart="@dimen/aod_slice_view_horizontal_margin" android:layout_marginEnd="@dimen/aod_slice_view_horizontal_margin" />
+        <batteryInfo android:layout_gravity="center_horizontal" android:layout_marginTop="@dimen/op_control_margin_space7" />
+        <notificationInfo android:layout_gravity="center_horizontal" android:layout_marginTop="@dimen/aod_clock_systeminfo_vertical_margin" />
+        <ownerInfo android:layout_gravity="center_horizontal" android:layout_marginTop="@dimen/aod_clock_systeminfo_vertical_margin" />
+    </systemInfoSettings>
+</AodClockStyle>
