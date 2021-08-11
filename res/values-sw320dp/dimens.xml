@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <dimen name="global_actions_grid_item_height">64.0dip</dimen>
-    <dimen name="global_actions_grid_item_width">64.0dip</dimen>
-    <dimen name="qs_detail_header_text_size">15.399994dip</dimen>
-    <dimen name="qs_footer_impl2_icon_padding">11.5dip</dimen>
-    <dimen name="qs_footer_impl2_icon_size">36.95999dip</dimen>
-</resources>

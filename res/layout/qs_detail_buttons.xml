@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:gravity="end" android:paddingTop="@dimen/op_control_margin_space3" android:paddingBottom="@dimen/op_control_margin_space3" android:layout_width="fill_parent" android:layout_height="72.0dip"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <TextView android:id="@android:id/button2" android:focusable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginEnd="@dimen/op_control_margin_space2" style="@style/OnePlus.Widget.AppCompat.Button.Borderless" />
-    <TextView android:id="@android:id/button1" android:focusable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginEnd="@dimen/op_control_margin_space4" style="@style/OnePlus.Widget.AppCompat.Button.Outline" />
-</LinearLayout>

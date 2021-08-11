@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <plurals name="smart_aod_calendar_remain_time">
-        <item quantity="other">za %d minuta</item>
-        <item quantity="one">za %d minutu</item>
-    </plurals>
-</resources>

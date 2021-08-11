@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:theme="@style/Theme.SystemUI.MediaProjectionAlertDialog" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="?android:dialogPreferredPadding" android:paddingEnd="?android:dialogPreferredPadding"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <ImageView android:layout_gravity="center_horizontal" android:id="@id/dialog_icon" android:layout_width="72.0px" android:layout_height="72.0px" android:layout_marginTop="54.0px" android:layout_marginBottom="36.0px" android:src="@drawable/ic_media_projection_permission" />
-    <TextView android:textAppearance="@android:style/TextAppearance.DeviceDefault.Title" android:textSize="20.0dip" android:textColor="?android:textColorPrimary" android:gravity="center" android:id="@id/dialog_title" android:layout_width="fill_parent" android:layout_height="wrap_content" />
-</LinearLayout>

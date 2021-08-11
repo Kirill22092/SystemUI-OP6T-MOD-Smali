@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:orientation="horizontal" android:id="@id/ssc_container" android:paddingTop="@dimen/cw_chip_margin_top_bottom" android:paddingBottom="@dimen/cw_chip_margin_top_bottom" android:layout_width="wrap_content" android:layout_height="wrap_content" android:paddingStart="@dimen/cw_chip_margin" android:paddingEnd="@dimen/cw_chip_margin"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <LinearLayout android:layout_gravity="center" android:id="@id/ssc_wrapper" android:background="@drawable/ssc_background" android:layout_width="wrap_content" android:layout_height="wrap_content" android:paddingStart="@dimen/cw_chip_text_margin" android:paddingEnd="@dimen/cw_chip_text_margin">
-        <ImageView android:gravity="center" android:layout_gravity="center" android:id="@id/ssc_icon" android:visibility="gone" android:layout_width="@dimen/ssc_icon_height" android:layout_height="@dimen/ssc_icon_height" android:scaleType="fitXY" android:layout_marginEnd="@dimen/ssc_icon_margin_end" />
-        <TextView android:textAppearance="@style/ssc_texts" android:ellipsize="end" android:gravity="center" android:orientation="vertical" android:id="@id/ssc_textview" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="@dimen/ssc_height" android:maxLines="1" />
-    </LinearLayout>
-</LinearLayout>

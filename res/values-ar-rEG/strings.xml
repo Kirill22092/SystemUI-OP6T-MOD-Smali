@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <string name="smartspace_calendar_now">دلوقتي</string>
-    <string name="smartspace_calendar_reformatted_event">%1$s: %2$s</string>
-    <string name="smartspace_hours_mins">%1$s %2$s</string>
-    <string name="weather_description">%1$s، %2$s</string>
-</resources>

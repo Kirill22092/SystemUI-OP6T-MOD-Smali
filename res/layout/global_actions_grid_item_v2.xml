@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<com.android.systemui.globalactions.GlobalActionsItem android:gravity="center" android:orientation="vertical" android:background="@drawable/globalaction_background" android:layout_width="0.0dip" android:layout_height="75.0dip" android:layout_marginLeft="@dimen/op_control_margin_space1" android:layout_marginRight="@dimen/op_control_margin_space1" android:layout_weight="1.0" android:stateListAnimator="@anim/control_state_list_animator"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <ImageView android:id="@android:id/icon" android:layout_width="24.0dip" android:layout_height="24.0dip" android:scaleType="centerInside" android:tint="@color/op_control_icon_color_active_dark" />
-    <TextView android:textAppearance="@style/op_control_text_style_body1" android:textColor="@color/op_control_text_color_primary_dark" android:ellipsize="end" android:gravity="center" android:id="@android:id/message" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="3.0dip" android:maxLines="2" android:marqueeRepeatLimit="marquee_forever" android:breakStrategy="high_quality" android:hyphenationFrequency="full" />
-</com.android.systemui.globalactions.GlobalActionsItem>

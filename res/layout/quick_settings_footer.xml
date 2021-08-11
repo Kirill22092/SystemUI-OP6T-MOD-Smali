@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:gravity="center_vertical" android:background="@android:color/transparent" android:paddingTop="@dimen/op_control_margin_space1" android:paddingBottom="@dimen/op_control_margin_space2" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="@dimen/op_control_margin_space4" android:paddingEnd="@dimen/op_control_margin_space4"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <com.android.systemui.util.AutoMarqueeTextView android:textAppearance="@style/op_control_text_style_body1" android:textColor="?android:textColorPrimary" android:ellipsize="marquee" android:gravity="start" android:id="@id/footer_text" android:paddingTop="4.0dip" android:paddingBottom="4.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:layout_weight="1.0" android:marqueeRepeatLimit="marquee_forever" />
-    <ImageView android:id="@id/footer_icon" android:layout_width="@dimen/op_control_icon_size_button" android:layout_height="@dimen/op_control_icon_size_button" android:src="@drawable/ic_info_outline" android:tint="?android:textColorPrimary" android:contentDescription="@null" android:layout_marginStart="@dimen/op_control_margin_space2" />
-</LinearLayout>
