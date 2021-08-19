@@ -58,12 +58,22 @@
 
 .field private static final DOWN_CUST23_ANIMATION:[I
 
+.field private static final DOWN_CUST24_ANIMATION:[I
+
+.field private static final DOWN_CUST25_ANIMATION:[I
+
+.field private static final DOWN_CUST26_ANIMATION:[I
+
+.field private static final DOWN_CUST27_ANIMATION:[I
+
+.field private static final DOWN_CUST28_ANIMATION:[I
+
 .field private static final UP_ANIMATION_DEFAULT:[I
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .registers 9
+    .registers 10
 
     .prologue
     const/16 v6, 0x1a
@@ -72,192 +82,225 @@
 
     const/16 v4, 0x2e
 
-    const/4 v8, 0x1
+    const/4 v9, 0x1
 
-    const/4 v7, 0x0
+    const/4 v8, 0x0
 
-    .line 8
+    .line 10
     new-array v3, v6, [I
 
     sput-object v3, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_ANIMATION_03:[I
 
-    .line 9
+    .line 11
     new-array v3, v4, [I
 
     sput-object v3, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_ANIMATION_04:[I
 
-    .line 10
+    .line 12
     const/16 v3, 0x2d
 
     new-array v3, v3, [I
 
     sput-object v3, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_ANIMATION_DEFAULT:[I
 
-    .line 11
+    .line 13
     const/16 v3, 0x3c
 
     new-array v3, v3, [I
 
     sput-object v3, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_ANIMATION_MCL:[I
 
-    .line 12
+    .line 14
     const/16 v3, 0x64
 
     new-array v3, v3, [I
 
     sput-object v3, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->UP_ANIMATION_DEFAULT:[I
 
-    .line 13
+    .line 15
     const/16 v3, 0x2d
 
     new-array v3, v3, [I
 
     sput-object v3, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_CUST01_ANIMATION:[I
 
-    .line 14
+    .line 16
     const/16 v3, 0x46
 
     new-array v3, v3, [I
 
     sput-object v3, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_CUST02_ANIMATION:[I
 
-    .line 15
+    .line 17
     new-array v3, v6, [I
 
     sput-object v3, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_CUST03_ANIMATION:[I
 
-    .line 16
+    .line 18
     new-array v3, v5, [I
 
     sput-object v3, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_CUST04_ANIMATION:[I
 
-    .line 17
+    .line 19
     new-array v3, v4, [I
 
     sput-object v3, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_CUST05_ANIMATION:[I
 
-    .line 18
+    .line 20
     new-array v3, v5, [I
 
     sput-object v3, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_CUST06_ANIMATION:[I
 
-    .line 19
+    .line 21
     new-array v3, v4, [I
 
     sput-object v3, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_CUST07_ANIMATION:[I
 
-    .line 20
+    .line 22
     const/16 v3, 0x10
 
     new-array v3, v3, [I
 
     sput-object v3, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_CUST08_ANIMATION:[I
 
-    .line 21
+    .line 23
     new-array v3, v4, [I
 
     sput-object v3, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_CUST09_ANIMATION:[I
 
-    .line 22
+    .line 24
     const/16 v3, 0x22
 
     new-array v3, v3, [I
 
     sput-object v3, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_CUST10_ANIMATION:[I
 
-    .line 23
+    .line 25
     const/16 v3, 0x17
 
     new-array v3, v3, [I
 
     sput-object v3, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_CUST11_ANIMATION:[I
 
-    .line 24
+    .line 26
     const/16 v3, 0x33
 
     new-array v3, v3, [I
 
     sput-object v3, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_CUST12_ANIMATION:[I
 
-    .line 25
+    .line 27
     const/16 v3, 0x33
 
     new-array v3, v3, [I
 
     sput-object v3, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_CUST13_ANIMATION:[I
 
-    .line 26
+    .line 28
     new-array v3, v5, [I
 
     sput-object v3, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_CUST14_ANIMATION:[I
 
-    .line 27
+    .line 29
     new-array v3, v4, [I
 
     sput-object v3, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_CUST15_ANIMATION:[I
 
-    .line 28
+    .line 30
     new-array v3, v4, [I
 
     sput-object v3, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_CUST16_ANIMATION:[I
 
-    .line 29
+    .line 31
     new-array v3, v5, [I
 
     sput-object v3, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_CUST17_ANIMATION:[I
-
-    .line 30
-    const/16 v3, 0x28
-
-    new-array v3, v3, [I
-
-    sput-object v3, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_CUST18_ANIMATION:[I
-
-    .line 31
-    const/16 v3, 0x29
-
-    new-array v3, v3, [I
-
-    sput-object v3, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_CUST19_ANIMATION:[I
 
     .line 32
     const/16 v3, 0x28
 
     new-array v3, v3, [I
 
-    sput-object v3, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_CUST20_ANIMATION:[I
+    sput-object v3, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_CUST18_ANIMATION:[I
 
     .line 33
+    const/16 v3, 0x29
+
+    new-array v3, v3, [I
+
+    sput-object v3, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_CUST19_ANIMATION:[I
+
+    .line 34
+    const/16 v3, 0x28
+
+    new-array v3, v3, [I
+
+    sput-object v3, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_CUST20_ANIMATION:[I
+
+    .line 35
     const/16 v3, 0x46
 
     new-array v3, v3, [I
 
     sput-object v3, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_CUST21_ANIMATION:[I
 
-    .line 34
+    .line 36
     new-array v3, v5, [I
 
     sput-object v3, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_CUST22_ANIMATION:[I
 
-    .line 35
+    .line 37
     const/16 v3, 0xa4
 
     new-array v3, v3, [I
 
     sput-object v3, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_CUST23_ANIMATION:[I
 
+    .line 38
+    const/16 v3, 0x2a
+
+    new-array v3, v3, [I
+
+    sput-object v3, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_CUST24_ANIMATION:[I
+
+    .line 39
+    const/16 v3, 0xf
+
+    new-array v3, v3, [I
+
+    sput-object v3, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_CUST25_ANIMATION:[I
+
     .line 40
+    new-array v3, v6, [I
+
+    sput-object v3, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_CUST26_ANIMATION:[I
+
+    .line 41
+    const/16 v3, 0x29
+
+    new-array v3, v3, [I
+
+    sput-object v3, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_CUST27_ANIMATION:[I
+
+    .line 42
+    const/16 v3, 0x1c
+
+    new-array v3, v3, [I
+
+    sput-object v3, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_CUST28_ANIMATION:[I
+
+    .line 47
     const/4 v0, 0x0
 
     .local v0, "i":I
-    :goto_97
+    :goto_b3
     sget-object v3, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_ANIMATION_03:[I
 
     array-length v3, v3
 
-    if-ge v0, v3, :cond_ca
+    if-ge v0, v3, :cond_e8
 
-    .line 41
+    .line 48
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -268,17 +311,19 @@
 
     move-result-object v3
 
-    const-string v4, "%02d"
+    sget-object v4, Ljava/util/Locale;->US:Ljava/util/Locale;
 
-    new-array v5, v8, [Ljava/lang/Object;
+    const-string v5, "%02d"
+
+    new-array v6, v9, [Ljava/lang/Object;
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    move-result-object v6
+    move-result-object v7
 
-    aput-object v6, v5, v7
+    aput-object v7, v6, v8
 
-    invoke-static {v4, v5}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-static {v4, v5, v6}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v4
 
@@ -290,7 +335,7 @@
 
     move-result-object v2
 
-    .line 42
+    .line 49
     .local v2, "string":Ljava/lang/String;
     const-string v3, "drawable"
 
@@ -298,31 +343,31 @@
 
     move-result v1
 
-    .line 43
+    .line 50
     .local v1, "identifier":I
     sget-object v3, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_ANIMATION_03:[I
 
     aput v1, v3, v0
 
-    .line 40
+    .line 47
     add-int/lit8 v0, v0, 0x1
 
-    goto :goto_97
+    goto :goto_b3
 
-    .line 45
+    .line 52
     .end local v1    # "identifier":I
     .end local v2    # "string":Ljava/lang/String;
-    :cond_ca
+    :cond_e8
     const/4 v0, 0x0
 
-    :goto_cb
+    :goto_e9
     sget-object v3, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_ANIMATION_04:[I
 
     array-length v3, v3
 
-    if-ge v0, v3, :cond_fe
+    if-ge v0, v3, :cond_11e
 
-    .line 46
+    .line 53
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -333,17 +378,19 @@
 
     move-result-object v3
 
-    const-string v4, "%02d"
+    sget-object v4, Ljava/util/Locale;->US:Ljava/util/Locale;
 
-    new-array v5, v8, [Ljava/lang/Object;
+    const-string v5, "%02d"
+
+    new-array v6, v9, [Ljava/lang/Object;
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    move-result-object v6
+    move-result-object v7
 
-    aput-object v6, v5, v7
+    aput-object v7, v6, v8
 
-    invoke-static {v4, v5}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-static {v4, v5, v6}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v4
 
@@ -355,7 +402,7 @@
 
     move-result-object v2
 
-    .line 47
+    .line 54
     .restart local v2    # "string":Ljava/lang/String;
     const-string v3, "drawable"
 
@@ -363,31 +410,31 @@
 
     move-result v1
 
-    .line 48
+    .line 55
     .restart local v1    # "identifier":I
     sget-object v3, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_ANIMATION_04:[I
 
     aput v1, v3, v0
 
-    .line 45
+    .line 52
     add-int/lit8 v0, v0, 0x1
 
-    goto :goto_cb
+    goto :goto_e9
 
-    .line 50
+    .line 57
     .end local v1    # "identifier":I
     .end local v2    # "string":Ljava/lang/String;
-    :cond_fe
+    :cond_11e
     const/4 v0, 0x0
 
-    :goto_ff
+    :goto_11f
     sget-object v3, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_ANIMATION_DEFAULT:[I
 
     array-length v3, v3
 
-    if-ge v0, v3, :cond_132
+    if-ge v0, v3, :cond_154
 
-    .line 51
+    .line 58
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -398,17 +445,19 @@
 
     move-result-object v3
 
-    const-string v4, "%02d"
+    sget-object v4, Ljava/util/Locale;->US:Ljava/util/Locale;
 
-    new-array v5, v8, [Ljava/lang/Object;
+    const-string v5, "%02d"
+
+    new-array v6, v9, [Ljava/lang/Object;
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    move-result-object v6
+    move-result-object v7
 
-    aput-object v6, v5, v7
+    aput-object v7, v6, v8
 
-    invoke-static {v4, v5}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-static {v4, v5, v6}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v4
 
@@ -420,7 +469,7 @@
 
     move-result-object v2
 
-    .line 52
+    .line 59
     .restart local v2    # "string":Ljava/lang/String;
     const-string v3, "drawable"
 
@@ -428,31 +477,31 @@
 
     move-result v1
 
-    .line 53
+    .line 60
     .restart local v1    # "identifier":I
     sget-object v3, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_ANIMATION_DEFAULT:[I
 
     aput v1, v3, v0
 
-    .line 50
+    .line 57
     add-int/lit8 v0, v0, 0x1
 
-    goto :goto_ff
+    goto :goto_11f
 
-    .line 55
+    .line 62
     .end local v1    # "identifier":I
     .end local v2    # "string":Ljava/lang/String;
-    :cond_132
+    :cond_154
     const/4 v0, 0x0
 
-    :goto_133
+    :goto_155
     sget-object v3, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_ANIMATION_MCL:[I
 
     array-length v3, v3
 
-    if-ge v0, v3, :cond_166
+    if-ge v0, v3, :cond_18a
 
-    .line 56
+    .line 63
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -463,17 +512,19 @@
 
     move-result-object v3
 
-    const-string v4, "%02d"
+    sget-object v4, Ljava/util/Locale;->US:Ljava/util/Locale;
 
-    new-array v5, v8, [Ljava/lang/Object;
+    const-string v5, "%02d"
+
+    new-array v6, v9, [Ljava/lang/Object;
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    move-result-object v6
+    move-result-object v7
 
-    aput-object v6, v5, v7
+    aput-object v7, v6, v8
 
-    invoke-static {v4, v5}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-static {v4, v5, v6}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v4
 
@@ -485,7 +536,7 @@
 
     move-result-object v2
 
-    .line 57
+    .line 64
     .restart local v2    # "string":Ljava/lang/String;
     const-string v3, "drawable"
 
@@ -493,31 +544,31 @@
 
     move-result v1
 
-    .line 58
+    .line 65
     .restart local v1    # "identifier":I
     sget-object v3, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_ANIMATION_MCL:[I
 
     aput v1, v3, v0
 
-    .line 55
+    .line 62
     add-int/lit8 v0, v0, 0x1
 
-    goto :goto_133
+    goto :goto_155
 
-    .line 60
+    .line 67
     .end local v1    # "identifier":I
     .end local v2    # "string":Ljava/lang/String;
-    :cond_166
+    :cond_18a
     const/4 v0, 0x0
 
-    :goto_167
+    :goto_18b
     sget-object v3, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_CUST01_ANIMATION:[I
 
     array-length v3, v3
 
-    if-ge v0, v3, :cond_19a
+    if-ge v0, v3, :cond_1c0
 
-    .line 61
+    .line 68
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -528,17 +579,19 @@
 
     move-result-object v3
 
-    const-string v4, "%02d"
+    sget-object v4, Ljava/util/Locale;->US:Ljava/util/Locale;
 
-    new-array v5, v8, [Ljava/lang/Object;
+    const-string v5, "%02d"
+
+    new-array v6, v9, [Ljava/lang/Object;
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    move-result-object v6
+    move-result-object v7
 
-    aput-object v6, v5, v7
+    aput-object v7, v6, v8
 
-    invoke-static {v4, v5}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-static {v4, v5, v6}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v4
 
@@ -550,7 +603,7 @@
 
     move-result-object v2
 
-    .line 62
+    .line 69
     .restart local v2    # "string":Ljava/lang/String;
     const-string v3, "drawable"
 
@@ -558,31 +611,31 @@
 
     move-result v1
 
-    .line 63
+    .line 70
     .restart local v1    # "identifier":I
     sget-object v3, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_CUST01_ANIMATION:[I
 
     aput v1, v3, v0
 
-    .line 60
+    .line 67
     add-int/lit8 v0, v0, 0x1
 
-    goto :goto_167
+    goto :goto_18b
 
-    .line 65
+    .line 72
     .end local v1    # "identifier":I
     .end local v2    # "string":Ljava/lang/String;
-    :cond_19a
+    :cond_1c0
     const/4 v0, 0x0
 
-    :goto_19b
+    :goto_1c1
     sget-object v3, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_CUST02_ANIMATION:[I
 
     array-length v3, v3
 
-    if-ge v0, v3, :cond_1ce
+    if-ge v0, v3, :cond_1f6
 
-    .line 66
+    .line 73
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -593,17 +646,19 @@
 
     move-result-object v3
 
-    const-string v4, "%02d"
+    sget-object v4, Ljava/util/Locale;->US:Ljava/util/Locale;
 
-    new-array v5, v8, [Ljava/lang/Object;
+    const-string v5, "%02d"
+
+    new-array v6, v9, [Ljava/lang/Object;
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    move-result-object v6
+    move-result-object v7
 
-    aput-object v6, v5, v7
+    aput-object v7, v6, v8
 
-    invoke-static {v4, v5}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-static {v4, v5, v6}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v4
 
@@ -615,7 +670,7 @@
 
     move-result-object v2
 
-    .line 67
+    .line 74
     .restart local v2    # "string":Ljava/lang/String;
     const-string v3, "drawable"
 
@@ -623,31 +678,31 @@
 
     move-result v1
 
-    .line 68
+    .line 75
     .restart local v1    # "identifier":I
     sget-object v3, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_CUST02_ANIMATION:[I
 
     aput v1, v3, v0
 
-    .line 65
+    .line 72
     add-int/lit8 v0, v0, 0x1
 
-    goto :goto_19b
+    goto :goto_1c1
 
-    .line 70
+    .line 77
     .end local v1    # "identifier":I
     .end local v2    # "string":Ljava/lang/String;
-    :cond_1ce
+    :cond_1f6
     const/4 v0, 0x0
 
-    :goto_1cf
+    :goto_1f7
     sget-object v3, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_CUST03_ANIMATION:[I
 
     array-length v3, v3
 
-    if-ge v0, v3, :cond_202
+    if-ge v0, v3, :cond_22c
 
-    .line 71
+    .line 78
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -658,17 +713,19 @@
 
     move-result-object v3
 
-    const-string v4, "%02d"
+    sget-object v4, Ljava/util/Locale;->US:Ljava/util/Locale;
 
-    new-array v5, v8, [Ljava/lang/Object;
+    const-string v5, "%02d"
+
+    new-array v6, v9, [Ljava/lang/Object;
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    move-result-object v6
+    move-result-object v7
 
-    aput-object v6, v5, v7
+    aput-object v7, v6, v8
 
-    invoke-static {v4, v5}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-static {v4, v5, v6}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v4
 
@@ -680,7 +737,7 @@
 
     move-result-object v2
 
-    .line 72
+    .line 79
     .restart local v2    # "string":Ljava/lang/String;
     const-string v3, "drawable"
 
@@ -688,31 +745,31 @@
 
     move-result v1
 
-    .line 73
+    .line 80
     .restart local v1    # "identifier":I
     sget-object v3, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_CUST03_ANIMATION:[I
 
     aput v1, v3, v0
 
-    .line 70
+    .line 77
     add-int/lit8 v0, v0, 0x1
 
-    goto :goto_1cf
+    goto :goto_1f7
 
-    .line 75
+    .line 82
     .end local v1    # "identifier":I
     .end local v2    # "string":Ljava/lang/String;
-    :cond_202
+    :cond_22c
     const/4 v0, 0x0
 
-    :goto_203
+    :goto_22d
     sget-object v3, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_CUST04_ANIMATION:[I
 
     array-length v3, v3
 
-    if-ge v0, v3, :cond_236
+    if-ge v0, v3, :cond_262
 
-    .line 76
+    .line 83
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -723,17 +780,19 @@
 
     move-result-object v3
 
-    const-string v4, "%02d"
+    sget-object v4, Ljava/util/Locale;->US:Ljava/util/Locale;
 
-    new-array v5, v8, [Ljava/lang/Object;
+    const-string v5, "%02d"
+
+    new-array v6, v9, [Ljava/lang/Object;
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    move-result-object v6
+    move-result-object v7
 
-    aput-object v6, v5, v7
+    aput-object v7, v6, v8
 
-    invoke-static {v4, v5}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-static {v4, v5, v6}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v4
 
@@ -745,7 +804,7 @@
 
     move-result-object v2
 
-    .line 77
+    .line 84
     .restart local v2    # "string":Ljava/lang/String;
     const-string v3, "drawable"
 
@@ -753,31 +812,31 @@
 
     move-result v1
 
-    .line 78
+    .line 85
     .restart local v1    # "identifier":I
     sget-object v3, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_CUST04_ANIMATION:[I
 
     aput v1, v3, v0
 
-    .line 75
+    .line 82
     add-int/lit8 v0, v0, 0x1
 
-    goto :goto_203
+    goto :goto_22d
 
-    .line 80
+    .line 87
     .end local v1    # "identifier":I
     .end local v2    # "string":Ljava/lang/String;
-    :cond_236
+    :cond_262
     const/4 v0, 0x0
 
-    :goto_237
+    :goto_263
     sget-object v3, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_CUST05_ANIMATION:[I
 
     array-length v3, v3
 
-    if-ge v0, v3, :cond_26a
+    if-ge v0, v3, :cond_298
 
-    .line 81
+    .line 88
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -788,17 +847,19 @@
 
     move-result-object v3
 
-    const-string v4, "%02d"
+    sget-object v4, Ljava/util/Locale;->US:Ljava/util/Locale;
 
-    new-array v5, v8, [Ljava/lang/Object;
+    const-string v5, "%02d"
+
+    new-array v6, v9, [Ljava/lang/Object;
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    move-result-object v6
+    move-result-object v7
 
-    aput-object v6, v5, v7
+    aput-object v7, v6, v8
 
-    invoke-static {v4, v5}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-static {v4, v5, v6}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v4
 
@@ -810,7 +871,7 @@
 
     move-result-object v2
 
-    .line 82
+    .line 89
     .restart local v2    # "string":Ljava/lang/String;
     const-string v3, "drawable"
 
@@ -818,31 +879,31 @@
 
     move-result v1
 
-    .line 83
+    .line 90
     .restart local v1    # "identifier":I
     sget-object v3, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_CUST05_ANIMATION:[I
 
     aput v1, v3, v0
 
-    .line 80
+    .line 87
     add-int/lit8 v0, v0, 0x1
 
-    goto :goto_237
+    goto :goto_263
 
-    .line 85
+    .line 92
     .end local v1    # "identifier":I
     .end local v2    # "string":Ljava/lang/String;
-    :cond_26a
+    :cond_298
     const/4 v0, 0x0
 
-    :goto_26b
+    :goto_299
     sget-object v3, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_CUST06_ANIMATION:[I
 
     array-length v3, v3
 
-    if-ge v0, v3, :cond_29e
+    if-ge v0, v3, :cond_2ce
 
-    .line 86
+    .line 93
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -853,17 +914,19 @@
 
     move-result-object v3
 
-    const-string v4, "%02d"
+    sget-object v4, Ljava/util/Locale;->US:Ljava/util/Locale;
 
-    new-array v5, v8, [Ljava/lang/Object;
+    const-string v5, "%02d"
+
+    new-array v6, v9, [Ljava/lang/Object;
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    move-result-object v6
+    move-result-object v7
 
-    aput-object v6, v5, v7
+    aput-object v7, v6, v8
 
-    invoke-static {v4, v5}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-static {v4, v5, v6}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v4
 
@@ -875,7 +938,7 @@
 
     move-result-object v2
 
-    .line 87
+    .line 94
     .restart local v2    # "string":Ljava/lang/String;
     const-string v3, "drawable"
 
@@ -883,31 +946,31 @@
 
     move-result v1
 
-    .line 88
+    .line 95
     .restart local v1    # "identifier":I
     sget-object v3, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_CUST06_ANIMATION:[I
 
     aput v1, v3, v0
 
-    .line 85
+    .line 92
     add-int/lit8 v0, v0, 0x1
 
-    goto :goto_26b
+    goto :goto_299
 
-    .line 90
+    .line 97
     .end local v1    # "identifier":I
     .end local v2    # "string":Ljava/lang/String;
-    :cond_29e
+    :cond_2ce
     const/4 v0, 0x0
 
-    :goto_29f
+    :goto_2cf
     sget-object v3, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_CUST07_ANIMATION:[I
 
     array-length v3, v3
 
-    if-ge v0, v3, :cond_2d2
+    if-ge v0, v3, :cond_304
 
-    .line 91
+    .line 98
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -918,17 +981,19 @@
 
     move-result-object v3
 
-    const-string v4, "%02d"
+    sget-object v4, Ljava/util/Locale;->US:Ljava/util/Locale;
 
-    new-array v5, v8, [Ljava/lang/Object;
+    const-string v5, "%02d"
+
+    new-array v6, v9, [Ljava/lang/Object;
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    move-result-object v6
+    move-result-object v7
 
-    aput-object v6, v5, v7
+    aput-object v7, v6, v8
 
-    invoke-static {v4, v5}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-static {v4, v5, v6}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v4
 
@@ -940,7 +1005,7 @@
 
     move-result-object v2
 
-    .line 92
+    .line 99
     .restart local v2    # "string":Ljava/lang/String;
     const-string v3, "drawable"
 
@@ -948,31 +1013,31 @@
 
     move-result v1
 
-    .line 93
+    .line 100
     .restart local v1    # "identifier":I
     sget-object v3, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_CUST07_ANIMATION:[I
 
     aput v1, v3, v0
 
-    .line 90
+    .line 97
     add-int/lit8 v0, v0, 0x1
 
-    goto :goto_29f
+    goto :goto_2cf
 
-    .line 95
+    .line 102
     .end local v1    # "identifier":I
     .end local v2    # "string":Ljava/lang/String;
-    :cond_2d2
+    :cond_304
     const/4 v0, 0x0
 
-    :goto_2d3
+    :goto_305
     sget-object v3, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_CUST08_ANIMATION:[I
 
     array-length v3, v3
 
-    if-ge v0, v3, :cond_306
+    if-ge v0, v3, :cond_33a
 
-    .line 96
+    .line 103
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -983,17 +1048,19 @@
 
     move-result-object v3
 
-    const-string v4, "%02d"
+    sget-object v4, Ljava/util/Locale;->US:Ljava/util/Locale;
 
-    new-array v5, v8, [Ljava/lang/Object;
+    const-string v5, "%02d"
+
+    new-array v6, v9, [Ljava/lang/Object;
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    move-result-object v6
+    move-result-object v7
 
-    aput-object v6, v5, v7
+    aput-object v7, v6, v8
 
-    invoke-static {v4, v5}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-static {v4, v5, v6}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v4
 
@@ -1005,7 +1072,7 @@
 
     move-result-object v2
 
-    .line 97
+    .line 104
     .restart local v2    # "string":Ljava/lang/String;
     const-string v3, "drawable"
 
@@ -1013,31 +1080,31 @@
 
     move-result v1
 
-    .line 98
+    .line 105
     .restart local v1    # "identifier":I
     sget-object v3, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_CUST08_ANIMATION:[I
 
     aput v1, v3, v0
 
-    .line 95
+    .line 102
     add-int/lit8 v0, v0, 0x1
 
-    goto :goto_2d3
+    goto :goto_305
 
-    .line 100
+    .line 107
     .end local v1    # "identifier":I
     .end local v2    # "string":Ljava/lang/String;
-    :cond_306
+    :cond_33a
     const/4 v0, 0x0
 
-    :goto_307
+    :goto_33b
     sget-object v3, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_CUST09_ANIMATION:[I
 
     array-length v3, v3
 
-    if-ge v0, v3, :cond_33a
+    if-ge v0, v3, :cond_370
 
-    .line 101
+    .line 108
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -1048,17 +1115,19 @@
 
     move-result-object v3
 
-    const-string v4, "%02d"
+    sget-object v4, Ljava/util/Locale;->US:Ljava/util/Locale;
 
-    new-array v5, v8, [Ljava/lang/Object;
+    const-string v5, "%02d"
+
+    new-array v6, v9, [Ljava/lang/Object;
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    move-result-object v6
+    move-result-object v7
 
-    aput-object v6, v5, v7
+    aput-object v7, v6, v8
 
-    invoke-static {v4, v5}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-static {v4, v5, v6}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v4
 
@@ -1070,7 +1139,7 @@
 
     move-result-object v2
 
-    .line 102
+    .line 109
     .restart local v2    # "string":Ljava/lang/String;
     const-string v3, "drawable"
 
@@ -1078,31 +1147,31 @@
 
     move-result v1
 
-    .line 103
+    .line 110
     .restart local v1    # "identifier":I
     sget-object v3, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_CUST09_ANIMATION:[I
 
     aput v1, v3, v0
 
-    .line 100
+    .line 107
     add-int/lit8 v0, v0, 0x1
 
-    goto :goto_307
+    goto :goto_33b
 
-    .line 105
+    .line 112
     .end local v1    # "identifier":I
     .end local v2    # "string":Ljava/lang/String;
-    :cond_33a
+    :cond_370
     const/4 v0, 0x0
 
-    :goto_33b
+    :goto_371
     sget-object v3, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_CUST10_ANIMATION:[I
 
     array-length v3, v3
 
-    if-ge v0, v3, :cond_36e
+    if-ge v0, v3, :cond_3a6
 
-    .line 106
+    .line 113
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -1113,17 +1182,19 @@
 
     move-result-object v3
 
-    const-string v4, "%02d"
+    sget-object v4, Ljava/util/Locale;->US:Ljava/util/Locale;
 
-    new-array v5, v8, [Ljava/lang/Object;
+    const-string v5, "%02d"
+
+    new-array v6, v9, [Ljava/lang/Object;
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    move-result-object v6
+    move-result-object v7
 
-    aput-object v6, v5, v7
+    aput-object v7, v6, v8
 
-    invoke-static {v4, v5}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-static {v4, v5, v6}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v4
 
@@ -1135,7 +1206,7 @@
 
     move-result-object v2
 
-    .line 107
+    .line 114
     .restart local v2    # "string":Ljava/lang/String;
     const-string v3, "drawable"
 
@@ -1143,31 +1214,31 @@
 
     move-result v1
 
-    .line 108
+    .line 115
     .restart local v1    # "identifier":I
     sget-object v3, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_CUST10_ANIMATION:[I
 
     aput v1, v3, v0
 
-    .line 105
+    .line 112
     add-int/lit8 v0, v0, 0x1
 
-    goto :goto_33b
+    goto :goto_371
 
-    .line 110
+    .line 117
     .end local v1    # "identifier":I
     .end local v2    # "string":Ljava/lang/String;
-    :cond_36e
+    :cond_3a6
     const/4 v0, 0x0
 
-    :goto_36f
+    :goto_3a7
     sget-object v3, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_CUST11_ANIMATION:[I
 
     array-length v3, v3
 
-    if-ge v0, v3, :cond_3a2
+    if-ge v0, v3, :cond_3dc
 
-    .line 111
+    .line 118
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -1178,17 +1249,19 @@
 
     move-result-object v3
 
-    const-string v4, "%02d"
+    sget-object v4, Ljava/util/Locale;->US:Ljava/util/Locale;
 
-    new-array v5, v8, [Ljava/lang/Object;
+    const-string v5, "%02d"
+
+    new-array v6, v9, [Ljava/lang/Object;
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    move-result-object v6
+    move-result-object v7
 
-    aput-object v6, v5, v7
+    aput-object v7, v6, v8
 
-    invoke-static {v4, v5}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-static {v4, v5, v6}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v4
 
@@ -1200,7 +1273,7 @@
 
     move-result-object v2
 
-    .line 112
+    .line 119
     .restart local v2    # "string":Ljava/lang/String;
     const-string v3, "drawable"
 
@@ -1208,31 +1281,31 @@
 
     move-result v1
 
-    .line 113
+    .line 120
     .restart local v1    # "identifier":I
     sget-object v3, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_CUST11_ANIMATION:[I
 
     aput v1, v3, v0
 
-    .line 110
+    .line 117
     add-int/lit8 v0, v0, 0x1
 
-    goto :goto_36f
+    goto :goto_3a7
 
-    .line 115
+    .line 122
     .end local v1    # "identifier":I
     .end local v2    # "string":Ljava/lang/String;
-    :cond_3a2
+    :cond_3dc
     const/4 v0, 0x0
 
-    :goto_3a3
+    :goto_3dd
     sget-object v3, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_CUST12_ANIMATION:[I
 
     array-length v3, v3
 
-    if-ge v0, v3, :cond_3d6
+    if-ge v0, v3, :cond_412
 
-    .line 116
+    .line 123
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -1243,17 +1316,19 @@
 
     move-result-object v3
 
-    const-string v4, "%02d"
+    sget-object v4, Ljava/util/Locale;->US:Ljava/util/Locale;
 
-    new-array v5, v8, [Ljava/lang/Object;
+    const-string v5, "%02d"
+
+    new-array v6, v9, [Ljava/lang/Object;
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    move-result-object v6
+    move-result-object v7
 
-    aput-object v6, v5, v7
+    aput-object v7, v6, v8
 
-    invoke-static {v4, v5}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-static {v4, v5, v6}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v4
 
@@ -1265,7 +1340,7 @@
 
     move-result-object v2
 
-    .line 117
+    .line 124
     .restart local v2    # "string":Ljava/lang/String;
     const-string v3, "drawable"
 
@@ -1273,31 +1348,31 @@
 
     move-result v1
 
-    .line 118
+    .line 125
     .restart local v1    # "identifier":I
     sget-object v3, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_CUST12_ANIMATION:[I
 
     aput v1, v3, v0
 
-    .line 115
+    .line 122
     add-int/lit8 v0, v0, 0x1
 
-    goto :goto_3a3
+    goto :goto_3dd
 
-    .line 120
+    .line 127
     .end local v1    # "identifier":I
     .end local v2    # "string":Ljava/lang/String;
-    :cond_3d6
+    :cond_412
     const/4 v0, 0x0
 
-    :goto_3d7
+    :goto_413
     sget-object v3, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_CUST13_ANIMATION:[I
 
     array-length v3, v3
 
-    if-ge v0, v3, :cond_40a
+    if-ge v0, v3, :cond_448
 
-    .line 121
+    .line 128
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -1308,17 +1383,19 @@
 
     move-result-object v3
 
-    const-string v4, "%02d"
+    sget-object v4, Ljava/util/Locale;->US:Ljava/util/Locale;
 
-    new-array v5, v8, [Ljava/lang/Object;
+    const-string v5, "%02d"
+
+    new-array v6, v9, [Ljava/lang/Object;
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    move-result-object v6
+    move-result-object v7
 
-    aput-object v6, v5, v7
+    aput-object v7, v6, v8
 
-    invoke-static {v4, v5}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-static {v4, v5, v6}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v4
 
@@ -1330,7 +1407,7 @@
 
     move-result-object v2
 
-    .line 122
+    .line 129
     .restart local v2    # "string":Ljava/lang/String;
     const-string v3, "drawable"
 
@@ -1338,31 +1415,31 @@
 
     move-result v1
 
-    .line 123
+    .line 130
     .restart local v1    # "identifier":I
     sget-object v3, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_CUST13_ANIMATION:[I
 
     aput v1, v3, v0
 
-    .line 120
+    .line 127
     add-int/lit8 v0, v0, 0x1
 
-    goto :goto_3d7
+    goto :goto_413
 
-    .line 125
+    .line 132
     .end local v1    # "identifier":I
     .end local v2    # "string":Ljava/lang/String;
-    :cond_40a
+    :cond_448
     const/4 v0, 0x0
 
-    :goto_40b
+    :goto_449
     sget-object v3, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_CUST14_ANIMATION:[I
 
     array-length v3, v3
 
-    if-ge v0, v3, :cond_43e
+    if-ge v0, v3, :cond_47e
 
-    .line 126
+    .line 133
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -1373,17 +1450,19 @@
 
     move-result-object v3
 
-    const-string v4, "%02d"
+    sget-object v4, Ljava/util/Locale;->US:Ljava/util/Locale;
 
-    new-array v5, v8, [Ljava/lang/Object;
+    const-string v5, "%02d"
+
+    new-array v6, v9, [Ljava/lang/Object;
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    move-result-object v6
+    move-result-object v7
 
-    aput-object v6, v5, v7
+    aput-object v7, v6, v8
 
-    invoke-static {v4, v5}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-static {v4, v5, v6}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v4
 
@@ -1395,7 +1474,7 @@
 
     move-result-object v2
 
-    .line 127
+    .line 134
     .restart local v2    # "string":Ljava/lang/String;
     const-string v3, "drawable"
 
@@ -1403,31 +1482,31 @@
 
     move-result v1
 
-    .line 128
+    .line 135
     .restart local v1    # "identifier":I
     sget-object v3, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_CUST14_ANIMATION:[I
 
     aput v1, v3, v0
 
-    .line 125
+    .line 132
     add-int/lit8 v0, v0, 0x1
 
-    goto :goto_40b
+    goto :goto_449
 
-    .line 130
+    .line 137
     .end local v1    # "identifier":I
     .end local v2    # "string":Ljava/lang/String;
-    :cond_43e
+    :cond_47e
     const/4 v0, 0x0
 
-    :goto_43f
+    :goto_47f
     sget-object v3, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_CUST15_ANIMATION:[I
 
     array-length v3, v3
 
-    if-ge v0, v3, :cond_472
+    if-ge v0, v3, :cond_4b4
 
-    .line 131
+    .line 138
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -1438,17 +1517,19 @@
 
     move-result-object v3
 
-    const-string v4, "%02d"
+    sget-object v4, Ljava/util/Locale;->US:Ljava/util/Locale;
 
-    new-array v5, v8, [Ljava/lang/Object;
+    const-string v5, "%02d"
+
+    new-array v6, v9, [Ljava/lang/Object;
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    move-result-object v6
+    move-result-object v7
 
-    aput-object v6, v5, v7
+    aput-object v7, v6, v8
 
-    invoke-static {v4, v5}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-static {v4, v5, v6}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v4
 
@@ -1460,7 +1541,7 @@
 
     move-result-object v2
 
-    .line 132
+    .line 139
     .restart local v2    # "string":Ljava/lang/String;
     const-string v3, "drawable"
 
@@ -1468,31 +1549,31 @@
 
     move-result v1
 
-    .line 133
+    .line 140
     .restart local v1    # "identifier":I
     sget-object v3, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_CUST15_ANIMATION:[I
 
     aput v1, v3, v0
 
-    .line 130
+    .line 137
     add-int/lit8 v0, v0, 0x1
 
-    goto :goto_43f
+    goto :goto_47f
 
-    .line 135
+    .line 142
     .end local v1    # "identifier":I
     .end local v2    # "string":Ljava/lang/String;
-    :cond_472
+    :cond_4b4
     const/4 v0, 0x0
 
-    :goto_473
+    :goto_4b5
     sget-object v3, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_CUST16_ANIMATION:[I
 
     array-length v3, v3
 
-    if-ge v0, v3, :cond_4a6
+    if-ge v0, v3, :cond_4ea
 
-    .line 136
+    .line 143
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -1503,17 +1584,19 @@
 
     move-result-object v3
 
-    const-string v4, "%02d"
+    sget-object v4, Ljava/util/Locale;->US:Ljava/util/Locale;
 
-    new-array v5, v8, [Ljava/lang/Object;
+    const-string v5, "%02d"
+
+    new-array v6, v9, [Ljava/lang/Object;
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    move-result-object v6
+    move-result-object v7
 
-    aput-object v6, v5, v7
+    aput-object v7, v6, v8
 
-    invoke-static {v4, v5}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-static {v4, v5, v6}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v4
 
@@ -1525,7 +1608,7 @@
 
     move-result-object v2
 
-    .line 137
+    .line 144
     .restart local v2    # "string":Ljava/lang/String;
     const-string v3, "drawable"
 
@@ -1533,31 +1616,31 @@
 
     move-result v1
 
-    .line 138
+    .line 145
     .restart local v1    # "identifier":I
     sget-object v3, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_CUST16_ANIMATION:[I
 
     aput v1, v3, v0
 
-    .line 135
+    .line 142
     add-int/lit8 v0, v0, 0x1
 
-    goto :goto_473
+    goto :goto_4b5
 
-    .line 140
+    .line 147
     .end local v1    # "identifier":I
     .end local v2    # "string":Ljava/lang/String;
-    :cond_4a6
+    :cond_4ea
     const/4 v0, 0x0
 
-    :goto_4a7
+    :goto_4eb
     sget-object v3, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_CUST17_ANIMATION:[I
 
     array-length v3, v3
 
-    if-ge v0, v3, :cond_4da
+    if-ge v0, v3, :cond_520
 
-    .line 141
+    .line 148
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -1568,17 +1651,19 @@
 
     move-result-object v3
 
-    const-string v4, "%02d"
+    sget-object v4, Ljava/util/Locale;->US:Ljava/util/Locale;
 
-    new-array v5, v8, [Ljava/lang/Object;
+    const-string v5, "%02d"
+
+    new-array v6, v9, [Ljava/lang/Object;
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    move-result-object v6
+    move-result-object v7
 
-    aput-object v6, v5, v7
+    aput-object v7, v6, v8
 
-    invoke-static {v4, v5}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-static {v4, v5, v6}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v4
 
@@ -1590,7 +1675,7 @@
 
     move-result-object v2
 
-    .line 142
+    .line 149
     .restart local v2    # "string":Ljava/lang/String;
     const-string v3, "drawable"
 
@@ -1598,31 +1683,31 @@
 
     move-result v1
 
-    .line 143
+    .line 150
     .restart local v1    # "identifier":I
     sget-object v3, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_CUST17_ANIMATION:[I
 
     aput v1, v3, v0
 
-    .line 140
+    .line 147
     add-int/lit8 v0, v0, 0x1
 
-    goto :goto_4a7
+    goto :goto_4eb
 
-    .line 145
+    .line 152
     .end local v1    # "identifier":I
     .end local v2    # "string":Ljava/lang/String;
-    :cond_4da
+    :cond_520
     const/4 v0, 0x0
 
-    :goto_4db
+    :goto_521
     sget-object v3, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_CUST18_ANIMATION:[I
 
     array-length v3, v3
 
-    if-ge v0, v3, :cond_50e
+    if-ge v0, v3, :cond_556
 
-    .line 146
+    .line 153
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -1633,17 +1718,19 @@
 
     move-result-object v3
 
-    const-string v4, "%02d"
+    sget-object v4, Ljava/util/Locale;->US:Ljava/util/Locale;
 
-    new-array v5, v8, [Ljava/lang/Object;
+    const-string v5, "%02d"
+
+    new-array v6, v9, [Ljava/lang/Object;
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    move-result-object v6
+    move-result-object v7
 
-    aput-object v6, v5, v7
+    aput-object v7, v6, v8
 
-    invoke-static {v4, v5}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-static {v4, v5, v6}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v4
 
@@ -1655,7 +1742,7 @@
 
     move-result-object v2
 
-    .line 147
+    .line 154
     .restart local v2    # "string":Ljava/lang/String;
     const-string v3, "drawable"
 
@@ -1663,31 +1750,31 @@
 
     move-result v1
 
-    .line 148
+    .line 155
     .restart local v1    # "identifier":I
     sget-object v3, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_CUST18_ANIMATION:[I
 
     aput v1, v3, v0
 
-    .line 145
+    .line 152
     add-int/lit8 v0, v0, 0x1
 
-    goto :goto_4db
+    goto :goto_521
 
-    .line 150
+    .line 157
     .end local v1    # "identifier":I
     .end local v2    # "string":Ljava/lang/String;
-    :cond_50e
+    :cond_556
     const/4 v0, 0x0
 
-    :goto_50f
+    :goto_557
     sget-object v3, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_CUST19_ANIMATION:[I
 
     array-length v3, v3
 
-    if-ge v0, v3, :cond_542
+    if-ge v0, v3, :cond_58c
 
-    .line 151
+    .line 158
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -1698,17 +1785,19 @@
 
     move-result-object v3
 
-    const-string v4, "%02d"
+    sget-object v4, Ljava/util/Locale;->US:Ljava/util/Locale;
 
-    new-array v5, v8, [Ljava/lang/Object;
+    const-string v5, "%02d"
+
+    new-array v6, v9, [Ljava/lang/Object;
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    move-result-object v6
+    move-result-object v7
 
-    aput-object v6, v5, v7
+    aput-object v7, v6, v8
 
-    invoke-static {v4, v5}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-static {v4, v5, v6}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v4
 
@@ -1720,7 +1809,7 @@
 
     move-result-object v2
 
-    .line 152
+    .line 159
     .restart local v2    # "string":Ljava/lang/String;
     const-string v3, "drawable"
 
@@ -1728,31 +1817,31 @@
 
     move-result v1
 
-    .line 153
+    .line 160
     .restart local v1    # "identifier":I
     sget-object v3, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_CUST19_ANIMATION:[I
 
     aput v1, v3, v0
 
-    .line 150
+    .line 157
     add-int/lit8 v0, v0, 0x1
 
-    goto :goto_50f
+    goto :goto_557
 
-    .line 155
+    .line 162
     .end local v1    # "identifier":I
     .end local v2    # "string":Ljava/lang/String;
-    :cond_542
+    :cond_58c
     const/4 v0, 0x0
 
-    :goto_543
+    :goto_58d
     sget-object v3, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_CUST20_ANIMATION:[I
 
     array-length v3, v3
 
-    if-ge v0, v3, :cond_576
+    if-ge v0, v3, :cond_5c2
 
-    .line 156
+    .line 163
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -1763,17 +1852,19 @@
 
     move-result-object v3
 
-    const-string v4, "%02d"
+    sget-object v4, Ljava/util/Locale;->US:Ljava/util/Locale;
 
-    new-array v5, v8, [Ljava/lang/Object;
+    const-string v5, "%02d"
+
+    new-array v6, v9, [Ljava/lang/Object;
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    move-result-object v6
+    move-result-object v7
 
-    aput-object v6, v5, v7
+    aput-object v7, v6, v8
 
-    invoke-static {v4, v5}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-static {v4, v5, v6}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v4
 
@@ -1785,7 +1876,7 @@
 
     move-result-object v2
 
-    .line 157
+    .line 164
     .restart local v2    # "string":Ljava/lang/String;
     const-string v3, "drawable"
 
@@ -1793,31 +1884,31 @@
 
     move-result v1
 
-    .line 158
+    .line 165
     .restart local v1    # "identifier":I
     sget-object v3, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_CUST20_ANIMATION:[I
 
     aput v1, v3, v0
 
-    .line 155
+    .line 162
     add-int/lit8 v0, v0, 0x1
 
-    goto :goto_543
+    goto :goto_58d
 
-    .line 160
+    .line 167
     .end local v1    # "identifier":I
     .end local v2    # "string":Ljava/lang/String;
-    :cond_576
+    :cond_5c2
     const/4 v0, 0x0
 
-    :goto_577
+    :goto_5c3
     sget-object v3, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_CUST21_ANIMATION:[I
 
     array-length v3, v3
 
-    if-ge v0, v3, :cond_5aa
+    if-ge v0, v3, :cond_5f8
 
-    .line 161
+    .line 168
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -1828,17 +1919,19 @@
 
     move-result-object v3
 
-    const-string v4, "%02d"
+    sget-object v4, Ljava/util/Locale;->US:Ljava/util/Locale;
 
-    new-array v5, v8, [Ljava/lang/Object;
+    const-string v5, "%02d"
+
+    new-array v6, v9, [Ljava/lang/Object;
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    move-result-object v6
+    move-result-object v7
 
-    aput-object v6, v5, v7
+    aput-object v7, v6, v8
 
-    invoke-static {v4, v5}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-static {v4, v5, v6}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v4
 
@@ -1850,7 +1943,7 @@
 
     move-result-object v2
 
-    .line 162
+    .line 169
     .restart local v2    # "string":Ljava/lang/String;
     const-string v3, "drawable"
 
@@ -1858,31 +1951,31 @@
 
     move-result v1
 
-    .line 163
+    .line 170
     .restart local v1    # "identifier":I
     sget-object v3, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_CUST21_ANIMATION:[I
 
     aput v1, v3, v0
 
-    .line 160
+    .line 167
     add-int/lit8 v0, v0, 0x1
 
-    goto :goto_577
+    goto :goto_5c3
 
-    .line 165
+    .line 172
     .end local v1    # "identifier":I
     .end local v2    # "string":Ljava/lang/String;
-    :cond_5aa
+    :cond_5f8
     const/4 v0, 0x0
 
-    :goto_5ab
+    :goto_5f9
     sget-object v3, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_CUST22_ANIMATION:[I
 
     array-length v3, v3
 
-    if-ge v0, v3, :cond_5de
+    if-ge v0, v3, :cond_62e
 
-    .line 166
+    .line 173
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -1893,17 +1986,19 @@
 
     move-result-object v3
 
-    const-string v4, "%02d"
+    sget-object v4, Ljava/util/Locale;->US:Ljava/util/Locale;
 
-    new-array v5, v8, [Ljava/lang/Object;
+    const-string v5, "%02d"
+
+    new-array v6, v9, [Ljava/lang/Object;
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    move-result-object v6
+    move-result-object v7
 
-    aput-object v6, v5, v7
+    aput-object v7, v6, v8
 
-    invoke-static {v4, v5}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-static {v4, v5, v6}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v4
 
@@ -1915,7 +2010,7 @@
 
     move-result-object v2
 
-    .line 167
+    .line 174
     .restart local v2    # "string":Ljava/lang/String;
     const-string v3, "drawable"
 
@@ -1923,31 +2018,31 @@
 
     move-result v1
 
-    .line 168
+    .line 175
     .restart local v1    # "identifier":I
     sget-object v3, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_CUST22_ANIMATION:[I
 
     aput v1, v3, v0
 
-    .line 165
+    .line 172
     add-int/lit8 v0, v0, 0x1
 
-    goto :goto_5ab
+    goto :goto_5f9
 
-    .line 170
+    .line 177
     .end local v1    # "identifier":I
     .end local v2    # "string":Ljava/lang/String;
-    :cond_5de
+    :cond_62e
     const/4 v0, 0x0
 
-    :goto_5df
+    :goto_62f
     sget-object v3, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_CUST23_ANIMATION:[I
 
     array-length v3, v3
 
-    if-ge v0, v3, :cond_612
+    if-ge v0, v3, :cond_664
 
-    .line 171
+    .line 178
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -1958,17 +2053,19 @@
 
     move-result-object v3
 
-    const-string v4, "%02d"
+    sget-object v4, Ljava/util/Locale;->US:Ljava/util/Locale;
 
-    new-array v5, v8, [Ljava/lang/Object;
+    const-string v5, "%02d"
+
+    new-array v6, v9, [Ljava/lang/Object;
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    move-result-object v6
+    move-result-object v7
 
-    aput-object v6, v5, v7
+    aput-object v7, v6, v8
 
-    invoke-static {v4, v5}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-static {v4, v5, v6}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v4
 
@@ -1980,7 +2077,7 @@
 
     move-result-object v2
 
-    .line 172
+    .line 179
     .restart local v2    # "string":Ljava/lang/String;
     const-string v3, "drawable"
 
@@ -1988,21 +2085,356 @@
 
     move-result v1
 
-    .line 173
+    .line 180
     .restart local v1    # "identifier":I
     sget-object v3, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_CUST23_ANIMATION:[I
 
     aput v1, v3, v0
 
-    .line 170
+    .line 177
     add-int/lit8 v0, v0, 0x1
 
-    goto :goto_5df
+    goto :goto_62f
 
-    .line 960
+    .line 182
     .end local v1    # "identifier":I
     .end local v2    # "string":Ljava/lang/String;
-    :cond_612
+    :cond_664
+    const/4 v0, 0x0
+
+    :goto_665
+    sget-object v3, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_CUST24_ANIMATION:[I
+
+    array-length v3, v3
+
+    if-ge v0, v3, :cond_69a
+
+    .line 183
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v4, "fod_recog_animation_shine_"
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    sget-object v4, Ljava/util/Locale;->US:Ljava/util/Locale;
+
+    const-string v5, "%02d"
+
+    new-array v6, v9, [Ljava/lang/Object;
+
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v7
+
+    aput-object v7, v6, v8
+
+    invoke-static {v4, v5, v6}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    .line 184
+    .restart local v2    # "string":Ljava/lang/String;
+    const-string v3, "drawable"
+
+    invoke-static {v2, v3}, Lcom/android/wubydax/GearUtils;->getIdentifier(Ljava/lang/String;Ljava/lang/String;)I
+
+    move-result v1
+
+    .line 185
+    .restart local v1    # "identifier":I
+    sget-object v3, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_CUST24_ANIMATION:[I
+
+    aput v1, v3, v0
+
+    .line 182
+    add-int/lit8 v0, v0, 0x1
+
+    goto :goto_665
+
+    .line 187
+    .end local v1    # "identifier":I
+    .end local v2    # "string":Ljava/lang/String;
+    :cond_69a
+    const/4 v0, 0x0
+
+    :goto_69b
+    sget-object v3, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_CUST25_ANIMATION:[I
+
+    array-length v3, v3
+
+    if-ge v0, v3, :cond_6d0
+
+    .line 188
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v4, "fod_recog_animation_smoke_"
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    sget-object v4, Ljava/util/Locale;->US:Ljava/util/Locale;
+
+    const-string v5, "%02d"
+
+    new-array v6, v9, [Ljava/lang/Object;
+
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v7
+
+    aput-object v7, v6, v8
+
+    invoke-static {v4, v5, v6}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    .line 189
+    .restart local v2    # "string":Ljava/lang/String;
+    const-string v3, "drawable"
+
+    invoke-static {v2, v3}, Lcom/android/wubydax/GearUtils;->getIdentifier(Ljava/lang/String;Ljava/lang/String;)I
+
+    move-result v1
+
+    .line 190
+    .restart local v1    # "identifier":I
+    sget-object v3, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_CUST25_ANIMATION:[I
+
+    aput v1, v3, v0
+
+    .line 187
+    add-int/lit8 v0, v0, 0x1
+
+    goto :goto_69b
+
+    .line 192
+    .end local v1    # "identifier":I
+    .end local v2    # "string":Ljava/lang/String;
+    :cond_6d0
+    const/4 v0, 0x0
+
+    :goto_6d1
+    sget-object v3, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_CUST26_ANIMATION:[I
+
+    array-length v3, v3
+
+    if-ge v0, v3, :cond_706
+
+    .line 193
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v4, "fod_recog_animation_strings_"
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    sget-object v4, Ljava/util/Locale;->US:Ljava/util/Locale;
+
+    const-string v5, "%02d"
+
+    new-array v6, v9, [Ljava/lang/Object;
+
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v7
+
+    aput-object v7, v6, v8
+
+    invoke-static {v4, v5, v6}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    .line 194
+    .restart local v2    # "string":Ljava/lang/String;
+    const-string v3, "drawable"
+
+    invoke-static {v2, v3}, Lcom/android/wubydax/GearUtils;->getIdentifier(Ljava/lang/String;Ljava/lang/String;)I
+
+    move-result v1
+
+    .line 195
+    .restart local v1    # "identifier":I
+    sget-object v3, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_CUST26_ANIMATION:[I
+
+    aput v1, v3, v0
+
+    .line 192
+    add-int/lit8 v0, v0, 0x1
+
+    goto :goto_6d1
+
+    .line 197
+    .end local v1    # "identifier":I
+    .end local v2    # "string":Ljava/lang/String;
+    :cond_706
+    const/4 v0, 0x0
+
+    :goto_707
+    sget-object v3, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_CUST27_ANIMATION:[I
+
+    array-length v3, v3
+
+    if-ge v0, v3, :cond_73c
+
+    .line 198
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v4, "gxzw_light_recognizing_anim_"
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    sget-object v4, Ljava/util/Locale;->US:Ljava/util/Locale;
+
+    const-string v5, "%02d"
+
+    new-array v6, v9, [Ljava/lang/Object;
+
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v7
+
+    aput-object v7, v6, v8
+
+    invoke-static {v4, v5, v6}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    .line 199
+    .restart local v2    # "string":Ljava/lang/String;
+    const-string v3, "drawable"
+
+    invoke-static {v2, v3}, Lcom/android/wubydax/GearUtils;->getIdentifier(Ljava/lang/String;Ljava/lang/String;)I
+
+    move-result v1
+
+    .line 200
+    .restart local v1    # "identifier":I
+    sget-object v3, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_CUST27_ANIMATION:[I
+
+    aput v1, v3, v0
+
+    .line 197
+    add-int/lit8 v0, v0, 0x1
+
+    goto :goto_707
+
+    .line 202
+    .end local v1    # "identifier":I
+    .end local v2    # "string":Ljava/lang/String;
+    :cond_73c
+    const/4 v0, 0x0
+
+    :goto_73d
+    sget-object v3, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_CUST28_ANIMATION:[I
+
+    array-length v3, v3
+
+    if-ge v0, v3, :cond_772
+
+    .line 203
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v4, "gxzw_pulse_recognizing_anim_"
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    sget-object v4, Ljava/util/Locale;->US:Ljava/util/Locale;
+
+    const-string v5, "%02d"
+
+    new-array v6, v9, [Ljava/lang/Object;
+
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v7
+
+    aput-object v7, v6, v8
+
+    invoke-static {v4, v5, v6}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    .line 204
+    .restart local v2    # "string":Ljava/lang/String;
+    const-string v3, "drawable"
+
+    invoke-static {v2, v3}, Lcom/android/wubydax/GearUtils;->getIdentifier(Ljava/lang/String;Ljava/lang/String;)I
+
+    move-result v1
+
+    .line 205
+    .restart local v1    # "identifier":I
+    sget-object v3, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_CUST28_ANIMATION:[I
+
+    aput v1, v3, v0
+
+    .line 202
+    add-int/lit8 v0, v0, 0x1
+
+    goto :goto_73d
+
+    .line 992
+    .end local v1    # "identifier":I
+    .end local v2    # "string":Ljava/lang/String;
+    :cond_772
     return-void
 .end method
 
@@ -2010,7 +2442,7 @@
     .registers 1
 
     .prologue
-    .line 6
+    .line 8
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -2022,7 +2454,7 @@
     .param p1, "n"    # I
 
     .prologue
-    .line 963
+    .line 995
     const/4 v0, 0x1
 
     if-eq p1, v0, :cond_7
@@ -2031,15 +2463,15 @@
 
     if-ne p1, v0, :cond_a
 
-    .line 964
+    .line 996
     :cond_7
     sget-object v0, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_CUST02_ANIMATION:[I
 
-    .line 1044
+    .line 1091
     :goto_9
     return-object v0
 
-    .line 966
+    .line 998
     :cond_a
     const/4 v0, 0x3
 
@@ -2049,511 +2481,608 @@
 
     if-ne p1, v0, :cond_14
 
-    .line 967
+    .line 999
     :cond_11
     sget-object v0, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_ANIMATION_MCL:[I
 
     goto :goto_9
 
-    .line 969
+    .line 1001
     :cond_14
     const/4 v0, 0x2
 
     if-ne p1, v0, :cond_1a
 
-    .line 970
+    .line 1002
     sget-object v0, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_ANIMATION_03:[I
 
     goto :goto_9
 
-    .line 972
+    .line 1004
     :cond_1a
     const/4 v0, 0x4
 
     if-ne p1, v0, :cond_20
 
-    .line 973
+    .line 1005
     sget-object v0, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_ANIMATION_04:[I
 
     goto :goto_9
 
-    .line 975
+    .line 1007
     :cond_20
     const/16 v0, 0x9
 
     if-ne p1, v0, :cond_26
 
-    .line 976
+    .line 1008
     const/4 v0, 0x0
 
     goto :goto_9
 
-    .line 978
+    .line 1010
     :cond_26
     const/16 v0, 0xb
 
     if-ne p1, v0, :cond_2d
 
-    .line 979
+    .line 1011
     sget-object v0, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_CUST01_ANIMATION:[I
 
     goto :goto_9
 
-    .line 981
+    .line 1013
     :cond_2d
     const/16 v0, 0xd
 
     if-ne p1, v0, :cond_34
 
-    .line 982
+    .line 1014
     sget-object v0, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_CUST04_ANIMATION:[I
 
     goto :goto_9
 
-    .line 984
+    .line 1016
     :cond_34
     const/16 v0, 0xe
 
     if-ne p1, v0, :cond_3b
 
-    .line 985
+    .line 1017
     sget-object v0, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_CUST05_ANIMATION:[I
 
     goto :goto_9
 
-    .line 987
+    .line 1019
     :cond_3b
     const/16 v0, 0xf
 
     if-ne p1, v0, :cond_42
 
-    .line 988
+    .line 1020
     sget-object v0, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_CUST06_ANIMATION:[I
 
     goto :goto_9
 
-    .line 990
+    .line 1022
     :cond_42
     const/16 v0, 0x10
 
     if-ne p1, v0, :cond_49
 
-    .line 991
+    .line 1023
     sget-object v0, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_CUST07_ANIMATION:[I
 
     goto :goto_9
 
-    .line 993
+    .line 1025
     :cond_49
     const/16 v0, 0x11
 
     if-ne p1, v0, :cond_50
 
-    .line 994
+    .line 1026
     sget-object v0, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_CUST08_ANIMATION:[I
 
     goto :goto_9
 
-    .line 996
+    .line 1028
     :cond_50
     const/16 v0, 0x12
 
     if-ne p1, v0, :cond_57
 
-    .line 997
+    .line 1029
     sget-object v0, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_CUST09_ANIMATION:[I
 
     goto :goto_9
 
-    .line 999
+    .line 1031
     :cond_57
     const/16 v0, 0x13
 
     if-ne p1, v0, :cond_5e
 
-    .line 1000
+    .line 1032
     sget-object v0, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_CUST10_ANIMATION:[I
 
     goto :goto_9
 
-    .line 1002
+    .line 1034
     :cond_5e
     const/16 v0, 0x14
 
     if-ne p1, v0, :cond_65
 
-    .line 1003
+    .line 1035
     sget-object v0, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_CUST11_ANIMATION:[I
 
     goto :goto_9
 
-    .line 1005
+    .line 1037
     :cond_65
     const/16 v0, 0x15
 
     if-ne p1, v0, :cond_6c
 
-    .line 1006
+    .line 1038
     sget-object v0, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_CUST12_ANIMATION:[I
 
     goto :goto_9
 
-    .line 1008
+    .line 1040
     :cond_6c
     const/16 v0, 0x16
 
     if-ne p1, v0, :cond_73
 
-    .line 1009
+    .line 1041
     sget-object v0, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_CUST13_ANIMATION:[I
 
     goto :goto_9
 
-    .line 1011
+    .line 1043
     :cond_73
     const/16 v0, 0x17
 
     if-ne p1, v0, :cond_7a
 
-    .line 1012
+    .line 1044
     sget-object v0, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_CUST14_ANIMATION:[I
 
     goto :goto_9
 
-    .line 1014
+    .line 1046
     :cond_7a
     const/16 v0, 0x18
 
     if-ne p1, v0, :cond_81
 
-    .line 1015
+    .line 1047
     sget-object v0, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_CUST15_ANIMATION:[I
 
     goto :goto_9
 
-    .line 1017
+    .line 1049
     :cond_81
     const/16 v0, 0x19
 
     if-ne p1, v0, :cond_88
 
-    .line 1018
+    .line 1050
     sget-object v0, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_CUST16_ANIMATION:[I
 
     goto :goto_9
 
-    .line 1020
+    .line 1052
     :cond_88
     const/16 v0, 0x1a
 
     if-ne p1, v0, :cond_90
 
-    .line 1021
+    .line 1053
     sget-object v0, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_CUST17_ANIMATION:[I
 
     goto/16 :goto_9
 
-    .line 1023
+    .line 1055
     :cond_90
     const/16 v0, 0x1b
 
     if-ne p1, v0, :cond_98
 
-    .line 1024
+    .line 1056
     sget-object v0, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_CUST18_ANIMATION:[I
 
     goto/16 :goto_9
 
-    .line 1026
+    .line 1058
     :cond_98
     const/16 v0, 0x1c
 
     if-ne p1, v0, :cond_a0
 
-    .line 1027
+    .line 1059
     sget-object v0, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_CUST19_ANIMATION:[I
 
     goto/16 :goto_9
 
-    .line 1029
+    .line 1061
     :cond_a0
     const/16 v0, 0x1d
 
     if-ne p1, v0, :cond_a8
 
-    .line 1030
+    .line 1062
     sget-object v0, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_CUST20_ANIMATION:[I
 
     goto/16 :goto_9
 
-    .line 1032
+    .line 1064
     :cond_a8
     const/16 v0, 0x1e
 
     if-ne p1, v0, :cond_b0
 
-    .line 1033
+    .line 1065
     sget-object v0, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_CUST21_ANIMATION:[I
 
     goto/16 :goto_9
 
-    .line 1035
+    .line 1067
     :cond_b0
     const/16 v0, 0x1f
 
     if-ne p1, v0, :cond_b8
 
-    .line 1036
+    .line 1068
     sget-object v0, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_CUST22_ANIMATION:[I
 
     goto/16 :goto_9
 
-    .line 1038
+    .line 1070
     :cond_b8
     const/16 v0, 0x20
 
     if-ne p1, v0, :cond_c0
 
-    .line 1039
+    .line 1071
     sget-object v0, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_CUST23_ANIMATION:[I
 
     goto/16 :goto_9
 
-    .line 1041
+    .line 1073
     :cond_c0
     const/16 v0, 0x21
 
     if-ne p1, v0, :cond_c8
 
-    .line 1042
+    .line 1074
     sget-object v0, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_CUST03_ANIMATION:[I
 
     goto/16 :goto_9
 
-    .line 1044
+    .line 1076
     :cond_c8
+    const/16 v0, 0x22
+
+    if-ne p1, v0, :cond_d0
+
+    .line 1077
+    sget-object v0, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_CUST24_ANIMATION:[I
+
+    goto/16 :goto_9
+
+    .line 1079
+    :cond_d0
+    const/16 v0, 0x23
+
+    if-ne p1, v0, :cond_d8
+
+    .line 1080
+    sget-object v0, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_CUST25_ANIMATION:[I
+
+    goto/16 :goto_9
+
+    .line 1082
+    :cond_d8
+    const/16 v0, 0x24
+
+    if-ne p1, v0, :cond_e0
+
+    .line 1083
+    sget-object v0, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_CUST26_ANIMATION:[I
+
+    goto/16 :goto_9
+
+    .line 1085
+    :cond_e0
+    const/16 v0, 0x25
+
+    if-ne p1, v0, :cond_e8
+
+    .line 1086
+    sget-object v0, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_CUST27_ANIMATION:[I
+
+    goto/16 :goto_9
+
+    .line 1088
+    :cond_e8
+    const/16 v0, 0x26
+
+    if-ne p1, v0, :cond_f0
+
+    .line 1089
+    sget-object v0, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_CUST28_ANIMATION:[I
+
+    goto/16 :goto_9
+
+    .line 1091
+    :cond_f0
     sget-object v0, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_ANIMATION_DEFAULT:[I
 
     goto/16 :goto_9
 .end method
 
 .method public static getDownEndFrameIndex(Landroid/content/Context;I)I
-    .registers 7
+    .registers 8
     .param p0, "context"    # Landroid/content/Context;
     .param p1, "n"    # I
 
     .prologue
-    const/16 v1, 0x21
+    const/16 v3, 0x1b
 
-    const/16 v3, 0x19
+    const/16 v4, 0x19
 
-    const/16 v2, 0x16
+    const/16 v1, 0x16
 
     const/16 v0, 0xf
 
-    .line 1048
-    const/4 v4, 0x4
+    const/16 v2, 0xe
 
-    if-eq p1, v4, :cond_1d
+    .line 1095
+    const/4 v5, 0x4
 
-    const/16 v4, 0xe
+    if-eq p1, v5, :cond_1d
 
-    if-eq p1, v4, :cond_1d
+    if-eq p1, v2, :cond_1d
 
-    const/16 v4, 0x10
+    const/16 v5, 0x10
 
-    if-eq p1, v4, :cond_1d
+    if-eq p1, v5, :cond_1d
 
-    const/16 v4, 0x12
+    const/16 v5, 0x12
 
-    if-eq p1, v4, :cond_1d
+    if-eq p1, v5, :cond_1d
 
-    const/16 v4, 0x18
+    const/16 v5, 0x18
 
-    if-eq p1, v4, :cond_1d
+    if-eq p1, v5, :cond_1d
 
-    if-ne p1, v3, :cond_20
+    if-ne p1, v4, :cond_20
 
-    .line 1049
+    .line 1096
     :cond_1d
     const/16 v0, 0x2d
 
-    .line 1087
+    .line 1143
     :cond_1f
     :goto_1f
     return v0
 
-    .line 1051
+    .line 1098
     :cond_20
-    const/16 v4, 0xd
+    const/16 v5, 0xd
 
-    if-eq p1, v4, :cond_32
+    if-eq p1, v5, :cond_32
 
     if-eq p1, v0, :cond_32
 
-    const/16 v4, 0x17
+    const/16 v5, 0x17
 
-    if-eq p1, v4, :cond_32
+    if-eq p1, v5, :cond_32
 
-    const/16 v4, 0x1a
+    const/16 v5, 0x1a
 
-    if-eq p1, v4, :cond_32
+    if-eq p1, v5, :cond_32
 
-    const/16 v4, 0x1f
+    const/16 v5, 0x1f
 
-    if-ne p1, v4, :cond_35
+    if-ne p1, v5, :cond_35
 
-    .line 1052
+    .line 1099
     :cond_32
     const/16 v0, 0x25
 
     goto :goto_1f
 
-    .line 1054
+    .line 1101
     :cond_35
-    const/4 v4, 0x1
+    const/4 v5, 0x1
 
-    if-eq p1, v4, :cond_40
+    if-eq p1, v5, :cond_40
 
-    const/16 v4, 0xc
+    const/16 v5, 0xc
 
-    if-eq p1, v4, :cond_40
+    if-eq p1, v5, :cond_40
 
-    const/16 v4, 0x1e
+    const/16 v5, 0x1e
 
-    if-ne p1, v4, :cond_43
+    if-ne p1, v5, :cond_43
 
-    .line 1055
+    .line 1102
     :cond_40
     const/16 v0, 0x45
 
     goto :goto_1f
 
-    .line 1057
+    .line 1104
     :cond_43
-    const/4 v4, 0x2
+    const/4 v5, 0x2
 
-    if-eq p1, v4, :cond_48
+    if-eq p1, v5, :cond_4e
 
-    if-ne p1, v1, :cond_4a
+    const/16 v5, 0x21
 
-    :cond_48
-    move v0, v3
+    if-eq p1, v5, :cond_4e
 
-    .line 1058
+    const/16 v5, 0x24
+
+    if-ne p1, v5, :cond_50
+
+    :cond_4e
+    move v0, v4
+
+    .line 1105
     goto :goto_1f
 
-    .line 1060
-    :cond_4a
-    const/4 v3, 0x3
+    .line 1107
+    :cond_50
+    const/4 v4, 0x3
 
-    if-eq p1, v3, :cond_51
+    if-eq p1, v4, :cond_57
 
-    const/16 v3, 0xa
+    const/16 v4, 0xa
 
-    if-ne p1, v3, :cond_54
+    if-ne p1, v4, :cond_5a
 
-    .line 1061
-    :cond_51
+    .line 1108
+    :cond_57
     const/16 v0, 0x3b
 
     goto :goto_1f
 
-    .line 1063
-    :cond_54
-    const/16 v3, 0x15
-
-    if-eq p1, v3, :cond_5a
-
-    if-ne p1, v2, :cond_5d
-
-    .line 1064
+    .line 1110
     :cond_5a
+    const/16 v4, 0x15
+
+    if-eq p1, v4, :cond_60
+
+    if-ne p1, v1, :cond_63
+
+    .line 1111
+    :cond_60
     const/16 v0, 0x32
 
     goto :goto_1f
 
-    .line 1066
-    :cond_5d
-    const/16 v3, 0x1b
+    .line 1113
+    :cond_63
+    if-eq p1, v3, :cond_69
 
-    if-eq p1, v3, :cond_65
+    const/16 v4, 0x1d
 
-    const/16 v3, 0x1d
+    if-ne p1, v4, :cond_6c
 
-    if-ne p1, v3, :cond_68
-
-    .line 1067
-    :cond_65
+    .line 1114
+    :cond_69
     const/16 v0, 0x27
 
     goto :goto_1f
 
-    .line 1069
-    :cond_68
-    const/16 v3, 0x9
+    .line 1116
+    :cond_6c
+    const/16 v4, 0x1c
 
-    if-ne p1, v3, :cond_6e
+    if-eq p1, v4, :cond_74
 
-    .line 1070
-    const/4 v0, -0x1
+    const/16 v4, 0x25
 
-    goto :goto_1f
+    if-ne p1, v4, :cond_77
 
-    .line 1072
-    :cond_6e
-    const/16 v3, 0x11
-
-    if-eq p1, v3, :cond_1f
-
-    .line 1075
-    const/16 v0, 0x13
-
-    if-ne p1, v0, :cond_78
-
-    move v0, v1
-
-    .line 1076
-    goto :goto_1f
-
-    .line 1078
-    :cond_78
-    const/16 v0, 0x14
-
-    if-ne p1, v0, :cond_7e
-
-    move v0, v2
-
-    .line 1079
-    goto :goto_1f
-
-    .line 1081
-    :cond_7e
-    const/16 v0, 0x1c
-
-    if-ne p1, v0, :cond_85
-
-    .line 1082
+    .line 1117
+    :cond_74
     const/16 v0, 0x28
 
     goto :goto_1f
 
-    .line 1084
-    :cond_85
+    .line 1119
+    :cond_77
+    const/16 v4, 0x9
+
+    if-ne p1, v4, :cond_7d
+
+    .line 1120
+    const/4 v0, -0x1
+
+    goto :goto_1f
+
+    .line 1122
+    :cond_7d
+    const/16 v4, 0x11
+
+    if-eq p1, v4, :cond_1f
+
+    .line 1125
+    const/16 v0, 0x13
+
+    if-ne p1, v0, :cond_88
+
+    .line 1126
+    const/16 v0, 0x21
+
+    goto :goto_1f
+
+    .line 1128
+    :cond_88
+    const/16 v0, 0x14
+
+    if-ne p1, v0, :cond_8e
+
+    move v0, v1
+
+    .line 1129
+    goto :goto_1f
+
+    .line 1131
+    :cond_8e
     const/16 v0, 0x20
 
-    if-ne p1, v0, :cond_8c
+    if-ne p1, v0, :cond_95
 
-    .line 1085
+    .line 1132
     const/16 v0, 0xa3
 
     goto :goto_1f
 
-    .line 1087
-    :cond_8c
-    const/16 v0, 0x2c
+    .line 1134
+    :cond_95
+    const/16 v0, 0x22
+
+    if-ne p1, v0, :cond_9c
+
+    .line 1135
+    const/16 v0, 0x29
 
     goto :goto_1f
+
+    .line 1137
+    :cond_9c
+    const/16 v0, 0x23
+
+    if-ne p1, v0, :cond_a3
+
+    move v0, v2
+
+    .line 1138
+    goto/16 :goto_1f
+
+    .line 1140
+    :cond_a3
+    const/16 v0, 0x26
+
+    if-ne p1, v0, :cond_aa
+
+    move v0, v3
+
+    .line 1141
+    goto/16 :goto_1f
+
+    .line 1143
+    :cond_aa
+    const/16 v0, 0x2c
+
+    goto/16 :goto_1f
 .end method
 
 .method public static getDownPlayFrameNum(Landroid/content/Context;I)I
@@ -2564,26 +3093,26 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 1091
+    .line 1147
     invoke-static {p0, p1}, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->getDownStartFrameIndex(Landroid/content/Context;I)I
 
     move-result v1
 
-    .line 1092
+    .line 1148
     .local v1, "downStartFrameIndex":I
     invoke-static {p0, p1}, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->getDownEndFrameIndex(Landroid/content/Context;I)I
 
     move-result v0
 
-    .line 1093
+    .line 1149
     .local v0, "downEndFrameIndex":I
     if-ltz v1, :cond_f
 
     if-ltz v0, :cond_f
 
-    if-le v1, v0, :cond_b1
+    if-le v1, v0, :cond_d5
 
-    .line 1095
+    .line 1151
     :cond_f
     const/4 v3, 0x4
 
@@ -2609,18 +3138,18 @@
 
     if-ne p1, v3, :cond_2a
 
-    .line 1096
+    .line 1152
     :cond_26
     sget-object v2, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_ANIMATION_04:[I
 
     array-length v2, v2
 
-    .line 1138
+    .line 1203
     :cond_29
     :goto_29
     return v2
 
-    .line 1098
+    .line 1154
     :cond_2a
     const/16 v3, 0xd
 
@@ -2642,7 +3171,7 @@
 
     if-ne p1, v3, :cond_42
 
-    .line 1099
+    .line 1155
     :cond_3e
     sget-object v2, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_CUST04_ANIMATION:[I
 
@@ -2650,7 +3179,7 @@
 
     goto :goto_29
 
-    .line 1101
+    .line 1157
     :cond_42
     const/4 v3, 0x1
 
@@ -2664,7 +3193,7 @@
 
     if-ne p1, v3, :cond_51
 
-    .line 1102
+    .line 1158
     :cond_4d
     sget-object v2, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_CUST02_ANIMATION:[I
 
@@ -2672,161 +3201,209 @@
 
     goto :goto_29
 
-    .line 1104
+    .line 1160
     :cond_51
     const/4 v3, 0x2
 
-    if-eq p1, v3, :cond_58
+    if-eq p1, v3, :cond_5c
 
     const/16 v3, 0x21
 
-    if-ne p1, v3, :cond_5c
+    if-eq p1, v3, :cond_5c
 
-    .line 1105
-    :cond_58
+    const/16 v3, 0x24
+
+    if-ne p1, v3, :cond_60
+
+    .line 1161
+    :cond_5c
     sget-object v2, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_ANIMATION_03:[I
 
     array-length v2, v2
 
     goto :goto_29
 
-    .line 1107
-    :cond_5c
+    .line 1163
+    :cond_60
     const/4 v3, 0x3
 
-    if-eq p1, v3, :cond_63
+    if-eq p1, v3, :cond_67
 
     const/16 v3, 0xa
 
-    if-ne p1, v3, :cond_67
+    if-ne p1, v3, :cond_6b
 
-    .line 1108
-    :cond_63
+    .line 1164
+    :cond_67
     sget-object v2, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_ANIMATION_MCL:[I
 
     array-length v2, v2
 
     goto :goto_29
 
-    .line 1110
-    :cond_67
+    .line 1166
+    :cond_6b
     const/16 v3, 0x15
 
-    if-eq p1, v3, :cond_6f
+    if-eq p1, v3, :cond_73
 
     const/16 v3, 0x16
 
-    if-ne p1, v3, :cond_73
+    if-ne p1, v3, :cond_77
 
-    .line 1111
-    :cond_6f
+    .line 1167
+    :cond_73
     sget-object v2, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_CUST12_ANIMATION:[I
 
     array-length v2, v2
 
     goto :goto_29
 
-    .line 1113
-    :cond_73
+    .line 1169
+    :cond_77
     const/16 v3, 0x1b
 
-    if-eq p1, v3, :cond_7b
+    if-eq p1, v3, :cond_7f
 
     const/16 v3, 0x1d
 
-    if-ne p1, v3, :cond_7f
+    if-ne p1, v3, :cond_83
 
-    .line 1114
-    :cond_7b
+    .line 1170
+    :cond_7f
     sget-object v2, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_CUST18_ANIMATION:[I
 
     array-length v2, v2
 
     goto :goto_29
 
-    .line 1116
-    :cond_7f
-    const/16 v3, 0x9
+    .line 1172
+    :cond_83
+    const/16 v3, 0x1c
 
-    if-eq p1, v3, :cond_29
+    if-eq p1, v3, :cond_8b
 
-    .line 1119
-    const/16 v2, 0x11
+    const/16 v3, 0x25
 
-    if-ne p1, v2, :cond_8b
+    if-ne p1, v3, :cond_8f
 
-    .line 1120
-    sget-object v2, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_CUST08_ANIMATION:[I
-
-    array-length v2, v2
-
-    goto :goto_29
-
-    .line 1122
+    .line 1173
     :cond_8b
-    const/16 v2, 0x13
-
-    if-ne p1, v2, :cond_93
-
-    .line 1123
-    sget-object v2, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_CUST10_ANIMATION:[I
-
-    array-length v2, v2
-
-    goto :goto_29
-
-    .line 1125
-    :cond_93
-    const/16 v2, 0x14
-
-    if-ne p1, v2, :cond_9b
-
-    .line 1126
-    sget-object v2, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_CUST11_ANIMATION:[I
-
-    array-length v2, v2
-
-    goto :goto_29
-
-    .line 1128
-    :cond_9b
-    const/16 v2, 0x1c
-
-    if-ne p1, v2, :cond_a3
-
-    .line 1129
     sget-object v2, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_CUST19_ANIMATION:[I
 
     array-length v2, v2
 
     goto :goto_29
 
-    .line 1131
+    .line 1175
+    :cond_8f
+    const/16 v3, 0x9
+
+    if-eq p1, v3, :cond_29
+
+    .line 1178
+    const/16 v2, 0x11
+
+    if-ne p1, v2, :cond_9b
+
+    .line 1179
+    sget-object v2, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_CUST08_ANIMATION:[I
+
+    array-length v2, v2
+
+    goto :goto_29
+
+    .line 1181
+    :cond_9b
+    const/16 v2, 0x13
+
+    if-ne p1, v2, :cond_a3
+
+    .line 1182
+    sget-object v2, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_CUST10_ANIMATION:[I
+
+    array-length v2, v2
+
+    goto :goto_29
+
+    .line 1184
     :cond_a3
-    const/16 v2, 0x20
+    const/16 v2, 0x14
 
     if-ne p1, v2, :cond_ac
 
-    .line 1132
+    .line 1185
+    sget-object v2, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_CUST11_ANIMATION:[I
+
+    array-length v2, v2
+
+    goto/16 :goto_29
+
+    .line 1187
+    :cond_ac
+    const/16 v2, 0x20
+
+    if-ne p1, v2, :cond_b5
+
+    .line 1188
     sget-object v2, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_CUST23_ANIMATION:[I
 
     array-length v2, v2
 
     goto/16 :goto_29
 
-    .line 1134
-    :cond_ac
+    .line 1190
+    :cond_b5
+    const/16 v2, 0x22
+
+    if-ne p1, v2, :cond_be
+
+    .line 1191
+    sget-object v2, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_CUST24_ANIMATION:[I
+
+    array-length v2, v2
+
+    goto/16 :goto_29
+
+    .line 1193
+    :cond_be
+    const/16 v2, 0x23
+
+    if-ne p1, v2, :cond_c7
+
+    .line 1194
+    sget-object v2, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_CUST25_ANIMATION:[I
+
+    array-length v2, v2
+
+    goto/16 :goto_29
+
+    .line 1196
+    :cond_c7
+    const/16 v2, 0x26
+
+    if-ne p1, v2, :cond_d0
+
+    .line 1197
+    sget-object v2, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_CUST28_ANIMATION:[I
+
+    array-length v2, v2
+
+    goto/16 :goto_29
+
+    .line 1199
+    :cond_d0
     sget-object v2, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->DOWN_ANIMATION_DEFAULT:[I
 
     array-length v2, v2
 
     goto/16 :goto_29
 
-    .line 1135
-    :cond_b1
+    .line 1200
+    :cond_d5
     if-eq v1, v0, :cond_29
 
-    .line 1138
+    .line 1203
     sub-int v2, v0, v1
 
     add-int/lit8 v2, v2, 0x1
@@ -2840,15 +3417,15 @@
     .param p1, "n"    # I
 
     .prologue
-    .line 1143
+    .line 1208
     const/16 v0, 0x9
 
     if-ne p1, v0, :cond_6
 
-    .line 1144
+    .line 1209
     const/4 v0, -0x1
 
-    .line 1146
+    .line 1211
     :goto_5
     return v0
 
@@ -2863,13 +3440,13 @@
     .param p0, "n"    # I
 
     .prologue
-    .line 1150
+    .line 1215
     if-nez p0, :cond_5
 
-    .line 1151
+    .line 1216
     sget-object v0, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->UP_ANIMATION_DEFAULT:[I
 
-    .line 1153
+    .line 1218
     :goto_4
     return-object v0
 
@@ -2887,7 +3464,7 @@
     .param p1, "n"    # I
 
     .prologue
-    .line 1172
+    .line 1237
     const/4 v0, 0x0
 
     return v0
@@ -2901,27 +3478,27 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 1157
+    .line 1222
     if-eqz p1, :cond_4
 
-    .line 1168
+    .line 1233
     :cond_3
     :goto_3
     return v2
 
-    .line 1160
+    .line 1225
     :cond_4
     invoke-static {p0, p1}, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->getUpStartFrameIndex(Landroid/content/Context;I)I
 
     move-result v1
 
-    .line 1161
+    .line 1226
     .local v1, "upStartFrameIndex":I
     invoke-static {p0, p1}, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->getUpEndFrameIndex(Landroid/content/Context;I)I
 
     move-result v0
 
-    .line 1162
+    .line 1227
     .local v0, "upEndFrameIndex2":I
     if-ltz v1, :cond_12
 
@@ -2929,7 +3506,7 @@
 
     if-le v1, v0, :cond_16
 
-    .line 1163
+    .line 1228
     :cond_12
     sget-object v2, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationResHelper;->UP_ANIMATION_DEFAULT:[I
 
@@ -2937,11 +3514,11 @@
 
     goto :goto_3
 
-    .line 1165
+    .line 1230
     :cond_16
     if-eq v1, v0, :cond_3
 
-    .line 1166
+    .line 1231
     sub-int v2, v0, v1
 
     add-int/lit8 v2, v2, 0x1
@@ -2955,7 +3532,7 @@
     .param p1, "n"    # I
 
     .prologue
-    .line 1176
+    .line 1241
     const/4 v0, 0x0
 
     return v0
