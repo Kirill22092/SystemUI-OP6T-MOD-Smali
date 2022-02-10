@@ -549,6 +549,14 @@
 
 
 # virtual methods
+.method public isFocused()Z
+    .locals 0
+
+    const/4 p0, 0x1
+
+    return p0
+.end method
+
 .method protected onAttachedToWindow()V
     .locals 1
 

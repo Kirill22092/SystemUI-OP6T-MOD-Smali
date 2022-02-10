@@ -2064,11 +2064,11 @@
 
     iget v3, p0, Lcom/android/systemui/statusbar/KeyguardIndicationController;->mChargingSpeed:I
 
+    const/4 v6, 0x3
+
     if-eqz v3, :cond_7
 
     if-eq v3, v4, :cond_5
-
-    const/4 v6, 0x3
 
     if-eq v3, v6, :cond_3
 
@@ -2118,9 +2118,13 @@
     sget v3, Lcom/android/systemui/R$string;->keyguard_plugged_in_charging_slowly:I
 
     :goto_1
-    iget-boolean v6, p0, Lcom/android/systemui/statusbar/KeyguardIndicationController;->mPdCharging:Z
+    iget-boolean v7, p0, Lcom/android/systemui/statusbar/KeyguardIndicationController;->mPdCharging:Z
 
-    if-eqz v6, :cond_e
+    if-eqz v7, :cond_e
+
+    iget v7, p0, Lcom/android/systemui/statusbar/KeyguardIndicationController;->mChargingSpeed:I
+
+    if-eq v7, v6, :cond_e
 
     if-eqz v0, :cond_9
 

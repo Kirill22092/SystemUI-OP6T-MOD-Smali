@@ -294,7 +294,7 @@
 
     new-array v1, v0, [I
 
-    const/16 v2, 0x175
+    const/16 v2, 0x176
 
     const/4 v3, 0x0
 

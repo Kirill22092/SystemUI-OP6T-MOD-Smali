@@ -34,6 +34,8 @@
     .end annotation
 .end field
 
+.field private mCheckingPairedDevices:Ljava/lang/Runnable;
+
 .field private final mConnectedDevices:Ljava/util/List;
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -60,6 +62,8 @@
 
 .field private mLastStateChangeUpdateTime:J
 
+.field private mLastTimeCheckPairedDevices:J
+
 .field private mLastUpdateTime:J
 
 .field private final mLocalBluetoothManager:Lcom/android/settingslib/bluetooth/LocalBluetoothManager;
@@ -73,7 +77,7 @@
 
 # direct methods
 .method public constructor <init>(Landroid/content/Context;Landroid/os/Looper;Landroid/os/Looper;Lcom/android/settingslib/bluetooth/LocalBluetoothManager;)V
-    .locals 1
+    .locals 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -94,6 +98,14 @@
     iput v0, p0, Lcom/android/systemui/statusbar/policy/BluetoothControllerImpl;->mConnectionState:I
 
     iput-boolean v0, p0, Lcom/android/systemui/statusbar/policy/BluetoothControllerImpl;->mTransientEnabling:Z
+
+    const-wide/16 v0, 0x0
+
+    iput-wide v0, p0, Lcom/android/systemui/statusbar/policy/BluetoothControllerImpl;->mLastTimeCheckPairedDevices:J
+
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Lcom/android/systemui/statusbar/policy/BluetoothControllerImpl;->mCheckingPairedDevices:Ljava/lang/Runnable;
 
     iput-object p4, p0, Lcom/android/systemui/statusbar/policy/BluetoothControllerImpl;->mLocalBluetoothManager:Lcom/android/settingslib/bluetooth/LocalBluetoothManager;
 
@@ -308,6 +320,20 @@
     move-result-object p0
 
     return-object p0
+.end method
+
+.method private synthetic lambda$onDeviceAttributesChanged$0()V
+    .locals 1
+
+    invoke-direct {p0}, Lcom/android/systemui/statusbar/policy/BluetoothControllerImpl;->updateConnected()V
+
+    iget-object p0, p0, Lcom/android/systemui/statusbar/policy/BluetoothControllerImpl;->mHandler:Lcom/android/systemui/statusbar/policy/BluetoothControllerImpl$H;
+
+    const/4 v0, 0x1
+
+    invoke-virtual {p0, v0}, Landroid/os/Handler;->sendEmptyMessage(I)Z
+
+    return-void
 .end method
 
 .method private static stateToString(I)Ljava/lang/String;
@@ -575,100 +601,104 @@
 
     invoke-interface {v1}, Ljava/util/List;->clear()V
 
+    const-string v1, "BluetoothController"
+
+    const-string v2, "####### clear all connected devices and re-check"
+
+    invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
     invoke-virtual {p0}, Lcom/android/systemui/statusbar/policy/BluetoothControllerImpl;->getDevices()Ljava/util/Collection;
 
-    move-result-object v1
+    move-result-object v2
 
-    invoke-interface {v1}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
+    invoke-interface {v2}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
 
-    move-result-object v1
+    move-result-object v2
 
-    move v2, v0
+    move v3, v0
 
     :cond_0
     :goto_0
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v3
-
-    if-eqz v3, :cond_2
-
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Lcom/android/settingslib/bluetooth/CachedBluetoothDevice;
-
-    invoke-virtual {v3}, Lcom/android/settingslib/bluetooth/CachedBluetoothDevice;->getMaxConnectionState()I
+    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v4
 
-    if-le v4, v2, :cond_1
+    if-eqz v4, :cond_2
 
-    move v2, v4
+    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v4
+
+    check-cast v4, Lcom/android/settingslib/bluetooth/CachedBluetoothDevice;
+
+    invoke-virtual {v4}, Lcom/android/settingslib/bluetooth/CachedBluetoothDevice;->getMaxConnectionState()I
+
+    move-result v5
+
+    if-le v5, v3, :cond_1
+
+    move v3, v5
 
     :cond_1
-    invoke-virtual {v3}, Lcom/android/settingslib/bluetooth/CachedBluetoothDevice;->isConnected()Z
+    invoke-virtual {v4}, Lcom/android/settingslib/bluetooth/CachedBluetoothDevice;->isConnected()Z
 
-    move-result v4
+    move-result v5
 
-    if-eqz v4, :cond_0
+    if-eqz v5, :cond_0
 
-    iget-object v4, p0, Lcom/android/systemui/statusbar/policy/BluetoothControllerImpl;->mConnectedDevices:Ljava/util/List;
+    iget-object v5, p0, Lcom/android/systemui/statusbar/policy/BluetoothControllerImpl;->mConnectedDevices:Ljava/util/List;
 
-    invoke-interface {v4, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    invoke-interface {v5, v4}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
     :cond_2
-    iget-object v1, p0, Lcom/android/systemui/statusbar/policy/BluetoothControllerImpl;->mConnectedDevices:Ljava/util/List;
+    iget-object v2, p0, Lcom/android/systemui/statusbar/policy/BluetoothControllerImpl;->mConnectedDevices:Ljava/util/List;
 
-    invoke-interface {v1}, Ljava/util/List;->isEmpty()Z
+    invoke-interface {v2}, Ljava/util/List;->isEmpty()Z
 
-    move-result v1
+    move-result v2
 
-    const/4 v3, 0x2
+    const/4 v4, 0x2
 
-    const-string v4, "BluetoothController"
+    if-eqz v2, :cond_3
 
-    if-eqz v1, :cond_3
+    if-ne v3, v4, :cond_3
 
-    if-ne v2, v3, :cond_3
+    const/4 v3, 0x0
 
-    const/4 v2, 0x0
+    const-string/jumbo v2, "update state to DISCONNECTED"
 
-    const-string/jumbo v1, "update state to DISCONNECTED"
-
-    invoke-static {v4, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_3
-    new-instance v1, Ljava/lang/StringBuilder;
+    new-instance v2, Ljava/lang/StringBuilder;
 
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
     const-string/jumbo v5, "updateConnected: "
 
-    invoke-virtual {v1, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     const-string v0, " to "
 
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     const-string v0, ", connection:"
 
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     iget v0, p0, Lcom/android/systemui/statusbar/policy/BluetoothControllerImpl;->mConnectionState:I
 
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     const-string v0, ", empty:"
 
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     iget-object v0, p0, Lcom/android/systemui/statusbar/policy/BluetoothControllerImpl;->mConnectedDevices:Ljava/util/List;
 
@@ -676,27 +706,27 @@
 
     move-result v0
 
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-static {v4, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     iget v0, p0, Lcom/android/systemui/statusbar/policy/BluetoothControllerImpl;->mConnectionState:I
 
-    if-eq v2, v0, :cond_4
+    if-eq v3, v0, :cond_4
 
     const-string v0, "check if send MSG_STATE_CHANGED"
 
-    invoke-static {v4, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    iput v2, p0, Lcom/android/systemui/statusbar/policy/BluetoothControllerImpl;->mConnectionState:I
+    iput v3, p0, Lcom/android/systemui/statusbar/policy/BluetoothControllerImpl;->mConnectionState:I
 
     iget-object v0, p0, Lcom/android/systemui/statusbar/policy/BluetoothControllerImpl;->mHandler:Lcom/android/systemui/statusbar/policy/BluetoothControllerImpl$H;
 
-    invoke-virtual {v0, v3}, Landroid/os/Handler;->sendEmptyMessage(I)Z
+    invoke-virtual {v0, v4}, Landroid/os/Handler;->sendEmptyMessage(I)Z
 
     :cond_4
     invoke-direct {p0}, Lcom/android/systemui/statusbar/policy/BluetoothControllerImpl;->updateAudioProfile()V
@@ -1284,6 +1314,14 @@
     return p0
 .end method
 
+.method public synthetic lambda$onDeviceAttributesChanged$0$BluetoothControllerImpl()V
+    .locals 0
+
+    invoke-direct {p0}, Lcom/android/systemui/statusbar/policy/BluetoothControllerImpl;->lambda$onDeviceAttributesChanged$0()V
+
+    return-void
+.end method
+
 .method public onAclConnectionStateChanged(Lcom/android/settingslib/bluetooth/CachedBluetoothDevice;I)V
     .locals 2
 
@@ -1567,7 +1605,7 @@
 .end method
 
 .method public onDeviceAttributesChanged()V
-    .locals 2
+    .locals 7
 
     const-string v0, "BluetoothController"
 
@@ -1575,13 +1613,72 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    invoke-direct {p0}, Lcom/android/systemui/statusbar/policy/BluetoothControllerImpl;->updateConnected()V
+    iget-object v1, p0, Lcom/android/systemui/statusbar/policy/BluetoothControllerImpl;->mCheckingPairedDevices:Ljava/lang/Runnable;
 
-    iget-object p0, p0, Lcom/android/systemui/statusbar/policy/BluetoothControllerImpl;->mHandler:Lcom/android/systemui/statusbar/policy/BluetoothControllerImpl$H;
+    if-nez v1, :cond_0
 
-    const/4 v0, 0x1
+    new-instance v1, Lcom/android/systemui/statusbar/policy/-$$Lambda$BluetoothControllerImpl$-fpihsFIMWT2bHO2WtzOkRXwqkE;
 
-    invoke-virtual {p0, v0}, Landroid/os/Handler;->sendEmptyMessage(I)Z
+    invoke-direct {v1, p0}, Lcom/android/systemui/statusbar/policy/-$$Lambda$BluetoothControllerImpl$-fpihsFIMWT2bHO2WtzOkRXwqkE;-><init>(Lcom/android/systemui/statusbar/policy/BluetoothControllerImpl;)V
+
+    iput-object v1, p0, Lcom/android/systemui/statusbar/policy/BluetoothControllerImpl;->mCheckingPairedDevices:Ljava/lang/Runnable;
+
+    :cond_0
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide v1
+
+    iget-wide v3, p0, Lcom/android/systemui/statusbar/policy/BluetoothControllerImpl;->mLastTimeCheckPairedDevices:J
+
+    sub-long v3, v1, v3
+
+    const-wide/16 v5, 0x7d0
+
+    cmp-long v3, v3, v5
+
+    if-gez v3, :cond_1
+
+    iget-object v3, p0, Lcom/android/systemui/statusbar/policy/BluetoothControllerImpl;->mBgHandler:Landroid/os/Handler;
+
+    iget-object v4, p0, Lcom/android/systemui/statusbar/policy/BluetoothControllerImpl;->mCheckingPairedDevices:Ljava/lang/Runnable;
+
+    invoke-virtual {v3, v4}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
+
+    iget-object v3, p0, Lcom/android/systemui/statusbar/policy/BluetoothControllerImpl;->mBgHandler:Landroid/os/Handler;
+
+    iget-object v4, p0, Lcom/android/systemui/statusbar/policy/BluetoothControllerImpl;->mCheckingPairedDevices:Ljava/lang/Runnable;
+
+    const-wide/16 v5, 0x12c
+
+    invoke-virtual {v3, v4, v5, v6}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
+
+    const-string v3, "Delayed checking connected devices ..."
+
+    invoke-static {v0, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    goto :goto_0
+
+    :cond_1
+    iget-object v3, p0, Lcom/android/systemui/statusbar/policy/BluetoothControllerImpl;->mBgHandler:Landroid/os/Handler;
+
+    iget-object v4, p0, Lcom/android/systemui/statusbar/policy/BluetoothControllerImpl;->mCheckingPairedDevices:Ljava/lang/Runnable;
+
+    invoke-virtual {v3, v4}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
+
+    iget-object v3, p0, Lcom/android/systemui/statusbar/policy/BluetoothControllerImpl;->mBgHandler:Landroid/os/Handler;
+
+    iget-object v4, p0, Lcom/android/systemui/statusbar/policy/BluetoothControllerImpl;->mCheckingPairedDevices:Ljava/lang/Runnable;
+
+    const-wide/16 v5, 0x32
+
+    invoke-virtual {v3, v4, v5, v6}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
+
+    const-string v3, "Checking connected devices immediately !!!"
+
+    invoke-static {v0, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    :goto_0
+    iput-wide v1, p0, Lcom/android/systemui/statusbar/policy/BluetoothControllerImpl;->mLastTimeCheckPairedDevices:J
 
     return-void
 .end method

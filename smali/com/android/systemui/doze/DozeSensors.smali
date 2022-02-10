@@ -134,7 +134,7 @@
 
     new-array v1, v0, [I
 
-    const/16 v2, 0x16a
+    const/16 v2, 0x16b
 
     aput v2, v1, v3
 

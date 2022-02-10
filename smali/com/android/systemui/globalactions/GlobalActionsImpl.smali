@@ -320,7 +320,7 @@
     :goto_0
     new-array p0, v0, [I
 
-    const/16 v0, 0x16b
+    const/16 v0, 0x16c
 
     aput v0, p0, v3
 

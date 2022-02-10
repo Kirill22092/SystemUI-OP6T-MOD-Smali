@@ -267,13 +267,13 @@
                 <category android:name="android.intent.category.DESK_DOCK"/>
             </intent-filter>
         </activity>
-        <activity android:excludeFromRecents="true" android:exported="true" android:finishOnCloseSystemDialogs="true" android:label="@string/quick_settings_brightness_dialog_title" android:launchMode="singleInstance" android:name="com.android.systemui.settings.BrightnessDialog" android:theme="@android:style/Theme.DeviceDefault.QuickSettings.Dialog">
+        <activity android:excludeFromRecents="true" android:exported="true" android:finishOnCloseSystemDialogs="true" android:label="@string/quick_settings_brightness_dialog_title" android:launchMode="singleInstance" android:name="com.android.systemui.settings.BrightnessDialog" android:theme="@*android:style/Theme.DeviceDefault.QuickSettings.Dialog">
             <intent-filter>
                 <action android:name="com.android.intent.action.SHOW_BRIGHTNESS_DIALOG"/>
                 <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
         </activity>
-        <activity android:excludeFromRecents="true" android:launchMode="singleTop" android:name="com.android.systemui.ForegroundServicesDialog" android:process=":fgservices" android:theme="@android:style/Theme.DeviceDefault.Settings.Dialog">
+        <activity android:excludeFromRecents="true" android:launchMode="singleTop" android:name="com.android.systemui.ForegroundServicesDialog" android:process=":fgservices" android:theme="@*android:style/Theme.DeviceDefault.Settings.Dialog">
             <intent-filter android:priority="1">
                 <action android:name="android.settings.FOREGROUND_SERVICES_SETTINGS"/>
                 <category android:name="android.intent.category.DEFAULT"/>
